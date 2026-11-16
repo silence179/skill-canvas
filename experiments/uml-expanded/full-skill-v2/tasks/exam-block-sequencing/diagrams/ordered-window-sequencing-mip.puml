@@ -1,0 +1,51 @@
+@startuml
+!pragma useVerticalIf on
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+skinparam defaultFontName SansSerif
+skinparam defaultFontSize 17
+skinparam ArrowColor #46566F
+skinparam activity {
+  BackgroundColor #EEF5FF
+  BorderColor #365A82
+  FontColor #152B44
+  DiamondBackgroundColor #FFF3D6
+  DiamondBorderColor #BA842A
+}
+skinparam noteBackgroundColor #FFF8DE
+skinparam noteBorderColor #BEA45C
+skinparam wrapWidth 370
+title Ordered windows | preserve sequence, masks and active overlaps
+start
+:Record ordered positions, successor relation,\nitems and required counts; keep tuple keys ordered;\ndefine missing-row meaning from supplied schema [S1];
+note right
+ Never sort tuple keys, add reverse pairs or
+ sum all permutations without an explicit rule.
+ Position labels need not be contiguous integers.
+end note
+if (Sequence representation?) then (assignment-linked)
+ :Create assign[item,position]; enforce each item\nexactly as required and each required position filled;
+ :For r-item windows create z for eligible starts;\nz <= each matching assign variable;\nz >= sum(assign variables) - (r-1) [S1];
+else (direct ordered windows)
+ :Create W[t,a1,...,ar]; one window per eligible start;\nrequired item-role counts; forbid repeats when\nrepresenting a permutation [S1];
+ :Link adjacent windows: sum over leading item\nW[t,a0,q1,...] = sum over trailing item\nW[next(t),q1,...,ar] [S1];
+endif
+:Use cyclic continuity ONLY if explicitly defined;\nreporting masks may still exclude boundary starts [S1];
+partition "Objective contract before optimization [S1]" {
+ :For every component record ordered tuple offsets,\neligible-start mask, successor rule and weights;
+ :Build active primitive patterns from those starts;
+ :Define overlap via membership in the required\nactive patterns; attach its specified ordered cost;
+ note right
+  For binary pattern indicators A,B:
+  overlap <= A; overlap <= B;
+  overlap >= A+B-1.
+  Active overlapping windows are NOT automatically
+  all combinations inside a wider window.
+ end note
+ :Keep pair, triple and high-order overlap terms\ninside the minimized weighted objective;
+}
+:Solve and extract one global sequence;\napply independent evaluate(sequence,input) [S1];
+:Audit ordering, masks, successor and boundary\nrules, missing tuples, overlaps and feasibility;\nhand the final artifact to solution-audit workflow [S1];
+stop
+footer Full-skill v2 | S1: SKILL.md
+@enduml

@@ -1,0 +1,40 @@
+{
+  "task": "manufacturing-fjsp-optimization",
+  "skillsbench_commit": "f860ecf02ef53412a030f8661c83d644b739ff01",
+  "comparison": "forced full skill text vs PNG-first plus identical full text",
+  "diagram_basis": "only original SKILL.md; no oracle/verifier content",
+  "renderer": {
+    "name": "PlantUML MIT",
+    "sha256": "30a66b81a16127fd3ec560992f31964fe9ae3f1233c614ef4558a4558a21489e",
+    "version": "1.2026.10"
+  },
+  "source_files": {
+    "fjsp-baseline-repair-with-downtime-and-policy/SKILL.md": "2668bd6b9c6977ccedcf1f1d4af4401afdfe215666d68f82df41b662852b2125",
+    "reference.md": "46f76e2898e1f1a3d7f0d8c7ee4e5390f7e9f8e57c1695dd5eb3ddf739f71743"
+  },
+  "skills": {
+    "fjsp-baseline-repair-with-downtime-and-policy": {
+      "guide_sha256": "2668bd6b9c6977ccedcf1f1d4af4401afdfe215666d68f82df41b662852b2125",
+      "uml_sha256": "410535e13b59d0aab378622cfcb098c5d1322cb05ca7c44b02e9c7dc3de3011a",
+      "png_sha256": "d94c741f1e882ca6f52f3b67c5c1f2e4560972232c25f41e7549cd930c63bb20",
+      "png_dimensions": [
+        929,
+        1890
+      ],
+      "guide_bytes": 4824
+    }
+  },
+  "bundles": {
+    "text": {
+      "fjsp-baseline-repair-with-downtime-and-policy/GUIDE.md": "2668bd6b9c6977ccedcf1f1d4af4401afdfe215666d68f82df41b662852b2125",
+      "fjsp-baseline-repair-with-downtime-and-policy/SKILL.md": "1214eb2eb7a89be592619c34e61efc0e03234a1d90efe1f533da30fc0816c306",
+      "reference.md": "46f76e2898e1f1a3d7f0d8c7ee4e5390f7e9f8e57c1695dd5eb3ddf739f71743"
+    },
+    "image": {
+      "fjsp-baseline-repair-with-downtime-and-policy/GUIDE.md": "2668bd6b9c6977ccedcf1f1d4af4401afdfe215666d68f82df41b662852b2125",
+      "fjsp-baseline-repair-with-downtime-and-policy/SKILL.md": "935a3e955d09b7f571486a57d98b99cd995bcb7fa97940e171a1d07dab136fd5",
+      "fjsp-baseline-repair-with-downtime-and-policy/assets/flowchart.png": "d94c741f1e882ca6f52f3b67c5c1f2e4560972232c25f41e7549cd930c63bb20",
+      "reference.md": "46f76e2898e1f1a3d7f0d8c7ee4e5390f7e9f8e57c1695dd5eb3ddf739f71743"
+    }
+  }
+}

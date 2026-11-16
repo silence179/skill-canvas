@@ -1,0 +1,55 @@
+@startuml
+!pragma useVerticalIf on
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+skinparam defaultFontName SansSerif
+skinparam defaultFontSize 17
+skinparam ArrowColor #46566F
+skinparam activity {
+  BackgroundColor #EEF5FF
+  BorderColor #365A82
+  FontColor #152B44
+  DiamondBackgroundColor #FFF3D6
+  DiamondBorderColor #BA842A
+}
+skinparam noteBackgroundColor #FFF8DE
+skinparam noteBorderColor #BEA45C
+skinparam wrapWidth 370
+title Economic dispatch | cost reference plus reserve coupling
+start
+:Map generator buses; read Pmin[9], Pmax[8];\nPg is per-unit, P_MW = Pg * baseMVA [S1];
+partition "Interpret each gencost row [S1, S2]" {
+ if (MODEL = 2 polynomial?) then (yes)
+  :Read NCOST and highest-order-first coefficients;\nquadratic: c2*P_MW^2 + c1*P_MW + c0;\nlinear / constant: use the matching coefficient count;
+  note right
+   S1's example treats NCOST >= 3 as quadratic.
+   S2 documents the general polynomial layout.
+   Check higher-degree data before reusing that example.
+  end note
+ else (not polynomial)
+  if (MODEL = 1 piecewise linear?) then (yes)
+   :Read N ordered (P,C) breakpoints from S2;\nuse the stated piecewise cost representation;\ndo not read these entries as polynomial coefficients;
+  else (unsupported)
+   :Resolve the cost representation before optimizing;
+   stop
+  endif
+ endif
+}
+:Bound Pg by Pmin/baseMVA and Pmax/baseMVA [S1];
+if (Network constraints included?) then (yes)
+ :Use nodal DC balances and branch limits;\nsee the companion dc-power-flow skill [S1];
+else (aggregate dispatch)
+ :sum(Pg) = total_load_MW / baseMVA [S1];
+endif
+if (Reserves required?) then (yes)
+ :Use Rg in MW; 0 <= Rg <= reserve_capacity;\nPg*baseMVA + Rg <= Pmax_MW;\nsum(Rg) >= reserve_requirement [S1];
+endif
+:Minimize total generation cost;\nGUIDE selects CLARABEL for quadratic network OPF [S1];
+:Export generator ID, bus, Pg_MW and Pmax_MW;\nreport cost, load and generation; when reserves\nare modeled also report Rg_MW, reserve totals\nand headroom sum(Pmax-Pg_MW-Rg) [S1];
+note right
+ S2: polynomial marginal cost = 2*c2*P + c1.
+ Cost uses MW; coefficient units must match.
+end note
+stop
+footer Full-skill v2 | S1: SKILL.md | S2: cost-functions.md
+@enduml

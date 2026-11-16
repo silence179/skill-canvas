@@ -1,0 +1,4 @@
+{
+  "reason": "Remove Pillow runtime dependency from frozen-source checker; use PNG stdlib header parser. Same generated graph bytes, before any campaign plan or model task.",
+  "old_manifest_sha256": "fb018155dbcda1a08948ed7a36e786c231498815e84e4157a8f26a6f3edd65dc"
+}

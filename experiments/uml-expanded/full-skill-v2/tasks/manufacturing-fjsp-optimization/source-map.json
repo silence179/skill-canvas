@@ -1,0 +1,41 @@
+{
+  "fjsp-baseline-repair-with-downtime-and-policy": {
+    "S1": {
+      "path": "fjsp-baseline-repair-with-downtime-and-policy/SKILL.md",
+      "sha256": "2668bd6b9c6977ccedcf1f1d4af4401afdfe215666d68f82df41b662852b2125",
+      "bytes": 4824,
+      "lines": 78,
+      "review": "Incorporate the shared baseline-repair context. Keep integer scan and same-order commitment explicit. Flag conflicting heuristic priorities and the sample safety-bound return not proving feasibility; preserve all original guidance/resources.",
+      "headings": [
+        {
+          "line": 12,
+          "heading": "# sorted Downtime windows"
+        },
+        {
+          "line": 19,
+          "heading": "# Precedence-aware repair order"
+        },
+        {
+          "line": 50,
+          "heading": "# Baseline machine may be illegal"
+        },
+        {
+          "line": 70,
+          "heading": "# First try baseline machine"
+        },
+        {
+          "line": 73,
+          "heading": "# If shift is large and we still can change machines, search alternates"
+        }
+      ]
+    },
+    "S2": {
+      "path": "reference.md",
+      "sha256": "46f76e2898e1f1a3d7f0d8c7ee4e5390f7e9f8e57c1695dd5eb3ddf739f71743",
+      "bytes": 4091,
+      "lines": 50,
+      "review": "Shared skills-root resource: baseline-repair commitments, FJSPLib provenance, difficulty taxonomy and literature. No instance-specific solution is supplied.",
+      "headings": []
+    }
+  }
+}

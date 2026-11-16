@@ -1,0 +1,74 @@
+@startuml
+!pragma useVerticalIf on
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+skinparam defaultFontName SansSerif
+skinparam defaultFontSize 17
+skinparam ArrowColor #46566F
+skinparam activity {
+  BackgroundColor #EEFAF4
+  BorderColor #2E7156
+  FontColor #143C2D
+  DiamondBackgroundColor #FFF3D6
+  DiamondBorderColor #A77D24
+  StartColor #2E7156
+  EndColor #2E7156
+}
+skinparam NoteBackgroundColor #FFF8E8
+skinparam NoteBorderColor #C9A34C
+title sympy | Symbolic computation workflow
+start
+:Define the mathematical goal;
+:Create symbols with needed assumptions\n(real, positive, integer, ...);
+:Construct expressions using exact values;
+note right
+  Use Rational(...) or S(...) for exact arithmetic.
+  Floating-point literals create approximations.
+  GUIDE.md: Working with SymPy
+end note
+if (Solving equations?) then (yes)
+  :Select a solver for the equation type;
+  note right
+    Algebraic: solveset / solve
+    Linear systems: linsolve
+    Nonlinear systems: nonlinsolve
+    Differential equations: dsolve
+    references/core-capabilities.md
+  end note
+  :Substitute solutions and simplify\nto verify the original equations;
+else (other computation)
+  :Choose the relevant operation;
+  note right
+    Algebra / calculus: core-capabilities.md
+    Matrices: matrices-linear-algebra.md
+    Physics: physics-mechanics.md
+    Geometry / number theory / logic / statistics:
+      advanced-topics.md
+  end note
+endif
+:Compute and simplify symbolically;
+if (Result or simplification is unexpected?) then (yes)
+  :Review symbol assumptions, float inputs\nand the chosen solver / simplification;
+  note right
+    GUIDE.md: Troubleshooting Common Issues
+    If no closed form exists, consider a
+    numerical solver when the goal allows it.
+  end note
+else (no)
+endif
+if (Need numerical evaluation?) then (yes)
+  if (Many repeated evaluations?) then (yes)
+    :Use lambdify(..., 'numpy')\nfor array-based evaluation;
+  else (single / precision)
+    :Use evalf(...) / N(...)\nwith the requested precision;
+  endif
+else (keep exact)
+  :Retain symbolic expressions / rationals;
+endif
+:Return expressions, print LaTeX,\nor generate executable code as needed;
+note right
+  references/code-generation-printing.md
+  Full API examples and caveats: GUIDE.md
+end note
+stop
+@enduml

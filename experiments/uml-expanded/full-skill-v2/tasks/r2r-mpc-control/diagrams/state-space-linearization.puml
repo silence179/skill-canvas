@@ -1,0 +1,48 @@
+@startuml
+!pragma useVerticalIf on
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+skinparam defaultFontName SansSerif
+skinparam defaultFontSize 17
+skinparam ArrowColor #46566F
+skinparam activity {
+  BackgroundColor #EEF5FF
+  BorderColor #365A82
+  FontColor #152B44
+  DiamondBackgroundColor #FFF3D6
+  DiamondBorderColor #BA842A
+}
+skinparam noteBackgroundColor #FFF8DE
+skinparam noteBorderColor #BEA45C
+skinparam wrapWidth 370
+title State-space linearization | operating point and discretization
+start
+:Specify nonlinear dx/dt=f(x,u), dimensions n,m\nand reference operating point (x_ref,u_ref) [S1];
+:Evaluate A_c = df/dx and B_c = df/du\nat that operating point [S1];
+note right
+ S1 R2R partial derivatives:
+ d(dT_i/dt)/dT_i = -v_i/L
+ d(dT_i/dt)/dv_i = EA/L - T_i/L
+ d(dv_i/dt)/dT_i = -R^2/J
+ d(dv_i/dt)/du_i = R/J
+end note
+if (Discretization choice?) then (Euler)
+ :A_d = I + dt*A_c; B_d = dt*B_c [S1];
+else (matrix exponential)
+ :A_d = expm(A_c*dt) [S1];
+ if (A_c invertible for the supplied formula?) then (yes)
+  :B_d = inv(A_c)*(A_d-I)*B_c [S1];
+ else (no)
+  :Do not evaluate an undefined inverse;\nrevisit the method / Euler option [S1 formula condition];
+  stop
+ endif
+endif
+:Check matrix dimensions and eigenvalues;\npass the discrete model to controller design [S1];
+if (Operating point changes significantly?) then (yes)
+ :Re-linearize around the updated reference [S1];
+else (no)
+ :Retain the current linearization [S1];
+endif
+stop
+footer Full-skill v2 | S1: SKILL.md
+@enduml

@@ -1,0 +1,44 @@
+@startuml
+!pragma useVerticalIf on
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+skinparam defaultFontName SansSerif
+skinparam defaultFontSize 18
+skinparam ArrowColor #46566F
+skinparam activity {
+  BackgroundColor #EEF5FF
+  BorderColor #365A82
+  FontColor #152B44
+  DiamondBackgroundColor #FFF3D6
+  DiamondBorderColor #BA842A
+}
+skinparam noteBackgroundColor #FFF8DE
+skinparam noteBorderColor #BEA45C
+skinparam wrapWidth 360
+title Economic dispatch - costs, reserves, capacity coupling
+start
+:Read mapped generators and gencost;\nPg variables in per-unit; use Pg_MW = Pg * baseMVA;
+while (More generator cost rows?) is (yes)
+  :Read NCOST and polynomial coefficients;
+  if (NCOST >= 3?) then (quadratic)
+    :Add c2 * Pg_MW^2 + c1 * Pg_MW + c0;
+  elseif (NCOST == 2?) then (linear)
+    :Add c1 * Pg_MW + c0;
+  else (constant)
+    :Use the guide's constant / empty cost handling;
+  endif
+endwhile (no)
+:Add Pmin / baseMVA <= Pg <= Pmax / baseMVA;
+if (Network modeled?) then (yes)
+  :Use nodal DC balance constraints;
+else (aggregate)
+  :Require sum(Pg) = total_load / baseMVA;
+endif
+if (Operating reserves required?) then (yes)
+  :Add Rg in MW;\n0 <= Rg <= reserve_capacity;\nPg_MW + Rg <= Pmax_MW;\nsum(Rg) >= reserve_requirement;
+endif
+:Minimize generation cost;\nuse CLARABEL for quadratic network problems;
+:Convert Pg back to MW; reserves remain MW;\nreport dispatch, cost, generation and reserve totals;
+:Headroom = sum(Pmax_MW - Pg_MW - Rg_MW);
+stop
+@enduml

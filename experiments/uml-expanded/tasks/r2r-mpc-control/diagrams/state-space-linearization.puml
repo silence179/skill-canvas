@@ -1,0 +1,35 @@
+@startuml
+!pragma useVerticalIf on
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+skinparam defaultFontName SansSerif
+skinparam defaultFontSize 18
+skinparam ArrowColor #46566F
+skinparam activity {
+  BackgroundColor #EEF5FF
+  BorderColor #365A82
+  FontColor #152B44
+  DiamondBackgroundColor #FFF3D6
+  DiamondBorderColor #BA842A
+}
+skinparam noteBackgroundColor #FFF8DE
+skinparam noteBorderColor #BEA45C
+skinparam wrapWidth 360
+title State-space linearization - operating point to discrete model
+start
+:Identify nonlinear dx/dt = f(x,u);\nchoose reference operating point (x_ref, u_ref);
+:Compute Jacobians at the reference:\nA_c = df/dx (n by n); B_c = df/du (n by m);
+:For R2R: include tension / velocity coupling\nand motor-torque terms from GUIDE;
+if (Discretization method?) then (Euler)
+  :A_d = I + dt * A_c;\nB_d = dt * B_c;
+else (matrix exponential)
+  :A_d = expm(A_c * dt);\nuse GUIDE's B_d expression and its\ninvertibility requirement for A_c;
+endif
+:Inspect eigenvalues and model stability;
+if (Operating point changed significantly?) then (yes)
+  :Update reference and re-linearize;
+else (no)
+  :Use A_d and B_d in discrete controller design;
+endif
+stop
+@enduml

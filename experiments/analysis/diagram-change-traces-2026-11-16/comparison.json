@@ -1,0 +1,3261 @@
+{
+  "completed_runs": 9,
+  "completed_comparisons": 6,
+  "comparisons": [
+    {
+      "key": "llm-prefix-cache-replay__prefix-cache-replay",
+      "new": {
+        "task": "llm-prefix-cache-replay",
+        "arm": "prefix-cache-replay",
+        "status": "finished",
+        "trial": "jobs/skill-structure-v3/llm-prefix-cache-replay/prefix-cache-replay/2026-11-15__22-55-21/llm-prefix-cache-replay__b98a5ec1",
+        "reward": 1.0,
+        "error": null,
+        "error_category": null,
+        "verifier_error": null,
+        "task_digest": "sha256:6e625578b9977265fdb8b1fccacda6fd109fd3097e8991125f99bb99d4931cf7",
+        "tool_calls": 5,
+        "trajectory": {
+          "steps": 10,
+          "tool_call_steps": 5,
+          "user_message_steps": 1,
+          "agent_message_steps": 1,
+          "agent_thought_steps": 3,
+          "other_steps": 0,
+          "event_type_counts": {
+            "user_message": 1,
+            "agent_thought": 3,
+            "tool_call": 5,
+            "agent_message": 1
+          },
+          "tool_call_status_counts": {
+            "completed": 5
+          },
+          "partial_trajectory": false,
+          "trajectory_source": "acp"
+        },
+        "input_tokens": 75959,
+        "output_tokens": 1994,
+        "cached_tokens": 63360,
+        "estimated_cost_usd": 0.00655266,
+        "agent_seconds": 12.2,
+        "timing": {
+          "slot_wait": 0.0,
+          "environment_setup": 15.9,
+          "install_agent": 1.013,
+          "sandbox_ready": 19.252,
+          "proxy_health_wait": 0.0,
+          "firewall_power": 0.062,
+          "cloud_metadata_block": 0.554,
+          "acp_connect": 1.837,
+          "agent_setup": 2.5,
+          "agent_execution": 12.2,
+          "harden_before_verify": {
+            "kill_sandbox_user_procs": 0.035,
+            "restore_disarmed_delegates": 0.051,
+            "clear_verifier_output": 0.0,
+            "prepare_app_dir": 0.01,
+            "reclaim_disk": 0.01,
+            "freeze_workspace": 0.11,
+            "cleanup_conftests": 0.07,
+            "build_verifier_env": 0.345,
+            "total": 0.736
+          },
+          "verifier": 5.8,
+          "agent_stop_to_reward": 6.067,
+          "provider_wait": 11.9,
+          "provider_retry_wait": 0.0,
+          "agent_without_provider_wait": 0.2,
+          "cleanup": 1.007,
+          "total": 41.3
+        },
+        "delivery_valid": true,
+        "main_calls": 5,
+        "helper_calls": 1,
+        "delivery_errors": [],
+        "actual_versions": {
+          "schema": 1,
+          "identity": {
+            "agent": "opencode",
+            "harness": "acp",
+            "install_sha256": "c67e56103012b7e12464dc28773188bfd283de83ec2f2cefb0dcc2000b7b2a2d"
+          },
+          "adapter": {
+            "package": "opencode-ai",
+            "version": "1.19.5",
+            "source": "installed-package"
+          },
+          "cli": {
+            "package": "opencode-ai",
+            "version": "1.19.5",
+            "source": "installed-package"
+          },
+          "engine": {
+            "package": "opencode-ai",
+            "version": "1.19.5",
+            "source": "installed-package"
+          }
+        },
+        "raw_usage": {
+          "calls": 6,
+          "input": 75959,
+          "output": 1994,
+          "cached": 63360,
+          "complete": true
+        },
+        "shared_tools_confirmed": true,
+        "evidence_sha256": {
+          "result.json": "72c0129bc68187b3d803666d4984776a46da6049218b06ec1b806d78d273029f",
+          "skill-delivery.json": "0fbd27fa5cb0d79459d28f47b91de65ce1cacbee3e9d7d45945468a8d4bf82cf",
+          "trajectory/llm_trajectory.jsonl": "91b712032c020ff69e09170f8201672831b1ed4db0639b4595c6cb045d6ba420",
+          "trajectory/acp_trajectory.jsonl": "d993b7b261fe1126000f9f7701c566bcfc29f3770362e4622ff9f50f485ac164",
+          "shared-opencode.json": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+          "verifier/test-stdout.txt": "cb4a5e7b230f81e74596c25ac19d35583b1566bd1986154f7ca4beb07b916944"
+        },
+        "total_tokens": 77953,
+        "usage_matches_raw": true,
+        "metric_admitted": true,
+        "changed_skill": "prefix-cache-replay",
+        "variant": "prefix-cache-replay",
+        "test_summary": {
+          "tests": 6,
+          "passed": 6,
+          "failed": 0,
+          "skipped": 0,
+          "pending": 0,
+          "other": 0,
+          "start": 1794754562.0267265,
+          "stop": 1794754562.0684679
+        },
+        "test_execution_confirmed": true,
+        "matches_healthy_oracle_digest": true,
+        "ctrf_sha256": "4f1131722a3d4d49d339e9cb3362a56267320f9e1cfb83785d4f3f4eecd6e79f",
+        "stage": "skill-structure-v3",
+        "evidence_checks": {
+          "task": "llm-prefix-cache-replay",
+          "variant": "prefix-cache-replay",
+          "changed_skill": "prefix-cache-replay",
+          "changed_skills": null,
+          "trial": "jobs/skill-structure-v3/llm-prefix-cache-replay/prefix-cache-replay/2026-11-15__22-55-21/llm-prefix-cache-replay__b98a5ec1",
+          "reward": 1.0,
+          "error": null,
+          "error_category": null,
+          "metric_admitted": true,
+          "evaluation_status": "native_pass",
+          "checks": {
+            "exact_png_guide_capture": true,
+            "policy_matches": true,
+            "shared_tool_receipt": true,
+            "visible_inputs_unchanged": true,
+            "task_digest_matches": true,
+            "raw_usage_matches": true,
+            "actual_verifier_execution": true,
+            "native_tool_count_matches": true
+          },
+          "captured_main_requests": 5,
+          "request_models": [
+            "deepseek-flash"
+          ],
+          "response_models": [
+            "runtime-deepseek-deepseek-flash"
+          ],
+          "http_statuses": [
+            200,
+            200,
+            200,
+            200,
+            200,
+            200
+          ],
+          "usage": {
+            "calls_with_usage": 6,
+            "missing_usage": 0,
+            "input": 75959,
+            "output": 1994,
+            "cached": 63360
+          },
+          "first_successful_main_prompt_tokens": 13473,
+          "ctrf_name_group_summary": {
+            "tests": 6,
+            "passed": 6,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1794754562.0267265,
+            "stop": 1794754562.0684679
+          },
+          "pytest_case_summary": {
+            "passed": 10
+          },
+          "inputs": [
+            {
+              "path": "trace.jsonl",
+              "unchanged": true
+            },
+            {
+              "path": "config.json",
+              "unchanged": true
+            }
+          ],
+          "integrity_findings": [],
+          "raw_evidence_sha256": {
+            "result.json": "72c0129bc68187b3d803666d4984776a46da6049218b06ec1b806d78d273029f",
+            "trajectory/llm_trajectory.jsonl": "91b712032c020ff69e09170f8201672831b1ed4db0639b4595c6cb045d6ba420",
+            "trajectory/acp_trajectory.jsonl": "d993b7b261fe1126000f9f7701c566bcfc29f3770362e4622ff9f50f485ac164",
+            "skill-delivery.json": "0fbd27fa5cb0d79459d28f47b91de65ce1cacbee3e9d7d45945468a8d4bf82cf",
+            "verifier/test-stdout.txt": "cb4a5e7b230f81e74596c25ac19d35583b1566bd1986154f7ca4beb07b916944",
+            "verifier/ctrf.json": "4f1131722a3d4d49d339e9cb3362a56267320f9e1cfb83785d4f3f4eecd6e79f"
+          }
+        }
+      },
+      "baseline": {
+        "task": "llm-prefix-cache-replay",
+        "arm": "baseline",
+        "status": "finished",
+        "trial": "jobs/skill-structure-v3/llm-prefix-cache-replay/baseline/2026-11-15__22-54-39/llm-prefix-cache-replay__c16bd5da",
+        "reward": 0.0,
+        "error": null,
+        "error_category": null,
+        "verifier_error": null,
+        "task_digest": "sha256:6e625578b9977265fdb8b1fccacda6fd109fd3097e8991125f99bb99d4931cf7",
+        "tool_calls": 3,
+        "trajectory": {
+          "steps": 8,
+          "tool_call_steps": 3,
+          "user_message_steps": 1,
+          "agent_message_steps": 1,
+          "agent_thought_steps": 3,
+          "other_steps": 0,
+          "event_type_counts": {
+            "user_message": 1,
+            "tool_call": 3,
+            "agent_thought": 3,
+            "agent_message": 1
+          },
+          "tool_call_status_counts": {
+            "completed": 3
+          },
+          "partial_trajectory": false,
+          "trajectory_source": "acp"
+        },
+        "input_tokens": 57584,
+        "output_tokens": 1735,
+        "cached_tokens": 45056,
+        "estimated_cost_usd": 0.006110736,
+        "agent_seconds": 11.1,
+        "timing": {
+          "slot_wait": 0.0,
+          "environment_setup": 15.3,
+          "install_agent": 0.611,
+          "sandbox_ready": 18.366,
+          "proxy_health_wait": 0.0,
+          "firewall_power": 0.06,
+          "cloud_metadata_block": 0.552,
+          "acp_connect": 1.977,
+          "agent_setup": 2.6,
+          "agent_execution": 11.1,
+          "harden_before_verify": {
+            "kill_sandbox_user_procs": 0.034,
+            "restore_disarmed_delegates": 0.049,
+            "clear_verifier_output": 0.0,
+            "prepare_app_dir": 0.01,
+            "reclaim_disk": 0.07,
+            "freeze_workspace": 0.09,
+            "cleanup_conftests": 0.05,
+            "build_verifier_env": 0.484,
+            "total": 0.868
+          },
+          "verifier": 7.1,
+          "agent_stop_to_reward": 7.34,
+          "provider_wait": 10.8,
+          "provider_retry_wait": 0.0,
+          "agent_without_provider_wait": 0.3,
+          "cleanup": 0.988,
+          "total": 40.8
+        },
+        "delivery_valid": true,
+        "main_calls": 4,
+        "helper_calls": 1,
+        "delivery_errors": [],
+        "actual_versions": {
+          "schema": 1,
+          "identity": {
+            "agent": "opencode",
+            "harness": "acp",
+            "install_sha256": "c67e56103012b7e12464dc28773188bfd283de83ec2f2cefb0dcc2000b7b2a2d"
+          },
+          "adapter": {
+            "package": "opencode-ai",
+            "version": "1.19.5",
+            "source": "installed-package"
+          },
+          "cli": {
+            "package": "opencode-ai",
+            "version": "1.19.5",
+            "source": "installed-package"
+          },
+          "engine": {
+            "package": "opencode-ai",
+            "version": "1.19.5",
+            "source": "installed-package"
+          }
+        },
+        "raw_usage": {
+          "calls": 5,
+          "input": 57584,
+          "output": 1735,
+          "cached": 45056,
+          "complete": true
+        },
+        "shared_tools_confirmed": true,
+        "evidence_sha256": {
+          "result.json": "7bf49e222a6ab86d586741bb86d19f329d993e3b4dce71d0328627d2c280a2b9",
+          "skill-delivery.json": "8d05a4f2106f9c98197f255fe5a28bbd4ad03a0f530ef0fe17194fc004dc22b7",
+          "trajectory/llm_trajectory.jsonl": "526fb15b34d9fd0d0ad2537396076ecd32ea67e05aa85feb36db14257918755a",
+          "trajectory/acp_trajectory.jsonl": "5980e29fad26d583d36211a00151d8e261e5ad110a88ea017f404905106b59f6",
+          "shared-opencode.json": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+          "verifier/test-stdout.txt": "414b50ba2989f1124773a3a9a03e586d476bf9b83b378953250f5bf88b5c78dc"
+        },
+        "total_tokens": 59319,
+        "usage_matches_raw": true,
+        "metric_admitted": true,
+        "changed_skill": null,
+        "variant": "baseline",
+        "test_summary": {
+          "tests": 6,
+          "passed": 3,
+          "failed": 3,
+          "skipped": 0,
+          "pending": 0,
+          "other": 0,
+          "start": 1794754519.3323433,
+          "stop": 1794754519.3821666
+        },
+        "test_execution_confirmed": true,
+        "matches_healthy_oracle_digest": true,
+        "ctrf_sha256": "352ea393f3a01bfece0bea246dbbfe0868337c569a9001eedaef9fcaee5abcda",
+        "stage": "skill-structure-v3",
+        "evidence_checks": {
+          "task": "llm-prefix-cache-replay",
+          "variant": "baseline",
+          "changed_skill": null,
+          "changed_skills": null,
+          "trial": "jobs/skill-structure-v3/llm-prefix-cache-replay/baseline/2026-11-15__22-54-39/llm-prefix-cache-replay__c16bd5da",
+          "reward": 0.0,
+          "error": null,
+          "error_category": null,
+          "metric_admitted": true,
+          "evaluation_status": "native_fail",
+          "checks": {
+            "exact_png_guide_capture": true,
+            "policy_matches": true,
+            "shared_tool_receipt": true,
+            "visible_inputs_unchanged": true,
+            "task_digest_matches": true,
+            "raw_usage_matches": true,
+            "actual_verifier_execution": true,
+            "native_tool_count_matches": true
+          },
+          "captured_main_requests": 4,
+          "request_models": [
+            "deepseek-flash"
+          ],
+          "response_models": [
+            "runtime-deepseek-deepseek-flash"
+          ],
+          "http_statuses": [
+            200,
+            200,
+            200,
+            200,
+            200
+          ],
+          "usage": {
+            "calls_with_usage": 5,
+            "missing_usage": 0,
+            "input": 57584,
+            "output": 1735,
+            "cached": 45056
+          },
+          "first_successful_main_prompt_tokens": 13423,
+          "ctrf_name_group_summary": {
+            "tests": 6,
+            "passed": 3,
+            "failed": 3,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1794754519.3323433,
+            "stop": 1794754519.3821666
+          },
+          "pytest_case_summary": {
+            "passed": 7,
+            "failed": 3
+          },
+          "inputs": [
+            {
+              "path": "trace.jsonl",
+              "unchanged": true
+            },
+            {
+              "path": "config.json",
+              "unchanged": true
+            }
+          ],
+          "integrity_findings": [],
+          "raw_evidence_sha256": {
+            "result.json": "7bf49e222a6ab86d586741bb86d19f329d993e3b4dce71d0328627d2c280a2b9",
+            "trajectory/llm_trajectory.jsonl": "526fb15b34d9fd0d0ad2537396076ecd32ea67e05aa85feb36db14257918755a",
+            "trajectory/acp_trajectory.jsonl": "5980e29fad26d583d36211a00151d8e261e5ad110a88ea017f404905106b59f6",
+            "skill-delivery.json": "8d05a4f2106f9c98197f255fe5a28bbd4ad03a0f530ef0fe17194fc004dc22b7",
+            "verifier/test-stdout.txt": "414b50ba2989f1124773a3a9a03e586d476bf9b83b378953250f5bf88b5c78dc",
+            "verifier/ctrf.json": "352ea393f3a01bfece0bea246dbbfe0868337c569a9001eedaef9fcaee5abcda"
+          }
+        }
+      },
+      "trace_new": "experiments/analysis/diagram-change-traces-2026-11-16/traces/llm-prefix-cache-replay__prefix-cache-replay.md",
+      "trace_baseline": "experiments/analysis/diagram-change-traces-2026-11-16/traces/llm-prefix-cache-replay__baseline.md",
+      "changes_pct": {
+        "total_tokens": 31.413206561135553,
+        "input_tokens": 31.909905529313697,
+        "output_tokens": 14.92795389048991,
+        "estimated_cost_usd": 7.231927545225325,
+        "agent_seconds": 9.909909909909898,
+        "main_calls": 25.0,
+        "tool_calls": 66.66666666666667
+      },
+      "baseline_context": {
+        "calls": 4,
+        "first": 13423,
+        "last": 14941,
+        "average": 14194.5,
+        "first_input_repeated_component": 53692,
+        "context_growth_component": 3086,
+        "raw_input_tokens": 56778
+      },
+      "new_context": {
+        "calls": 5,
+        "first": 13473,
+        "last": 16008,
+        "average": 15030.6,
+        "first_input_repeated_component": 67365,
+        "context_growth_component": 7788,
+        "raw_input_tokens": 75153
+      }
+    },
+    {
+      "key": "energy-market-pricing__dc-power-flow",
+      "new": {
+        "task": "energy-market-pricing",
+        "arm": "dc-power-flow",
+        "status": "finished",
+        "trial": "jobs/skill-structure-v3/energy-market-pricing/dc-power-flow/2026-11-15__22-56-04/energy-market-pricing__52088b93",
+        "reward": 1.0,
+        "error": null,
+        "error_category": null,
+        "verifier_error": null,
+        "task_digest": "sha256:e722a071d27ef633f8f56ef981efa22b3cb5fbf3e02c326472908192f10c369d",
+        "tool_calls": 19,
+        "trajectory": {
+          "steps": 39,
+          "tool_call_steps": 19,
+          "user_message_steps": 1,
+          "agent_message_steps": 2,
+          "agent_thought_steps": 17,
+          "other_steps": 0,
+          "event_type_counts": {
+            "user_message": 1,
+            "agent_message": 2,
+            "tool_call": 19,
+            "agent_thought": 17
+          },
+          "tool_call_status_counts": {
+            "completed": 19
+          },
+          "partial_trajectory": false,
+          "trajectory_source": "acp"
+        },
+        "input_tokens": 574973,
+        "output_tokens": 24978,
+        "cached_tokens": 552832,
+        "estimated_cost_usd": 0.039932892,
+        "agent_seconds": 300.1,
+        "timing": {
+          "slot_wait": 0.0,
+          "environment_setup": 16.1,
+          "install_agent": 0.588,
+          "sandbox_ready": 19.377,
+          "proxy_health_wait": 0.0,
+          "firewall_power": 0.051,
+          "cloud_metadata_block": 0.722,
+          "acp_connect": 1.851,
+          "agent_setup": 2.7,
+          "agent_execution": 300.1,
+          "harden_before_verify": {
+            "kill_sandbox_user_procs": 0.029,
+            "restore_disarmed_delegates": 0.043,
+            "clear_verifier_output": 0.0,
+            "prepare_app_dir": 0.0,
+            "reclaim_disk": 0.02,
+            "freeze_workspace": 0.15,
+            "cleanup_conftests": 0.1,
+            "build_verifier_env": 0.392,
+            "total": 1.092
+          },
+          "verifier": 18.1,
+          "agent_stop_to_reward": 24.648,
+          "provider_wait": 153.6,
+          "provider_retry_wait": 0.0,
+          "agent_without_provider_wait": 146.5,
+          "cleanup": 1.169,
+          "total": 348.1
+        },
+        "delivery_valid": true,
+        "main_calls": 20,
+        "helper_calls": 1,
+        "delivery_errors": [],
+        "actual_versions": {
+          "schema": 1,
+          "identity": {
+            "agent": "opencode",
+            "harness": "acp",
+            "install_sha256": "c67e56103012b7e12464dc28773188bfd283de83ec2f2cefb0dcc2000b7b2a2d"
+          },
+          "adapter": {
+            "package": "opencode-ai",
+            "version": "1.19.5",
+            "source": "installed-package"
+          },
+          "cli": {
+            "package": "opencode-ai",
+            "version": "1.19.5",
+            "source": "installed-package"
+          },
+          "engine": {
+            "package": "opencode-ai",
+            "version": "1.19.5",
+            "source": "installed-package"
+          }
+        },
+        "raw_usage": {
+          "calls": 21,
+          "input": 574973,
+          "output": 24978,
+          "cached": 552832,
+          "complete": true
+        },
+        "shared_tools_confirmed": true,
+        "evidence_sha256": {
+          "result.json": "7707adb1aefacc564a8e138e8376d2207277c68d18863a9e0949fd4ff5ace19f",
+          "skill-delivery.json": "7088753c194c4a0ceaa1d8c45277fc9bc6f5bbfeb0f346074455fb2fba30cd0a",
+          "trajectory/llm_trajectory.jsonl": "ceab399add789d7c6e0d5ab3751044db8476cdb40f5040ac81db580058fe36f0",
+          "trajectory/acp_trajectory.jsonl": "f23576f6048c89cc23a378aab95836b303ede274996d30785d7924c7706b178c",
+          "shared-opencode.json": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+          "verifier/test-stdout.txt": "6847afbf64a05da15de8a8916dd072594058d381cada269999f9270b29027299"
+        },
+        "total_tokens": 599951,
+        "usage_matches_raw": true,
+        "metric_admitted": true,
+        "changed_skill": "dc-power-flow",
+        "variant": "dc-power-flow",
+        "test_summary": {
+          "tests": 4,
+          "passed": 4,
+          "failed": 0,
+          "skipped": 0,
+          "pending": 0,
+          "other": 0,
+          "start": 1794754896.1484673,
+          "stop": 1794754911.3044415
+        },
+        "test_execution_confirmed": true,
+        "matches_healthy_oracle_digest": true,
+        "ctrf_sha256": "675cc729f31a7f080bd5215666a5c6b04a6c572ea23a9f56319ccad4a7892163",
+        "stage": "skill-structure-v3",
+        "evidence_checks": {
+          "task": "energy-market-pricing",
+          "variant": "dc-power-flow",
+          "changed_skill": "dc-power-flow",
+          "changed_skills": null,
+          "trial": "jobs/skill-structure-v3/energy-market-pricing/dc-power-flow/2026-11-15__22-56-04/energy-market-pricing__52088b93",
+          "reward": 1.0,
+          "error": null,
+          "error_category": null,
+          "metric_admitted": true,
+          "evaluation_status": "native_pass",
+          "checks": {
+            "exact_png_guide_capture": true,
+            "policy_matches": true,
+            "shared_tool_receipt": true,
+            "visible_inputs_unchanged": true,
+            "task_digest_matches": true,
+            "raw_usage_matches": true,
+            "actual_verifier_execution": true,
+            "native_tool_count_matches": true
+          },
+          "captured_main_requests": 20,
+          "request_models": [
+            "deepseek-flash"
+          ],
+          "response_models": [
+            "runtime-deepseek-deepseek-flash"
+          ],
+          "http_statuses": [
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200
+          ],
+          "usage": {
+            "calls_with_usage": 21,
+            "missing_usage": 0,
+            "input": 574973,
+            "output": 24978,
+            "cached": 552832
+          },
+          "first_successful_main_prompt_tokens": 16519,
+          "ctrf_name_group_summary": {
+            "tests": 4,
+            "passed": 4,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1794754896.1484673,
+            "stop": 1794754911.3044415
+          },
+          "pytest_case_summary": {
+            "passed": 4
+          },
+          "inputs": [
+            {
+              "path": "network.json",
+              "unchanged": true
+            }
+          ],
+          "integrity_findings": [],
+          "raw_evidence_sha256": {
+            "result.json": "7707adb1aefacc564a8e138e8376d2207277c68d18863a9e0949fd4ff5ace19f",
+            "trajectory/llm_trajectory.jsonl": "ceab399add789d7c6e0d5ab3751044db8476cdb40f5040ac81db580058fe36f0",
+            "trajectory/acp_trajectory.jsonl": "f23576f6048c89cc23a378aab95836b303ede274996d30785d7924c7706b178c",
+            "skill-delivery.json": "7088753c194c4a0ceaa1d8c45277fc9bc6f5bbfeb0f346074455fb2fba30cd0a",
+            "verifier/test-stdout.txt": "6847afbf64a05da15de8a8916dd072594058d381cada269999f9270b29027299",
+            "verifier/ctrf.json": "675cc729f31a7f080bd5215666a5c6b04a6c572ea23a9f56319ccad4a7892163"
+          }
+        }
+      },
+      "baseline": {
+        "task": "energy-market-pricing",
+        "arm": "baseline",
+        "status": "finished",
+        "trial": "jobs/skill-structure-v3/energy-market-pricing/baseline/2026-11-15__23-01-55/energy-market-pricing__aeadbfca",
+        "reward": 1.0,
+        "error": null,
+        "error_category": null,
+        "verifier_error": null,
+        "task_digest": "sha256:e722a071d27ef633f8f56ef981efa22b3cb5fbf3e02c326472908192f10c369d",
+        "tool_calls": 13,
+        "trajectory": {
+          "steps": 26,
+          "tool_call_steps": 13,
+          "user_message_steps": 1,
+          "agent_message_steps": 1,
+          "agent_thought_steps": 11,
+          "other_steps": 0,
+          "event_type_counts": {
+            "user_message": 1,
+            "agent_thought": 11,
+            "tool_call": 13,
+            "agent_message": 1
+          },
+          "tool_call_status_counts": {
+            "completed": 13
+          },
+          "partial_trajectory": false,
+          "trajectory_source": "acp"
+        },
+        "input_tokens": 289734,
+        "output_tokens": 11954,
+        "cached_tokens": 274816,
+        "estimated_cost_usd": 0.020469096,
+        "agent_seconds": 112.9,
+        "timing": {
+          "slot_wait": 0.0,
+          "environment_setup": 14.4,
+          "install_agent": 0.563,
+          "sandbox_ready": 17.415,
+          "proxy_health_wait": 0.0,
+          "firewall_power": 0.055,
+          "cloud_metadata_block": 0.632,
+          "acp_connect": 1.859,
+          "agent_setup": 2.6,
+          "agent_execution": 112.9,
+          "harden_before_verify": {
+            "kill_sandbox_user_procs": 0.029,
+            "restore_disarmed_delegates": 0.043,
+            "clear_verifier_output": 0.0,
+            "prepare_app_dir": 0.0,
+            "reclaim_disk": 0.02,
+            "freeze_workspace": 0.15,
+            "cleanup_conftests": 0.09,
+            "build_verifier_env": 0.386,
+            "total": 1.06
+          },
+          "verifier": 17.6,
+          "agent_stop_to_reward": 24.139,
+          "provider_wait": 72.3,
+          "provider_retry_wait": 0.0,
+          "agent_without_provider_wait": 40.5,
+          "cleanup": 1.034,
+          "total": 158.3
+        },
+        "delivery_valid": true,
+        "main_calls": 12,
+        "helper_calls": 1,
+        "delivery_errors": [],
+        "actual_versions": {
+          "schema": 1,
+          "identity": {
+            "agent": "opencode",
+            "harness": "acp",
+            "install_sha256": "c67e56103012b7e12464dc28773188bfd283de83ec2f2cefb0dcc2000b7b2a2d"
+          },
+          "adapter": {
+            "package": "opencode-ai",
+            "version": "1.19.5",
+            "source": "installed-package"
+          },
+          "cli": {
+            "package": "opencode-ai",
+            "version": "1.19.5",
+            "source": "installed-package"
+          },
+          "engine": {
+            "package": "opencode-ai",
+            "version": "1.19.5",
+            "source": "installed-package"
+          }
+        },
+        "raw_usage": {
+          "calls": 13,
+          "input": 289734,
+          "output": 11954,
+          "cached": 274816,
+          "complete": true
+        },
+        "shared_tools_confirmed": true,
+        "evidence_sha256": {
+          "result.json": "31c0a9182e11ab91f7285bd4e12c96a1864a4fb2bb8924782138082257de4731",
+          "skill-delivery.json": "e9d289346d0bff88dbd61645667df0c6dea6f12a2e3a86ce43af6bed086a3e53",
+          "trajectory/llm_trajectory.jsonl": "c5aaa2d043d8af2bf2a530301db8d702ffbf93d16bbdaa26d5d9e2b298ed3010",
+          "trajectory/acp_trajectory.jsonl": "1a376e5f8b45a80592253ba3e92f6eceeacc01c31473638d406d8c8b318fe8d6",
+          "shared-opencode.json": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+          "verifier/test-stdout.txt": "4a350577954224a6d2efdae15c361e4e42164e9128b8410c09a779cd52b27b30"
+        },
+        "total_tokens": 301688,
+        "usage_matches_raw": true,
+        "metric_admitted": true,
+        "changed_skill": null,
+        "variant": "baseline",
+        "test_summary": {
+          "tests": 4,
+          "passed": 4,
+          "failed": 0,
+          "skipped": 0,
+          "pending": 0,
+          "other": 0,
+          "start": 1794755057.582988,
+          "stop": 1794755072.5026593
+        },
+        "test_execution_confirmed": true,
+        "matches_healthy_oracle_digest": true,
+        "ctrf_sha256": "a85c7f34e7b6bbc25598684c81cf41423d91cbdd2676a13f263c9e829b6beac5",
+        "stage": "skill-structure-v3",
+        "evidence_checks": {
+          "task": "energy-market-pricing",
+          "variant": "baseline",
+          "changed_skill": null,
+          "changed_skills": null,
+          "trial": "jobs/skill-structure-v3/energy-market-pricing/baseline/2026-11-15__23-01-55/energy-market-pricing__aeadbfca",
+          "reward": 1.0,
+          "error": null,
+          "error_category": null,
+          "metric_admitted": true,
+          "evaluation_status": "native_pass",
+          "checks": {
+            "exact_png_guide_capture": true,
+            "policy_matches": true,
+            "shared_tool_receipt": true,
+            "visible_inputs_unchanged": true,
+            "task_digest_matches": true,
+            "raw_usage_matches": true,
+            "actual_verifier_execution": true,
+            "native_tool_count_matches": true
+          },
+          "captured_main_requests": 12,
+          "request_models": [
+            "deepseek-flash"
+          ],
+          "response_models": [
+            "runtime-deepseek-deepseek-flash"
+          ],
+          "http_statuses": [
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200
+          ],
+          "usage": {
+            "calls_with_usage": 13,
+            "missing_usage": 0,
+            "input": 289734,
+            "output": 11954,
+            "cached": 274816
+          },
+          "first_successful_main_prompt_tokens": 16273,
+          "ctrf_name_group_summary": {
+            "tests": 4,
+            "passed": 4,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1794755057.582988,
+            "stop": 1794755072.5026593
+          },
+          "pytest_case_summary": {
+            "passed": 4
+          },
+          "inputs": [
+            {
+              "path": "network.json",
+              "unchanged": true
+            }
+          ],
+          "integrity_findings": [],
+          "raw_evidence_sha256": {
+            "result.json": "31c0a9182e11ab91f7285bd4e12c96a1864a4fb2bb8924782138082257de4731",
+            "trajectory/llm_trajectory.jsonl": "c5aaa2d043d8af2bf2a530301db8d702ffbf93d16bbdaa26d5d9e2b298ed3010",
+            "trajectory/acp_trajectory.jsonl": "1a376e5f8b45a80592253ba3e92f6eceeacc01c31473638d406d8c8b318fe8d6",
+            "skill-delivery.json": "e9d289346d0bff88dbd61645667df0c6dea6f12a2e3a86ce43af6bed086a3e53",
+            "verifier/test-stdout.txt": "4a350577954224a6d2efdae15c361e4e42164e9128b8410c09a779cd52b27b30",
+            "verifier/ctrf.json": "a85c7f34e7b6bbc25598684c81cf41423d91cbdd2676a13f263c9e829b6beac5"
+          }
+        }
+      },
+      "trace_new": "experiments/analysis/diagram-change-traces-2026-11-16/traces/energy-market-pricing__dc-power-flow.md",
+      "trace_baseline": "experiments/analysis/diagram-change-traces-2026-11-16/traces/energy-market-pricing__baseline.md",
+      "changes_pct": {
+        "total_tokens": 98.86472116888972,
+        "input_tokens": 98.44857697060061,
+        "output_tokens": 108.95097875188222,
+        "estimated_cost_usd": 95.0886937068447,
+        "agent_seconds": 165.8104517271922,
+        "main_calls": 66.66666666666667,
+        "tool_calls": 46.153846153846146
+      },
+      "baseline_context": {
+        "calls": 12,
+        "first": 16273,
+        "last": 31872,
+        "average": 24029.916666666668,
+        "first_input_repeated_component": 195276,
+        "context_growth_component": 93083,
+        "raw_input_tokens": 288359
+      },
+      "new_context": {
+        "calls": 20,
+        "first": 16519,
+        "last": 45566,
+        "average": 28679.9,
+        "first_input_repeated_component": 330380,
+        "context_growth_component": 243218,
+        "raw_input_tokens": 573598
+      }
+    },
+    {
+      "key": "energy-market-pricing__economic-dispatch",
+      "new": {
+        "task": "energy-market-pricing",
+        "arm": "economic-dispatch",
+        "status": "finished",
+        "trial": "jobs/skill-structure-v3/energy-market-pricing/economic-dispatch/2026-11-15__23-04-35/energy-market-pricing__b5d97cc7",
+        "reward": 1.0,
+        "error": null,
+        "error_category": null,
+        "verifier_error": null,
+        "task_digest": "sha256:e722a071d27ef633f8f56ef981efa22b3cb5fbf3e02c326472908192f10c369d",
+        "tool_calls": 32,
+        "trajectory": {
+          "steps": 64,
+          "tool_call_steps": 32,
+          "user_message_steps": 1,
+          "agent_message_steps": 2,
+          "agent_thought_steps": 29,
+          "other_steps": 0,
+          "event_type_counts": {
+            "user_message": 1,
+            "agent_message": 2,
+            "tool_call": 32,
+            "agent_thought": 29
+          },
+          "tool_call_status_counts": {
+            "completed": 32
+          },
+          "partial_trajectory": false,
+          "trajectory_source": "acp"
+        },
+        "input_tokens": 1191048,
+        "output_tokens": 37655,
+        "cached_tokens": 1165952,
+        "estimated_cost_usd": 0.059710512,
+        "agent_seconds": 474.8,
+        "timing": {
+          "slot_wait": 0.0,
+          "environment_setup": 15.9,
+          "install_agent": 0.572,
+          "sandbox_ready": 18.924,
+          "proxy_health_wait": 0.0,
+          "firewall_power": 0.052,
+          "cloud_metadata_block": 0.639,
+          "acp_connect": 1.888,
+          "agent_setup": 2.6,
+          "agent_execution": 474.8,
+          "harden_before_verify": {
+            "kill_sandbox_user_procs": 0.029,
+            "restore_disarmed_delegates": 0.045,
+            "clear_verifier_output": 0.0,
+            "prepare_app_dir": 0.01,
+            "reclaim_disk": 0.01,
+            "freeze_workspace": 0.1,
+            "cleanup_conftests": 0.09,
+            "build_verifier_env": 0.403,
+            "total": 0.88
+          },
+          "verifier": 17.7,
+          "agent_stop_to_reward": 18.028,
+          "provider_wait": 221.5,
+          "provider_retry_wait": 0.0,
+          "agent_without_provider_wait": 253.2,
+          "cleanup": 1.245,
+          "total": 515.8
+        },
+        "delivery_valid": true,
+        "main_calls": 33,
+        "helper_calls": 1,
+        "delivery_errors": [],
+        "actual_versions": {
+          "schema": 1,
+          "identity": {
+            "agent": "opencode",
+            "harness": "acp",
+            "install_sha256": "c67e56103012b7e12464dc28773188bfd283de83ec2f2cefb0dcc2000b7b2a2d"
+          },
+          "adapter": {
+            "package": "opencode-ai",
+            "version": "1.19.5",
+            "source": "installed-package"
+          },
+          "cli": {
+            "package": "opencode-ai",
+            "version": "1.19.5",
+            "source": "installed-package"
+          },
+          "engine": {
+            "package": "opencode-ai",
+            "version": "1.19.5",
+            "source": "installed-package"
+          }
+        },
+        "raw_usage": {
+          "calls": 34,
+          "input": 1191048,
+          "output": 37655,
+          "cached": 1165952,
+          "complete": true
+        },
+        "shared_tools_confirmed": true,
+        "evidence_sha256": {
+          "result.json": "762cda3dc3ee11bbf38be220b7c0aed43f11f1ba22f44bfe3d24563e19194e3f",
+          "skill-delivery.json": "ea6ed4027dabdde787a45b56f47d6230aec7652999878a7eecd2e50545bb450b",
+          "trajectory/llm_trajectory.jsonl": "c2639d09202fc12e907424145cb3997a931c3083abfe483f5270225f1da0cf02",
+          "trajectory/acp_trajectory.jsonl": "173101d404180a7aee44851ee2205b77d6cc47e56a4e92d2f8236af5f0eed4ca",
+          "shared-opencode.json": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+          "verifier/test-stdout.txt": "b3c178b15b6829d393cdd1895d29788353b95ceae5fdf68e3f35e7d0216687da"
+        },
+        "total_tokens": 1228703,
+        "usage_matches_raw": true,
+        "metric_admitted": true,
+        "changed_skill": "economic-dispatch",
+        "variant": "economic-dispatch",
+        "test_summary": {
+          "tests": 4,
+          "passed": 4,
+          "failed": 0,
+          "skipped": 0,
+          "pending": 0,
+          "other": 0,
+          "start": 1794755575.4038086,
+          "stop": 1794755590.4624238
+        },
+        "test_execution_confirmed": true,
+        "matches_healthy_oracle_digest": true,
+        "ctrf_sha256": "137f762e9477e6707ed9bfa4c51f1579a6b7b47255d4a0bd07dd5172b818fadf",
+        "stage": "skill-structure-v3",
+        "evidence_checks": {
+          "task": "energy-market-pricing",
+          "variant": "economic-dispatch",
+          "changed_skill": "economic-dispatch",
+          "changed_skills": null,
+          "trial": "jobs/skill-structure-v3/energy-market-pricing/economic-dispatch/2026-11-15__23-04-35/energy-market-pricing__b5d97cc7",
+          "reward": 1.0,
+          "error": null,
+          "error_category": null,
+          "metric_admitted": true,
+          "evaluation_status": "native_pass",
+          "checks": {
+            "exact_png_guide_capture": true,
+            "policy_matches": true,
+            "shared_tool_receipt": true,
+            "visible_inputs_unchanged": true,
+            "task_digest_matches": true,
+            "raw_usage_matches": true,
+            "actual_verifier_execution": true,
+            "native_tool_count_matches": true
+          },
+          "captured_main_requests": 33,
+          "request_models": [
+            "deepseek-flash"
+          ],
+          "response_models": [
+            "runtime-deepseek-deepseek-flash"
+          ],
+          "http_statuses": [
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200
+          ],
+          "usage": {
+            "calls_with_usage": 34,
+            "missing_usage": 0,
+            "input": 1191048,
+            "output": 37655,
+            "cached": 1165952
+          },
+          "first_successful_main_prompt_tokens": 16264,
+          "ctrf_name_group_summary": {
+            "tests": 4,
+            "passed": 4,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1794755575.4038086,
+            "stop": 1794755590.4624238
+          },
+          "pytest_case_summary": {
+            "passed": 4
+          },
+          "inputs": [
+            {
+              "path": "network.json",
+              "unchanged": true
+            }
+          ],
+          "integrity_findings": [],
+          "raw_evidence_sha256": {
+            "result.json": "762cda3dc3ee11bbf38be220b7c0aed43f11f1ba22f44bfe3d24563e19194e3f",
+            "trajectory/llm_trajectory.jsonl": "c2639d09202fc12e907424145cb3997a931c3083abfe483f5270225f1da0cf02",
+            "trajectory/acp_trajectory.jsonl": "173101d404180a7aee44851ee2205b77d6cc47e56a4e92d2f8236af5f0eed4ca",
+            "skill-delivery.json": "ea6ed4027dabdde787a45b56f47d6230aec7652999878a7eecd2e50545bb450b",
+            "verifier/test-stdout.txt": "b3c178b15b6829d393cdd1895d29788353b95ceae5fdf68e3f35e7d0216687da",
+            "verifier/ctrf.json": "137f762e9477e6707ed9bfa4c51f1579a6b7b47255d4a0bd07dd5172b818fadf"
+          }
+        }
+      },
+      "baseline": {
+        "task": "energy-market-pricing",
+        "arm": "baseline",
+        "status": "finished",
+        "trial": "jobs/skill-structure-v3/energy-market-pricing/baseline/2026-11-15__23-01-55/energy-market-pricing__aeadbfca",
+        "reward": 1.0,
+        "error": null,
+        "error_category": null,
+        "verifier_error": null,
+        "task_digest": "sha256:e722a071d27ef633f8f56ef981efa22b3cb5fbf3e02c326472908192f10c369d",
+        "tool_calls": 13,
+        "trajectory": {
+          "steps": 26,
+          "tool_call_steps": 13,
+          "user_message_steps": 1,
+          "agent_message_steps": 1,
+          "agent_thought_steps": 11,
+          "other_steps": 0,
+          "event_type_counts": {
+            "user_message": 1,
+            "agent_thought": 11,
+            "tool_call": 13,
+            "agent_message": 1
+          },
+          "tool_call_status_counts": {
+            "completed": 13
+          },
+          "partial_trajectory": false,
+          "trajectory_source": "acp"
+        },
+        "input_tokens": 289734,
+        "output_tokens": 11954,
+        "cached_tokens": 274816,
+        "estimated_cost_usd": 0.020469096,
+        "agent_seconds": 112.9,
+        "timing": {
+          "slot_wait": 0.0,
+          "environment_setup": 14.4,
+          "install_agent": 0.563,
+          "sandbox_ready": 17.415,
+          "proxy_health_wait": 0.0,
+          "firewall_power": 0.055,
+          "cloud_metadata_block": 0.632,
+          "acp_connect": 1.859,
+          "agent_setup": 2.6,
+          "agent_execution": 112.9,
+          "harden_before_verify": {
+            "kill_sandbox_user_procs": 0.029,
+            "restore_disarmed_delegates": 0.043,
+            "clear_verifier_output": 0.0,
+            "prepare_app_dir": 0.0,
+            "reclaim_disk": 0.02,
+            "freeze_workspace": 0.15,
+            "cleanup_conftests": 0.09,
+            "build_verifier_env": 0.386,
+            "total": 1.06
+          },
+          "verifier": 17.6,
+          "agent_stop_to_reward": 24.139,
+          "provider_wait": 72.3,
+          "provider_retry_wait": 0.0,
+          "agent_without_provider_wait": 40.5,
+          "cleanup": 1.034,
+          "total": 158.3
+        },
+        "delivery_valid": true,
+        "main_calls": 12,
+        "helper_calls": 1,
+        "delivery_errors": [],
+        "actual_versions": {
+          "schema": 1,
+          "identity": {
+            "agent": "opencode",
+            "harness": "acp",
+            "install_sha256": "c67e56103012b7e12464dc28773188bfd283de83ec2f2cefb0dcc2000b7b2a2d"
+          },
+          "adapter": {
+            "package": "opencode-ai",
+            "version": "1.19.5",
+            "source": "installed-package"
+          },
+          "cli": {
+            "package": "opencode-ai",
+            "version": "1.19.5",
+            "source": "installed-package"
+          },
+          "engine": {
+            "package": "opencode-ai",
+            "version": "1.19.5",
+            "source": "installed-package"
+          }
+        },
+        "raw_usage": {
+          "calls": 13,
+          "input": 289734,
+          "output": 11954,
+          "cached": 274816,
+          "complete": true
+        },
+        "shared_tools_confirmed": true,
+        "evidence_sha256": {
+          "result.json": "31c0a9182e11ab91f7285bd4e12c96a1864a4fb2bb8924782138082257de4731",
+          "skill-delivery.json": "e9d289346d0bff88dbd61645667df0c6dea6f12a2e3a86ce43af6bed086a3e53",
+          "trajectory/llm_trajectory.jsonl": "c5aaa2d043d8af2bf2a530301db8d702ffbf93d16bbdaa26d5d9e2b298ed3010",
+          "trajectory/acp_trajectory.jsonl": "1a376e5f8b45a80592253ba3e92f6eceeacc01c31473638d406d8c8b318fe8d6",
+          "shared-opencode.json": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+          "verifier/test-stdout.txt": "4a350577954224a6d2efdae15c361e4e42164e9128b8410c09a779cd52b27b30"
+        },
+        "total_tokens": 301688,
+        "usage_matches_raw": true,
+        "metric_admitted": true,
+        "changed_skill": null,
+        "variant": "baseline",
+        "test_summary": {
+          "tests": 4,
+          "passed": 4,
+          "failed": 0,
+          "skipped": 0,
+          "pending": 0,
+          "other": 0,
+          "start": 1794755057.582988,
+          "stop": 1794755072.5026593
+        },
+        "test_execution_confirmed": true,
+        "matches_healthy_oracle_digest": true,
+        "ctrf_sha256": "a85c7f34e7b6bbc25598684c81cf41423d91cbdd2676a13f263c9e829b6beac5",
+        "stage": "skill-structure-v3",
+        "evidence_checks": {
+          "task": "energy-market-pricing",
+          "variant": "baseline",
+          "changed_skill": null,
+          "changed_skills": null,
+          "trial": "jobs/skill-structure-v3/energy-market-pricing/baseline/2026-11-15__23-01-55/energy-market-pricing__aeadbfca",
+          "reward": 1.0,
+          "error": null,
+          "error_category": null,
+          "metric_admitted": true,
+          "evaluation_status": "native_pass",
+          "checks": {
+            "exact_png_guide_capture": true,
+            "policy_matches": true,
+            "shared_tool_receipt": true,
+            "visible_inputs_unchanged": true,
+            "task_digest_matches": true,
+            "raw_usage_matches": true,
+            "actual_verifier_execution": true,
+            "native_tool_count_matches": true
+          },
+          "captured_main_requests": 12,
+          "request_models": [
+            "deepseek-flash"
+          ],
+          "response_models": [
+            "runtime-deepseek-deepseek-flash"
+          ],
+          "http_statuses": [
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200
+          ],
+          "usage": {
+            "calls_with_usage": 13,
+            "missing_usage": 0,
+            "input": 289734,
+            "output": 11954,
+            "cached": 274816
+          },
+          "first_successful_main_prompt_tokens": 16273,
+          "ctrf_name_group_summary": {
+            "tests": 4,
+            "passed": 4,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1794755057.582988,
+            "stop": 1794755072.5026593
+          },
+          "pytest_case_summary": {
+            "passed": 4
+          },
+          "inputs": [
+            {
+              "path": "network.json",
+              "unchanged": true
+            }
+          ],
+          "integrity_findings": [],
+          "raw_evidence_sha256": {
+            "result.json": "31c0a9182e11ab91f7285bd4e12c96a1864a4fb2bb8924782138082257de4731",
+            "trajectory/llm_trajectory.jsonl": "c5aaa2d043d8af2bf2a530301db8d702ffbf93d16bbdaa26d5d9e2b298ed3010",
+            "trajectory/acp_trajectory.jsonl": "1a376e5f8b45a80592253ba3e92f6eceeacc01c31473638d406d8c8b318fe8d6",
+            "skill-delivery.json": "e9d289346d0bff88dbd61645667df0c6dea6f12a2e3a86ce43af6bed086a3e53",
+            "verifier/test-stdout.txt": "4a350577954224a6d2efdae15c361e4e42164e9128b8410c09a779cd52b27b30",
+            "verifier/ctrf.json": "a85c7f34e7b6bbc25598684c81cf41423d91cbdd2676a13f263c9e829b6beac5"
+          }
+        }
+      },
+      "trace_new": "experiments/analysis/diagram-change-traces-2026-11-16/traces/energy-market-pricing__economic-dispatch.md",
+      "trace_baseline": "experiments/analysis/diagram-change-traces-2026-11-16/traces/energy-market-pricing__baseline.md",
+      "changes_pct": {
+        "total_tokens": 307.2760600355334,
+        "input_tokens": 311.0832694816625,
+        "output_tokens": 214.99916345992972,
+        "estimated_cost_usd": 191.7105474516315,
+        "agent_seconds": 320.54915854738704,
+        "main_calls": 175.0,
+        "tool_calls": 146.15384615384616
+      },
+      "baseline_context": {
+        "calls": 12,
+        "first": 16273,
+        "last": 31872,
+        "average": 24029.916666666668,
+        "first_input_repeated_component": 195276,
+        "context_growth_component": 93083,
+        "raw_input_tokens": 288359
+      },
+      "new_context": {
+        "calls": 33,
+        "first": 16264,
+        "last": 60586,
+        "average": 36050.69696969697,
+        "first_input_repeated_component": 536712,
+        "context_growth_component": 652961,
+        "raw_input_tokens": 1189673
+      }
+    },
+    {
+      "key": "energy-market-pricing__locational-marginal-prices",
+      "new": {
+        "task": "energy-market-pricing",
+        "arm": "locational-marginal-prices",
+        "status": "finished",
+        "trial": "jobs/skill-structure-v3/energy-market-pricing/locational-marginal-prices/2026-11-15__23-13-15/energy-market-pricing__d5941249",
+        "reward": 1.0,
+        "error": null,
+        "error_category": null,
+        "verifier_error": null,
+        "task_digest": "sha256:e722a071d27ef633f8f56ef981efa22b3cb5fbf3e02c326472908192f10c369d",
+        "tool_calls": 15,
+        "trajectory": {
+          "steps": 29,
+          "tool_call_steps": 15,
+          "user_message_steps": 1,
+          "agent_message_steps": 1,
+          "agent_thought_steps": 12,
+          "other_steps": 0,
+          "event_type_counts": {
+            "user_message": 1,
+            "agent_thought": 12,
+            "tool_call": 15,
+            "agent_message": 1
+          },
+          "tool_call_status_counts": {
+            "completed": 15
+          },
+          "partial_trajectory": false,
+          "trajectory_source": "acp"
+        },
+        "input_tokens": 335015,
+        "output_tokens": 10744,
+        "cached_tokens": 315904,
+        "estimated_cost_usd": 0.020521524,
+        "agent_seconds": 127.7,
+        "timing": {
+          "slot_wait": 0.0,
+          "environment_setup": 15.7,
+          "install_agent": 0.552,
+          "sandbox_ready": 18.729,
+          "proxy_health_wait": 0.0,
+          "firewall_power": 0.054,
+          "cloud_metadata_block": 0.627,
+          "acp_connect": 1.796,
+          "agent_setup": 2.5,
+          "agent_execution": 127.7,
+          "harden_before_verify": {
+            "kill_sandbox_user_procs": 0.03,
+            "restore_disarmed_delegates": 0.043,
+            "clear_verifier_output": 0.0,
+            "prepare_app_dir": 0.0,
+            "reclaim_disk": 0.02,
+            "freeze_workspace": 0.15,
+            "cleanup_conftests": 0.09,
+            "build_verifier_env": 0.406,
+            "total": 1.082
+          },
+          "verifier": 17.6,
+          "agent_stop_to_reward": 24.098,
+          "provider_wait": 62.4,
+          "provider_retry_wait": 0.0,
+          "agent_without_provider_wait": 65.3,
+          "cleanup": 1.122,
+          "total": 174.4
+        },
+        "delivery_valid": true,
+        "main_calls": 14,
+        "helper_calls": 1,
+        "delivery_errors": [],
+        "actual_versions": {
+          "schema": 1,
+          "identity": {
+            "agent": "opencode",
+            "harness": "acp",
+            "install_sha256": "c67e56103012b7e12464dc28773188bfd283de83ec2f2cefb0dcc2000b7b2a2d"
+          },
+          "adapter": {
+            "package": "opencode-ai",
+            "version": "1.19.5",
+            "source": "installed-package"
+          },
+          "cli": {
+            "package": "opencode-ai",
+            "version": "1.19.5",
+            "source": "installed-package"
+          },
+          "engine": {
+            "package": "opencode-ai",
+            "version": "1.19.5",
+            "source": "installed-package"
+          }
+        },
+        "raw_usage": {
+          "calls": 15,
+          "input": 335015,
+          "output": 10744,
+          "cached": 315904,
+          "complete": true
+        },
+        "shared_tools_confirmed": true,
+        "evidence_sha256": {
+          "result.json": "820834a2e9c957f4ac1301c9a1c4611d6041412db3c87b0f4abb5905a091f07f",
+          "skill-delivery.json": "51e6a6ebcc7895e26900136f1a4bffb9788d56d1a03d74ac327c9dc8906b18a6",
+          "trajectory/llm_trajectory.jsonl": "f7d6c36282dd1b99f3d0ede8c0688b90e6256fa1a6191f718fbb2bd9d7fdd57e",
+          "trajectory/acp_trajectory.jsonl": "eaa9675d8cd1ea5ad591e0d60a145339ce514b98b29ad4aeedb2ace995062da9",
+          "shared-opencode.json": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+          "verifier/test-stdout.txt": "135d86f9cbecc4fc92e60783a0e2c088e8c05228652d080e4fc1948bb9f6e92e"
+        },
+        "total_tokens": 345759,
+        "usage_matches_raw": true,
+        "metric_admitted": true,
+        "changed_skill": "locational-marginal-prices",
+        "variant": "locational-marginal-prices",
+        "test_summary": {
+          "tests": 4,
+          "passed": 4,
+          "failed": 0,
+          "skipped": 0,
+          "pending": 0,
+          "other": 0,
+          "start": 1794755753.7356303,
+          "stop": 1794755768.5938754
+        },
+        "test_execution_confirmed": true,
+        "matches_healthy_oracle_digest": true,
+        "ctrf_sha256": "443876e1644a21592d90994cd5fbb544bc8d4ed686162dd57168fafe8a672e86",
+        "stage": "skill-structure-v3",
+        "evidence_checks": {
+          "task": "energy-market-pricing",
+          "variant": "locational-marginal-prices",
+          "changed_skill": "locational-marginal-prices",
+          "changed_skills": null,
+          "trial": "jobs/skill-structure-v3/energy-market-pricing/locational-marginal-prices/2026-11-15__23-13-15/energy-market-pricing__d5941249",
+          "reward": 1.0,
+          "error": null,
+          "error_category": null,
+          "metric_admitted": true,
+          "evaluation_status": "native_pass",
+          "checks": {
+            "exact_png_guide_capture": true,
+            "policy_matches": true,
+            "shared_tool_receipt": true,
+            "visible_inputs_unchanged": true,
+            "task_digest_matches": true,
+            "raw_usage_matches": true,
+            "actual_verifier_execution": true,
+            "native_tool_count_matches": true
+          },
+          "captured_main_requests": 14,
+          "request_models": [
+            "deepseek-flash"
+          ],
+          "response_models": [
+            "runtime-deepseek-deepseek-flash"
+          ],
+          "http_statuses": [
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200
+          ],
+          "usage": {
+            "calls_with_usage": 15,
+            "missing_usage": 0,
+            "input": 335015,
+            "output": 10744,
+            "cached": 315904
+          },
+          "first_successful_main_prompt_tokens": 16699,
+          "ctrf_name_group_summary": {
+            "tests": 4,
+            "passed": 4,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1794755753.7356303,
+            "stop": 1794755768.5938754
+          },
+          "pytest_case_summary": {
+            "passed": 4
+          },
+          "inputs": [
+            {
+              "path": "network.json",
+              "unchanged": true
+            }
+          ],
+          "integrity_findings": [],
+          "raw_evidence_sha256": {
+            "result.json": "820834a2e9c957f4ac1301c9a1c4611d6041412db3c87b0f4abb5905a091f07f",
+            "trajectory/llm_trajectory.jsonl": "f7d6c36282dd1b99f3d0ede8c0688b90e6256fa1a6191f718fbb2bd9d7fdd57e",
+            "trajectory/acp_trajectory.jsonl": "eaa9675d8cd1ea5ad591e0d60a145339ce514b98b29ad4aeedb2ace995062da9",
+            "skill-delivery.json": "51e6a6ebcc7895e26900136f1a4bffb9788d56d1a03d74ac327c9dc8906b18a6",
+            "verifier/test-stdout.txt": "135d86f9cbecc4fc92e60783a0e2c088e8c05228652d080e4fc1948bb9f6e92e",
+            "verifier/ctrf.json": "443876e1644a21592d90994cd5fbb544bc8d4ed686162dd57168fafe8a672e86"
+          }
+        }
+      },
+      "baseline": {
+        "task": "energy-market-pricing",
+        "arm": "baseline",
+        "status": "finished",
+        "trial": "jobs/skill-structure-v3/energy-market-pricing/baseline/2026-11-15__23-01-55/energy-market-pricing__aeadbfca",
+        "reward": 1.0,
+        "error": null,
+        "error_category": null,
+        "verifier_error": null,
+        "task_digest": "sha256:e722a071d27ef633f8f56ef981efa22b3cb5fbf3e02c326472908192f10c369d",
+        "tool_calls": 13,
+        "trajectory": {
+          "steps": 26,
+          "tool_call_steps": 13,
+          "user_message_steps": 1,
+          "agent_message_steps": 1,
+          "agent_thought_steps": 11,
+          "other_steps": 0,
+          "event_type_counts": {
+            "user_message": 1,
+            "agent_thought": 11,
+            "tool_call": 13,
+            "agent_message": 1
+          },
+          "tool_call_status_counts": {
+            "completed": 13
+          },
+          "partial_trajectory": false,
+          "trajectory_source": "acp"
+        },
+        "input_tokens": 289734,
+        "output_tokens": 11954,
+        "cached_tokens": 274816,
+        "estimated_cost_usd": 0.020469096,
+        "agent_seconds": 112.9,
+        "timing": {
+          "slot_wait": 0.0,
+          "environment_setup": 14.4,
+          "install_agent": 0.563,
+          "sandbox_ready": 17.415,
+          "proxy_health_wait": 0.0,
+          "firewall_power": 0.055,
+          "cloud_metadata_block": 0.632,
+          "acp_connect": 1.859,
+          "agent_setup": 2.6,
+          "agent_execution": 112.9,
+          "harden_before_verify": {
+            "kill_sandbox_user_procs": 0.029,
+            "restore_disarmed_delegates": 0.043,
+            "clear_verifier_output": 0.0,
+            "prepare_app_dir": 0.0,
+            "reclaim_disk": 0.02,
+            "freeze_workspace": 0.15,
+            "cleanup_conftests": 0.09,
+            "build_verifier_env": 0.386,
+            "total": 1.06
+          },
+          "verifier": 17.6,
+          "agent_stop_to_reward": 24.139,
+          "provider_wait": 72.3,
+          "provider_retry_wait": 0.0,
+          "agent_without_provider_wait": 40.5,
+          "cleanup": 1.034,
+          "total": 158.3
+        },
+        "delivery_valid": true,
+        "main_calls": 12,
+        "helper_calls": 1,
+        "delivery_errors": [],
+        "actual_versions": {
+          "schema": 1,
+          "identity": {
+            "agent": "opencode",
+            "harness": "acp",
+            "install_sha256": "c67e56103012b7e12464dc28773188bfd283de83ec2f2cefb0dcc2000b7b2a2d"
+          },
+          "adapter": {
+            "package": "opencode-ai",
+            "version": "1.19.5",
+            "source": "installed-package"
+          },
+          "cli": {
+            "package": "opencode-ai",
+            "version": "1.19.5",
+            "source": "installed-package"
+          },
+          "engine": {
+            "package": "opencode-ai",
+            "version": "1.19.5",
+            "source": "installed-package"
+          }
+        },
+        "raw_usage": {
+          "calls": 13,
+          "input": 289734,
+          "output": 11954,
+          "cached": 274816,
+          "complete": true
+        },
+        "shared_tools_confirmed": true,
+        "evidence_sha256": {
+          "result.json": "31c0a9182e11ab91f7285bd4e12c96a1864a4fb2bb8924782138082257de4731",
+          "skill-delivery.json": "e9d289346d0bff88dbd61645667df0c6dea6f12a2e3a86ce43af6bed086a3e53",
+          "trajectory/llm_trajectory.jsonl": "c5aaa2d043d8af2bf2a530301db8d702ffbf93d16bbdaa26d5d9e2b298ed3010",
+          "trajectory/acp_trajectory.jsonl": "1a376e5f8b45a80592253ba3e92f6eceeacc01c31473638d406d8c8b318fe8d6",
+          "shared-opencode.json": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+          "verifier/test-stdout.txt": "4a350577954224a6d2efdae15c361e4e42164e9128b8410c09a779cd52b27b30"
+        },
+        "total_tokens": 301688,
+        "usage_matches_raw": true,
+        "metric_admitted": true,
+        "changed_skill": null,
+        "variant": "baseline",
+        "test_summary": {
+          "tests": 4,
+          "passed": 4,
+          "failed": 0,
+          "skipped": 0,
+          "pending": 0,
+          "other": 0,
+          "start": 1794755057.582988,
+          "stop": 1794755072.5026593
+        },
+        "test_execution_confirmed": true,
+        "matches_healthy_oracle_digest": true,
+        "ctrf_sha256": "a85c7f34e7b6bbc25598684c81cf41423d91cbdd2676a13f263c9e829b6beac5",
+        "stage": "skill-structure-v3",
+        "evidence_checks": {
+          "task": "energy-market-pricing",
+          "variant": "baseline",
+          "changed_skill": null,
+          "changed_skills": null,
+          "trial": "jobs/skill-structure-v3/energy-market-pricing/baseline/2026-11-15__23-01-55/energy-market-pricing__aeadbfca",
+          "reward": 1.0,
+          "error": null,
+          "error_category": null,
+          "metric_admitted": true,
+          "evaluation_status": "native_pass",
+          "checks": {
+            "exact_png_guide_capture": true,
+            "policy_matches": true,
+            "shared_tool_receipt": true,
+            "visible_inputs_unchanged": true,
+            "task_digest_matches": true,
+            "raw_usage_matches": true,
+            "actual_verifier_execution": true,
+            "native_tool_count_matches": true
+          },
+          "captured_main_requests": 12,
+          "request_models": [
+            "deepseek-flash"
+          ],
+          "response_models": [
+            "runtime-deepseek-deepseek-flash"
+          ],
+          "http_statuses": [
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200
+          ],
+          "usage": {
+            "calls_with_usage": 13,
+            "missing_usage": 0,
+            "input": 289734,
+            "output": 11954,
+            "cached": 274816
+          },
+          "first_successful_main_prompt_tokens": 16273,
+          "ctrf_name_group_summary": {
+            "tests": 4,
+            "passed": 4,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1794755057.582988,
+            "stop": 1794755072.5026593
+          },
+          "pytest_case_summary": {
+            "passed": 4
+          },
+          "inputs": [
+            {
+              "path": "network.json",
+              "unchanged": true
+            }
+          ],
+          "integrity_findings": [],
+          "raw_evidence_sha256": {
+            "result.json": "31c0a9182e11ab91f7285bd4e12c96a1864a4fb2bb8924782138082257de4731",
+            "trajectory/llm_trajectory.jsonl": "c5aaa2d043d8af2bf2a530301db8d702ffbf93d16bbdaa26d5d9e2b298ed3010",
+            "trajectory/acp_trajectory.jsonl": "1a376e5f8b45a80592253ba3e92f6eceeacc01c31473638d406d8c8b318fe8d6",
+            "skill-delivery.json": "e9d289346d0bff88dbd61645667df0c6dea6f12a2e3a86ce43af6bed086a3e53",
+            "verifier/test-stdout.txt": "4a350577954224a6d2efdae15c361e4e42164e9128b8410c09a779cd52b27b30",
+            "verifier/ctrf.json": "a85c7f34e7b6bbc25598684c81cf41423d91cbdd2676a13f263c9e829b6beac5"
+          }
+        }
+      },
+      "trace_new": "experiments/analysis/diagram-change-traces-2026-11-16/traces/energy-market-pricing__locational-marginal-prices.md",
+      "trace_baseline": "experiments/analysis/diagram-change-traces-2026-11-16/traces/energy-market-pricing__baseline.md",
+      "changes_pct": {
+        "total_tokens": 14.608138209010635,
+        "input_tokens": 15.6284730131776,
+        "output_tokens": -10.122134850259323,
+        "estimated_cost_usd": 0.2561324642768703,
+        "agent_seconds": 13.108945969884855,
+        "main_calls": 16.666666666666675,
+        "tool_calls": 15.384615384615374
+      },
+      "baseline_context": {
+        "calls": 12,
+        "first": 16273,
+        "last": 31872,
+        "average": 24029.916666666668,
+        "first_input_repeated_component": 195276,
+        "context_growth_component": 93083,
+        "raw_input_tokens": 288359
+      },
+      "new_context": {
+        "calls": 14,
+        "first": 16699,
+        "last": 30356,
+        "average": 23831.428571428572,
+        "first_input_repeated_component": 233786,
+        "context_growth_component": 99854,
+        "raw_input_tokens": 333640
+      }
+    },
+    {
+      "key": "r2r-mpc-control__finite-horizon-lqr",
+      "new": {
+        "task": "r2r-mpc-control",
+        "arm": "finite-horizon-lqr",
+        "status": "finished",
+        "trial": "jobs/skill-structure-v3/r2r-mpc-control/finite-horizon-lqr/2026-11-15__23-18-38/r2r-mpc-control__6b5d4442",
+        "reward": 1.0,
+        "error": null,
+        "error_category": null,
+        "verifier_error": null,
+        "task_digest": "sha256:56caf760c2411c1d1e4fb20faa30c82a1a1de4b58fbfafe03fcce5e3d6d1f31b",
+        "tool_calls": 27,
+        "trajectory": {
+          "steps": 52,
+          "tool_call_steps": 27,
+          "user_message_steps": 1,
+          "agent_message_steps": 1,
+          "agent_thought_steps": 23,
+          "other_steps": 0,
+          "event_type_counts": {
+            "user_message": 1,
+            "agent_thought": 23,
+            "tool_call": 27,
+            "agent_message": 1
+          },
+          "tool_call_status_counts": {
+            "completed": 25,
+            "failed": 2
+          },
+          "partial_trajectory": false,
+          "trajectory_source": "acp"
+        },
+        "input_tokens": 974776,
+        "output_tokens": 29085,
+        "cached_tokens": 934656,
+        "estimated_cost_usd": 0.052545936,
+        "agent_seconds": 432.1,
+        "timing": {
+          "slot_wait": 0.0,
+          "environment_setup": 16.3,
+          "install_agent": 0.652,
+          "sandbox_ready": 19.174,
+          "proxy_health_wait": 0.0,
+          "firewall_power": 0.054,
+          "cloud_metadata_block": 0.692,
+          "acp_connect": 1.208,
+          "agent_setup": 2.0,
+          "agent_execution": 432.1,
+          "harden_before_verify": {
+            "kill_sandbox_user_procs": 0.029,
+            "restore_disarmed_delegates": 0.045,
+            "clear_verifier_output": 0.0,
+            "prepare_app_dir": 0.0,
+            "reclaim_disk": 0.01,
+            "freeze_workspace": 0.13,
+            "cleanup_conftests": 0.08,
+            "build_verifier_env": 0.371,
+            "total": 0.966
+          },
+          "verifier": 2.9,
+          "agent_stop_to_reward": 9.408,
+          "provider_wait": 163.3,
+          "provider_retry_wait": 0.0,
+          "agent_without_provider_wait": 268.8,
+          "cleanup": 1.098,
+          "total": 464.0
+        },
+        "delivery_valid": true,
+        "main_calls": 25,
+        "helper_calls": 1,
+        "delivery_errors": [],
+        "actual_versions": {
+          "schema": 1,
+          "identity": {
+            "agent": "opencode",
+            "harness": "acp",
+            "install_sha256": "c67e56103012b7e12464dc28773188bfd283de83ec2f2cefb0dcc2000b7b2a2d"
+          },
+          "adapter": {
+            "package": "opencode-ai",
+            "version": "1.19.5",
+            "source": "installed-package"
+          },
+          "cli": {
+            "package": "opencode-ai",
+            "version": "1.19.5",
+            "source": "installed-package"
+          },
+          "engine": {
+            "package": "opencode-ai",
+            "version": "1.19.5",
+            "source": "installed-package"
+          }
+        },
+        "raw_usage": {
+          "calls": 26,
+          "input": 974776,
+          "output": 29085,
+          "cached": 934656,
+          "complete": true
+        },
+        "shared_tools_confirmed": true,
+        "evidence_sha256": {
+          "result.json": "469c07ada424abef7e6a6eadaffed7be2f9e04ec8e47f9397620b8368105db27",
+          "skill-delivery.json": "f765638e57dcd1304e288b452f65322e252e416dadd460bd44ce4494a30c8140",
+          "trajectory/llm_trajectory.jsonl": "ef5ba9984314cce7360f544592b6b2500a0d7f248d8bc661c36821f15a724415",
+          "trajectory/acp_trajectory.jsonl": "769ec8000173fb92318f1b1d2af9c233a9e67caa22262f9292c9381bbfc5e279",
+          "shared-opencode.json": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+          "verifier/test-stdout.txt": "55d5665ca8d7ca89f8926d3586ec239f3f04d540adae7123a04cb4ad43b136c3"
+        },
+        "total_tokens": 1003861,
+        "usage_matches_raw": true,
+        "metric_admitted": true,
+        "changed_skill": "finite-horizon-lqr",
+        "variant": "finite-horizon-lqr",
+        "test_summary": {
+          "tests": 6,
+          "passed": 6,
+          "failed": 0,
+          "skipped": 0,
+          "pending": 0,
+          "other": 0,
+          "start": 1794756380.962564,
+          "stop": 1794756381.3447082
+        },
+        "test_execution_confirmed": true,
+        "matches_healthy_oracle_digest": true,
+        "ctrf_sha256": "7df8a735990dd3422e1dc9a2eeceffe52ba6a943d16d5fdc210aec569198d9a0",
+        "stage": "skill-structure-v3",
+        "evidence_checks": {
+          "task": "r2r-mpc-control",
+          "variant": "finite-horizon-lqr",
+          "changed_skill": "finite-horizon-lqr",
+          "changed_skills": null,
+          "trial": "jobs/skill-structure-v3/r2r-mpc-control/finite-horizon-lqr/2026-11-15__23-18-38/r2r-mpc-control__6b5d4442",
+          "reward": 1.0,
+          "error": null,
+          "error_category": null,
+          "metric_admitted": true,
+          "evaluation_status": "native_pass",
+          "checks": {
+            "exact_png_guide_capture": true,
+            "policy_matches": true,
+            "shared_tool_receipt": true,
+            "visible_inputs_unchanged": true,
+            "task_digest_matches": true,
+            "raw_usage_matches": true,
+            "actual_verifier_execution": true,
+            "native_tool_count_matches": true
+          },
+          "captured_main_requests": 25,
+          "request_models": [
+            "deepseek-flash"
+          ],
+          "response_models": [
+            "runtime-deepseek-deepseek-flash"
+          ],
+          "http_statuses": [
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200
+          ],
+          "usage": {
+            "calls_with_usage": 26,
+            "missing_usage": 0,
+            "input": 974776,
+            "output": 29085,
+            "cached": 934656
+          },
+          "first_successful_main_prompt_tokens": 12248,
+          "ctrf_name_group_summary": {
+            "tests": 6,
+            "passed": 6,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1794756380.962564,
+            "stop": 1794756381.3447082
+          },
+          "pytest_case_summary": {
+            "passed": 6
+          },
+          "inputs": [
+            {
+              "path": "r2r_simulator.py",
+              "unchanged": true
+            },
+            {
+              "path": "system_config.json",
+              "unchanged": true
+            }
+          ],
+          "integrity_findings": [],
+          "raw_evidence_sha256": {
+            "result.json": "469c07ada424abef7e6a6eadaffed7be2f9e04ec8e47f9397620b8368105db27",
+            "trajectory/llm_trajectory.jsonl": "ef5ba9984314cce7360f544592b6b2500a0d7f248d8bc661c36821f15a724415",
+            "trajectory/acp_trajectory.jsonl": "769ec8000173fb92318f1b1d2af9c233a9e67caa22262f9292c9381bbfc5e279",
+            "skill-delivery.json": "f765638e57dcd1304e288b452f65322e252e416dadd460bd44ce4494a30c8140",
+            "verifier/test-stdout.txt": "55d5665ca8d7ca89f8926d3586ec239f3f04d540adae7123a04cb4ad43b136c3",
+            "verifier/ctrf.json": "7df8a735990dd3422e1dc9a2eeceffe52ba6a943d16d5fdc210aec569198d9a0"
+          }
+        }
+      },
+      "baseline": {
+        "task": "r2r-mpc-control",
+        "arm": "baseline",
+        "status": "finished",
+        "trial": "jobs/skill-structure-v3/r2r-mpc-control/baseline/2026-11-15__23-16-12/r2r-mpc-control__2e03bd55",
+        "reward": 1.0,
+        "error": null,
+        "error_category": null,
+        "verifier_error": null,
+        "task_digest": "sha256:56caf760c2411c1d1e4fb20faa30c82a1a1de4b58fbfafe03fcce5e3d6d1f31b",
+        "tool_calls": 18,
+        "trajectory": {
+          "steps": 33,
+          "tool_call_steps": 18,
+          "user_message_steps": 1,
+          "agent_message_steps": 1,
+          "agent_thought_steps": 13,
+          "other_steps": 0,
+          "event_type_counts": {
+            "user_message": 1,
+            "agent_thought": 13,
+            "tool_call": 18,
+            "agent_message": 1
+          },
+          "tool_call_status_counts": {
+            "completed": 18
+          },
+          "partial_trajectory": false,
+          "trajectory_source": "acp"
+        },
+        "input_tokens": 467725,
+        "output_tokens": 18246,
+        "cached_tokens": 450176,
+        "estimated_cost_usd": 0.029860956,
+        "agent_seconds": 113.5,
+        "timing": {
+          "slot_wait": 0.0,
+          "environment_setup": 14.5,
+          "install_agent": 0.567,
+          "sandbox_ready": 17.302,
+          "proxy_health_wait": 0.0,
+          "firewall_power": 0.056,
+          "cloud_metadata_block": 0.638,
+          "acp_connect": 1.246,
+          "agent_setup": 2.0,
+          "agent_execution": 113.5,
+          "harden_before_verify": {
+            "kill_sandbox_user_procs": 0.029,
+            "restore_disarmed_delegates": 0.043,
+            "clear_verifier_output": 0.0,
+            "prepare_app_dir": 0.0,
+            "reclaim_disk": 0.01,
+            "freeze_workspace": 0.13,
+            "cleanup_conftests": 0.07,
+            "build_verifier_env": 0.379,
+            "total": 1.005
+          },
+          "verifier": 2.8,
+          "agent_stop_to_reward": 9.241,
+          "provider_wait": 99.9,
+          "provider_retry_wait": 0.0,
+          "agent_without_provider_wait": 13.6,
+          "cleanup": 1.123,
+          "total": 143.4
+        },
+        "delivery_valid": true,
+        "main_calls": 18,
+        "helper_calls": 1,
+        "delivery_errors": [],
+        "actual_versions": {
+          "schema": 1,
+          "identity": {
+            "agent": "opencode",
+            "harness": "acp",
+            "install_sha256": "c67e56103012b7e12464dc28773188bfd283de83ec2f2cefb0dcc2000b7b2a2d"
+          },
+          "adapter": {
+            "package": "opencode-ai",
+            "version": "1.19.5",
+            "source": "installed-package"
+          },
+          "cli": {
+            "package": "opencode-ai",
+            "version": "1.19.5",
+            "source": "installed-package"
+          },
+          "engine": {
+            "package": "opencode-ai",
+            "version": "1.19.5",
+            "source": "installed-package"
+          }
+        },
+        "raw_usage": {
+          "calls": 19,
+          "input": 467725,
+          "output": 18246,
+          "cached": 450176,
+          "complete": true
+        },
+        "shared_tools_confirmed": true,
+        "evidence_sha256": {
+          "result.json": "0fcae579f60f6e1997d16b5dd024a47ddd5ce148146e69298ab0906cca6ee1df",
+          "skill-delivery.json": "f3dc5f3951e5bf02e1a40e11496752911642fb0868e83d9bb7729aafe01713e6",
+          "trajectory/llm_trajectory.jsonl": "47281fad97fad28629f2d9f080e41058fdda751c1a26d1c4153b9153a8c98bca",
+          "trajectory/acp_trajectory.jsonl": "8d3cccd342a3b5af87648fa36b618118379bae39da0130eacb03c8d7c1e04401",
+          "shared-opencode.json": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+          "verifier/test-stdout.txt": "5fe05b6044581fcecd0fb6140c6f9230d3e00224a74f3921b8b681278b5b2d2e"
+        },
+        "total_tokens": 485971,
+        "usage_matches_raw": true,
+        "metric_admitted": true,
+        "changed_skill": null,
+        "variant": "baseline",
+        "test_summary": {
+          "tests": 6,
+          "passed": 6,
+          "failed": 0,
+          "skipped": 0,
+          "pending": 0,
+          "other": 0,
+          "start": 1794755914.4475477,
+          "stop": 1794755914.7440922
+        },
+        "test_execution_confirmed": true,
+        "matches_healthy_oracle_digest": true,
+        "ctrf_sha256": "a9671771262f28a558e91a506b3948ec357b277234f5f2cc88481d42d2902ea7",
+        "stage": "skill-structure-v3",
+        "evidence_checks": {
+          "task": "r2r-mpc-control",
+          "variant": "baseline",
+          "changed_skill": null,
+          "changed_skills": null,
+          "trial": "jobs/skill-structure-v3/r2r-mpc-control/baseline/2026-11-15__23-16-12/r2r-mpc-control__2e03bd55",
+          "reward": 1.0,
+          "error": null,
+          "error_category": null,
+          "metric_admitted": true,
+          "evaluation_status": "native_pass",
+          "checks": {
+            "exact_png_guide_capture": true,
+            "policy_matches": true,
+            "shared_tool_receipt": true,
+            "visible_inputs_unchanged": true,
+            "task_digest_matches": true,
+            "raw_usage_matches": true,
+            "actual_verifier_execution": true,
+            "native_tool_count_matches": true
+          },
+          "captured_main_requests": 18,
+          "request_models": [
+            "deepseek-flash"
+          ],
+          "response_models": [
+            "runtime-deepseek-deepseek-flash"
+          ],
+          "http_statuses": [
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200
+          ],
+          "usage": {
+            "calls_with_usage": 19,
+            "missing_usage": 0,
+            "input": 467725,
+            "output": 18246,
+            "cached": 450176
+          },
+          "first_successful_main_prompt_tokens": 12019,
+          "ctrf_name_group_summary": {
+            "tests": 6,
+            "passed": 6,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1794755914.4475477,
+            "stop": 1794755914.7440922
+          },
+          "pytest_case_summary": {
+            "passed": 6
+          },
+          "inputs": [
+            {
+              "path": "r2r_simulator.py",
+              "unchanged": true
+            },
+            {
+              "path": "system_config.json",
+              "unchanged": true
+            }
+          ],
+          "integrity_findings": [],
+          "raw_evidence_sha256": {
+            "result.json": "0fcae579f60f6e1997d16b5dd024a47ddd5ce148146e69298ab0906cca6ee1df",
+            "trajectory/llm_trajectory.jsonl": "47281fad97fad28629f2d9f080e41058fdda751c1a26d1c4153b9153a8c98bca",
+            "trajectory/acp_trajectory.jsonl": "8d3cccd342a3b5af87648fa36b618118379bae39da0130eacb03c8d7c1e04401",
+            "skill-delivery.json": "f3dc5f3951e5bf02e1a40e11496752911642fb0868e83d9bb7729aafe01713e6",
+            "verifier/test-stdout.txt": "5fe05b6044581fcecd0fb6140c6f9230d3e00224a74f3921b8b681278b5b2d2e",
+            "verifier/ctrf.json": "a9671771262f28a558e91a506b3948ec357b277234f5f2cc88481d42d2902ea7"
+          }
+        }
+      },
+      "trace_new": "experiments/analysis/diagram-change-traces-2026-11-16/traces/r2r-mpc-control__finite-horizon-lqr.md",
+      "trace_baseline": "experiments/analysis/diagram-change-traces-2026-11-16/traces/r2r-mpc-control__baseline.md",
+      "changes_pct": {
+        "total_tokens": 106.5680873961615,
+        "input_tokens": 108.40793201133145,
+        "output_tokens": 59.40480105228543,
+        "estimated_cost_usd": 75.96869972950631,
+        "agent_seconds": 280.704845814978,
+        "main_calls": 38.888888888888886,
+        "tool_calls": 50.0
+      },
+      "baseline_context": {
+        "calls": 18,
+        "first": 12019,
+        "last": 40338,
+        "average": 25915.722222222223,
+        "first_input_repeated_component": 216342,
+        "context_growth_component": 250141,
+        "raw_input_tokens": 466483
+      },
+      "new_context": {
+        "calls": 25,
+        "first": 12248,
+        "last": 73839,
+        "average": 38941.36,
+        "first_input_repeated_component": 306200,
+        "context_growth_component": 667334,
+        "raw_input_tokens": 973534
+      }
+    },
+    {
+      "key": "r2r-mpc-control__combined",
+      "new": {
+        "task": "r2r-mpc-control",
+        "arm": "combined",
+        "status": "finished",
+        "trial": "jobs/skill-structure-v3-combined/r2r-mpc-control/combined/2026-11-15__23-27-46/r2r-mpc-control__2f465008",
+        "reward": 1.0,
+        "error": null,
+        "error_category": null,
+        "verifier_error": null,
+        "task_digest": "sha256:56caf760c2411c1d1e4fb20faa30c82a1a1de4b58fbfafe03fcce5e3d6d1f31b",
+        "tool_calls": 20,
+        "trajectory": {
+          "steps": 39,
+          "tool_call_steps": 20,
+          "user_message_steps": 1,
+          "agent_message_steps": 1,
+          "agent_thought_steps": 17,
+          "other_steps": 0,
+          "event_type_counts": {
+            "user_message": 1,
+            "agent_thought": 17,
+            "tool_call": 20,
+            "agent_message": 1
+          },
+          "tool_call_status_counts": {
+            "completed": 20
+          },
+          "partial_trajectory": false,
+          "trajectory_source": "acp"
+        },
+        "input_tokens": 634167,
+        "output_tokens": 19918,
+        "cached_tokens": 608256,
+        "estimated_cost_usd": 0.035324436,
+        "agent_seconds": 133.6,
+        "timing": {
+          "slot_wait": 0.0,
+          "environment_setup": 16.2,
+          "install_agent": 0.563,
+          "sandbox_ready": 18.919,
+          "proxy_health_wait": 0.0,
+          "firewall_power": 0.052,
+          "cloud_metadata_block": 0.678,
+          "acp_connect": 1.272,
+          "agent_setup": 2.1,
+          "agent_execution": 133.6,
+          "harden_before_verify": {
+            "kill_sandbox_user_procs": 0.028,
+            "restore_disarmed_delegates": 0.042,
+            "clear_verifier_output": 0.0,
+            "prepare_app_dir": 0.0,
+            "reclaim_disk": 0.02,
+            "freeze_workspace": 0.12,
+            "cleanup_conftests": 0.08,
+            "build_verifier_env": 0.38,
+            "total": 0.971
+          },
+          "verifier": 2.8,
+          "agent_stop_to_reward": 9.534,
+          "provider_wait": 106.2,
+          "provider_retry_wait": 0.0,
+          "agent_without_provider_wait": 27.4,
+          "cleanup": 1.106,
+          "total": 165.5
+        },
+        "delivery_valid": true,
+        "main_calls": 20,
+        "helper_calls": 1,
+        "delivery_errors": [],
+        "actual_versions": {
+          "schema": 1,
+          "identity": {
+            "agent": "opencode",
+            "harness": "acp",
+            "install_sha256": "c67e56103012b7e12464dc28773188bfd283de83ec2f2cefb0dcc2000b7b2a2d"
+          },
+          "adapter": {
+            "package": "opencode-ai",
+            "version": "1.19.5",
+            "source": "installed-package"
+          },
+          "cli": {
+            "package": "opencode-ai",
+            "version": "1.19.5",
+            "source": "installed-package"
+          },
+          "engine": {
+            "package": "opencode-ai",
+            "version": "1.19.5",
+            "source": "installed-package"
+          }
+        },
+        "raw_usage": {
+          "calls": 21,
+          "input": 634167,
+          "output": 19918,
+          "cached": 608256,
+          "complete": true
+        },
+        "shared_tools_confirmed": true,
+        "evidence_sha256": {
+          "result.json": "cf5ad599ef4f3885bd0dfe598ceb5aac9279039615e4842c670ff05234633591",
+          "skill-delivery.json": "b5158f2aac408882c0ccf70b0c6447aee10493e8bbbfedbda872f9a35e074653",
+          "trajectory/llm_trajectory.jsonl": "3ba20d2eca4aca9cd3f3a365669d7b13ce139ff3b3b92e2c12ff9d9969725449",
+          "trajectory/acp_trajectory.jsonl": "41d5af45c89a6987b29cdf9437a4475538e99b8a4d641ee8ffe2fc753ad6d584",
+          "shared-opencode.json": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+          "verifier/test-stdout.txt": "0dd4cf5a2aaa63847ebe2889d49f26dd4a6f15ade5375f1161a94a8c391ca233"
+        },
+        "total_tokens": 654085,
+        "usage_matches_raw": true,
+        "metric_admitted": true,
+        "changed_skills": [
+          "finite-horizon-lqr",
+          "integral-action-design"
+        ],
+        "test_summary": {
+          "tests": 6,
+          "passed": 6,
+          "failed": 0,
+          "skipped": 0,
+          "pending": 0,
+          "other": 0,
+          "start": 1794756630.8928478,
+          "stop": 1794756631.1976607
+        },
+        "test_execution_confirmed": true,
+        "matches_healthy_oracle_digest": true,
+        "stage": "skill-structure-v3-combined",
+        "evidence_checks": {
+          "task": "r2r-mpc-control",
+          "variant": "combined",
+          "changed_skill": null,
+          "changed_skills": [
+            "finite-horizon-lqr",
+            "integral-action-design"
+          ],
+          "trial": "jobs/skill-structure-v3-combined/r2r-mpc-control/combined/2026-11-15__23-27-46/r2r-mpc-control__2f465008",
+          "reward": 1.0,
+          "error": null,
+          "error_category": null,
+          "metric_admitted": true,
+          "evaluation_status": "native_pass",
+          "checks": {
+            "exact_png_guide_capture": true,
+            "policy_matches": true,
+            "shared_tool_receipt": true,
+            "visible_inputs_unchanged": true,
+            "task_digest_matches": true,
+            "raw_usage_matches": true,
+            "actual_verifier_execution": true,
+            "native_tool_count_matches": true
+          },
+          "captured_main_requests": 20,
+          "request_models": [
+            "deepseek-flash"
+          ],
+          "response_models": [
+            "runtime-deepseek-deepseek-flash"
+          ],
+          "http_statuses": [
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200
+          ],
+          "usage": {
+            "calls_with_usage": 21,
+            "missing_usage": 0,
+            "input": 634167,
+            "output": 19918,
+            "cached": 608256
+          },
+          "first_successful_main_prompt_tokens": 12642,
+          "ctrf_name_group_summary": {
+            "tests": 6,
+            "passed": 6,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1794756630.8928478,
+            "stop": 1794756631.1976607
+          },
+          "pytest_case_summary": {
+            "passed": 6
+          },
+          "inputs": [
+            {
+              "path": "r2r_simulator.py",
+              "unchanged": true
+            },
+            {
+              "path": "system_config.json",
+              "unchanged": true
+            }
+          ],
+          "integrity_findings": [],
+          "raw_evidence_sha256": {
+            "result.json": "cf5ad599ef4f3885bd0dfe598ceb5aac9279039615e4842c670ff05234633591",
+            "trajectory/llm_trajectory.jsonl": "3ba20d2eca4aca9cd3f3a365669d7b13ce139ff3b3b92e2c12ff9d9969725449",
+            "trajectory/acp_trajectory.jsonl": "41d5af45c89a6987b29cdf9437a4475538e99b8a4d641ee8ffe2fc753ad6d584",
+            "skill-delivery.json": "b5158f2aac408882c0ccf70b0c6447aee10493e8bbbfedbda872f9a35e074653",
+            "verifier/test-stdout.txt": "0dd4cf5a2aaa63847ebe2889d49f26dd4a6f15ade5375f1161a94a8c391ca233",
+            "verifier/ctrf.json": "9f006f086eb5a6bfdc69bd7b2cf32afcf4a4cba3ce51c0351ea1ec44859a4694"
+          }
+        }
+      },
+      "baseline": {
+        "task": "r2r-mpc-control",
+        "arm": "baseline",
+        "status": "finished",
+        "trial": "jobs/skill-structure-v3/r2r-mpc-control/baseline/2026-11-15__23-16-12/r2r-mpc-control__2e03bd55",
+        "reward": 1.0,
+        "error": null,
+        "error_category": null,
+        "verifier_error": null,
+        "task_digest": "sha256:56caf760c2411c1d1e4fb20faa30c82a1a1de4b58fbfafe03fcce5e3d6d1f31b",
+        "tool_calls": 18,
+        "trajectory": {
+          "steps": 33,
+          "tool_call_steps": 18,
+          "user_message_steps": 1,
+          "agent_message_steps": 1,
+          "agent_thought_steps": 13,
+          "other_steps": 0,
+          "event_type_counts": {
+            "user_message": 1,
+            "agent_thought": 13,
+            "tool_call": 18,
+            "agent_message": 1
+          },
+          "tool_call_status_counts": {
+            "completed": 18
+          },
+          "partial_trajectory": false,
+          "trajectory_source": "acp"
+        },
+        "input_tokens": 467725,
+        "output_tokens": 18246,
+        "cached_tokens": 450176,
+        "estimated_cost_usd": 0.029860956,
+        "agent_seconds": 113.5,
+        "timing": {
+          "slot_wait": 0.0,
+          "environment_setup": 14.5,
+          "install_agent": 0.567,
+          "sandbox_ready": 17.302,
+          "proxy_health_wait": 0.0,
+          "firewall_power": 0.056,
+          "cloud_metadata_block": 0.638,
+          "acp_connect": 1.246,
+          "agent_setup": 2.0,
+          "agent_execution": 113.5,
+          "harden_before_verify": {
+            "kill_sandbox_user_procs": 0.029,
+            "restore_disarmed_delegates": 0.043,
+            "clear_verifier_output": 0.0,
+            "prepare_app_dir": 0.0,
+            "reclaim_disk": 0.01,
+            "freeze_workspace": 0.13,
+            "cleanup_conftests": 0.07,
+            "build_verifier_env": 0.379,
+            "total": 1.005
+          },
+          "verifier": 2.8,
+          "agent_stop_to_reward": 9.241,
+          "provider_wait": 99.9,
+          "provider_retry_wait": 0.0,
+          "agent_without_provider_wait": 13.6,
+          "cleanup": 1.123,
+          "total": 143.4
+        },
+        "delivery_valid": true,
+        "main_calls": 18,
+        "helper_calls": 1,
+        "delivery_errors": [],
+        "actual_versions": {
+          "schema": 1,
+          "identity": {
+            "agent": "opencode",
+            "harness": "acp",
+            "install_sha256": "c67e56103012b7e12464dc28773188bfd283de83ec2f2cefb0dcc2000b7b2a2d"
+          },
+          "adapter": {
+            "package": "opencode-ai",
+            "version": "1.19.5",
+            "source": "installed-package"
+          },
+          "cli": {
+            "package": "opencode-ai",
+            "version": "1.19.5",
+            "source": "installed-package"
+          },
+          "engine": {
+            "package": "opencode-ai",
+            "version": "1.19.5",
+            "source": "installed-package"
+          }
+        },
+        "raw_usage": {
+          "calls": 19,
+          "input": 467725,
+          "output": 18246,
+          "cached": 450176,
+          "complete": true
+        },
+        "shared_tools_confirmed": true,
+        "evidence_sha256": {
+          "result.json": "0fcae579f60f6e1997d16b5dd024a47ddd5ce148146e69298ab0906cca6ee1df",
+          "skill-delivery.json": "f3dc5f3951e5bf02e1a40e11496752911642fb0868e83d9bb7729aafe01713e6",
+          "trajectory/llm_trajectory.jsonl": "47281fad97fad28629f2d9f080e41058fdda751c1a26d1c4153b9153a8c98bca",
+          "trajectory/acp_trajectory.jsonl": "8d3cccd342a3b5af87648fa36b618118379bae39da0130eacb03c8d7c1e04401",
+          "shared-opencode.json": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+          "verifier/test-stdout.txt": "5fe05b6044581fcecd0fb6140c6f9230d3e00224a74f3921b8b681278b5b2d2e"
+        },
+        "total_tokens": 485971,
+        "usage_matches_raw": true,
+        "metric_admitted": true,
+        "changed_skill": null,
+        "variant": "baseline",
+        "test_summary": {
+          "tests": 6,
+          "passed": 6,
+          "failed": 0,
+          "skipped": 0,
+          "pending": 0,
+          "other": 0,
+          "start": 1794755914.4475477,
+          "stop": 1794755914.7440922
+        },
+        "test_execution_confirmed": true,
+        "matches_healthy_oracle_digest": true,
+        "ctrf_sha256": "a9671771262f28a558e91a506b3948ec357b277234f5f2cc88481d42d2902ea7",
+        "stage": "skill-structure-v3",
+        "evidence_checks": {
+          "task": "r2r-mpc-control",
+          "variant": "baseline",
+          "changed_skill": null,
+          "changed_skills": null,
+          "trial": "jobs/skill-structure-v3/r2r-mpc-control/baseline/2026-11-15__23-16-12/r2r-mpc-control__2e03bd55",
+          "reward": 1.0,
+          "error": null,
+          "error_category": null,
+          "metric_admitted": true,
+          "evaluation_status": "native_pass",
+          "checks": {
+            "exact_png_guide_capture": true,
+            "policy_matches": true,
+            "shared_tool_receipt": true,
+            "visible_inputs_unchanged": true,
+            "task_digest_matches": true,
+            "raw_usage_matches": true,
+            "actual_verifier_execution": true,
+            "native_tool_count_matches": true
+          },
+          "captured_main_requests": 18,
+          "request_models": [
+            "deepseek-flash"
+          ],
+          "response_models": [
+            "runtime-deepseek-deepseek-flash"
+          ],
+          "http_statuses": [
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200,
+            200
+          ],
+          "usage": {
+            "calls_with_usage": 19,
+            "missing_usage": 0,
+            "input": 467725,
+            "output": 18246,
+            "cached": 450176
+          },
+          "first_successful_main_prompt_tokens": 12019,
+          "ctrf_name_group_summary": {
+            "tests": 6,
+            "passed": 6,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1794755914.4475477,
+            "stop": 1794755914.7440922
+          },
+          "pytest_case_summary": {
+            "passed": 6
+          },
+          "inputs": [
+            {
+              "path": "r2r_simulator.py",
+              "unchanged": true
+            },
+            {
+              "path": "system_config.json",
+              "unchanged": true
+            }
+          ],
+          "integrity_findings": [],
+          "raw_evidence_sha256": {
+            "result.json": "0fcae579f60f6e1997d16b5dd024a47ddd5ce148146e69298ab0906cca6ee1df",
+            "trajectory/llm_trajectory.jsonl": "47281fad97fad28629f2d9f080e41058fdda751c1a26d1c4153b9153a8c98bca",
+            "trajectory/acp_trajectory.jsonl": "8d3cccd342a3b5af87648fa36b618118379bae39da0130eacb03c8d7c1e04401",
+            "skill-delivery.json": "f3dc5f3951e5bf02e1a40e11496752911642fb0868e83d9bb7729aafe01713e6",
+            "verifier/test-stdout.txt": "5fe05b6044581fcecd0fb6140c6f9230d3e00224a74f3921b8b681278b5b2d2e",
+            "verifier/ctrf.json": "a9671771262f28a558e91a506b3948ec357b277234f5f2cc88481d42d2902ea7"
+          }
+        }
+      },
+      "trace_new": "experiments/analysis/diagram-change-traces-2026-11-16/traces/r2r-mpc-control__combined.md",
+      "trace_baseline": "experiments/analysis/diagram-change-traces-2026-11-16/traces/r2r-mpc-control__baseline.md",
+      "changes_pct": {
+        "total_tokens": 34.593422241244845,
+        "input_tokens": 35.58544016248864,
+        "output_tokens": 9.16365230735503,
+        "estimated_cost_usd": 18.29640015544043,
+        "agent_seconds": 17.709251101321577,
+        "main_calls": 11.111111111111116,
+        "tool_calls": 11.111111111111116
+      },
+      "baseline_context": {
+        "calls": 18,
+        "first": 12019,
+        "last": 40338,
+        "average": 25915.722222222223,
+        "first_input_repeated_component": 216342,
+        "context_growth_component": 250141,
+        "raw_input_tokens": 466483
+      },
+      "new_context": {
+        "calls": 20,
+        "first": 12642,
+        "last": 44946,
+        "average": 31646.25,
+        "first_input_repeated_component": 252840,
+        "context_growth_component": 380085,
+        "raw_input_tokens": 632925
+      }
+    }
+  ],
+  "image_stats": {
+    "prefix-cache-replay": {
+      "old": [
+        708,
+        2151
+      ],
+      "new": [
+        2766,
+        1041
+      ],
+      "area_ratio": 1.8907287899203367
+    },
+    "dc-power-flow": {
+      "old": [
+        818,
+        1457
+      ],
+      "new": [
+        1601,
+        1487
+      ],
+      "area_ratio": 1.997512220743632
+    },
+    "economic-dispatch": {
+      "old": [
+        1611,
+        1287
+      ],
+      "new": [
+        2687,
+        882
+      ],
+      "area_ratio": 1.1430419363380258
+    },
+    "locational-marginal-prices": {
+      "old": [
+        778,
+        1158
+      ],
+      "new": [
+        1901,
+        946
+      ],
+      "area_ratio": 1.9961128796657654
+    },
+    "finite-horizon-lqr": {
+      "old": [
+        832,
+        881
+      ],
+      "new": [
+        2284,
+        475
+      ],
+      "area_ratio": 1.480098009255217
+    },
+    "integral-action-design": {
+      "old": [
+        653,
+        1178
+      ],
+      "new": [
+        2639,
+        579
+      ],
+      "area_ratio": 1.9863669572587794
+    },
+    "ordered-window-sequencing-mip": {
+      "old": [
+        1024,
+        1539
+      ],
+      "new": [
+        2064,
+        1386
+      ],
+      "area_ratio": 1.8152412280701755
+    },
+    "fjsp-baseline-repair-with-downtime-and-policy": {
+      "old": [
+        975,
+        2268
+      ],
+      "new": [
+        2132,
+        1319
+      ],
+      "area_ratio": 1.2716990005878894
+    }
+  },
+  "energy_output_comparison": {
+    "dc-power-flow": {
+      "base_case": {
+        "cost": 2965637.91,
+        "buses": 2869,
+        "sign_disagreements_vs_baseline": 510,
+        "differences_gt_005": 510,
+        "maximum_difference": 79.14,
+        "examples": {
+          "1": {
+            "baseline": 32.32,
+            "new": 32.32
+          },
+          "9": {
+            "baseline": 32.33,
+            "new": -32.33
+          },
+          "64": {
+            "baseline": 123.56,
+            "new": 123.56
+          },
+          "629": {
+            "baseline": 89.71,
+            "new": 89.71
+          },
+          "1266": {
+            "baseline": 39.17,
+            "new": -39.17
+          },
+          "1501": {
+            "baseline": -263.91,
+            "new": -263.91
+          },
+          "1709": {
+            "baseline": 39.17,
+            "new": -39.17
+          }
+        },
+        "sign_disagreement_set_equals_generator_bus_set": true,
+        "disagreements_exact_negations": true
+      },
+      "counterfactual": {
+        "cost": 2961759.38,
+        "buses": 2869,
+        "sign_disagreements_vs_baseline": 510,
+        "differences_gt_005": 510,
+        "maximum_difference": 80.72,
+        "examples": {
+          "1": {
+            "baseline": 32.33,
+            "new": 32.33
+          },
+          "9": {
+            "baseline": 32.36,
+            "new": -32.36
+          },
+          "64": {
+            "baseline": 37.9,
+            "new": 37.9
+          },
+          "629": {
+            "baseline": 37.73,
+            "new": 37.73
+          },
+          "1266": {
+            "baseline": 39.17,
+            "new": -39.17
+          },
+          "1501": {
+            "baseline": 37.9,
+            "new": 37.9
+          },
+          "1709": {
+            "baseline": 39.17,
+            "new": -39.17
+          }
+        },
+        "sign_disagreement_set_equals_generator_bus_set": true,
+        "disagreements_exact_negations": true
+      }
+    },
+    "baseline": {
+      "base_case": {
+        "cost": 2965637.91,
+        "buses": 2869,
+        "sign_disagreements_vs_baseline": 0,
+        "differences_gt_005": 0,
+        "maximum_difference": 0.0,
+        "examples": {
+          "1": {
+            "baseline": 32.32,
+            "new": 32.32
+          },
+          "9": {
+            "baseline": 32.33,
+            "new": 32.33
+          },
+          "64": {
+            "baseline": 123.56,
+            "new": 123.56
+          },
+          "629": {
+            "baseline": 89.71,
+            "new": 89.71
+          },
+          "1266": {
+            "baseline": 39.17,
+            "new": 39.17
+          },
+          "1501": {
+            "baseline": -263.91,
+            "new": -263.91
+          },
+          "1709": {
+            "baseline": 39.17,
+            "new": 39.17
+          }
+        },
+        "sign_disagreement_set_equals_generator_bus_set": false,
+        "disagreements_exact_negations": false
+      },
+      "counterfactual": {
+        "cost": 2961759.38,
+        "buses": 2869,
+        "sign_disagreements_vs_baseline": 0,
+        "differences_gt_005": 0,
+        "maximum_difference": 0.0,
+        "examples": {
+          "1": {
+            "baseline": 32.33,
+            "new": 32.33
+          },
+          "9": {
+            "baseline": 32.36,
+            "new": 32.36
+          },
+          "64": {
+            "baseline": 37.9,
+            "new": 37.9
+          },
+          "629": {
+            "baseline": 37.73,
+            "new": 37.73
+          },
+          "1266": {
+            "baseline": 39.17,
+            "new": 39.17
+          },
+          "1501": {
+            "baseline": 37.9,
+            "new": 37.9
+          },
+          "1709": {
+            "baseline": 39.17,
+            "new": 39.17
+          }
+        },
+        "sign_disagreement_set_equals_generator_bus_set": false,
+        "disagreements_exact_negations": false
+      }
+    },
+    "economic-dispatch": {
+      "base_case": {
+        "cost": 2965637.91,
+        "buses": 2869,
+        "sign_disagreements_vs_baseline": 0,
+        "differences_gt_005": 0,
+        "maximum_difference": 0.0,
+        "examples": {
+          "1": {
+            "baseline": 32.32,
+            "new": 32.32
+          },
+          "9": {
+            "baseline": 32.33,
+            "new": 32.33
+          },
+          "64": {
+            "baseline": 123.56,
+            "new": 123.56
+          },
+          "629": {
+            "baseline": 89.71,
+            "new": 89.71
+          },
+          "1266": {
+            "baseline": 39.17,
+            "new": 39.17
+          },
+          "1501": {
+            "baseline": -263.91,
+            "new": -263.91
+          },
+          "1709": {
+            "baseline": 39.17,
+            "new": 39.17
+          }
+        },
+        "sign_disagreement_set_equals_generator_bus_set": false,
+        "disagreements_exact_negations": false
+      },
+      "counterfactual": {
+        "cost": 2961759.38,
+        "buses": 2869,
+        "sign_disagreements_vs_baseline": 0,
+        "differences_gt_005": 0,
+        "maximum_difference": 0.0,
+        "examples": {
+          "1": {
+            "baseline": 32.33,
+            "new": 32.33
+          },
+          "9": {
+            "baseline": 32.36,
+            "new": 32.36
+          },
+          "64": {
+            "baseline": 37.9,
+            "new": 37.9
+          },
+          "629": {
+            "baseline": 37.73,
+            "new": 37.73
+          },
+          "1266": {
+            "baseline": 39.17,
+            "new": 39.17
+          },
+          "1501": {
+            "baseline": 37.9,
+            "new": 37.9
+          },
+          "1709": {
+            "baseline": 39.17,
+            "new": 39.17
+          }
+        },
+        "sign_disagreement_set_equals_generator_bus_set": false,
+        "disagreements_exact_negations": false
+      }
+    },
+    "locational-marginal-prices": {
+      "base_case": {
+        "cost": 2965637.91,
+        "buses": 2869,
+        "sign_disagreements_vs_baseline": 510,
+        "differences_gt_005": 510,
+        "maximum_difference": 79.14,
+        "examples": {
+          "1": {
+            "baseline": 32.32,
+            "new": 32.32
+          },
+          "9": {
+            "baseline": 32.33,
+            "new": -32.33
+          },
+          "64": {
+            "baseline": 123.56,
+            "new": 123.56
+          },
+          "629": {
+            "baseline": 89.71,
+            "new": 89.71
+          },
+          "1266": {
+            "baseline": 39.17,
+            "new": -39.17
+          },
+          "1501": {
+            "baseline": -263.91,
+            "new": -263.91
+          },
+          "1709": {
+            "baseline": 39.17,
+            "new": -39.17
+          }
+        },
+        "sign_disagreement_set_equals_generator_bus_set": true,
+        "disagreements_exact_negations": true
+      },
+      "counterfactual": {
+        "cost": 2961759.38,
+        "buses": 2869,
+        "sign_disagreements_vs_baseline": 510,
+        "differences_gt_005": 510,
+        "maximum_difference": 80.72,
+        "examples": {
+          "1": {
+            "baseline": 32.33,
+            "new": 32.33
+          },
+          "9": {
+            "baseline": 32.36,
+            "new": -32.36
+          },
+          "64": {
+            "baseline": 37.9,
+            "new": 37.9
+          },
+          "629": {
+            "baseline": 37.73,
+            "new": 37.73
+          },
+          "1266": {
+            "baseline": 39.17,
+            "new": -39.17
+          },
+          "1501": {
+            "baseline": 37.9,
+            "new": 37.9
+          },
+          "1709": {
+            "baseline": 39.17,
+            "new": -39.17
+          }
+        },
+        "sign_disagreement_set_equals_generator_bus_set": true,
+        "disagreements_exact_negations": true
+      }
+    }
+  },
+  "r2r_common_window": {
+    "baseline": {
+      "original_reported_metrics": {
+        "steady_state_error": 0.2272,
+        "settling_time": 1.17,
+        "max_tension": 45.0471,
+        "min_tension": 19.4705
+      },
+      "original_duration": 5.0,
+      "common_duration": 5,
+      "samples_in_4_to_5": 101,
+      "mean_absolute_error_4_to_5": 0.2272032724531246,
+      "settling_2N_within_first_5s": 1.17,
+      "settling_2pct_within_first_5s": 4.45,
+      "max_tension_first_5s": 45.047079657619555,
+      "min_tension_first_5s": 19.47051411612054
+    },
+    "finite-horizon-lqr": {
+      "original_reported_metrics": {
+        "steady_state_error": 0.030740894118598146,
+        "settling_time": 1.2300000000000013,
+        "max_tension": 44.017702476273605,
+        "min_tension": 19.96983155827136
+      },
+      "original_duration": 7.999999999999874,
+      "common_duration": 5,
+      "samples_in_4_to_5": 101,
+      "mean_absolute_error_4_to_5": 0.03163688694918529,
+      "settling_2N_within_first_5s": 0.7300000000000009,
+      "settling_2pct_within_first_5s": 1.2300000000000013,
+      "max_tension_first_5s": 44.012333853403305,
+      "min_tension_first_5s": 19.96983155827136
+    },
+    "combined": {
+      "original_reported_metrics": {
+        "steady_state_error": 0.09211723739321431,
+        "settling_time": 1.1300000000000012,
+        "max_tension": 43.97639751783078,
+        "min_tension": 19.898851717829345
+      },
+      "original_duration": 6.199999999999912,
+      "common_duration": 5,
+      "samples_in_4_to_5": 101,
+      "mean_absolute_error_4_to_5": 0.09125109131267446,
+      "settling_2N_within_first_5s": 1.0200000000000011,
+      "settling_2pct_within_first_5s": 1.1400000000000012,
+      "max_tension_first_5s": 43.97639751783078,
+      "min_tension_first_5s": 19.898851717829345
+    }
+  },
+  "r2r_baseline_lqr_controller_params_exactly_equal": true,
+  "additional_source_hashes": {
+    "jobs/skill-structure-v3/energy-market-pricing/dc-power-flow/2026-11-15__22-56-04/energy-market-pricing__52088b93/evidence/workspace/report.json": "a1fa8470bb6df7a7aea4fee2fdf4aa69d29925ec22284383678b7588f37eba45",
+    "jobs/skill-structure-v3/energy-market-pricing/baseline/2026-11-15__23-01-55/energy-market-pricing__aeadbfca/evidence/workspace/report.json": "7bb6ebc5a12c7db9c84c376527d542b27576bddeb7d46dc1f98e79bc5b5d7196",
+    "jobs/skill-structure-v3/energy-market-pricing/economic-dispatch/2026-11-15__23-04-35/energy-market-pricing__b5d97cc7/evidence/workspace/report.json": "04958c7a6d61e3327397927f884fdcdc5911d544747cd8dc9a557ad33cdfc88b",
+    "jobs/skill-structure-v3/energy-market-pricing/locational-marginal-prices/2026-11-15__23-13-15/energy-market-pricing__d5941249/evidence/workspace/report.json": "625995aa9d7959e25e338a3fa122ed5d4b8ad101c54c2723277d3da70aedb1c3",
+    "jobs/skill-structure-v3/energy-market-pricing/baseline/2026-11-15__23-01-55/energy-market-pricing__aeadbfca/evidence/workspace/network.json": "e2161afc51409365c72738918454a8819630f64ff0238e70ee1f7b30453b4bc9",
+    "jobs/skill-structure-v3/r2r-mpc-control/baseline/2026-11-15__23-16-12/r2r-mpc-control__2e03bd55/evidence/workspace/control_log.json": "1e90ef4835bc70e1579fca810e345d18c1621c51779ea53159f3a4f5eb25ea91",
+    "jobs/skill-structure-v3/r2r-mpc-control/baseline/2026-11-15__23-16-12/r2r-mpc-control__2e03bd55/evidence/workspace/system_config.json": "69659661d4e6bd83bec675306b28d62f47d3ff90c26b38155e23aaef606b743d",
+    "jobs/skill-structure-v3/r2r-mpc-control/baseline/2026-11-15__23-16-12/r2r-mpc-control__2e03bd55/evidence/workspace/metrics.json": "d62b01fd8b0938cebbf56c044cae920f96256433513abbde5b04cc11bd32f8fa",
+    "jobs/skill-structure-v3/r2r-mpc-control/finite-horizon-lqr/2026-11-15__23-18-38/r2r-mpc-control__6b5d4442/evidence/workspace/control_log.json": "c1840d7b31f5deaf35f5f567d4d2433ee4d66fd1e1c626c7b646508fc35aa9b2",
+    "jobs/skill-structure-v3/r2r-mpc-control/finite-horizon-lqr/2026-11-15__23-18-38/r2r-mpc-control__6b5d4442/evidence/workspace/system_config.json": "69659661d4e6bd83bec675306b28d62f47d3ff90c26b38155e23aaef606b743d",
+    "jobs/skill-structure-v3/r2r-mpc-control/finite-horizon-lqr/2026-11-15__23-18-38/r2r-mpc-control__6b5d4442/evidence/workspace/metrics.json": "68f218a02b9011b29f2c43a2ba58285c1fa9bec1f746e983c6f5c5f8cf4bb4ad",
+    "jobs/skill-structure-v3-combined/r2r-mpc-control/combined/2026-11-15__23-27-46/r2r-mpc-control__2f465008/evidence/workspace/control_log.json": "a38c8bae65cffb1763971b08dbbdc3da0ad42503fe71024d64297687f1402d20",
+    "jobs/skill-structure-v3-combined/r2r-mpc-control/combined/2026-11-15__23-27-46/r2r-mpc-control__2f465008/evidence/workspace/system_config.json": "69659661d4e6bd83bec675306b28d62f47d3ff90c26b38155e23aaef606b743d",
+    "jobs/skill-structure-v3-combined/r2r-mpc-control/combined/2026-11-15__23-27-46/r2r-mpc-control__2f465008/evidence/workspace/metrics.json": "8c930716287a342d280f102cad2c73d8baf7611e6d2d4e23578382cbae9f4fd1"
+  },
+  "scope": "Offline analysis of archived evidence only. No new benchmark, model, solver, or simulator execution.",
+  "limitations": [
+    "one observation per variant; shared controls",
+    "different layout and emphasis along with diagram type",
+    "no direct measurement of image attention",
+    "partial exam and unlaunched manufacturing excluded from quality comparisons",
+    "common-window R2R metrics compare stored traces, not independent controller robustness trials",
+    "LMP disagreement is not by itself proof; recorded finite-difference checks support the sampled sign errors"
+  ]
+}

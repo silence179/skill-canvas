@@ -1,0 +1,36 @@
+@startuml
+!pragma useVerticalIf on
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+skinparam defaultFontName SansSerif
+skinparam defaultFontSize 18
+skinparam ArrowColor #46566F
+skinparam activity {
+  BackgroundColor #EEF5FF
+  BorderColor #365A82
+  FontColor #152B44
+  DiamondBackgroundColor #FFF3D6
+  DiamondBorderColor #BA842A
+}
+skinparam noteBackgroundColor #FFF8DE
+skinparam noteBorderColor #BEA45C
+skinparam wrapWidth 360
+title Power-flow data - parse, map, normalize
+start
+:Parse network JSON with json.load;\ninspect array sizes and total active load;
+note right
+  Large files: summarize with Python.
+  Do not dump line-by-line into context.
+end note
+:Read baseMVA, bus, gen, branch, gencost;\nread reserve_capacity and reserve_requirement;
+:Build bus_number -> zero-based row mapping;\nmap generator buses and branch endpoints;
+note right
+  IDs may be non-contiguous.
+  Never substitute bus_id - 1.
+end note
+:Classify buses: slack=3, PV=2, PQ=1;\nfind the slack reference bus;
+:Interpret branch R, X, charging, RATE_A,\nand in-service flag from documented columns;
+:Convert power units explicitly;\nP_pu = P_MW / baseMVA;\nP_MW = P_pu * baseMVA;
+:Return mapped topology, power and reserve data;\ncheck total load using bus column 2;
+stop
+@enduml

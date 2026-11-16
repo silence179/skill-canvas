@@ -1,0 +1,194 @@
+{
+  "prefix-cache-replay": {
+    "S1": {
+      "path": "prefix-cache-replay/SKILL.md",
+      "sha256": "28ced940ec272cc01cf06519912077492d948b10e08a933acba12dd9907220cf",
+      "bytes": 9283,
+      "lines": 110,
+      "review": "Keep pre-access hit accounting distinct from all-hash mutation; show M/G helper transitions, preserved promotion frequency, rounding and ghost exclusion.",
+      "headings": [
+        {
+          "line": 6,
+          "heading": "# Overview"
+        },
+        {
+          "line": 12,
+          "heading": "# Longest-prefix hit semantics (policy-independent)"
+        },
+        {
+          "line": 24,
+          "heading": "# S3FIFO (Yang et al., SOSP 2023 — \"FIFO queues are all you need\")"
+        },
+        {
+          "line": 35,
+          "heading": "## Access rule (per `h` in a request's `hash_ids`)"
+        },
+        {
+          "line": 41,
+          "heading": "## Admission to S (drains old S entries when S is full)"
+        },
+        {
+          "line": 54,
+          "heading": "## Admission to M (second-chance, drains until one real eviction when M is full)"
+        },
+        {
+          "line": 71,
+          "heading": "## Ghost insertion"
+        },
+        {
+          "line": 75,
+          "heading": "## Residency and final size"
+        },
+        {
+          "line": 79,
+          "heading": "# Trace format"
+        },
+        {
+          "line": 89,
+          "heading": "# Common mistakes"
+        },
+        {
+          "line": 104,
+          "heading": "# Quick sanity checks on your output"
+        }
+      ]
+    },
+    "S2": {
+      "path": "cache-policy-comparison/SKILL.md",
+      "sha256": "353a7215727695b01e48ea69e63ed92c0b32174534a6bda38cee9b91382e5963",
+      "bytes": 5970,
+      "lines": 85,
+      "review": "Companion policy specification: do not follow S3FIFO transitions when a different eviction policy is declared.",
+      "headings": [
+        {
+          "line": 6,
+          "heading": "# Overview"
+        },
+        {
+          "line": 19,
+          "heading": "# LRU"
+        },
+        {
+          "line": 44,
+          "heading": "# LFU"
+        },
+        {
+          "line": 53,
+          "heading": "# FIFO"
+        },
+        {
+          "line": 59,
+          "heading": "# S3FIFO"
+        },
+        {
+          "line": 63,
+          "heading": "# Workload implications"
+        },
+        {
+          "line": 70,
+          "heading": "# Comparing hit rates on a trace"
+        },
+        {
+          "line": 78,
+          "heading": "# Common mistakes"
+        }
+      ]
+    }
+  },
+  "cache-policy-comparison": {
+    "S1": {
+      "path": "cache-policy-comparison/SKILL.md",
+      "sha256": "353a7215727695b01e48ea69e63ed92c0b32174534a6bda38cee9b91382e5963",
+      "bytes": 5970,
+      "lines": 85,
+      "review": "Include LFU initial frequency=1 and insertion-order ties; follow the linked full S3FIFO skill. ARC is named but no algorithm is supplied.",
+      "headings": [
+        {
+          "line": 6,
+          "heading": "# Overview"
+        },
+        {
+          "line": 19,
+          "heading": "# LRU"
+        },
+        {
+          "line": 44,
+          "heading": "# LFU"
+        },
+        {
+          "line": 53,
+          "heading": "# FIFO"
+        },
+        {
+          "line": 59,
+          "heading": "# S3FIFO"
+        },
+        {
+          "line": 63,
+          "heading": "# Workload implications"
+        },
+        {
+          "line": 70,
+          "heading": "# Comparing hit rates on a trace"
+        },
+        {
+          "line": 78,
+          "heading": "# Common mistakes"
+        }
+      ]
+    },
+    "S2": {
+      "path": "prefix-cache-replay/SKILL.md",
+      "sha256": "28ced940ec272cc01cf06519912077492d948b10e08a933acba12dd9907220cf",
+      "bytes": 9283,
+      "lines": 110,
+      "review": "Explicitly linked sibling: full S3FIFO transitions and prefix-hit accounting.",
+      "headings": [
+        {
+          "line": 6,
+          "heading": "# Overview"
+        },
+        {
+          "line": 12,
+          "heading": "# Longest-prefix hit semantics (policy-independent)"
+        },
+        {
+          "line": 24,
+          "heading": "# S3FIFO (Yang et al., SOSP 2023 — \"FIFO queues are all you need\")"
+        },
+        {
+          "line": 35,
+          "heading": "## Access rule (per `h` in a request's `hash_ids`)"
+        },
+        {
+          "line": 41,
+          "heading": "## Admission to S (drains old S entries when S is full)"
+        },
+        {
+          "line": 54,
+          "heading": "## Admission to M (second-chance, drains until one real eviction when M is full)"
+        },
+        {
+          "line": 71,
+          "heading": "## Ghost insertion"
+        },
+        {
+          "line": 75,
+          "heading": "## Residency and final size"
+        },
+        {
+          "line": 79,
+          "heading": "# Trace format"
+        },
+        {
+          "line": 89,
+          "heading": "# Common mistakes"
+        },
+        {
+          "line": 104,
+          "heading": "# Quick sanity checks on your output"
+        }
+      ]
+    }
+  }
+}

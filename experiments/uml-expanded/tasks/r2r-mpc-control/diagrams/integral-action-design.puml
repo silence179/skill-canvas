@@ -1,0 +1,38 @@
+@startuml
+!pragma useVerticalIf on
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+skinparam defaultFontName SansSerif
+skinparam defaultFontSize 18
+skinparam ArrowColor #46566F
+skinparam activity {
+  BackgroundColor #EEF5FF
+  BorderColor #365A82
+  FontColor #152B44
+  DiamondBackgroundColor #FFF3D6
+  DiamondBorderColor #BA842A
+}
+skinparam noteBackgroundColor #FFF8DE
+skinparam noteBorderColor #BEA45C
+skinparam wrapWidth 360
+title Integral action - offset correction with anti-windup
+start
+:Initialize an integral term per tension section;\nchoose dt, integral gain c_I and decay gamma;
+note right
+  GUIDE ranges: c_I starts around 0.1-0.3;
+  gamma commonly 0.9-0.99.
+  gamma=1 is a pure integrator.
+end note
+while (Next control timestep?) is (yes)
+  :Measure T and reference T_ref;
+  :For each section:\nu_I = gamma*u_I - c_I*dt*(T - T_ref);
+  :Clip u_I to [-max_integral, +max_integral];
+  :Combine u_total = u_mpc + u_I;\napply control and observe tracking;
+  if (Correction too slow?) then (yes)
+    :Review integral gain; increase cautiously;
+  elseif (Oscillation / instability?) then (yes)
+    :Reduce gain; review decay and saturation;
+  endif
+endwhile (finished)
+stop
+@enduml

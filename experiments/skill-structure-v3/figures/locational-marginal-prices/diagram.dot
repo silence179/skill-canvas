@@ -1,0 +1,18 @@
+digraph skill {
+graph [bgcolor="white", pad="0.28", nodesep="0.38", ranksep="0.5", fontname="DejaVu Sans", fontsize=22, labelloc=t, labeljust=l];
+node [shape=box, style="rounded,filled", fillcolor="#eef5ff", color="#365a82", fontcolor="#152b44", fontname="DejaVu Sans", fontsize=17, margin="0.16,0.12", penwidth=1.3];
+edge [color="#46566f", fontname="DejaVu Sans", fontsize=14, arrowsize=.8];
+label="locational-marginal-prices | dual dependencies and paired cases";
+rankdir=TB;
+model [label="balance_constraints[i] references [S1]\ngeneration - load == B[i,:] @ theta\nreserve_con = sum(Rg) >= reserve_requirement"];
+base [label="Solve BASE case\ncost / duals / line flows [S1]"];
+cf [label="Solve COUNTERFACTUAL\nmodify specified thermal limit; same other inputs [S1]\nsource example factor 1.20; match either endpoint direction"];
+model -> base; model -> cf;
+dualbase [label="BASE pricing + congestion [S1]\nretain original bus IDs\nLMP source example: dual*baseMVA\nreserve MCP: reserve_con.dual\nNone -> 0 is source fallback, not observed price"];
+dualcf [label="COUNTERFACTUAL pricing + congestion [S1]\nsame units / equality direction / ID mapping\nloading=abs(flow_MW)/rating*100\nbinding when loading>=99% (source convention)"];
+base -> dualbase; cf -> dualcf;
+compare [label="compare cases [S1]\ncost_reduction=base_cost-cf_cost (>=0 for relaxation)\ndelta_LMP[bus]=cf_LMP-base_LMP\nrelieved = binding_before AND NOT binding_after"];
+dualbase -> compare [label="base records"]; dualcf -> compare [label="cf records"];
+note [shape=note,fillcolor="#fff8de",label="Source convention caveat retained from v2:\nverify normalization/sign against actual equation.\nNo alternative price formula is supplied by this diagram.\nPositive/negative marginal price follows cost response;\nnegative prices are not automatically invalid. [S1]\nFor binding-line calculation source guards x!=0, rate>0."];
+model -> note [style=dotted,arrowhead=none];
+}

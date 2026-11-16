@@ -1,0 +1,1357 @@
+{
+  "valid": true,
+  "scope": "Local HTTP serialization using synthetic native skill results; no actual OpenCode process, provider or benchmark executed.",
+  "condition_count": 22,
+  "local_http_calls": 100,
+  "conditions": [
+    {
+      "task": "crystallographic-wyckoff-position-analysis",
+      "arm": "text",
+      "figures": null,
+      "policy": {
+        "method": "skill-on-demand-v1",
+        "arm": "text",
+        "task": "crystallographic-wyckoff-position-analysis",
+        "figures": null,
+        "material_sha256": "5a1a95fbb37f7dafb18ca70bcabc480b45b7c1a95518232b4d66a837af50ff3e",
+        "adapter_sha256": {
+          "protocol.py": "4a634be20274593096903ae684fd5b3bb966c63da98cc23fbece80f64e21c7cd",
+          "runner.py": "6b8d02b51e42b96d46583baf7c0cedb93c2be8cd47dec6476e43edaa53c99be0"
+        },
+        "id": "900296e632571fd02f8ee0c4f698daa48461eb1143d9b9098f56b9e6eb4f2b71",
+        "assets": [
+          {
+            "skill": "pymatgen",
+            "skill_sha256": "eeb3616b03e293072332847795e055413becfa42d74dfaeb48ac6aa90e21654f"
+          },
+          {
+            "skill": "sympy",
+            "skill_sha256": "1464cb81c992472072bdd66249623f55fa1709a74ca4148f7f5f40fa6cbb6616"
+          }
+        ]
+      },
+      "cases": [
+        {
+          "case": "before_any_activation",
+          "images": 0,
+          "active_skill_calls": 0,
+          "payload_sha256": "08bc824851df9e54d5bc37976691bdb0eff75bfed18adf8f3b804fdcedb5dfa6"
+        },
+        {
+          "case": "after_pymatgen",
+          "images": 0,
+          "active_skill_calls": 1,
+          "payload_sha256": "4ab3c2aed265eb121dd34ac399e286460cf9851fc316a34568449e80ffa582c2"
+        },
+        {
+          "case": "after_sympy",
+          "images": 0,
+          "active_skill_calls": 2,
+          "payload_sha256": "87d3f25025ca30d5820a88f439f2ab3a95709ec07234d878eab164565f8b54b6"
+        },
+        {
+          "case": "history_replay_no_extra_activation",
+          "images": 0,
+          "active_skill_calls": 2,
+          "payload_sha256": "4fe009a1cd03406db923d441684c3878460dd16f54bc84521a6292a0e78e7f58"
+        }
+      ],
+      "valid": true
+    },
+    {
+      "task": "crystallographic-wyckoff-position-analysis",
+      "arm": "image",
+      "figures": "uml-v1",
+      "policy": {
+        "method": "skill-on-demand-v1",
+        "arm": "image",
+        "task": "crystallographic-wyckoff-position-analysis",
+        "figures": "uml-v1",
+        "material_sha256": "53e34781ddb067ffd9b5d555ce1588368b1575c7b5762c0fc22f307c0fd81a79",
+        "adapter_sha256": {
+          "protocol.py": "4a634be20274593096903ae684fd5b3bb966c63da98cc23fbece80f64e21c7cd",
+          "runner.py": "6b8d02b51e42b96d46583baf7c0cedb93c2be8cd47dec6476e43edaa53c99be0"
+        },
+        "id": "6b2c1ef6cb69cb751f88cc854deab84e80bfefd86e203d24d8ce1a57f35215f9",
+        "assets": [
+          {
+            "skill": "pymatgen",
+            "skill_sha256": "eeb3616b03e293072332847795e055413becfa42d74dfaeb48ac6aa90e21654f",
+            "image_sha256": "78d6969514609b483b2e6b34ac167db2afc20e396f1451a35c2bd3109b9ea9bd"
+          },
+          {
+            "skill": "sympy",
+            "skill_sha256": "1464cb81c992472072bdd66249623f55fa1709a74ca4148f7f5f40fa6cbb6616",
+            "image_sha256": "f83f060db0c5007381adac566ed9a571de613192a1d88cd6ec4ea6717a89292e"
+          }
+        ]
+      },
+      "cases": [
+        {
+          "case": "before_any_activation",
+          "images": 0,
+          "active_skill_calls": 0,
+          "payload_sha256": "08bc824851df9e54d5bc37976691bdb0eff75bfed18adf8f3b804fdcedb5dfa6"
+        },
+        {
+          "case": "after_pymatgen",
+          "images": 1,
+          "active_skill_calls": 1,
+          "payload_sha256": "f2d3d0a320f2efde479e2edfc12dc027dc014a251c6a2e36a405060e17003127"
+        },
+        {
+          "case": "after_sympy",
+          "images": 2,
+          "active_skill_calls": 2,
+          "payload_sha256": "aaa881008df6b5185fd4080dacd1f5065608e86442c063da33607eb308c686e0"
+        },
+        {
+          "case": "history_replay_no_extra_activation",
+          "images": 2,
+          "active_skill_calls": 2,
+          "payload_sha256": "2f13491212203ea5a55812a3f391916b71e43ac6624b80ce6f47120b055617f4"
+        }
+      ],
+      "valid": true
+    },
+    {
+      "task": "llm-prefix-cache-replay",
+      "arm": "text",
+      "figures": null,
+      "policy": {
+        "method": "skill-on-demand-v1",
+        "arm": "text",
+        "task": "llm-prefix-cache-replay",
+        "figures": null,
+        "material_sha256": "d76545205cd521ad2a1fe856eb0e8055ccfea0899add6ea87a320b2bcc5a01c4",
+        "adapter_sha256": {
+          "protocol.py": "4a634be20274593096903ae684fd5b3bb966c63da98cc23fbece80f64e21c7cd",
+          "runner.py": "6b8d02b51e42b96d46583baf7c0cedb93c2be8cd47dec6476e43edaa53c99be0"
+        },
+        "id": "e73f6e4df79766552713fe46d7e0606ef076afea1354457309ce327e484295d2",
+        "assets": [
+          {
+            "skill": "cache-policy-comparison",
+            "skill_sha256": "353a7215727695b01e48ea69e63ed92c0b32174534a6bda38cee9b91382e5963"
+          },
+          {
+            "skill": "prefix-cache-replay",
+            "skill_sha256": "28ced940ec272cc01cf06519912077492d948b10e08a933acba12dd9907220cf"
+          }
+        ]
+      },
+      "cases": [
+        {
+          "case": "before_any_activation",
+          "images": 0,
+          "active_skill_calls": 0,
+          "payload_sha256": "08bc824851df9e54d5bc37976691bdb0eff75bfed18adf8f3b804fdcedb5dfa6"
+        },
+        {
+          "case": "after_cache-policy-comparison",
+          "images": 0,
+          "active_skill_calls": 1,
+          "payload_sha256": "e6b39a6d42d8acfd59f73b6a4d9803810f39c8d8b5d07fbc3faaff7e06c878d9"
+        },
+        {
+          "case": "after_prefix-cache-replay",
+          "images": 0,
+          "active_skill_calls": 2,
+          "payload_sha256": "24c2628cebd70434896693726ebd8f4985211028fc8913b2fda1d439954d44e3"
+        },
+        {
+          "case": "history_replay_no_extra_activation",
+          "images": 0,
+          "active_skill_calls": 2,
+          "payload_sha256": "ddf3b25d2188ecac921ce2b814d1380765b1e62fb81b0429bb6bec5e39763ede"
+        }
+      ],
+      "valid": true
+    },
+    {
+      "task": "llm-prefix-cache-replay",
+      "arm": "image",
+      "figures": "uml-v1",
+      "policy": {
+        "method": "skill-on-demand-v1",
+        "arm": "image",
+        "task": "llm-prefix-cache-replay",
+        "figures": "uml-v1",
+        "material_sha256": "a6b65210c587797465db92291862217215ce43c729f859e0e41d787fef17eafc",
+        "adapter_sha256": {
+          "protocol.py": "4a634be20274593096903ae684fd5b3bb966c63da98cc23fbece80f64e21c7cd",
+          "runner.py": "6b8d02b51e42b96d46583baf7c0cedb93c2be8cd47dec6476e43edaa53c99be0"
+        },
+        "id": "9b8ae816c9e9e2a1a167f1962b7599f80c1b62310d9f4decc6a6c84381ba8794",
+        "assets": [
+          {
+            "skill": "cache-policy-comparison",
+            "skill_sha256": "353a7215727695b01e48ea69e63ed92c0b32174534a6bda38cee9b91382e5963",
+            "image_sha256": "51d431b40a76bafeb0881abc0c8030a1caeb48214da3169a838b52646249fd50"
+          },
+          {
+            "skill": "prefix-cache-replay",
+            "skill_sha256": "28ced940ec272cc01cf06519912077492d948b10e08a933acba12dd9907220cf",
+            "image_sha256": "4be13bc22de0b66f0f0dee788f576b824793ee0d44d13807d2e231ac69e703c9"
+          }
+        ]
+      },
+      "cases": [
+        {
+          "case": "before_any_activation",
+          "images": 0,
+          "active_skill_calls": 0,
+          "payload_sha256": "08bc824851df9e54d5bc37976691bdb0eff75bfed18adf8f3b804fdcedb5dfa6"
+        },
+        {
+          "case": "after_cache-policy-comparison",
+          "images": 1,
+          "active_skill_calls": 1,
+          "payload_sha256": "568323355f9d3084252a2eade44e2ac8859344088fb7fc5c8a79d5b1468da24a"
+        },
+        {
+          "case": "after_prefix-cache-replay",
+          "images": 2,
+          "active_skill_calls": 2,
+          "payload_sha256": "5eb07dc0abf1ba9bd15f7520cf303f43873f6cfb369b4c327ca99ae0c943ada0"
+        },
+        {
+          "case": "history_replay_no_extra_activation",
+          "images": 2,
+          "active_skill_calls": 2,
+          "payload_sha256": "ea666c8164f0b988aab1ad3084082d6632ea35dae6414fb55e0de952d1792416"
+        }
+      ],
+      "valid": true
+    },
+    {
+      "task": "llm-prefix-cache-replay",
+      "arm": "image",
+      "figures": "uml-v2",
+      "policy": {
+        "method": "skill-on-demand-v1",
+        "arm": "image",
+        "task": "llm-prefix-cache-replay",
+        "figures": "uml-v2",
+        "material_sha256": "84cc8caed5fceaa4026e68e269568ec9f53e08420074815ac632e8298239ffb5",
+        "adapter_sha256": {
+          "protocol.py": "4a634be20274593096903ae684fd5b3bb966c63da98cc23fbece80f64e21c7cd",
+          "runner.py": "6b8d02b51e42b96d46583baf7c0cedb93c2be8cd47dec6476e43edaa53c99be0"
+        },
+        "id": "07491468649e74d277a88c7202ae1f92f0535d71bed7cf321895b02f27c2f98d",
+        "assets": [
+          {
+            "skill": "cache-policy-comparison",
+            "skill_sha256": "353a7215727695b01e48ea69e63ed92c0b32174534a6bda38cee9b91382e5963",
+            "image_sha256": "985529ae3381d1b5867612b01a88e5ce13cd0842d4e65d51bd06cf693806ca03"
+          },
+          {
+            "skill": "prefix-cache-replay",
+            "skill_sha256": "28ced940ec272cc01cf06519912077492d948b10e08a933acba12dd9907220cf",
+            "image_sha256": "617a6c6cd5cc7614e2a9e1deddce402da00cc81e7bb57d20385022dbbdb7cfc9"
+          }
+        ]
+      },
+      "cases": [
+        {
+          "case": "before_any_activation",
+          "images": 0,
+          "active_skill_calls": 0,
+          "payload_sha256": "08bc824851df9e54d5bc37976691bdb0eff75bfed18adf8f3b804fdcedb5dfa6"
+        },
+        {
+          "case": "after_cache-policy-comparison",
+          "images": 1,
+          "active_skill_calls": 1,
+          "payload_sha256": "ea9c70481d9cab3e4a73ed6cf583592578352e13c54e3b44b112c13d9528c173"
+        },
+        {
+          "case": "after_prefix-cache-replay",
+          "images": 2,
+          "active_skill_calls": 2,
+          "payload_sha256": "42b1923174941c2a83850077dfd30fe855b51909920575a6d18654e4bea63ad4"
+        },
+        {
+          "case": "history_replay_no_extra_activation",
+          "images": 2,
+          "active_skill_calls": 2,
+          "payload_sha256": "14aae93d897bf4b20f68b7b5507ebd280c89f2fd332d4b182a828aff6958e585"
+        }
+      ],
+      "valid": true
+    },
+    {
+      "task": "llm-prefix-cache-replay",
+      "arm": "image",
+      "figures": "structure-v3",
+      "policy": {
+        "method": "skill-on-demand-v1",
+        "arm": "image",
+        "task": "llm-prefix-cache-replay",
+        "figures": "structure-v3",
+        "material_sha256": "2f3ad595d4ebf377740d2313eababb83b871a6307d572020d8cbf3cab0956a06",
+        "adapter_sha256": {
+          "protocol.py": "4a634be20274593096903ae684fd5b3bb966c63da98cc23fbece80f64e21c7cd",
+          "runner.py": "6b8d02b51e42b96d46583baf7c0cedb93c2be8cd47dec6476e43edaa53c99be0"
+        },
+        "id": "085c736020e156963439617f0603a16d6ee41cf9d738f1f99f3f20df2fb228b1",
+        "assets": [
+          {
+            "skill": "cache-policy-comparison",
+            "skill_sha256": "353a7215727695b01e48ea69e63ed92c0b32174534a6bda38cee9b91382e5963",
+            "image_sha256": "985529ae3381d1b5867612b01a88e5ce13cd0842d4e65d51bd06cf693806ca03"
+          },
+          {
+            "skill": "prefix-cache-replay",
+            "skill_sha256": "28ced940ec272cc01cf06519912077492d948b10e08a933acba12dd9907220cf",
+            "image_sha256": "7b5d4157a967913cedd1b53c063b82c7a977e61f39542b306ae433bbee9a073c"
+          }
+        ]
+      },
+      "cases": [
+        {
+          "case": "before_any_activation",
+          "images": 0,
+          "active_skill_calls": 0,
+          "payload_sha256": "08bc824851df9e54d5bc37976691bdb0eff75bfed18adf8f3b804fdcedb5dfa6"
+        },
+        {
+          "case": "after_cache-policy-comparison",
+          "images": 1,
+          "active_skill_calls": 1,
+          "payload_sha256": "a0193717070dda45edc8f4d19c6bb6b4e15716f8b3341b51c0face2fba91c688"
+        },
+        {
+          "case": "after_prefix-cache-replay",
+          "images": 2,
+          "active_skill_calls": 2,
+          "payload_sha256": "0b9f852a3163802efeaae5746a0881ebaeba12ceca6fc4ddf968e7e465d13de5"
+        },
+        {
+          "case": "history_replay_no_extra_activation",
+          "images": 2,
+          "active_skill_calls": 2,
+          "payload_sha256": "da82873356de7d5cee5f3d2c588910789b3244e88ec7bb1cef3b2b08f9a523bc"
+        }
+      ],
+      "valid": true
+    },
+    {
+      "task": "energy-market-pricing",
+      "arm": "text",
+      "figures": null,
+      "policy": {
+        "method": "skill-on-demand-v1",
+        "arm": "text",
+        "task": "energy-market-pricing",
+        "figures": null,
+        "material_sha256": "fb80ffbf0656d275d004b7153e2457f92ff243d66095a314dcb28c92a5757b9c",
+        "adapter_sha256": {
+          "protocol.py": "4a634be20274593096903ae684fd5b3bb966c63da98cc23fbece80f64e21c7cd",
+          "runner.py": "6b8d02b51e42b96d46583baf7c0cedb93c2be8cd47dec6476e43edaa53c99be0"
+        },
+        "id": "4bccfb33c7c8f4a9e768d0d60fe61d0e69bb15c64e7d88f5888cce58d133038e",
+        "assets": [
+          {
+            "skill": "dc-power-flow",
+            "skill_sha256": "461a4a93c6baf5f84eaa16881b11d76d0542907c8bb50745eceeb21d217e480e"
+          },
+          {
+            "skill": "economic-dispatch",
+            "skill_sha256": "907586a8ab5d697d20efaafb190809fbe737bcbac4082c0f94458c1e6489b82f"
+          },
+          {
+            "skill": "locational-marginal-prices",
+            "skill_sha256": "c48851e863afad9f416e52d57f5b065cc9a7a1ab2146b829abae4ac85412f2ac"
+          },
+          {
+            "skill": "power-flow-data",
+            "skill_sha256": "7c6544423d4106746ca831e431e6725292015c768e7958a168c57db140051846"
+          }
+        ]
+      },
+      "cases": [
+        {
+          "case": "before_any_activation",
+          "images": 0,
+          "active_skill_calls": 0,
+          "payload_sha256": "08bc824851df9e54d5bc37976691bdb0eff75bfed18adf8f3b804fdcedb5dfa6"
+        },
+        {
+          "case": "after_dc-power-flow",
+          "images": 0,
+          "active_skill_calls": 1,
+          "payload_sha256": "70ae9bc43d59cc542310f09df7ff01f2ca20e87092d5a0d9d5d7dbe556afb5ad"
+        },
+        {
+          "case": "after_economic-dispatch",
+          "images": 0,
+          "active_skill_calls": 2,
+          "payload_sha256": "5d847e5aa8cd89cb304714b770f8f4f1d6e970c7ed63ea57cf8860326357fe2f"
+        },
+        {
+          "case": "after_locational-marginal-prices",
+          "images": 0,
+          "active_skill_calls": 3,
+          "payload_sha256": "9bf989babcf5ca046252cfb7d263cf4f09236ed0441f174fc37d7644cb7ee205"
+        },
+        {
+          "case": "after_power-flow-data",
+          "images": 0,
+          "active_skill_calls": 4,
+          "payload_sha256": "7904f22502e57523b3502f7d4e64dd78aa9e5175dfef4946a30b57ff3a504c5f"
+        },
+        {
+          "case": "history_replay_no_extra_activation",
+          "images": 0,
+          "active_skill_calls": 4,
+          "payload_sha256": "3a10e9f94663bc2b0b59c45e1888a34960e90c83c8f355ee6b1b5bab256efe33"
+        }
+      ],
+      "valid": true
+    },
+    {
+      "task": "energy-market-pricing",
+      "arm": "image",
+      "figures": "uml-v1",
+      "policy": {
+        "method": "skill-on-demand-v1",
+        "arm": "image",
+        "task": "energy-market-pricing",
+        "figures": "uml-v1",
+        "material_sha256": "057ff7725dd1c2f208e5bc49ab4bfcdebe565f4cf234abd88795e000d2783392",
+        "adapter_sha256": {
+          "protocol.py": "4a634be20274593096903ae684fd5b3bb966c63da98cc23fbece80f64e21c7cd",
+          "runner.py": "6b8d02b51e42b96d46583baf7c0cedb93c2be8cd47dec6476e43edaa53c99be0"
+        },
+        "id": "7b61fd2275a703e48ca5c15f49c75fcf8b9f45e99e43d593d43550e435b94169",
+        "assets": [
+          {
+            "skill": "dc-power-flow",
+            "skill_sha256": "461a4a93c6baf5f84eaa16881b11d76d0542907c8bb50745eceeb21d217e480e",
+            "image_sha256": "6dbd3ec6c8dffb791d1a627a0ac6f661ab171211f0dfe9e39f2337f926d3e0b4"
+          },
+          {
+            "skill": "economic-dispatch",
+            "skill_sha256": "907586a8ab5d697d20efaafb190809fbe737bcbac4082c0f94458c1e6489b82f",
+            "image_sha256": "70c0b9749f726aa38e03b73073a7b0121c4016638551b507c5690a25a19f408f"
+          },
+          {
+            "skill": "locational-marginal-prices",
+            "skill_sha256": "c48851e863afad9f416e52d57f5b065cc9a7a1ab2146b829abae4ac85412f2ac",
+            "image_sha256": "e9c06d446b71c5b3cbec03e8cfd5ec64fe7a7e8306538f5051eea9407f65bb21"
+          },
+          {
+            "skill": "power-flow-data",
+            "skill_sha256": "7c6544423d4106746ca831e431e6725292015c768e7958a168c57db140051846",
+            "image_sha256": "07f218b00cb88fb54d1c440b2667246d29cb21882ec4bff631d61022708452b6"
+          }
+        ]
+      },
+      "cases": [
+        {
+          "case": "before_any_activation",
+          "images": 0,
+          "active_skill_calls": 0,
+          "payload_sha256": "08bc824851df9e54d5bc37976691bdb0eff75bfed18adf8f3b804fdcedb5dfa6"
+        },
+        {
+          "case": "after_dc-power-flow",
+          "images": 1,
+          "active_skill_calls": 1,
+          "payload_sha256": "620332623cfe528cc7710c492832c52f92939a05973c2ae3eb7e90bbbd8ed265"
+        },
+        {
+          "case": "after_economic-dispatch",
+          "images": 2,
+          "active_skill_calls": 2,
+          "payload_sha256": "3613207554ceb99e9ffbab0573aa823c903d0b5c6646359f031c67cf109c132b"
+        },
+        {
+          "case": "after_locational-marginal-prices",
+          "images": 3,
+          "active_skill_calls": 3,
+          "payload_sha256": "a0d17f2110bbef714ebd040beb24b36d18dce466df6d355271fa67678c18caff"
+        },
+        {
+          "case": "after_power-flow-data",
+          "images": 4,
+          "active_skill_calls": 4,
+          "payload_sha256": "4ccf8f419dec19078dbe4452fa1c6235802fea6ea1308cdda9e07fb8f98a93b5"
+        },
+        {
+          "case": "history_replay_no_extra_activation",
+          "images": 4,
+          "active_skill_calls": 4,
+          "payload_sha256": "4be0cd3428799849c3478074ff2de79e86ba00baf6b3d6858c13ff36fe3d525c"
+        }
+      ],
+      "valid": true
+    },
+    {
+      "task": "energy-market-pricing",
+      "arm": "image",
+      "figures": "uml-v2",
+      "policy": {
+        "method": "skill-on-demand-v1",
+        "arm": "image",
+        "task": "energy-market-pricing",
+        "figures": "uml-v2",
+        "material_sha256": "a663e5fed0dc5e78dba9011db91bcdfc6f195f46be5f68e27b771581aed6044b",
+        "adapter_sha256": {
+          "protocol.py": "4a634be20274593096903ae684fd5b3bb966c63da98cc23fbece80f64e21c7cd",
+          "runner.py": "6b8d02b51e42b96d46583baf7c0cedb93c2be8cd47dec6476e43edaa53c99be0"
+        },
+        "id": "70e8a7255373e8990a21a9e8f9db8701ec194d46bf1c0cd611b4efc068eb29d9",
+        "assets": [
+          {
+            "skill": "dc-power-flow",
+            "skill_sha256": "461a4a93c6baf5f84eaa16881b11d76d0542907c8bb50745eceeb21d217e480e",
+            "image_sha256": "71a9005073ac48f740500ee9005e01d0be0a417c01410bd7af7ef00b19130cb7"
+          },
+          {
+            "skill": "economic-dispatch",
+            "skill_sha256": "907586a8ab5d697d20efaafb190809fbe737bcbac4082c0f94458c1e6489b82f",
+            "image_sha256": "c6df0d528db63d3b5f109d843062effd1818dbe7e1de4e0adeb9eba96ab7f5bc"
+          },
+          {
+            "skill": "locational-marginal-prices",
+            "skill_sha256": "c48851e863afad9f416e52d57f5b065cc9a7a1ab2146b829abae4ac85412f2ac",
+            "image_sha256": "2ad20c6d835fe6f363346c6fdcfd03cf90dafd953f817af997c6cabc4d094057"
+          },
+          {
+            "skill": "power-flow-data",
+            "skill_sha256": "7c6544423d4106746ca831e431e6725292015c768e7958a168c57db140051846",
+            "image_sha256": "c31a490fda9fab3781719075f960f24075e5d9d1f3fe6e534147a98cf9c55003"
+          }
+        ]
+      },
+      "cases": [
+        {
+          "case": "before_any_activation",
+          "images": 0,
+          "active_skill_calls": 0,
+          "payload_sha256": "08bc824851df9e54d5bc37976691bdb0eff75bfed18adf8f3b804fdcedb5dfa6"
+        },
+        {
+          "case": "after_dc-power-flow",
+          "images": 1,
+          "active_skill_calls": 1,
+          "payload_sha256": "5f878faf51fc6050c6441e0d2b3a73dd879d1345aacf3b956ee5307b6f12a340"
+        },
+        {
+          "case": "after_economic-dispatch",
+          "images": 2,
+          "active_skill_calls": 2,
+          "payload_sha256": "5df2acd817a33691acf796fd70412c76450f2d9a119ad611720e64a1e969a86e"
+        },
+        {
+          "case": "after_locational-marginal-prices",
+          "images": 3,
+          "active_skill_calls": 3,
+          "payload_sha256": "e646717a4e38aa160a2f9e9dd1aed814842adbe6f51134bc8f785ce886a37aff"
+        },
+        {
+          "case": "after_power-flow-data",
+          "images": 4,
+          "active_skill_calls": 4,
+          "payload_sha256": "1fa9933f18a04b04e8847abc27edfde7fd90e06f44dea47066c7a568acd0ab3a"
+        },
+        {
+          "case": "history_replay_no_extra_activation",
+          "images": 4,
+          "active_skill_calls": 4,
+          "payload_sha256": "7ed0ecd05802c307c38fbdda8e2b5ce2352ea3c9453d036d84888e527488372f"
+        }
+      ],
+      "valid": true
+    },
+    {
+      "task": "energy-market-pricing",
+      "arm": "image",
+      "figures": "structure-v3",
+      "policy": {
+        "method": "skill-on-demand-v1",
+        "arm": "image",
+        "task": "energy-market-pricing",
+        "figures": "structure-v3",
+        "material_sha256": "c0ac58e3fcbc8228666e717fc1a9ee15d1f438b4391fabebe5217f3f84aca0dd",
+        "adapter_sha256": {
+          "protocol.py": "4a634be20274593096903ae684fd5b3bb966c63da98cc23fbece80f64e21c7cd",
+          "runner.py": "6b8d02b51e42b96d46583baf7c0cedb93c2be8cd47dec6476e43edaa53c99be0"
+        },
+        "id": "66babf1150cfd86909071e5a999e089c93795f7677adf457427ef5d42dc017d4",
+        "assets": [
+          {
+            "skill": "dc-power-flow",
+            "skill_sha256": "461a4a93c6baf5f84eaa16881b11d76d0542907c8bb50745eceeb21d217e480e",
+            "image_sha256": "11cd84101d1349f0c545b6b516711cb188f4b1aeb56ce17e46487cbb760a38ee"
+          },
+          {
+            "skill": "economic-dispatch",
+            "skill_sha256": "907586a8ab5d697d20efaafb190809fbe737bcbac4082c0f94458c1e6489b82f",
+            "image_sha256": "ec69547a95477261f4925c8c3263d327a7cc1a078f8a006afac83716b0371e60"
+          },
+          {
+            "skill": "locational-marginal-prices",
+            "skill_sha256": "c48851e863afad9f416e52d57f5b065cc9a7a1ab2146b829abae4ac85412f2ac",
+            "image_sha256": "ab7192389b69198590639f1ac616e6244b4a8b679d1387da967ff147dfd817c3"
+          },
+          {
+            "skill": "power-flow-data",
+            "skill_sha256": "7c6544423d4106746ca831e431e6725292015c768e7958a168c57db140051846",
+            "image_sha256": "c31a490fda9fab3781719075f960f24075e5d9d1f3fe6e534147a98cf9c55003"
+          }
+        ]
+      },
+      "cases": [
+        {
+          "case": "before_any_activation",
+          "images": 0,
+          "active_skill_calls": 0,
+          "payload_sha256": "08bc824851df9e54d5bc37976691bdb0eff75bfed18adf8f3b804fdcedb5dfa6"
+        },
+        {
+          "case": "after_dc-power-flow",
+          "images": 1,
+          "active_skill_calls": 1,
+          "payload_sha256": "4304097ab05cf781a42b914b3b90a93fc8ef0ff93fc8973e7ba9fd07b79fcf80"
+        },
+        {
+          "case": "after_economic-dispatch",
+          "images": 2,
+          "active_skill_calls": 2,
+          "payload_sha256": "94846acbb263ffd5f16d69ab7cb70e3df6ec09885ddacd673c056915f3f2a37d"
+        },
+        {
+          "case": "after_locational-marginal-prices",
+          "images": 3,
+          "active_skill_calls": 3,
+          "payload_sha256": "433b3ef0fea8621525fd5b9f0930e4f5c909c30b4b8fdac98736caa52a475dd6"
+        },
+        {
+          "case": "after_power-flow-data",
+          "images": 4,
+          "active_skill_calls": 4,
+          "payload_sha256": "38dcaee5c40e027acd7a60364286449da99c2700b0c6fb75171ffd2628171d38"
+        },
+        {
+          "case": "history_replay_no_extra_activation",
+          "images": 4,
+          "active_skill_calls": 4,
+          "payload_sha256": "06b4154f1c90483e1f3278b66670307b6ab613cc62d1f86c1a5ec0212b644ed1"
+        }
+      ],
+      "valid": true
+    },
+    {
+      "task": "r2r-mpc-control",
+      "arm": "text",
+      "figures": null,
+      "policy": {
+        "method": "skill-on-demand-v1",
+        "arm": "text",
+        "task": "r2r-mpc-control",
+        "figures": null,
+        "material_sha256": "f8d4843b426d770936048bd938785bbae72801002feb60993e793101b9189fbb",
+        "adapter_sha256": {
+          "protocol.py": "4a634be20274593096903ae684fd5b3bb966c63da98cc23fbece80f64e21c7cd",
+          "runner.py": "6b8d02b51e42b96d46583baf7c0cedb93c2be8cd47dec6476e43edaa53c99be0"
+        },
+        "id": "a9f9aa6f892688f8b5ef87104ca97ca190727ffdfbde561338295f2afbba2723",
+        "assets": [
+          {
+            "skill": "finite-horizon-lqr",
+            "skill_sha256": "8ce87c503270a401f9bce17518a8f11d8cc421de2f15984678ddeb0b8c27575f"
+          },
+          {
+            "skill": "integral-action-design",
+            "skill_sha256": "e3368f03c7c53e47f650272a2225602b0d437ae82c825b049291b02006d43220"
+          },
+          {
+            "skill": "mpc-horizon-tuning",
+            "skill_sha256": "fa85a6c22e728d92176f4aace0a3ad65e280bd4ecd061d1037a042b29ec47123"
+          },
+          {
+            "skill": "state-space-linearization",
+            "skill_sha256": "1cd18b96f4f55ff004aa92c0acbf0cab2744032c94a42d750ce749055038835b"
+          }
+        ]
+      },
+      "cases": [
+        {
+          "case": "before_any_activation",
+          "images": 0,
+          "active_skill_calls": 0,
+          "payload_sha256": "08bc824851df9e54d5bc37976691bdb0eff75bfed18adf8f3b804fdcedb5dfa6"
+        },
+        {
+          "case": "after_finite-horizon-lqr",
+          "images": 0,
+          "active_skill_calls": 1,
+          "payload_sha256": "eca332cfdfeccee5de72d09e9e70027de73dd1c25d0c80e7f9c02175bed919b3"
+        },
+        {
+          "case": "after_integral-action-design",
+          "images": 0,
+          "active_skill_calls": 2,
+          "payload_sha256": "6d70d98c109f1e61a7a4ff69db4b474f840639dd3f2b4258b6de8f653bdcc92f"
+        },
+        {
+          "case": "after_mpc-horizon-tuning",
+          "images": 0,
+          "active_skill_calls": 3,
+          "payload_sha256": "7f6516633ad10f0ab3db88dc2cf95559dadbedb89c60639b586e81ca8e0c4d22"
+        },
+        {
+          "case": "after_state-space-linearization",
+          "images": 0,
+          "active_skill_calls": 4,
+          "payload_sha256": "ee3dcb2cefcb234fbacb46ccfa7d567984dbc692cffa32c5253f46315f0b8d5c"
+        },
+        {
+          "case": "history_replay_no_extra_activation",
+          "images": 0,
+          "active_skill_calls": 4,
+          "payload_sha256": "3ad77fdcf0111f533cdf86e437a9e370c2aa88014d5512a7d170b67890b3d764"
+        }
+      ],
+      "valid": true
+    },
+    {
+      "task": "r2r-mpc-control",
+      "arm": "image",
+      "figures": "uml-v1",
+      "policy": {
+        "method": "skill-on-demand-v1",
+        "arm": "image",
+        "task": "r2r-mpc-control",
+        "figures": "uml-v1",
+        "material_sha256": "bfa6c58f820f5d0b7c7d98e780c6c6e272c13be4dfcd59bb94e991e6732ebb7e",
+        "adapter_sha256": {
+          "protocol.py": "4a634be20274593096903ae684fd5b3bb966c63da98cc23fbece80f64e21c7cd",
+          "runner.py": "6b8d02b51e42b96d46583baf7c0cedb93c2be8cd47dec6476e43edaa53c99be0"
+        },
+        "id": "c1c988281b8e40fe87a45d0a3f30a6d0a288ea7679d5c2a2c739642df2847d32",
+        "assets": [
+          {
+            "skill": "finite-horizon-lqr",
+            "skill_sha256": "8ce87c503270a401f9bce17518a8f11d8cc421de2f15984678ddeb0b8c27575f",
+            "image_sha256": "06488c46fd7f1bbecf58c93bbd169a8ee460c5cd6781fe11d7ec06517c25abe1"
+          },
+          {
+            "skill": "integral-action-design",
+            "skill_sha256": "e3368f03c7c53e47f650272a2225602b0d437ae82c825b049291b02006d43220",
+            "image_sha256": "907cfca631e45c3e398739fe20a4816bea93b022a271fc98006bf03c2fb3fddf"
+          },
+          {
+            "skill": "mpc-horizon-tuning",
+            "skill_sha256": "fa85a6c22e728d92176f4aace0a3ad65e280bd4ecd061d1037a042b29ec47123",
+            "image_sha256": "dcfb8ab96dbc86671e498e729c3ac5f2e12784cfa485b7d4f26ca40750110fb6"
+          },
+          {
+            "skill": "state-space-linearization",
+            "skill_sha256": "1cd18b96f4f55ff004aa92c0acbf0cab2744032c94a42d750ce749055038835b",
+            "image_sha256": "59ec451e56d61cad931a303d7da0b77f6dc436cff7e4a1c7f35e8f53254fa764"
+          }
+        ]
+      },
+      "cases": [
+        {
+          "case": "before_any_activation",
+          "images": 0,
+          "active_skill_calls": 0,
+          "payload_sha256": "08bc824851df9e54d5bc37976691bdb0eff75bfed18adf8f3b804fdcedb5dfa6"
+        },
+        {
+          "case": "after_finite-horizon-lqr",
+          "images": 1,
+          "active_skill_calls": 1,
+          "payload_sha256": "054b59240fd2754ed565dab4f70c5c73bc88ec703281752ffaa35bcbaa7f2b3b"
+        },
+        {
+          "case": "after_integral-action-design",
+          "images": 2,
+          "active_skill_calls": 2,
+          "payload_sha256": "d141a83b5a97892f8bf3bd439725a535297d4e8cd58654848fd926cfbd4e687a"
+        },
+        {
+          "case": "after_mpc-horizon-tuning",
+          "images": 3,
+          "active_skill_calls": 3,
+          "payload_sha256": "de17138821caa3054a482641ca3ede0960be5fae5d297d84057536cd551d3117"
+        },
+        {
+          "case": "after_state-space-linearization",
+          "images": 4,
+          "active_skill_calls": 4,
+          "payload_sha256": "1bbe1a9af9c6ce89290c7909bb8e74e4f4210aa273bcc3eeffa80b161f89ee53"
+        },
+        {
+          "case": "history_replay_no_extra_activation",
+          "images": 4,
+          "active_skill_calls": 4,
+          "payload_sha256": "16e9ecc43b707543d4e02bc209674deec137fb96a18d1dc16cdabc15f41bf025"
+        }
+      ],
+      "valid": true
+    },
+    {
+      "task": "r2r-mpc-control",
+      "arm": "image",
+      "figures": "uml-v2",
+      "policy": {
+        "method": "skill-on-demand-v1",
+        "arm": "image",
+        "task": "r2r-mpc-control",
+        "figures": "uml-v2",
+        "material_sha256": "6cf8139b8b98f245fb3f3e7f275f478626ebe8023dc2c7ecd6dc28e2f3574100",
+        "adapter_sha256": {
+          "protocol.py": "4a634be20274593096903ae684fd5b3bb966c63da98cc23fbece80f64e21c7cd",
+          "runner.py": "6b8d02b51e42b96d46583baf7c0cedb93c2be8cd47dec6476e43edaa53c99be0"
+        },
+        "id": "7ac7619b5dff420fcd2c4229e0b74e0a16b46b4f6b189a898277ca9fe7c575a6",
+        "assets": [
+          {
+            "skill": "finite-horizon-lqr",
+            "skill_sha256": "8ce87c503270a401f9bce17518a8f11d8cc421de2f15984678ddeb0b8c27575f",
+            "image_sha256": "42fe2a72ed5cdba47e79d5278e033dd9a6b6ee4daf5db60cb688fb2e3e2c045c"
+          },
+          {
+            "skill": "integral-action-design",
+            "skill_sha256": "e3368f03c7c53e47f650272a2225602b0d437ae82c825b049291b02006d43220",
+            "image_sha256": "85d0662bcf8380add9d3f1e1857f6a0539ac5bd7c85c13d43dec06e497c5f0c2"
+          },
+          {
+            "skill": "mpc-horizon-tuning",
+            "skill_sha256": "fa85a6c22e728d92176f4aace0a3ad65e280bd4ecd061d1037a042b29ec47123",
+            "image_sha256": "59badbc75938ce9967bd4e59004dec6825dc0b4f8e8d527dd7f3e7382d899fb4"
+          },
+          {
+            "skill": "state-space-linearization",
+            "skill_sha256": "1cd18b96f4f55ff004aa92c0acbf0cab2744032c94a42d750ce749055038835b",
+            "image_sha256": "03535233b61d0a522481ba44b606a2a0caf577bca1fed6ad0117705547243945"
+          }
+        ]
+      },
+      "cases": [
+        {
+          "case": "before_any_activation",
+          "images": 0,
+          "active_skill_calls": 0,
+          "payload_sha256": "08bc824851df9e54d5bc37976691bdb0eff75bfed18adf8f3b804fdcedb5dfa6"
+        },
+        {
+          "case": "after_finite-horizon-lqr",
+          "images": 1,
+          "active_skill_calls": 1,
+          "payload_sha256": "83437c63c976bdf5bc812f1f5e6d793f0954cdece368c8737035e7c593359add"
+        },
+        {
+          "case": "after_integral-action-design",
+          "images": 2,
+          "active_skill_calls": 2,
+          "payload_sha256": "7173a23d46e5380c69c4011e11cb15513fe2458d388d68e7d6f160b2fb721078"
+        },
+        {
+          "case": "after_mpc-horizon-tuning",
+          "images": 3,
+          "active_skill_calls": 3,
+          "payload_sha256": "a315b641e1f324ae146522df212b77742fe9b8f304404d3d936bf5b9807579d1"
+        },
+        {
+          "case": "after_state-space-linearization",
+          "images": 4,
+          "active_skill_calls": 4,
+          "payload_sha256": "d8e105cffa032eb4a82a0e6f2fe393601f232aaa8cca09b7d8ed23e1a3c28491"
+        },
+        {
+          "case": "history_replay_no_extra_activation",
+          "images": 4,
+          "active_skill_calls": 4,
+          "payload_sha256": "c160764dbc346407477415453f7db3d2c9d79430ba0e5d1a4b9adec35433755f"
+        }
+      ],
+      "valid": true
+    },
+    {
+      "task": "r2r-mpc-control",
+      "arm": "image",
+      "figures": "structure-v3",
+      "policy": {
+        "method": "skill-on-demand-v1",
+        "arm": "image",
+        "task": "r2r-mpc-control",
+        "figures": "structure-v3",
+        "material_sha256": "27365d0bdda228aabc2f77b11550df6b3cbe5d80ad8c6bc47b662a5e9a23ab6d",
+        "adapter_sha256": {
+          "protocol.py": "4a634be20274593096903ae684fd5b3bb966c63da98cc23fbece80f64e21c7cd",
+          "runner.py": "6b8d02b51e42b96d46583baf7c0cedb93c2be8cd47dec6476e43edaa53c99be0"
+        },
+        "id": "a8aa3c4f08d17d588d679085b0c147f721752ebd90e9bcfb4e0584faf90e2df4",
+        "assets": [
+          {
+            "skill": "finite-horizon-lqr",
+            "skill_sha256": "8ce87c503270a401f9bce17518a8f11d8cc421de2f15984678ddeb0b8c27575f",
+            "image_sha256": "3f97c238eaedf67ce22d42d8630c5fec08697ba4dd379ce1cd98a27f10ccc4c2"
+          },
+          {
+            "skill": "integral-action-design",
+            "skill_sha256": "e3368f03c7c53e47f650272a2225602b0d437ae82c825b049291b02006d43220",
+            "image_sha256": "fac55b6c9d2442481c34f600f8deb3f381835487dee48c65560db0ad2886d67d"
+          },
+          {
+            "skill": "mpc-horizon-tuning",
+            "skill_sha256": "fa85a6c22e728d92176f4aace0a3ad65e280bd4ecd061d1037a042b29ec47123",
+            "image_sha256": "59badbc75938ce9967bd4e59004dec6825dc0b4f8e8d527dd7f3e7382d899fb4"
+          },
+          {
+            "skill": "state-space-linearization",
+            "skill_sha256": "1cd18b96f4f55ff004aa92c0acbf0cab2744032c94a42d750ce749055038835b",
+            "image_sha256": "03535233b61d0a522481ba44b606a2a0caf577bca1fed6ad0117705547243945"
+          }
+        ]
+      },
+      "cases": [
+        {
+          "case": "before_any_activation",
+          "images": 0,
+          "active_skill_calls": 0,
+          "payload_sha256": "08bc824851df9e54d5bc37976691bdb0eff75bfed18adf8f3b804fdcedb5dfa6"
+        },
+        {
+          "case": "after_finite-horizon-lqr",
+          "images": 1,
+          "active_skill_calls": 1,
+          "payload_sha256": "4c089bf243890f9e4cbffcf52cc50be20a89b8dca0e48b39052f278a673317ec"
+        },
+        {
+          "case": "after_integral-action-design",
+          "images": 2,
+          "active_skill_calls": 2,
+          "payload_sha256": "118575719488b3928281c59bdd0e70e87ebe7ff6ad77354d57a49c08723639d7"
+        },
+        {
+          "case": "after_mpc-horizon-tuning",
+          "images": 3,
+          "active_skill_calls": 3,
+          "payload_sha256": "106d127677fd48f68c6c949b447d747202737be2ad4009d59d19d805e1b656bd"
+        },
+        {
+          "case": "after_state-space-linearization",
+          "images": 4,
+          "active_skill_calls": 4,
+          "payload_sha256": "b1242d95fb04ac5492e79cd13931f682448fa352de38d4998ec05cd6b4ae20b2"
+        },
+        {
+          "case": "history_replay_no_extra_activation",
+          "images": 4,
+          "active_skill_calls": 4,
+          "payload_sha256": "cf35083386f83e3a16713383c8954ecd5df1587b84640c953d24770a5a6e8b2b"
+        }
+      ],
+      "valid": true
+    },
+    {
+      "task": "exam-block-sequencing",
+      "arm": "text",
+      "figures": null,
+      "policy": {
+        "method": "skill-on-demand-v1",
+        "arm": "text",
+        "task": "exam-block-sequencing",
+        "figures": null,
+        "material_sha256": "43caa7f1697476cdc4dc2c0dbf7ad658bc6c83699b3b229dd8560f0722307374",
+        "adapter_sha256": {
+          "protocol.py": "4a634be20274593096903ae684fd5b3bb966c63da98cc23fbece80f64e21c7cd",
+          "runner.py": "6b8d02b51e42b96d46583baf7c0cedb93c2be8cd47dec6476e43edaa53c99be0"
+        },
+        "id": "4c9ccaad1a8b600abe9226d353703599954b158c4d6087a26a77a2e5c6899644",
+        "assets": [
+          {
+            "skill": "mip-solver-and-solution-audit",
+            "skill_sha256": "34ab1c8cd80ab01f65ad7287776994efeceb15fe454c36216d7d4ba2fee442f7"
+          },
+          {
+            "skill": "ordered-window-sequencing-mip",
+            "skill_sha256": "0e1aa2b96b164e0cb06045b8d6b3fdd56d693c002a7dbbf8fb093bca3216c514"
+          }
+        ]
+      },
+      "cases": [
+        {
+          "case": "before_any_activation",
+          "images": 0,
+          "active_skill_calls": 0,
+          "payload_sha256": "08bc824851df9e54d5bc37976691bdb0eff75bfed18adf8f3b804fdcedb5dfa6"
+        },
+        {
+          "case": "after_mip-solver-and-solution-audit",
+          "images": 0,
+          "active_skill_calls": 1,
+          "payload_sha256": "4edbc0f036b229d57a46b8e9e71505e714b7123bd4901350428201af2590263d"
+        },
+        {
+          "case": "after_ordered-window-sequencing-mip",
+          "images": 0,
+          "active_skill_calls": 2,
+          "payload_sha256": "376daf575630fe78d660febe20596445d76d16e6602894323e14b2d908312dc9"
+        },
+        {
+          "case": "history_replay_no_extra_activation",
+          "images": 0,
+          "active_skill_calls": 2,
+          "payload_sha256": "d7c9f60fcd92f757731f59a802db150dc18dab6bb1bf19ca301ebc693e7815a6"
+        }
+      ],
+      "valid": true
+    },
+    {
+      "task": "exam-block-sequencing",
+      "arm": "image",
+      "figures": "uml-v1",
+      "policy": {
+        "method": "skill-on-demand-v1",
+        "arm": "image",
+        "task": "exam-block-sequencing",
+        "figures": "uml-v1",
+        "material_sha256": "a481f48c140290b2fd63319da53c31a3d4f2e182958d3bac121b3b0748037705",
+        "adapter_sha256": {
+          "protocol.py": "4a634be20274593096903ae684fd5b3bb966c63da98cc23fbece80f64e21c7cd",
+          "runner.py": "6b8d02b51e42b96d46583baf7c0cedb93c2be8cd47dec6476e43edaa53c99be0"
+        },
+        "id": "b95cf56d937ff4a2ae8f56ca4e569accc2b75879f1edb6128cf74980c1fa240b",
+        "assets": [
+          {
+            "skill": "mip-solver-and-solution-audit",
+            "skill_sha256": "34ab1c8cd80ab01f65ad7287776994efeceb15fe454c36216d7d4ba2fee442f7",
+            "image_sha256": "ffdc956265f7d40c7a1df8d91deceeea79ca90ca095644745d25fbe707f3d53b"
+          },
+          {
+            "skill": "ordered-window-sequencing-mip",
+            "skill_sha256": "0e1aa2b96b164e0cb06045b8d6b3fdd56d693c002a7dbbf8fb093bca3216c514",
+            "image_sha256": "6536b052c2ee814065b860b19d34e1de7e5239a81cd2e4bd6e0b4c3dc69ce0ca"
+          }
+        ]
+      },
+      "cases": [
+        {
+          "case": "before_any_activation",
+          "images": 0,
+          "active_skill_calls": 0,
+          "payload_sha256": "08bc824851df9e54d5bc37976691bdb0eff75bfed18adf8f3b804fdcedb5dfa6"
+        },
+        {
+          "case": "after_mip-solver-and-solution-audit",
+          "images": 1,
+          "active_skill_calls": 1,
+          "payload_sha256": "7f46aaedf81b1db258faa925c87e6e2b77e33985070eef085fc6b7dba91c57bd"
+        },
+        {
+          "case": "after_ordered-window-sequencing-mip",
+          "images": 2,
+          "active_skill_calls": 2,
+          "payload_sha256": "0a32d191fe32efc3fc575b4e417f6bc810ae377a12462657ac77444d65f1e1c5"
+        },
+        {
+          "case": "history_replay_no_extra_activation",
+          "images": 2,
+          "active_skill_calls": 2,
+          "payload_sha256": "7fa15f9a1588f51956c9da4e40b5f5b75d68a7af603e7c6ac91cd5530e1bc319"
+        }
+      ],
+      "valid": true
+    },
+    {
+      "task": "exam-block-sequencing",
+      "arm": "image",
+      "figures": "uml-v2",
+      "policy": {
+        "method": "skill-on-demand-v1",
+        "arm": "image",
+        "task": "exam-block-sequencing",
+        "figures": "uml-v2",
+        "material_sha256": "838326a3144e5e8747f57c214b03a2e2468c10bb2eaf60e3e946fca0d7abd34e",
+        "adapter_sha256": {
+          "protocol.py": "4a634be20274593096903ae684fd5b3bb966c63da98cc23fbece80f64e21c7cd",
+          "runner.py": "6b8d02b51e42b96d46583baf7c0cedb93c2be8cd47dec6476e43edaa53c99be0"
+        },
+        "id": "f2b780788cd85c6ecf1262dda3653c26becdfe6b5fad7bb0410dd33374669dc4",
+        "assets": [
+          {
+            "skill": "mip-solver-and-solution-audit",
+            "skill_sha256": "34ab1c8cd80ab01f65ad7287776994efeceb15fe454c36216d7d4ba2fee442f7",
+            "image_sha256": "0ed781645eaea904b51908ec8883d4e1d250504cceb44618477e461cedf5558c"
+          },
+          {
+            "skill": "ordered-window-sequencing-mip",
+            "skill_sha256": "0e1aa2b96b164e0cb06045b8d6b3fdd56d693c002a7dbbf8fb093bca3216c514",
+            "image_sha256": "6db37ba712e6e2a292e8fa30fbcb00bfeb730c78d32f60aa2e52575dff34ead9"
+          }
+        ]
+      },
+      "cases": [
+        {
+          "case": "before_any_activation",
+          "images": 0,
+          "active_skill_calls": 0,
+          "payload_sha256": "08bc824851df9e54d5bc37976691bdb0eff75bfed18adf8f3b804fdcedb5dfa6"
+        },
+        {
+          "case": "after_mip-solver-and-solution-audit",
+          "images": 1,
+          "active_skill_calls": 1,
+          "payload_sha256": "2b5d6980041b6f00b26ea8760fce9290e1f8c73820282f96bfcc558a75fa2bb4"
+        },
+        {
+          "case": "after_ordered-window-sequencing-mip",
+          "images": 2,
+          "active_skill_calls": 2,
+          "payload_sha256": "97a007f36d3e3f189ef3b8b28e6245724180671afca8bb0b05d1e8567cd0dd9f"
+        },
+        {
+          "case": "history_replay_no_extra_activation",
+          "images": 2,
+          "active_skill_calls": 2,
+          "payload_sha256": "ee3b2ea4d4033bb5d7ff7ed397602bf59cee5d5fce15d0cb89299072f587885d"
+        }
+      ],
+      "valid": true
+    },
+    {
+      "task": "exam-block-sequencing",
+      "arm": "image",
+      "figures": "structure-v3",
+      "policy": {
+        "method": "skill-on-demand-v1",
+        "arm": "image",
+        "task": "exam-block-sequencing",
+        "figures": "structure-v3",
+        "material_sha256": "d0fd90dd88f7ad671981f01fd6613aa180c39c1b7287f07c1edd1eca65c31a7f",
+        "adapter_sha256": {
+          "protocol.py": "4a634be20274593096903ae684fd5b3bb966c63da98cc23fbece80f64e21c7cd",
+          "runner.py": "6b8d02b51e42b96d46583baf7c0cedb93c2be8cd47dec6476e43edaa53c99be0"
+        },
+        "id": "be9d5c2428dd76deca6cd9058d540c6dec97eae4bb3000875b7516df2c02873f",
+        "assets": [
+          {
+            "skill": "mip-solver-and-solution-audit",
+            "skill_sha256": "34ab1c8cd80ab01f65ad7287776994efeceb15fe454c36216d7d4ba2fee442f7",
+            "image_sha256": "0ed781645eaea904b51908ec8883d4e1d250504cceb44618477e461cedf5558c"
+          },
+          {
+            "skill": "ordered-window-sequencing-mip",
+            "skill_sha256": "0e1aa2b96b164e0cb06045b8d6b3fdd56d693c002a7dbbf8fb093bca3216c514",
+            "image_sha256": "b6d4ac6537faad738386ff8a32b5c4e351167bd90c8e04005c0aa96f13f817cf"
+          }
+        ]
+      },
+      "cases": [
+        {
+          "case": "before_any_activation",
+          "images": 0,
+          "active_skill_calls": 0,
+          "payload_sha256": "08bc824851df9e54d5bc37976691bdb0eff75bfed18adf8f3b804fdcedb5dfa6"
+        },
+        {
+          "case": "after_mip-solver-and-solution-audit",
+          "images": 1,
+          "active_skill_calls": 1,
+          "payload_sha256": "eb9b5e7aadfc5c26fb777d132fff4f195497f6f3b0895a8893b376b9536ae8e1"
+        },
+        {
+          "case": "after_ordered-window-sequencing-mip",
+          "images": 2,
+          "active_skill_calls": 2,
+          "payload_sha256": "6ad22ebc1975549fbf77d17033ce8ecf2353b00aab8cb84bcaf3ab93ab2d2de8"
+        },
+        {
+          "case": "history_replay_no_extra_activation",
+          "images": 2,
+          "active_skill_calls": 2,
+          "payload_sha256": "590b61632467ed6816294890e387233fe4b12423be720b3425b98757092b56cf"
+        }
+      ],
+      "valid": true
+    },
+    {
+      "task": "manufacturing-fjsp-optimization",
+      "arm": "text",
+      "figures": null,
+      "policy": {
+        "method": "skill-on-demand-v1",
+        "arm": "text",
+        "task": "manufacturing-fjsp-optimization",
+        "figures": null,
+        "material_sha256": "6a4882fbc7e8272e9bc77ac738bbba2091093e30e6ea0b2dddb28ed5171289d4",
+        "adapter_sha256": {
+          "protocol.py": "4a634be20274593096903ae684fd5b3bb966c63da98cc23fbece80f64e21c7cd",
+          "runner.py": "6b8d02b51e42b96d46583baf7c0cedb93c2be8cd47dec6476e43edaa53c99be0"
+        },
+        "id": "a5a1e7aba4b0731185281b2a6531c67c79132e95cba6d8c7d43f06b3e1551cf2",
+        "assets": [
+          {
+            "skill": "fjsp-baseline-repair-with-downtime-and-policy",
+            "skill_sha256": "2668bd6b9c6977ccedcf1f1d4af4401afdfe215666d68f82df41b662852b2125"
+          }
+        ]
+      },
+      "cases": [
+        {
+          "case": "before_any_activation",
+          "images": 0,
+          "active_skill_calls": 0,
+          "payload_sha256": "08bc824851df9e54d5bc37976691bdb0eff75bfed18adf8f3b804fdcedb5dfa6"
+        },
+        {
+          "case": "after_fjsp-baseline-repair-with-downtime-and-policy",
+          "images": 0,
+          "active_skill_calls": 1,
+          "payload_sha256": "9433bd852709822dd9217c65eff31d7ed7807253ab56410b92e3d61f97dbe0fb"
+        },
+        {
+          "case": "history_replay_no_extra_activation",
+          "images": 0,
+          "active_skill_calls": 1,
+          "payload_sha256": "426ab04814f162bfe9352317aef8be38ad342e8d065e3ccead8a0d7ca11bf0f8"
+        }
+      ],
+      "valid": true
+    },
+    {
+      "task": "manufacturing-fjsp-optimization",
+      "arm": "image",
+      "figures": "uml-v1",
+      "policy": {
+        "method": "skill-on-demand-v1",
+        "arm": "image",
+        "task": "manufacturing-fjsp-optimization",
+        "figures": "uml-v1",
+        "material_sha256": "6584dfc8998204dd5fc50b75dbe677133620f63a609dc2e93cec47086dfb4cbe",
+        "adapter_sha256": {
+          "protocol.py": "4a634be20274593096903ae684fd5b3bb966c63da98cc23fbece80f64e21c7cd",
+          "runner.py": "6b8d02b51e42b96d46583baf7c0cedb93c2be8cd47dec6476e43edaa53c99be0"
+        },
+        "id": "79cc331dad70e691738e0fe3afedd489e9cb1aa7555679579e044fbcd7f66b34",
+        "assets": [
+          {
+            "skill": "fjsp-baseline-repair-with-downtime-and-policy",
+            "skill_sha256": "2668bd6b9c6977ccedcf1f1d4af4401afdfe215666d68f82df41b662852b2125",
+            "image_sha256": "d94c741f1e882ca6f52f3b67c5c1f2e4560972232c25f41e7549cd930c63bb20"
+          }
+        ]
+      },
+      "cases": [
+        {
+          "case": "before_any_activation",
+          "images": 0,
+          "active_skill_calls": 0,
+          "payload_sha256": "08bc824851df9e54d5bc37976691bdb0eff75bfed18adf8f3b804fdcedb5dfa6"
+        },
+        {
+          "case": "after_fjsp-baseline-repair-with-downtime-and-policy",
+          "images": 1,
+          "active_skill_calls": 1,
+          "payload_sha256": "828687267f850d10cd918643b6dc0b3867cf6a377bf5ad169826b1c40b92ac57"
+        },
+        {
+          "case": "history_replay_no_extra_activation",
+          "images": 1,
+          "active_skill_calls": 1,
+          "payload_sha256": "86493ca0ff22107fc13f68a7d8eedb91dfc377b414fb88066d044f5bb8383ee7"
+        }
+      ],
+      "valid": true
+    },
+    {
+      "task": "manufacturing-fjsp-optimization",
+      "arm": "image",
+      "figures": "uml-v2",
+      "policy": {
+        "method": "skill-on-demand-v1",
+        "arm": "image",
+        "task": "manufacturing-fjsp-optimization",
+        "figures": "uml-v2",
+        "material_sha256": "ba6e9939d45e8250b93add8d6d1959c40b35efcf28bcecf01c9f90ae1cc30695",
+        "adapter_sha256": {
+          "protocol.py": "4a634be20274593096903ae684fd5b3bb966c63da98cc23fbece80f64e21c7cd",
+          "runner.py": "6b8d02b51e42b96d46583baf7c0cedb93c2be8cd47dec6476e43edaa53c99be0"
+        },
+        "id": "6e20c68f8ea6e157ca907992023893b93a61d950e9723f585be7cbe831f87662",
+        "assets": [
+          {
+            "skill": "fjsp-baseline-repair-with-downtime-and-policy",
+            "skill_sha256": "2668bd6b9c6977ccedcf1f1d4af4401afdfe215666d68f82df41b662852b2125",
+            "image_sha256": "eea4b605e9135f60be906315cd8ba736e93b3e54ed72b214e2e8760a31e3f540"
+          }
+        ]
+      },
+      "cases": [
+        {
+          "case": "before_any_activation",
+          "images": 0,
+          "active_skill_calls": 0,
+          "payload_sha256": "08bc824851df9e54d5bc37976691bdb0eff75bfed18adf8f3b804fdcedb5dfa6"
+        },
+        {
+          "case": "after_fjsp-baseline-repair-with-downtime-and-policy",
+          "images": 1,
+          "active_skill_calls": 1,
+          "payload_sha256": "3d03bc956fea61832de64acc8a99b8e8873b4fcea24f0ec59d67e857ac0dcc37"
+        },
+        {
+          "case": "history_replay_no_extra_activation",
+          "images": 1,
+          "active_skill_calls": 1,
+          "payload_sha256": "95aa4fd1310bfcb4a0bbfbd2d187dc5c56b5688df12a4f1f14a7bb19a5f6f304"
+        }
+      ],
+      "valid": true
+    },
+    {
+      "task": "manufacturing-fjsp-optimization",
+      "arm": "image",
+      "figures": "structure-v3",
+      "policy": {
+        "method": "skill-on-demand-v1",
+        "arm": "image",
+        "task": "manufacturing-fjsp-optimization",
+        "figures": "structure-v3",
+        "material_sha256": "fe4e87eee6612ad1be8e23557e4bd2637af0f46c851a1788e18688c2a7a6a090",
+        "adapter_sha256": {
+          "protocol.py": "4a634be20274593096903ae684fd5b3bb966c63da98cc23fbece80f64e21c7cd",
+          "runner.py": "6b8d02b51e42b96d46583baf7c0cedb93c2be8cd47dec6476e43edaa53c99be0"
+        },
+        "id": "774dfa9d596a4fd2b92be4e02afca12e1536dcfabc3abcff91d1d2cc116160a9",
+        "assets": [
+          {
+            "skill": "fjsp-baseline-repair-with-downtime-and-policy",
+            "skill_sha256": "2668bd6b9c6977ccedcf1f1d4af4401afdfe215666d68f82df41b662852b2125",
+            "image_sha256": "a8acf7dd005eb5d42b204ed94ded845085a4a8008b456aba04f215241036ac10"
+          }
+        ]
+      },
+      "cases": [
+        {
+          "case": "before_any_activation",
+          "images": 0,
+          "active_skill_calls": 0,
+          "payload_sha256": "08bc824851df9e54d5bc37976691bdb0eff75bfed18adf8f3b804fdcedb5dfa6"
+        },
+        {
+          "case": "after_fjsp-baseline-repair-with-downtime-and-policy",
+          "images": 1,
+          "active_skill_calls": 1,
+          "payload_sha256": "09611bf3eba2f5006bd8a2268789f0e6b755e91e6bb47971b12cfade8b348fd5"
+        },
+        {
+          "case": "history_replay_no_extra_activation",
+          "images": 1,
+          "active_skill_calls": 1,
+          "payload_sha256": "7016d080905b855509c61d6da1bb4493ea4fc15e8d294885861b4df8c5e436d4"
+        }
+      ],
+      "valid": true
+    }
+  ]
+}

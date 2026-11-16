@@ -1,0 +1,8 @@
+{
+  "source_repo": "https://github.com/benchflow-ai/skillsbench",
+  "public_source_commit": "f860ecf02ef53412a030f8661c83d644b739ff01",
+  "committed_skill_resource_files_verified": 16,
+  "destination": "https://api.deepseek.com/v1",
+  "payload": "only public benchmark skill text and diagrams derived from it, plus fixed connectivity-check sentence; no task instance, .env, credentials, private project data or result trajectories in message",
+  "authorization": "User explicitly requested reuse of existing experiment logic and new skill diagrams, rerun and analyze; existing model routing is deepseek/deepseek-flash."
+}

@@ -1,0 +1,37 @@
+@startuml
+!pragma useVerticalIf on
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+skinparam defaultFontName SansSerif
+skinparam defaultFontSize 17
+skinparam ArrowColor #46566F
+skinparam activity {
+  BackgroundColor #EEF5FF
+  BorderColor #365A82
+  FontColor #152B44
+  DiamondBackgroundColor #FFF3D6
+  DiamondBorderColor #BA842A
+}
+skinparam noteBackgroundColor #FFF8DE
+skinparam noteBorderColor #BEA45C
+skinparam wrapWidth 370
+title Network data | schema, identifiers and units
+start
+:Parse the whole network JSON with json.load;\nprint dimensions and total active load only [S1];
+note right
+ S1: large networks should not be dumped
+ line by line into the model context.
+end note
+:Load baseMVA, bus, gen, branch and gencost;\nread reserve_capacity / reserve_requirement\nwhen present in the declared input [S1];
+:Build bus_number -> zero-based row mapping;\nmap every generator and branch endpoint [S1];
+note right
+ Bus labels may have gaps.
+ Never substitute bus_id - 1.
+end note
+:Classify buses: slack=3, PV=2, PQ=1;\nlocate reference bus with angle zero [S1];
+:Read branch R[2], X[3], charging[4],\nRATE_A[5] and in-service flag[10] [S1];
+:Keep physical and per-unit values distinct;\nP_pu = P_MW / baseMVA;\nP_MW = P_pu * baseMVA [S1];
+:Compute load = sum(bus[:,2]);\nreturn mapped arrays, topology, units\nand declared reserve fields [S1];
+stop
+footer Full-skill v2 | S1: SKILL.md
+@enduml

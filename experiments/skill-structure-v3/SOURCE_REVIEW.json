@@ -1,0 +1,51 @@
+{
+  "all_eight_pngs_visually_inspected": true,
+  "source_review": "All local skill texts and declared scripts/references were inspected; no instance, task.md, oracle or verifier used in authoring.",
+  "known_limits": [
+    "Source-derived summaries differ in layout and emphasis; not an equal-content modality ablation.",
+    "Author previously saw historical outcomes; selection is not blinded.",
+    "No-new-diagram skills get no standalone experiment; old background figures remain fixed during another skill intervention."
+  ],
+  "reviewed_figures": {
+    "prefix-cache-replay": {
+      "figures/prefix-cache-replay/diagram.dot": "b93be82c47aff3f0b03eb4e1c02af549a797ca29ba3e7e132f1b485e3d4d752a",
+      "figures/prefix-cache-replay/diagram.png": "7b5d4157a967913cedd1b53c063b82c7a977e61f39542b306ae433bbee9a073c",
+      "figures/prefix-cache-replay/diagram.svg": "de6b1fc4ad7b9d95b17eef3c03275d49383cde1725fcfb792dcb9441ac5d826f"
+    },
+    "dc-power-flow": {
+      "figures/dc-power-flow/diagram.dot": "0172601c45f1f64678f4c555e1b0da8abfd3f6fafe94acc8b78c2e9011cf0322",
+      "figures/dc-power-flow/diagram.png": "11cd84101d1349f0c545b6b516711cb188f4b1aeb56ce17e46487cbb760a38ee",
+      "figures/dc-power-flow/diagram.svg": "c4d71b7b907adb48326b660b04c97eab85c930c31317b90344c72378bb5b1370"
+    },
+    "economic-dispatch": {
+      "figures/economic-dispatch/diagram.dot": "2be3381e79bc3d7f9a6034d07c196545e09e835de31c80f6aa9965b4dcf1d124",
+      "figures/economic-dispatch/diagram.png": "ec69547a95477261f4925c8c3263d327a7cc1a078f8a006afac83716b0371e60",
+      "figures/economic-dispatch/diagram.svg": "9e8cfcb8b912a26d7c92cb869bbd8481cd84dbed81ca679b7cf568e7b44acb2b"
+    },
+    "locational-marginal-prices": {
+      "figures/locational-marginal-prices/diagram.dot": "73cdccf76feb2e789edf8fb1acaa2e7168daf287bd921580fc83628413ee061a",
+      "figures/locational-marginal-prices/diagram.png": "ab7192389b69198590639f1ac616e6244b4a8b679d1387da967ff147dfd817c3",
+      "figures/locational-marginal-prices/diagram.svg": "7fb2721a63ffe7ea893a242cb0356d8224cd1ec2c1957281ce1f3a39d0183c46"
+    },
+    "finite-horizon-lqr": {
+      "figures/finite-horizon-lqr/diagram.dot": "074b9965fe5063cb51f7ee7e8df7912c10ddddbca0eb8e14e5c1b3e4f09fd5b4",
+      "figures/finite-horizon-lqr/diagram.png": "3f97c238eaedf67ce22d42d8630c5fec08697ba4dd379ce1cd98a27f10ccc4c2",
+      "figures/finite-horizon-lqr/diagram.svg": "83d464b953b8f489a3df92e9db54fe93fd50ae63cbd8f0510e213cd37a7ba887"
+    },
+    "integral-action-design": {
+      "figures/integral-action-design/diagram.dot": "5562a620d7cf44e9184b042d70c0b6a86fd3348c17d55b8f7dee3d37743d4b73",
+      "figures/integral-action-design/diagram.png": "fac55b6c9d2442481c34f600f8deb3f381835487dee48c65560db0ad2886d67d",
+      "figures/integral-action-design/diagram.svg": "776f72a2bf183136d5ddbfcb0d19008a4ca7e71fcebedcf0b3a78ff5f6cad305"
+    },
+    "ordered-window-sequencing-mip": {
+      "figures/ordered-window-sequencing-mip/diagram.dot": "ba2e72e05e1423aef3c965c6659b69443a6d3098da0a095b91a96881a46c7ff0",
+      "figures/ordered-window-sequencing-mip/diagram.png": "b6d4ac6537faad738386ff8a32b5c4e351167bd90c8e04005c0aa96f13f817cf",
+      "figures/ordered-window-sequencing-mip/diagram.svg": "700e9e95b1aa4a9c1758867210af8ed6edde493ee7fbd82f696e20a7a14478dc"
+    },
+    "fjsp-baseline-repair-with-downtime-and-policy": {
+      "figures/fjsp-baseline-repair-with-downtime-and-policy/diagram.dot": "6dd0c972bb02217aa203dcfd15017a7fab98331f28d4d83b6d48be2be3a34b0f",
+      "figures/fjsp-baseline-repair-with-downtime-and-policy/diagram.png": "a8acf7dd005eb5d42b204ed94ded845085a4a8008b456aba04f215241036ac10",
+      "figures/fjsp-baseline-repair-with-downtime-and-policy/diagram.svg": "17d2f4b4e6cb44608a912f1bbca2c86adf92f91739e0a2297c7fdf77dc7019b3"
+    }
+  }
+}

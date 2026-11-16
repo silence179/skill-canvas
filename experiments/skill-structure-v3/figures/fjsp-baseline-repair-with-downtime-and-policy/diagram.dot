@@ -1,0 +1,26 @@
+digraph skill {
+graph [bgcolor="white", pad="0.28", nodesep="0.38", ranksep="0.5", fontname="DejaVu Sans", fontsize=22, labelloc=t, labeljust=l];
+node [shape=box, style="rounded,filled", fillcolor="#eef5ff", color="#365a82", fontcolor="#152b44", fontname="DejaVu Sans", fontsize=17, margin="0.16,0.12", penwidth=1.3];
+edge [color="#46566f", fontname="DejaVu Sans", fontsize=14, arrowsize=.8];
+label="fjsp-baseline-repair-with-downtime-and-policy | symbolic resource timeline";
+rankdir=TB;
+timeline [shape=plain,label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="12">
+<TR><TD BGCOLOR="#dae7f8">resource</TD><TD>anchor</TD><TD>candidate integers</TD><TD>first feasible t*</TD><TD>end=t*+dur_m</TD></TR>
+<TR><TD>job predecessor</TD><TD COLSPAN="2" BGCOLOR="#dceee4">anchor=max(baseline_start, predecessor_new_end)</TD><TD></TD><TD></TD></TR>
+<TR><TD>machine m</TD><TD BGCOLOR="#d9dee6">committed work</TD><TD BGCOLOR="#ffe0d8">downtime / conflict</TD><TD COLSPAN="2" BGCOLOR="#dceee4">candidate interval [t*,t*+dur_m)</TD></TR>
+<TR><TD COLSPAN="5">SCHEMATIC ONLY [S1,S2]: symbolic intervals, no instance values; rows illustrate constraints, not a schedule.</TD></TR>
+</TABLE>>];
+order [label="Commit in precedence-aware order [S1]\nsort by (operation index, baseline start, original list index)\nretain ORIGINAL baseline machine/start for budget accounting"];
+scan [label="For EACH considered legal machine [S1]\nuse its own processing duration; start at anchor\nwhile conflict with committed work OR downtime: t += 1\nfirst feasible INTEGER t is the candidate\nhalf-open overlap(s,e,a,b): s<b AND a<e"];
+order -> scan;timeline -> scan [label="resource/precedence constraints"];
+choose [label="Machine choice + budgets [S1]\ntry legal baseline machine first; if illegal choose legal default\nsource: min-duration default / machine-change-first score\nalso source: consider earlier alternate for large shifts\nstate a consistent priority; these heuristics may conflict"];
+scan -> choose [label="one earliest feasible candidate per machine"];
+commit [label="commit immediately in SAME order [S1]\nupdate machine intervals + job predecessor end\nMC=sum[m_new != m_original]\nL1=sum(abs(start_new-start_original))\nrespect MC/L1 limits; never start before baseline"];
+choose -> commit;
+commit -> scan [label="next operation; updated state",constraint=false,color="#b06b30"];
+check [label="Local timing invariant [S1]\nif start>anchor, start-1 must be infeasible\ncheck legal machine/duration, precedence, overlaps, downtime\npolicy budgets and makespan improvement"];
+commit -> check;
+note [shape=note,fillcolor="#fff8de",label="S2: repair preserves baseline production commitments.\nS1 safety-bound return alone does not prove feasibility.\nShared reference supplies provenance/difficulty/bibliography,\nnot a new algorithm or instance-specific solution."];
+note -> check [style=dotted,arrowhead=none];
+}

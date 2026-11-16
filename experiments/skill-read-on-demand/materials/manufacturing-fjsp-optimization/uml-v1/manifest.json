@@ -1,0 +1,18 @@
+{
+  "method": "skill-read-on-demand-v2",
+  "task": "manufacturing-fjsp-optimization",
+  "arm": "image",
+  "figures": "uml-v1",
+  "source_files": {
+    "fjsp-baseline-repair-with-downtime-and-policy/SKILL.md": "2668bd6b9c6977ccedcf1f1d4af4401afdfe215666d68f82df41b662852b2125",
+    "reference.md": "46f76e2898e1f1a3d7f0d8c7ee4e5390f7e9f8e57c1695dd5eb3ddf739f71743"
+  },
+  "figure_hashes": {
+    "fjsp-baseline-repair-with-downtime-and-policy": "d94c741f1e882ca6f52f3b67c5c1f2e4560972232c25f41e7549cd930c63bb20"
+  },
+  "bundle_files": {
+    "fjsp-baseline-repair-with-downtime-and-policy/SKILL.md": "2668bd6b9c6977ccedcf1f1d4af4401afdfe215666d68f82df41b662852b2125",
+    "fjsp-baseline-repair-with-downtime-and-policy/assets/skillcanvas-diagram.png": "d94c741f1e882ca6f52f3b67c5c1f2e4560972232c25f41e7549cd930c63bb20",
+    "reference.md": "46f76e2898e1f1a3d7f0d8c7ee4e5390f7e9f8e57c1695dd5eb3ddf739f71743"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "method": "skill-on-demand-v1",
+  "task": "energy-market-pricing",
+  "arm": "image",
+  "figures": "structure-v3",
+  "source_files": {
+    "dc-power-flow/SKILL.md": "461a4a93c6baf5f84eaa16881b11d76d0542907c8bb50745eceeb21d217e480e",
+    "dc-power-flow/scripts/build_b_matrix.py": "8ed65d06fe16b87b13eadf33397b3986de95afa515ec5dcb6f22df8201a44095",
+    "economic-dispatch/SKILL.md": "907586a8ab5d697d20efaafb190809fbe737bcbac4082c0f94458c1e6489b82f",
+    "economic-dispatch/references/cost-functions.md": "a9bf78f5dd90f559d50872d526c1c7bf6685f6c8147c95ec701d1628d318d0ee",
+    "locational-marginal-prices/SKILL.md": "c48851e863afad9f416e52d57f5b065cc9a7a1ab2146b829abae4ac85412f2ac",
+    "power-flow-data/SKILL.md": "7c6544423d4106746ca831e431e6725292015c768e7958a168c57db140051846"
+  },
+  "figure_hashes": {
+    "dc-power-flow": "11cd84101d1349f0c545b6b516711cb188f4b1aeb56ce17e46487cbb760a38ee",
+    "economic-dispatch": "ec69547a95477261f4925c8c3263d327a7cc1a078f8a006afac83716b0371e60",
+    "locational-marginal-prices": "ab7192389b69198590639f1ac616e6244b4a8b679d1387da967ff147dfd817c3",
+    "power-flow-data": "c31a490fda9fab3781719075f960f24075e5d9d1f3fe6e534147a98cf9c55003"
+  },
+  "bundle_files": {
+    "dc-power-flow/SKILL.md": "461a4a93c6baf5f84eaa16881b11d76d0542907c8bb50745eceeb21d217e480e",
+    "dc-power-flow/assets/skillcanvas-diagram.png": "11cd84101d1349f0c545b6b516711cb188f4b1aeb56ce17e46487cbb760a38ee",
+    "dc-power-flow/scripts/build_b_matrix.py": "8ed65d06fe16b87b13eadf33397b3986de95afa515ec5dcb6f22df8201a44095",
+    "economic-dispatch/SKILL.md": "907586a8ab5d697d20efaafb190809fbe737bcbac4082c0f94458c1e6489b82f",
+    "economic-dispatch/assets/skillcanvas-diagram.png": "ec69547a95477261f4925c8c3263d327a7cc1a078f8a006afac83716b0371e60",
+    "economic-dispatch/references/cost-functions.md": "a9bf78f5dd90f559d50872d526c1c7bf6685f6c8147c95ec701d1628d318d0ee",
+    "locational-marginal-prices/SKILL.md": "c48851e863afad9f416e52d57f5b065cc9a7a1ab2146b829abae4ac85412f2ac",
+    "locational-marginal-prices/assets/skillcanvas-diagram.png": "ab7192389b69198590639f1ac616e6244b4a8b679d1387da967ff147dfd817c3",
+    "power-flow-data/SKILL.md": "7c6544423d4106746ca831e431e6725292015c768e7958a168c57db140051846",
+    "power-flow-data/assets/skillcanvas-diagram.png": "c31a490fda9fab3781719075f960f24075e5d9d1f3fe6e534147a98cf9c55003"
+  }
+}

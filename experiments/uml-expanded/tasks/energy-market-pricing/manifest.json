@@ -1,0 +1,91 @@
+{
+  "task": "energy-market-pricing",
+  "skillsbench_commit": "f860ecf02ef53412a030f8661c83d644b739ff01",
+  "comparison": "forced full skill text vs PNG-first plus identical full text",
+  "diagram_basis": "only original SKILL.md; no oracle/verifier content",
+  "renderer": {
+    "name": "PlantUML MIT",
+    "sha256": "30a66b81a16127fd3ec560992f31964fe9ae3f1233c614ef4558a4558a21489e",
+    "version": "1.2026.10"
+  },
+  "source_files": {
+    "dc-power-flow/SKILL.md": "461a4a93c6baf5f84eaa16881b11d76d0542907c8bb50745eceeb21d217e480e",
+    "dc-power-flow/scripts/build_b_matrix.py": "8ed65d06fe16b87b13eadf33397b3986de95afa515ec5dcb6f22df8201a44095",
+    "economic-dispatch/SKILL.md": "907586a8ab5d697d20efaafb190809fbe737bcbac4082c0f94458c1e6489b82f",
+    "economic-dispatch/references/cost-functions.md": "a9bf78f5dd90f559d50872d526c1c7bf6685f6c8147c95ec701d1628d318d0ee",
+    "locational-marginal-prices/SKILL.md": "c48851e863afad9f416e52d57f5b065cc9a7a1ab2146b829abae4ac85412f2ac",
+    "power-flow-data/SKILL.md": "7c6544423d4106746ca831e431e6725292015c768e7958a168c57db140051846"
+  },
+  "skills": {
+    "dc-power-flow": {
+      "guide_sha256": "461a4a93c6baf5f84eaa16881b11d76d0542907c8bb50745eceeb21d217e480e",
+      "uml_sha256": "df3ad1246c764db847cb04570b9e9cf05bd086792ad8f2cf23070a984357c634",
+      "png_sha256": "6dbd3ec6c8dffb791d1a627a0ac6f661ab171211f0dfe9e39f2337f926d3e0b4",
+      "png_dimensions": [
+        622,
+        1199
+      ],
+      "guide_bytes": 2882
+    },
+    "economic-dispatch": {
+      "guide_sha256": "907586a8ab5d697d20efaafb190809fbe737bcbac4082c0f94458c1e6489b82f",
+      "uml_sha256": "2661b48e8b9570404b02f8e6c58d3a9a3bcff629e2eee002813412f86fc2efa8",
+      "png_sha256": "70c0b9749f726aa38e03b73073a7b0121c4016638551b507c5690a25a19f408f",
+      "png_dimensions": [
+        715,
+        1526
+      ],
+      "guide_bytes": 4932
+    },
+    "locational-marginal-prices": {
+      "guide_sha256": "c48851e863afad9f416e52d57f5b065cc9a7a1ab2146b829abae4ac85412f2ac",
+      "uml_sha256": "2dd5c1bd0606ce757f14a7f81c08dd2f89d77669180d2b0c930a251b9ddfbed9",
+      "png_sha256": "e9c06d446b71c5b3cbec03e8cfd5ec64fe7a7e8306538f5051eea9407f65bb21",
+      "png_dimensions": [
+        773,
+        1180
+      ],
+      "guide_bytes": 4746
+    },
+    "power-flow-data": {
+      "guide_sha256": "7c6544423d4106746ca831e431e6725292015c768e7958a168c57db140051846",
+      "uml_sha256": "8e1d3f7b885a7274da9fde7ac67f71f2b21cfba6bf3aa8ef257d511bfa64f506",
+      "png_sha256": "07f218b00cb88fb54d1c440b2667246d29cb21882ec4bff631d61022708452b6",
+      "png_dimensions": [
+        761,
+        906
+      ],
+      "guide_bytes": 4367
+    }
+  },
+  "bundles": {
+    "text": {
+      "dc-power-flow/GUIDE.md": "461a4a93c6baf5f84eaa16881b11d76d0542907c8bb50745eceeb21d217e480e",
+      "dc-power-flow/SKILL.md": "1a8d5eca974505c8b1b7e5771b7371abfad2509c2f578701e6877996389699fa",
+      "dc-power-flow/scripts/build_b_matrix.py": "8ed65d06fe16b87b13eadf33397b3986de95afa515ec5dcb6f22df8201a44095",
+      "economic-dispatch/GUIDE.md": "907586a8ab5d697d20efaafb190809fbe737bcbac4082c0f94458c1e6489b82f",
+      "economic-dispatch/SKILL.md": "7d0fec6619487b12c327543734bf96d9956af7aaaa03116dffc7a691daf1ce6a",
+      "economic-dispatch/references/cost-functions.md": "a9bf78f5dd90f559d50872d526c1c7bf6685f6c8147c95ec701d1628d318d0ee",
+      "locational-marginal-prices/GUIDE.md": "c48851e863afad9f416e52d57f5b065cc9a7a1ab2146b829abae4ac85412f2ac",
+      "locational-marginal-prices/SKILL.md": "5c5cc8c4fd108b95aa3c367e57a3a4c09a08912cde245c9a897543eeb7ff81e5",
+      "power-flow-data/GUIDE.md": "7c6544423d4106746ca831e431e6725292015c768e7958a168c57db140051846",
+      "power-flow-data/SKILL.md": "838d6c687bb548a35f17a7e4ab76926b85b19cd1e65dbcbc891b35c0edcef98d"
+    },
+    "image": {
+      "dc-power-flow/GUIDE.md": "461a4a93c6baf5f84eaa16881b11d76d0542907c8bb50745eceeb21d217e480e",
+      "dc-power-flow/SKILL.md": "293bdfe7c3b44e972e1c300264d7fa66c21bb973420b03913d26f92f91537085",
+      "dc-power-flow/assets/flowchart.png": "6dbd3ec6c8dffb791d1a627a0ac6f661ab171211f0dfe9e39f2337f926d3e0b4",
+      "dc-power-flow/scripts/build_b_matrix.py": "8ed65d06fe16b87b13eadf33397b3986de95afa515ec5dcb6f22df8201a44095",
+      "economic-dispatch/GUIDE.md": "907586a8ab5d697d20efaafb190809fbe737bcbac4082c0f94458c1e6489b82f",
+      "economic-dispatch/SKILL.md": "3ea95a07d7ccaa64182ec40d7f58432799478b7574df1ac2f96dc2fe6897476a",
+      "economic-dispatch/assets/flowchart.png": "70c0b9749f726aa38e03b73073a7b0121c4016638551b507c5690a25a19f408f",
+      "economic-dispatch/references/cost-functions.md": "a9bf78f5dd90f559d50872d526c1c7bf6685f6c8147c95ec701d1628d318d0ee",
+      "locational-marginal-prices/GUIDE.md": "c48851e863afad9f416e52d57f5b065cc9a7a1ab2146b829abae4ac85412f2ac",
+      "locational-marginal-prices/SKILL.md": "eb99a6a724a09d10bcb9bf4369c7da2dc9d213abdf2e15b53fe4da08cf4b2f7b",
+      "locational-marginal-prices/assets/flowchart.png": "e9c06d446b71c5b3cbec03e8cfd5ec64fe7a7e8306538f5051eea9407f65bb21",
+      "power-flow-data/GUIDE.md": "7c6544423d4106746ca831e431e6725292015c768e7958a168c57db140051846",
+      "power-flow-data/SKILL.md": "56fb9dc00f8b075af6117017042485a3a9c38cc27bab8ead0d6854f79dd9d21c",
+      "power-flow-data/assets/flowchart.png": "07f218b00cb88fb54d1c440b2667246d29cb21882ec4bff631d61022708452b6"
+    }
+  }
+}

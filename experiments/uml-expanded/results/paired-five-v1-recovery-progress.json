@@ -1,0 +1,1098 @@
+{
+  "schema": 1,
+  "final": false,
+  "created_at_utc": "2026-11-14T15:08:47.861845+00:00",
+  "campaign": "jobs/uml-expanded/paired-five-v1-recovery",
+  "intended_slots": 10,
+  "finished_slots": 6,
+  "failed_slots": 0,
+  "admitted_pairs": 3,
+  "pairs": [
+    {
+      "task": "llm-prefix-cache-replay",
+      "label": "前缀缓存回放",
+      "same_task_digest": true,
+      "paired_metrics_admitted": true,
+      "text": {
+        "task": "llm-prefix-cache-replay",
+        "arm": "text",
+        "status": "finished",
+        "trial": "jobs/uml-expanded/paired-five-v1/llm-prefix-cache-replay/text/2026-11-14__21-41-13/llm-prefix-cache-replay__ea6444ba",
+        "reward": 1.0,
+        "error": null,
+        "error_category": null,
+        "verifier_error": null,
+        "task_digest": "sha256:6e625578b9977265fdb8b1fccacda6fd109fd3097e8991125f99bb99d4931cf7",
+        "tool_calls": 5,
+        "trajectory": {
+          "steps": 10,
+          "tool_call_steps": 5,
+          "user_message_steps": 1,
+          "agent_message_steps": 2,
+          "agent_thought_steps": 2,
+          "other_steps": 0,
+          "event_type_counts": {
+            "user_message": 1,
+            "agent_message": 2,
+            "tool_call": 5,
+            "agent_thought": 2
+          },
+          "tool_call_status_counts": {
+            "completed": 5
+          },
+          "partial_trajectory": false,
+          "trajectory_source": "acp"
+        },
+        "input_tokens": 66578,
+        "output_tokens": 2046,
+        "cached_tokens": 55040,
+        "estimated_cost_usd": 0.00624684,
+        "agent_seconds": 12.0,
+        "timing": {
+          "slot_wait": 0.0,
+          "environment_setup": 19.8,
+          "install_agent": 0.761,
+          "sandbox_ready": 23.357,
+          "proxy_health_wait": 0.0,
+          "firewall_power": 0.069,
+          "cloud_metadata_block": 0.648,
+          "acp_connect": 2.217,
+          "agent_setup": 3.0,
+          "agent_execution": 12.0,
+          "harden_before_verify": {
+            "kill_sandbox_user_procs": 0.039,
+            "restore_disarmed_delegates": 0.059,
+            "clear_verifier_output": 0.0,
+            "prepare_app_dir": 0.0,
+            "reclaim_disk": 0.02,
+            "freeze_workspace": 0.14,
+            "cleanup_conftests": 0.06,
+            "build_verifier_env": 0.519,
+            "total": 0.961
+          },
+          "verifier": 7.7,
+          "agent_stop_to_reward": 8.037,
+          "provider_wait": 11.8,
+          "provider_retry_wait": 0.0,
+          "agent_without_provider_wait": 0.2,
+          "cleanup": 1.027,
+          "total": 47.7
+        },
+        "delivery_valid": true,
+        "main_calls": 5,
+        "helper_calls": 1,
+        "delivery_errors": [],
+        "actual_versions": {
+          "schema": 1,
+          "identity": {
+            "agent": "opencode",
+            "harness": "acp",
+            "install_sha256": "c67e56103012b7e12464dc28773188bfd283de83ec2f2cefb0dcc2000b7b2a2d"
+          },
+          "adapter": {
+            "package": "opencode-ai",
+            "version": "1.19.5",
+            "source": "installed-package"
+          },
+          "cli": {
+            "package": "opencode-ai",
+            "version": "1.19.5",
+            "source": "installed-package"
+          },
+          "engine": {
+            "package": "opencode-ai",
+            "version": "1.19.5",
+            "source": "installed-package"
+          }
+        },
+        "raw_usage": {
+          "calls": 6,
+          "input": 66578,
+          "output": 2046,
+          "cached": 55040,
+          "complete": true
+        },
+        "shared_tools_confirmed": true,
+        "evidence_sha256": {
+          "result.json": "49c5ba6a63b5be9d5d16217ac4d164c7d2ce9615c37edaff35a8b061916b5d6e",
+          "skill-delivery.json": "965ee11c171335288589ddee5631b5e458cd7964c37f1edc825d9679576e25c9",
+          "trajectory/llm_trajectory.jsonl": "23257c7f4cda9453569e26c0da153d385dbea2f0f360c637f48905a7bd7c6888",
+          "trajectory/acp_trajectory.jsonl": "06e1d0c12b99a44bbf05cc36a3c7e1f1ab05038a446445de7717b56a97b58c27",
+          "shared-opencode.json": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+          "verifier/test-stdout.txt": "5322dc471a78c2742c3bc4a7c2146bd6209be5c0d1caf357e5c22fee48b13f21"
+        },
+        "total_tokens": 68624,
+        "usage_matches_raw": true,
+        "metric_admitted": true,
+        "test_execution_confirmed": true,
+        "test_summary": {
+          "tests": 6,
+          "passed": 6,
+          "failed": 0,
+          "skipped": 0,
+          "pending": 0,
+          "other": 0,
+          "start": 1794663719.9182653,
+          "stop": 1794663719.9719436
+        },
+        "ctrf_sha256": "52768dacd94c99273f85c53167432144daf7ede5594e1675017e4e7fa2c01741",
+        "first_successful_main_prompt_tokens": 11859
+      },
+      "image": {
+        "task": "llm-prefix-cache-replay",
+        "arm": "image",
+        "status": "finished",
+        "trial": "jobs/uml-expanded/paired-five-v1/llm-prefix-cache-replay/image/2026-11-14__21-42-02/llm-prefix-cache-replay__e6631438",
+        "reward": 1.0,
+        "error": null,
+        "error_category": null,
+        "verifier_error": null,
+        "task_digest": "sha256:6e625578b9977265fdb8b1fccacda6fd109fd3097e8991125f99bb99d4931cf7",
+        "tool_calls": 4,
+        "trajectory": {
+          "steps": 10,
+          "tool_call_steps": 4,
+          "user_message_steps": 1,
+          "agent_message_steps": 1,
+          "agent_thought_steps": 4,
+          "other_steps": 0,
+          "event_type_counts": {
+            "user_message": 1,
+            "agent_thought": 4,
+            "tool_call": 4,
+            "agent_message": 1
+          },
+          "tool_call_status_counts": {
+            "completed": 4
+          },
+          "partial_trajectory": false,
+          "trajectory_source": "acp"
+        },
+        "input_tokens": 74618,
+        "output_tokens": 2778,
+        "cached_tokens": 62080,
+        "estimated_cost_usd": 0.00746748,
+        "agent_seconds": 17.2,
+        "timing": {
+          "slot_wait": 0.0,
+          "environment_setup": 20.1,
+          "install_agent": 0.715,
+          "sandbox_ready": 23.599,
+          "proxy_health_wait": 0.0,
+          "firewall_power": 0.07,
+          "cloud_metadata_block": 0.645,
+          "acp_connect": 2.218,
+          "agent_setup": 3.0,
+          "agent_execution": 17.2,
+          "harden_before_verify": {
+            "kill_sandbox_user_procs": 0.038,
+            "restore_disarmed_delegates": 0.058,
+            "clear_verifier_output": 0.06,
+            "prepare_app_dir": 0.0,
+            "reclaim_disk": 0.02,
+            "freeze_workspace": 0.12,
+            "cleanup_conftests": 0.09,
+            "build_verifier_env": 0.414,
+            "total": 0.891
+          },
+          "verifier": 11.2,
+          "agent_stop_to_reward": 11.547,
+          "provider_wait": 17.0,
+          "provider_retry_wait": 0.0,
+          "agent_without_provider_wait": 0.2,
+          "cleanup": 1.046,
+          "total": 56.6
+        },
+        "delivery_valid": true,
+        "main_calls": 5,
+        "helper_calls": 1,
+        "delivery_errors": [],
+        "actual_versions": {
+          "schema": 1,
+          "identity": {
+            "agent": "opencode",
+            "harness": "acp",
+            "install_sha256": "c67e56103012b7e12464dc28773188bfd283de83ec2f2cefb0dcc2000b7b2a2d"
+          },
+          "adapter": {
+            "package": "opencode-ai",
+            "version": "1.19.5",
+            "source": "installed-package"
+          },
+          "cli": {
+            "package": "opencode-ai",
+            "version": "1.19.5",
+            "source": "installed-package"
+          },
+          "engine": {
+            "package": "opencode-ai",
+            "version": "1.19.5",
+            "source": "installed-package"
+          }
+        },
+        "raw_usage": {
+          "calls": 6,
+          "input": 74618,
+          "output": 2778,
+          "cached": 62080,
+          "complete": true
+        },
+        "shared_tools_confirmed": true,
+        "evidence_sha256": {
+          "result.json": "ff1c357708535c325a7e1b904db32d0bd6c92f3a25375681a62c4c73a018a00b",
+          "skill-delivery.json": "cffb37c0e2699b5a68e0973e6e5f9fdf352ab7ea5f0a95536c90e1eb22a3b3cd",
+          "trajectory/llm_trajectory.jsonl": "92ccab63edf08ac35ddb843a73164374e17abe58623b4add216d08950fd20bd5",
+          "trajectory/acp_trajectory.jsonl": "6396d6de82280d56915212bb84075928148df9a3bc312e61184451891df63e4b",
+          "shared-opencode.json": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+          "verifier/test-stdout.txt": "927ed00b4cc85673ab845939c4178dfad28a34693701469646dbc02f5dd5e803"
+        },
+        "total_tokens": 77396,
+        "usage_matches_raw": true,
+        "metric_admitted": true,
+        "test_execution_confirmed": true,
+        "test_summary": {
+          "tests": 6,
+          "passed": 6,
+          "failed": 0,
+          "skipped": 0,
+          "pending": 0,
+          "other": 0,
+          "start": 1794663778.036663,
+          "stop": 1794663778.089323
+        },
+        "ctrf_sha256": "50fa297930405bdaf7ee3b2d0a4c3d1361dd76c0ce5b578fb10edeb2fb52da34",
+        "first_successful_main_prompt_tokens": 13260
+      },
+      "total_tokens_change_pct": 12.782699930053631,
+      "tool_calls_change_pct": -19.999999999999996,
+      "main_calls_change_pct": 0.0,
+      "agent_seconds_change_pct": 43.333333333333336,
+      "estimated_cost_usd_change_pct": 19.54011948441132,
+      "matches_healthy_oracle_digest": true
+    },
+    {
+      "task": "energy-market-pricing",
+      "label": "电价与拥塞分析",
+      "same_task_digest": true,
+      "paired_metrics_admitted": true,
+      "text": {
+        "task": "energy-market-pricing",
+        "arm": "text",
+        "status": "finished",
+        "trial": "jobs/uml-expanded/paired-five-v1/energy-market-pricing/text/2026-11-14__21-50-30/energy-market-pricing__f430f1c0",
+        "reward": 1.0,
+        "error": null,
+        "error_category": null,
+        "verifier_error": null,
+        "task_digest": "sha256:e722a071d27ef633f8f56ef981efa22b3cb5fbf3e02c326472908192f10c369d",
+        "tool_calls": 25,
+        "trajectory": {
+          "steps": 50,
+          "tool_call_steps": 25,
+          "user_message_steps": 1,
+          "agent_message_steps": 1,
+          "agent_thought_steps": 23,
+          "other_steps": 0,
+          "event_type_counts": {
+            "user_message": 1,
+            "agent_thought": 23,
+            "tool_call": 25,
+            "agent_message": 1
+          },
+          "tool_call_status_counts": {
+            "completed": 25
+          },
+          "partial_trajectory": false,
+          "trajectory_source": "acp"
+        },
+        "input_tokens": 698313,
+        "output_tokens": 20167,
+        "cached_tokens": 676736,
+        "estimated_cost_usd": 0.034733916,
+        "agent_seconds": 232.5,
+        "timing": {
+          "slot_wait": 0.0,
+          "environment_setup": 19.5,
+          "install_agent": 0.697,
+          "sandbox_ready": 23.152,
+          "proxy_health_wait": 0.0,
+          "firewall_power": 0.057,
+          "cloud_metadata_block": 0.738,
+          "acp_connect": 2.26,
+          "agent_setup": 3.1,
+          "agent_execution": 232.5,
+          "harden_before_verify": {
+            "kill_sandbox_user_procs": 0.067,
+            "restore_disarmed_delegates": 0.063,
+            "clear_verifier_output": 0.01,
+            "prepare_app_dir": 0.0,
+            "reclaim_disk": 0.02,
+            "freeze_workspace": 0.19,
+            "cleanup_conftests": 0.13,
+            "build_verifier_env": 0.604,
+            "total": 1.567
+          },
+          "verifier": 22.8,
+          "agent_stop_to_reward": 31.972,
+          "provider_wait": 123.4,
+          "provider_retry_wait": 0.0,
+          "agent_without_provider_wait": 109.0,
+          "cleanup": 1.092,
+          "total": 292.1
+        },
+        "delivery_valid": true,
+        "main_calls": 26,
+        "helper_calls": 1,
+        "delivery_errors": [],
+        "actual_versions": {
+          "schema": 1,
+          "identity": {
+            "agent": "opencode",
+            "harness": "acp",
+            "install_sha256": "c67e56103012b7e12464dc28773188bfd283de83ec2f2cefb0dcc2000b7b2a2d"
+          },
+          "adapter": {
+            "package": "opencode-ai",
+            "version": "1.19.5",
+            "source": "installed-package"
+          },
+          "cli": {
+            "package": "opencode-ai",
+            "version": "1.19.5",
+            "source": "installed-package"
+          },
+          "engine": {
+            "package": "opencode-ai",
+            "version": "1.19.5",
+            "source": "installed-package"
+          }
+        },
+        "raw_usage": {
+          "calls": 27,
+          "input": 698313,
+          "output": 20167,
+          "cached": 676736,
+          "complete": true
+        },
+        "shared_tools_confirmed": true,
+        "evidence_sha256": {
+          "result.json": "9b637e4bf5f276c2b310187285bba65410d6bc0fdfd36f277f2c83acda0c7060",
+          "skill-delivery.json": "7de460b61173b7c642101b7b020c9329a73c0b7ea57c616eec902632e3fae079",
+          "trajectory/llm_trajectory.jsonl": "7ad2e9d8942ca53c57c5479c76a7b57dcc4642a5cd03ec8dfcf7edee6f9e8a35",
+          "trajectory/acp_trajectory.jsonl": "61798d2ef1a11df3838c5a28e4a262ba8e5430c9c25093a63005305946f71b47",
+          "shared-opencode.json": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+          "verifier/test-stdout.txt": "d145792fa75cc58fad06639cae976bc03b424a58d2d5d7c0e9baad3f58391cfb"
+        },
+        "total_tokens": 718480,
+        "usage_matches_raw": true,
+        "metric_admitted": true,
+        "test_execution_confirmed": true,
+        "test_summary": {
+          "tests": 4,
+          "passed": 4,
+          "failed": 0,
+          "skipped": 0,
+          "pending": 0,
+          "other": 0,
+          "start": 1794664502.574975,
+          "stop": 1794664521.626614
+        },
+        "ctrf_sha256": "d2d0df3cfbf6bf648d51f9d733acd440c1fa5b9bfd55686c74f9f8e7652f19ff",
+        "first_successful_main_prompt_tokens": 13467
+      },
+      "image": {
+        "task": "energy-market-pricing",
+        "arm": "image",
+        "status": "finished",
+        "trial": "jobs/uml-expanded/paired-five-v1/energy-market-pricing/image/2026-11-14__21-43-00/energy-market-pricing__cbab5e5b",
+        "reward": 1.0,
+        "error": null,
+        "error_category": null,
+        "verifier_error": null,
+        "task_digest": "sha256:e722a071d27ef633f8f56ef981efa22b3cb5fbf3e02c326472908192f10c369d",
+        "tool_calls": 22,
+        "trajectory": {
+          "steps": 45,
+          "tool_call_steps": 22,
+          "user_message_steps": 1,
+          "agent_message_steps": 1,
+          "agent_thought_steps": 21,
+          "other_steps": 0,
+          "event_type_counts": {
+            "user_message": 1,
+            "agent_thought": 21,
+            "tool_call": 22,
+            "agent_message": 1
+          },
+          "tool_call_status_counts": {
+            "completed": 22
+          },
+          "partial_trajectory": false,
+          "trajectory_source": "acp"
+        },
+        "input_tokens": 678979,
+        "output_tokens": 24512,
+        "cached_tokens": 655360,
+        "estimated_cost_usd": 0.04043226,
+        "agent_seconds": 387.8,
+        "timing": {
+          "slot_wait": 0.0,
+          "environment_setup": 20.2,
+          "install_agent": 0.69,
+          "sandbox_ready": 23.644,
+          "proxy_health_wait": 0.0,
+          "firewall_power": 0.058,
+          "cloud_metadata_block": 0.733,
+          "acp_connect": 2.265,
+          "agent_setup": 3.1,
+          "agent_execution": 387.8,
+          "harden_before_verify": {
+            "kill_sandbox_user_procs": 0.032,
+            "restore_disarmed_delegates": 0.048,
+            "clear_verifier_output": 0.01,
+            "prepare_app_dir": 0.0,
+            "reclaim_disk": 0.01,
+            "freeze_workspace": 0.18,
+            "cleanup_conftests": 0.12,
+            "build_verifier_env": 0.49,
+            "total": 1.324
+          },
+          "verifier": 22.4,
+          "agent_stop_to_reward": 31.031,
+          "provider_wait": 148.7,
+          "provider_retry_wait": 0.0,
+          "agent_without_provider_wait": 239.2,
+          "cleanup": 1.105,
+          "total": 447.0
+        },
+        "delivery_valid": true,
+        "main_calls": 22,
+        "helper_calls": 1,
+        "delivery_errors": [],
+        "actual_versions": {
+          "schema": 1,
+          "identity": {
+            "agent": "opencode",
+            "harness": "acp",
+            "install_sha256": "c67e56103012b7e12464dc28773188bfd283de83ec2f2cefb0dcc2000b7b2a2d"
+          },
+          "adapter": {
+            "package": "opencode-ai",
+            "version": "1.19.5",
+            "source": "installed-package"
+          },
+          "cli": {
+            "package": "opencode-ai",
+            "version": "1.19.5",
+            "source": "installed-package"
+          },
+          "engine": {
+            "package": "opencode-ai",
+            "version": "1.19.5",
+            "source": "installed-package"
+          }
+        },
+        "raw_usage": {
+          "calls": 23,
+          "input": 678979,
+          "output": 24512,
+          "cached": 655360,
+          "complete": true
+        },
+        "shared_tools_confirmed": true,
+        "evidence_sha256": {
+          "result.json": "5cb6790866b1f0994520818ad41c1fd0a98ded14968603565e78b5764bb52326",
+          "skill-delivery.json": "754b07d6b2e416a78f5bde5788649c32804ca16c895ea1b346cf9bc2fcf4ea93",
+          "trajectory/llm_trajectory.jsonl": "b90f7102f57597ebce85a13ae3b07e252ed926e6d7dec9f455695f58cba78c48",
+          "trajectory/acp_trajectory.jsonl": "df102ebdf21d5217e917fbb46bdad3f597af4cad31c33369229eb538cf60406f",
+          "shared-opencode.json": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+          "verifier/test-stdout.txt": "7244e2ee87a094297cb4a62ade6d2318471df56c2dfd97ceaa4a62a42cc74719"
+        },
+        "total_tokens": 703491,
+        "usage_matches_raw": true,
+        "metric_admitted": true,
+        "test_execution_confirmed": true,
+        "test_summary": {
+          "tests": 4,
+          "passed": 4,
+          "failed": 0,
+          "skipped": 0,
+          "pending": 0,
+          "other": 0,
+          "start": 1794664207.6345885,
+          "stop": 1794664226.4965792
+        },
+        "ctrf_sha256": "e54737334358db1e7ef536c8fd85fe58b3e149dccebb5568d682a4a9e9aa95c1",
+        "first_successful_main_prompt_tokens": 15718
+      },
+      "total_tokens_change_pct": -2.0862097761941922,
+      "tool_calls_change_pct": -12.0,
+      "main_calls_change_pct": -15.384615384615385,
+      "agent_seconds_change_pct": 66.79569892473118,
+      "estimated_cost_usd_change_pct": 16.405705593345708,
+      "matches_healthy_oracle_digest": true
+    },
+    {
+      "task": "r2r-mpc-control",
+      "label": "R2R 控制器",
+      "same_task_digest": true,
+      "paired_metrics_admitted": true,
+      "text": {
+        "task": "r2r-mpc-control",
+        "arm": "text",
+        "status": "finished",
+        "trial": "jobs/uml-expanded/paired-five-v1/r2r-mpc-control/text/2026-11-14__21-55-25/r2r-mpc-control__cdd8d0d1",
+        "reward": 1.0,
+        "error": null,
+        "error_category": null,
+        "verifier_error": null,
+        "task_digest": "sha256:56caf760c2411c1d1e4fb20faa30c82a1a1de4b58fbfafe03fcce5e3d6d1f31b",
+        "tool_calls": 31,
+        "trajectory": {
+          "steps": 58,
+          "tool_call_steps": 31,
+          "user_message_steps": 1,
+          "agent_message_steps": 4,
+          "agent_thought_steps": 22,
+          "other_steps": 0,
+          "event_type_counts": {
+            "user_message": 1,
+            "agent_message": 4,
+            "tool_call": 31,
+            "agent_thought": 22
+          },
+          "tool_call_status_counts": {
+            "completed": 30,
+            "failed": 1
+          },
+          "partial_trajectory": false,
+          "trajectory_source": "acp"
+        },
+        "input_tokens": 982187,
+        "output_tokens": 39086,
+        "cached_tokens": 954368,
+        "estimated_cost_usd": 0.060975108,
+        "agent_seconds": 509.1,
+        "timing": {
+          "slot_wait": 0.0,
+          "environment_setup": 23.8,
+          "install_agent": 0.74,
+          "sandbox_ready": 28.155,
+          "proxy_health_wait": 0.0,
+          "firewall_power": 0.105,
+          "cloud_metadata_block": 0.988,
+          "acp_connect": 1.461,
+          "agent_setup": 2.7,
+          "agent_execution": 509.1,
+          "harden_before_verify": {
+            "kill_sandbox_user_procs": 0.063,
+            "restore_disarmed_delegates": 0.093,
+            "clear_verifier_output": 0.01,
+            "prepare_app_dir": 0.0,
+            "reclaim_disk": 0.04,
+            "freeze_workspace": 0.17,
+            "cleanup_conftests": 0.1,
+            "build_verifier_env": 0.585,
+            "total": 1.545
+          },
+          "verifier": 3.9,
+          "agent_stop_to_reward": 13.22,
+          "provider_wait": 235.3,
+          "provider_retry_wait": 0.0,
+          "agent_without_provider_wait": 273.8,
+          "cleanup": 1.118,
+          "total": 554.6
+        },
+        "delivery_valid": true,
+        "main_calls": 24,
+        "helper_calls": 1,
+        "delivery_errors": [],
+        "actual_versions": {
+          "schema": 1,
+          "identity": {
+            "agent": "opencode",
+            "harness": "acp",
+            "install_sha256": "c67e56103012b7e12464dc28773188bfd283de83ec2f2cefb0dcc2000b7b2a2d"
+          },
+          "adapter": {
+            "package": "opencode-ai",
+            "version": "1.19.5",
+            "source": "installed-package"
+          },
+          "cli": {
+            "package": "opencode-ai",
+            "version": "1.19.5",
+            "source": "installed-package"
+          },
+          "engine": {
+            "package": "opencode-ai",
+            "version": "1.19.5",
+            "source": "installed-package"
+          }
+        },
+        "raw_usage": {
+          "calls": 25,
+          "input": 982187,
+          "output": 39086,
+          "cached": 954368,
+          "complete": true
+        },
+        "shared_tools_confirmed": true,
+        "evidence_sha256": {
+          "result.json": "eed4c3a29f8c2add790a9a6570d39342877a44cd533bfb72db8bb3c158d77720",
+          "skill-delivery.json": "fae5c5ab2321397dc51b5368caf7a138a0f5a1777e138ac1bc3a9e1add9c6a74",
+          "trajectory/llm_trajectory.jsonl": "a42c7dae78a2fd9cc7cbaf60e8e042b02d927b683741b72d99babbd1ecabe612",
+          "trajectory/acp_trajectory.jsonl": "047861a4a10f350c07fca3ab50db3d4c6e816a6255b9bf547dccb1d40fe6ba42",
+          "shared-opencode.json": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+          "verifier/test-stdout.txt": "c97476ee9010d7eb2ef9d3887593139fafa23b78cff3233b0bddce144f2f8e42"
+        },
+        "total_tokens": 1021273,
+        "usage_matches_raw": true,
+        "metric_admitted": true,
+        "test_execution_confirmed": true,
+        "test_summary": {
+          "tests": 6,
+          "passed": 6,
+          "failed": 0,
+          "skipped": 0,
+          "pending": 0,
+          "other": 0,
+          "start": 1794665078.9782367,
+          "stop": 1794665079.3806825
+        },
+        "ctrf_sha256": "ad46554b04d8ba2a909790d87599b8a3022e95cfc4c708d502c2d4ff165806cf",
+        "first_successful_main_prompt_tokens": 9819
+      },
+      "image": {
+        "task": "r2r-mpc-control",
+        "arm": "image",
+        "status": "finished",
+        "trial": "jobs/uml-expanded/paired-five-v1/r2r-mpc-control/image/2026-11-14__22-04-43/r2r-mpc-control__115ad66b",
+        "reward": 1.0,
+        "error": null,
+        "error_category": null,
+        "verifier_error": null,
+        "task_digest": "sha256:56caf760c2411c1d1e4fb20faa30c82a1a1de4b58fbfafe03fcce5e3d6d1f31b",
+        "tool_calls": 40,
+        "trajectory": {
+          "steps": 80,
+          "tool_call_steps": 40,
+          "user_message_steps": 1,
+          "agent_message_steps": 1,
+          "agent_thought_steps": 38,
+          "other_steps": 0,
+          "event_type_counts": {
+            "user_message": 1,
+            "agent_thought": 38,
+            "tool_call": 40,
+            "agent_message": 1
+          },
+          "tool_call_status_counts": {
+            "completed": 40
+          },
+          "partial_trajectory": false,
+          "trajectory_source": "acp"
+        },
+        "input_tokens": 2019842,
+        "output_tokens": 52074,
+        "cached_tokens": 1981440,
+        "estimated_cost_usd": 0.08589804,
+        "agent_seconds": 649.2,
+        "timing": {
+          "slot_wait": 0.0,
+          "environment_setup": 23.7,
+          "install_agent": 0.745,
+          "sandbox_ready": 28.119,
+          "proxy_health_wait": 0.0,
+          "firewall_power": 0.118,
+          "cloud_metadata_block": 1.011,
+          "acp_connect": 1.488,
+          "agent_setup": 2.7,
+          "agent_execution": 649.2,
+          "harden_before_verify": {
+            "kill_sandbox_user_procs": 0.039,
+            "restore_disarmed_delegates": 0.083,
+            "clear_verifier_output": 0.01,
+            "prepare_app_dir": 0.0,
+            "reclaim_disk": 0.03,
+            "freeze_workspace": 0.17,
+            "cleanup_conftests": 0.09,
+            "build_verifier_env": 0.58,
+            "total": 1.466
+          },
+          "verifier": 3.8,
+          "agent_stop_to_reward": 12.845,
+          "provider_wait": 298.2,
+          "provider_retry_wait": 0.0,
+          "agent_without_provider_wait": 351.0,
+          "cleanup": 1.251,
+          "total": 694.4
+        },
+        "delivery_valid": true,
+        "main_calls": 38,
+        "helper_calls": 1,
+        "delivery_errors": [],
+        "actual_versions": {
+          "schema": 1,
+          "identity": {
+            "agent": "opencode",
+            "harness": "acp",
+            "install_sha256": "c67e56103012b7e12464dc28773188bfd283de83ec2f2cefb0dcc2000b7b2a2d"
+          },
+          "adapter": {
+            "package": "opencode-ai",
+            "version": "1.19.5",
+            "source": "installed-package"
+          },
+          "cli": {
+            "package": "opencode-ai",
+            "version": "1.19.5",
+            "source": "installed-package"
+          },
+          "engine": {
+            "package": "opencode-ai",
+            "version": "1.19.5",
+            "source": "installed-package"
+          }
+        },
+        "raw_usage": {
+          "calls": 39,
+          "input": 2019842,
+          "output": 52074,
+          "cached": 1981440,
+          "complete": true
+        },
+        "shared_tools_confirmed": true,
+        "evidence_sha256": {
+          "result.json": "426414ba3522771456a0704c772f2f2ba76be214685b8096eca93a96d349fb8c",
+          "skill-delivery.json": "04ce1ebd619102d4de9760f786aeaf2e729605bcc981f209c0ba01bf89212e71",
+          "trajectory/llm_trajectory.jsonl": "e0802639972c927aeaaa05f06dd2c83c40f4f8f68dd364528e18eb2c62ed161e",
+          "trajectory/acp_trajectory.jsonl": "c7b3c7c2c3e06c65c6a8846e2fdb76e75926656130eaa689090987928d141366",
+          "shared-opencode.json": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+          "verifier/test-stdout.txt": "e092b86b21af9a83e274a43e066bb27574a3d82238770094bfc55c48e11dabac"
+        },
+        "total_tokens": 2071916,
+        "usage_matches_raw": true,
+        "metric_admitted": true,
+        "test_execution_confirmed": true,
+        "test_summary": {
+          "tests": 6,
+          "passed": 6,
+          "failed": 0,
+          "skipped": 0,
+          "pending": 0,
+          "other": 0,
+          "start": 1794665776.5504532,
+          "stop": 1794665776.9220881
+        },
+        "ctrf_sha256": "5af4b711a14d9805bb797185717cb3fc189dfe493d80d5a8d5fcd01ef4c205e1",
+        "first_successful_main_prompt_tokens": 11599
+      },
+      "total_tokens_change_pct": 102.87582262529216,
+      "tool_calls_change_pct": 29.032258064516125,
+      "main_calls_change_pct": 58.33333333333333,
+      "agent_seconds_change_pct": 27.519151443724233,
+      "estimated_cost_usd_change_pct": 40.873944823517164,
+      "matches_healthy_oracle_digest": true
+    },
+    {
+      "task": "exam-block-sequencing",
+      "label": "考试排程",
+      "same_task_digest": false,
+      "paired_metrics_admitted": false,
+      "text": {
+        "task": "exam-block-sequencing",
+        "arm": "text",
+        "status": "planned",
+        "metric_admitted": false,
+        "reason": "expected one result, found 0",
+        "test_execution_confirmed": false,
+        "test_summary": {},
+        "ctrf_sha256": null,
+        "first_successful_main_prompt_tokens": null
+      },
+      "image": {
+        "task": "exam-block-sequencing",
+        "arm": "image",
+        "status": "launched",
+        "metric_admitted": false,
+        "reason": "expected one result, found 0",
+        "test_execution_confirmed": false,
+        "test_summary": {},
+        "ctrf_sha256": null,
+        "first_successful_main_prompt_tokens": null
+      },
+      "matches_healthy_oracle_digest": false
+    },
+    {
+      "task": "manufacturing-fjsp-optimization",
+      "label": "制造排程修复",
+      "same_task_digest": false,
+      "paired_metrics_admitted": false,
+      "text": {
+        "task": "manufacturing-fjsp-optimization",
+        "arm": "text",
+        "status": "planned",
+        "metric_admitted": false,
+        "reason": "expected one result, found 0",
+        "test_execution_confirmed": false,
+        "test_summary": {},
+        "ctrf_sha256": null,
+        "first_successful_main_prompt_tokens": null
+      },
+      "image": {
+        "task": "manufacturing-fjsp-optimization",
+        "arm": "image",
+        "status": "planned",
+        "metric_admitted": false,
+        "reason": "expected one result, found 0",
+        "test_execution_confirmed": false,
+        "test_summary": {},
+        "ctrf_sha256": null,
+        "first_successful_main_prompt_tokens": null
+      },
+      "matches_healthy_oracle_digest": false
+    }
+  ],
+  "totals_for_admitted_pairs": {
+    "text": {
+      "total_tokens": 1808377,
+      "input_tokens": 1747078,
+      "output_tokens": 61299,
+      "cached_tokens": 1686144,
+      "tool_calls": 61,
+      "main_calls": 55,
+      "agent_seconds": 753.6,
+      "estimated_cost_usd": 0.101955864
+    },
+    "image": {
+      "total_tokens": 2852803,
+      "input_tokens": 2773439,
+      "output_tokens": 79364,
+      "cached_tokens": 2698880,
+      "tool_calls": 66,
+      "main_calls": 65,
+      "agent_seconds": 1054.2,
+      "estimated_cost_usd": 0.13379778
+    }
+  },
+  "control_attempts": [
+    {
+      "path": "jobs/uml-expanded/environment-controls/2026-11-14__21-03-21/energy-market-pricing__14ca8794/result.json",
+      "sha256": "9713adb07e25b7397fd50e36c19169ee068761cfa77e44650c8a88f8327d2040",
+      "task": "energy-market-pricing",
+      "reward": 0.0,
+      "error": null,
+      "verifier_error": null,
+      "verifier_timeout_info": null,
+      "task_digest": "sha256:e5356f572f0bb796124ada01375010386a6c83d6f9725ff2f30667316e8245f6"
+    },
+    {
+      "path": "jobs/uml-expanded/environment-controls/2026-11-14__21-03-21/exam-block-sequencing__667caaf4/result.json",
+      "sha256": "4ac682d695a3867bff8e9e77c112b238bc0694abe5f2fdd241c532fe8be38b7a",
+      "task": "exam-block-sequencing",
+      "reward": null,
+      "error": "ExecTimeoutError: Command timed out after 599.9999965909992 seconds",
+      "verifier_error": null,
+      "verifier_timeout_info": null,
+      "task_digest": "sha256:dd28bc0e4a0fd1c4cb7e2d7a424cdd3dc3a7a14634070c518508ec3ae964cfb2"
+    },
+    {
+      "path": "jobs/uml-expanded/environment-controls/2026-11-14__21-03-21/llm-prefix-cache-replay__80d81320/result.json",
+      "sha256": "834121d6f83226d5ef186eb9a0e42c7cd017e753b1313d79533ad1a6c48ede8b",
+      "task": "llm-prefix-cache-replay",
+      "reward": 0.0,
+      "error": null,
+      "verifier_error": null,
+      "verifier_timeout_info": null,
+      "task_digest": "sha256:aaee98ed9c5b7682fb0dfc0209686baca5f3977d95897c1f4752b6ec9df8d13f"
+    },
+    {
+      "path": "jobs/uml-expanded/environment-controls/2026-11-14__21-03-21/manufacturing-fjsp-optimization__09825aa1/result.json",
+      "sha256": "e658bafb3f25894ce67b3cbedcbdd7fb3885443ad53b977bb8326f1644a77187",
+      "task": "manufacturing-fjsp-optimization",
+      "reward": null,
+      "error": "ExecTimeoutError: Command timed out after 599.9999987070005 seconds",
+      "verifier_error": null,
+      "verifier_timeout_info": null,
+      "task_digest": "sha256:e75187156d2d8364b7fd84f38fa25d47e65d1de3fbd8d3bb14665ea7d52eb44f"
+    },
+    {
+      "path": "jobs/uml-expanded/environment-controls/2026-11-14__21-03-21/r2r-mpc-control__9de3dead/result.json",
+      "sha256": "0d110151bf2409fa4f24165b71b337d1d7e4feab77861b9fddb7fefa80248888",
+      "task": "r2r-mpc-control",
+      "reward": 0.0,
+      "error": null,
+      "verifier_error": null,
+      "verifier_timeout_info": null,
+      "task_digest": "sha256:493a0f303e752ae98f8657782a16421dc80afd2acf431cc42e27b7dda915f5d6"
+    },
+    {
+      "path": "jobs/uml-expanded/environment-controls-diagnostic/2026-11-14__21-21-09/energy-market-pricing__e97a44ff/result.json",
+      "sha256": "ced6fea800fa1933610b20d6f4c9b3c2d8a82c5b66ece1c6b5b09749ff67783f",
+      "task": "energy-market-pricing",
+      "reward": 0.0,
+      "error": null,
+      "verifier_error": null,
+      "verifier_timeout_info": null,
+      "task_digest": "sha256:e5356f572f0bb796124ada01375010386a6c83d6f9725ff2f30667316e8245f6"
+    },
+    {
+      "path": "jobs/uml-expanded/environment-controls-prepared/2026-11-14__21-36-43/energy-market-pricing__7a87ad9d/result.json",
+      "sha256": "953f70c396b724da7be730228c23271b6971da0bed5a8c3769999c44ec25cc4d",
+      "task": "energy-market-pricing",
+      "reward": 1.0,
+      "error": null,
+      "verifier_error": null,
+      "verifier_timeout_info": null,
+      "task_digest": "sha256:e722a071d27ef633f8f56ef981efa22b3cb5fbf3e02c326472908192f10c369d"
+    },
+    {
+      "path": "jobs/uml-expanded/environment-controls-prepared/2026-11-14__21-36-43/exam-block-sequencing__4644bc43/result.json",
+      "sha256": "f111b5916e9b776a2957d3cd12e148d6937a93b9751fd85cd316ba2437f8695a",
+      "task": "exam-block-sequencing",
+      "reward": 1.0,
+      "error": null,
+      "verifier_error": null,
+      "verifier_timeout_info": null,
+      "task_digest": "sha256:95ae80d185fcca7a6537462b0daf3e8ef0a867e69be8626bf67e2dc7954ad922"
+    },
+    {
+      "path": "jobs/uml-expanded/environment-controls-prepared/2026-11-14__21-36-43/llm-prefix-cache-replay__5757393a/result.json",
+      "sha256": "f88ea407aba54548d21f5143d54cf56b83f024415fdf421a75cfae6c0b7999c4",
+      "task": "llm-prefix-cache-replay",
+      "reward": 1.0,
+      "error": null,
+      "verifier_error": null,
+      "verifier_timeout_info": null,
+      "task_digest": "sha256:6e625578b9977265fdb8b1fccacda6fd109fd3097e8991125f99bb99d4931cf7"
+    },
+    {
+      "path": "jobs/uml-expanded/environment-controls-prepared/2026-11-14__21-36-43/manufacturing-fjsp-optimization__2af6a23b/result.json",
+      "sha256": "2bc68488d7c1bb5449e066ec336ad164baf7e944162ccc634b6572ac2d223387",
+      "task": "manufacturing-fjsp-optimization",
+      "reward": 0.0,
+      "error": null,
+      "verifier_error": null,
+      "verifier_timeout_info": {
+        "timeout_budget_sec": 450.0,
+        "elapsed_sec": 450.8,
+        "task_name": "manufacturing-fjsp-optimization",
+        "scored": true,
+        "processes_killed": 4,
+        "partial_output_files": 0,
+        "partial_output_bytes": 0,
+        "partial_output_error": null
+      },
+      "task_digest": "sha256:53d6ee606637350e3adaf9abf73aaebe665d9477e24166c9016401d27a9b558c"
+    },
+    {
+      "path": "jobs/uml-expanded/environment-controls-prepared/2026-11-14__21-36-43/r2r-mpc-control__677ac5be/result.json",
+      "sha256": "71afc9812d7f6ec9cd5efe853c3414528461177eaa86d0b03e5952318fb96c8c",
+      "task": "r2r-mpc-control",
+      "reward": 1.0,
+      "error": null,
+      "verifier_error": null,
+      "verifier_timeout_info": null,
+      "task_digest": "sha256:56caf760c2411c1d1e4fb20faa30c82a1a1de4b58fbfafe03fcce5e3d6d1f31b"
+    },
+    {
+      "path": "jobs/uml-expanded/environment-controls-prepared/2026-11-14__21-40-32/llm-prefix-cache-replay__7aea4cf4/result.json",
+      "sha256": "3c0a34846cc9917683c609e179be881076a6eb4dac4dca3effb1112f092c4f0d",
+      "task": "llm-prefix-cache-replay",
+      "reward": 1.0,
+      "error": null,
+      "verifier_error": null,
+      "verifier_timeout_info": null,
+      "task_digest": "sha256:6e625578b9977265fdb8b1fccacda6fd109fd3097e8991125f99bb99d4931cf7"
+    },
+    {
+      "path": "jobs/uml-expanded/environment-controls-prepared/2026-11-14__21-45-28/manufacturing-fjsp-optimization__720be5d3/result.json",
+      "sha256": "b88ea7fd21a7efb3533570938ca54869a7677b0d92fa6b85025c9dc7d6d81d93",
+      "task": "manufacturing-fjsp-optimization",
+      "reward": 0.0,
+      "error": null,
+      "verifier_error": null,
+      "verifier_timeout_info": {
+        "timeout_budget_sec": 450.0,
+        "elapsed_sec": 450.7,
+        "task_name": "manufacturing-fjsp-optimization",
+        "scored": true,
+        "processes_killed": 5,
+        "partial_output_files": 0,
+        "partial_output_bytes": 0,
+        "partial_output_error": null
+      },
+      "task_digest": "sha256:8e1fba7ec3b62a67bb4c2fa0081c352ef0605f0956713ea468f2698fdf8a3304"
+    },
+    {
+      "path": "jobs/uml-expanded/environment-controls-prepared/2026-11-14__21-45-28/r2r-mpc-control__b4354eec/result.json",
+      "sha256": "d1bd97d7c15c7e06abd4e0423f3b75cc96f104a1deefcec9dcce945969471de8",
+      "task": "r2r-mpc-control",
+      "reward": 1.0,
+      "error": null,
+      "verifier_error": null,
+      "verifier_timeout_info": null,
+      "task_digest": "sha256:56caf760c2411c1d1e4fb20faa30c82a1a1de4b58fbfafe03fcce5e3d6d1f31b"
+    },
+    {
+      "path": "jobs/uml-expanded/environment-controls-prepared/2026-11-14__21-53-06/manufacturing-fjsp-optimization__beaf8d99/result.json",
+      "sha256": "c7c4262d0011092935ea26f196d46ba76c5ec382c028835a47a083061b0aa89d",
+      "task": "manufacturing-fjsp-optimization",
+      "reward": 0.0,
+      "error": null,
+      "verifier_error": null,
+      "verifier_timeout_info": {
+        "timeout_budget_sec": 450.0,
+        "elapsed_sec": 450.8,
+        "task_name": "manufacturing-fjsp-optimization",
+        "scored": true,
+        "processes_killed": 4,
+        "partial_output_files": 0,
+        "partial_output_bytes": 0,
+        "partial_output_error": null
+      },
+      "task_digest": "sha256:53d6ee606637350e3adaf9abf73aaebe665d9477e24166c9016401d27a9b558c"
+    },
+    {
+      "path": "jobs/uml-expanded/environment-controls-prepared/2026-11-14__21-57-30/manufacturing-fjsp-optimization__ad3120a5/result.json",
+      "sha256": "d94ed126b53c077ef524bd43eb3d9695dcdb7655965e130b9c032c81e1d93b0f",
+      "task": "manufacturing-fjsp-optimization",
+      "reward": 1.0,
+      "error": null,
+      "verifier_error": null,
+      "verifier_timeout_info": null,
+      "task_digest": "sha256:fcbecdd0787726916a1072273fe8571639e2ee7d12cb1f33afdee25e08dc57af"
+    },
+    {
+      "path": "jobs/uml-expanded/environment-controls-prepared/2026-11-14__23-00-23/manufacturing-fjsp-optimization__28fa6af6/result.json",
+      "sha256": "137e8ba6067df01b93ab5a07ce7844e7f2685c07c775fb72f2ef52239d8e0a40",
+      "task": "manufacturing-fjsp-optimization",
+      "reward": 1.0,
+      "error": null,
+      "verifier_error": null,
+      "verifier_timeout_info": null,
+      "task_digest": "sha256:fcbecdd0787726916a1072273fe8571639e2ee7d12cb1f33afdee25e08dc57af"
+    }
+  ],
+  "bindings": {
+    "campaign.json": "abbb29200fd92cd133181f6d06e499891c885e2a797b6a7adecf3fd5464ea936",
+    "comparison.json": "5112e235ddf691bfb5b947221d31afd122e05beb8c4fb99124dae093265adb01",
+    "manufacturing-environment-amendment.json": "04f1912b087ba244e893f52b0454546d46463c8424c670b8013e4b23278ee441",
+    "manufacturing-bootstrap-amendment.json": "7acac70d76116e33ecdbfd19e0c563cabba4899a6fde37cf9e83b32ac3d549b9",
+    "manufacturing-amended-files.json": "e70d0a4c32481f62edcd8724c38104ed2a3557c08c2b43b45ca6e70b2ecaa1a9",
+    "frozen-source-manifest.json": "9b0fbf3a591ea7c91dd7df804f7516182812532fa88a9db0fc47fddb17189ea1",
+    "recovery-plan.json": "10546cfda8fc5a21ec9ad6f53218ec70b2ed207f2ddbaac8e5c4e1679f54c47a",
+    "manufacturing-offline-recovery-amendment.json": "4ed93869c489c8ada951d1e2c180e424ca73555a9f74fee5cc40272f097b54d0",
+    "vision-sanity.json": "6f782de2899750e49c43f124d7fe1119146ce76e8f550af4c378ff3aa1cbfe8d",
+    "analyze.py": "2295210c92ebf5d5db0e5b30104c6f5c8c77748c92d26e7647bed827b810b4a0"
+  },
+  "limits": [
+    "one trial per arm per task; no seed; descriptive pilot only",
+    "diagrams add extracted information as well as a visual format; no matched text-summary arm",
+    "provider usage includes cached input and helper calls; image tokens are not itemized separately",
+    "agent time is observed elapsed time; some oracle controls overlapped early model runs",
+    "manufacturing verifier dependency bootstrap adapted before either model arm; scoring tail and Python assertions unchanged",
+    "results describe only these selected local task runs"
+  ]
+}

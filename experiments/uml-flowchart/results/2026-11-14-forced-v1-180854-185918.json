@@ -1,0 +1,158 @@
+{
+  "method": "forced-prefix-v1",
+  "task": "crystallographic-wyckoff-position-analysis",
+  "trials_per_arm": 1,
+  "runs": {
+    "text": {
+      "root": "/home/silence/myfiles/SkillCanvas/jobs/uml-flowchart/forced-v1/text/2026-11-14__18-08-54/crystallographic-wyckoff-position-analysis__5ca3d85c",
+      "task_digest": "sha256:e0e32aa068a4c02c898fddf2e67788b00a17cc7fd88dfc3e9d87fb75b280894e",
+      "harness": {
+        "schema": 1,
+        "identity": {
+          "agent": "opencode",
+          "harness": "acp",
+          "install_sha256": "c67e56103012b7e12464dc28773188bfd283de83ec2f2cefb0dcc2000b7b2a2d"
+        },
+        "adapter": {
+          "package": "opencode-ai",
+          "version": "1.19.5",
+          "source": "installed-package"
+        },
+        "cli": {
+          "package": "opencode-ai",
+          "version": "1.19.5",
+          "source": "installed-package"
+        },
+        "engine": {
+          "package": "opencode-ai",
+          "version": "1.19.5",
+          "source": "installed-package"
+        }
+      },
+      "policy": {
+        "method": "forced-prefix-v1",
+        "arm": "text",
+        "id": "4c7ba6a492034505fa7bde68a76e9d5bfe6ad501709445d99064c6af4f270de1",
+        "adapter_sha256": {
+          "delivery_runner.py": "655cd9a47a533771f0f15a09f343b3284b13d49b08f3dc434ebb2e4f220d2aac",
+          "delivery_protocol.py": "0431c02d6b3c08d17efb7b936913f344857973fe17cd5f3bb8362e6d3e57b640"
+        },
+        "assets": [
+          {
+            "skill": "pymatgen",
+            "guide_sha256": "eeb3616b03e293072332847795e055413becfa42d74dfaeb48ac6aa90e21654f"
+          },
+          {
+            "skill": "sympy",
+            "guide_sha256": "1464cb81c992472072bdd66249623f55fa1709a74ca4148f7f5f40fa6cbb6616"
+          }
+        ]
+      },
+      "delivery_valid": true,
+      "reward": 1,
+      "tools": 19,
+      "trajectory_steps": 35,
+      "main_calls": 15,
+      "title_calls": 1,
+      "input_tokens": 482123,
+      "output_tokens": 9273,
+      "cached_input_tokens": 450176,
+      "uncached_input_tokens": 31947,
+      "total_tokens": 491396,
+      "estimated_cost_usd": 0.023412756,
+      "agent_execution_sec": 64.6,
+      "total_trial_sec": 167.7,
+      "evidence_sha256": {
+        "result.json": "d6bcf6a9a699d6748be553b3b82c0203260e6a6a77662c74c24c07c56a770008",
+        "skill-delivery.json": "6229090b554964b3ed8f61158241e215a2a0b24d8bebb19aef82e78af885bd99",
+        "trajectory/llm_trajectory.jsonl": "c670b096cfc4bc66106f6fae4bb88c6d066dabeab7335bddf917a7e66e314536",
+        "trajectory/acp_trajectory.jsonl": "713bb193f243f9d4f5195e30a013cc6a2beadff15e7dddeb83c8df10d65e1a1a",
+        "verifier/test-stdout.txt": "ad414236640a3f7d2338cb790a01adb858c9a2c0c2adaedcdc373b49196c0b3d"
+      }
+    },
+    "image": {
+      "root": "/home/silence/myfiles/SkillCanvas/jobs/uml-flowchart/forced-v1/image/2026-11-14__18-59-18/crystallographic-wyckoff-position-analysis__9701e12d",
+      "task_digest": "sha256:e0e32aa068a4c02c898fddf2e67788b00a17cc7fd88dfc3e9d87fb75b280894e",
+      "harness": {
+        "schema": 1,
+        "identity": {
+          "agent": "opencode",
+          "harness": "acp",
+          "install_sha256": "c67e56103012b7e12464dc28773188bfd283de83ec2f2cefb0dcc2000b7b2a2d"
+        },
+        "adapter": {
+          "package": "opencode-ai",
+          "version": "1.19.5",
+          "source": "installed-package"
+        },
+        "cli": {
+          "package": "opencode-ai",
+          "version": "1.19.5",
+          "source": "installed-package"
+        },
+        "engine": {
+          "package": "opencode-ai",
+          "version": "1.19.5",
+          "source": "installed-package"
+        }
+      },
+      "policy": {
+        "method": "forced-prefix-v1",
+        "arm": "image",
+        "id": "80444472be965ad18b60543e3318c8bc6a32a4fd91bea9e44437322ae2b03205",
+        "adapter_sha256": {
+          "delivery_runner.py": "30504f26f8792631b50d11beb404c39e32d063aeab0bf3bfcdf64820542291b4",
+          "delivery_protocol.py": "0431c02d6b3c08d17efb7b936913f344857973fe17cd5f3bb8362e6d3e57b640"
+        },
+        "assets": [
+          {
+            "skill": "pymatgen",
+            "guide_sha256": "eeb3616b03e293072332847795e055413becfa42d74dfaeb48ac6aa90e21654f",
+            "image_sha256": "78d6969514609b483b2e6b34ac167db2afc20e396f1451a35c2bd3109b9ea9bd"
+          },
+          {
+            "skill": "sympy",
+            "guide_sha256": "1464cb81c992472072bdd66249623f55fa1709a74ca4148f7f5f40fa6cbb6616",
+            "image_sha256": "f83f060db0c5007381adac566ed9a571de613192a1d88cd6ec4ea6717a89292e"
+          }
+        ]
+      },
+      "delivery_valid": true,
+      "reward": 1,
+      "tools": 8,
+      "trajectory_steps": 15,
+      "main_calls": 7,
+      "title_calls": 1,
+      "input_tokens": 159190,
+      "output_tokens": 2138,
+      "cached_input_tokens": 142464,
+      "uncached_input_tokens": 16726,
+      "total_tokens": 161328,
+      "estimated_cost_usd": 0.008438184,
+      "agent_execution_sec": 15.7,
+      "total_trial_sec": 98.5,
+      "evidence_sha256": {
+        "result.json": "366f4178af79261460ab00b4912e7bb91b0429ac17b802856999a11565ab5340",
+        "skill-delivery.json": "b7078b5b4ff4c6e2a3453241f3cf5de87e89cbdf53b9db03e9f5bb109a441e42",
+        "trajectory/llm_trajectory.jsonl": "3b39c0a1b1c9ae404ced54baa57a96092ff064ee0f5bc8844ae3c7a62f2101cd",
+        "trajectory/acp_trajectory.jsonl": "25652a5d279fb732787e49f771a0d04292650d5e6d5d0cbd6572f507428be07a",
+        "verifier/test-stdout.txt": "12b143608925139c34b79843a36ac06eec365abcefe63f69bc06b362969aa3a2"
+      }
+    }
+  },
+  "notes": [
+    "Both arms force the same full GUIDE texts into every agent request; image arm adds both PNGs before guides.",
+    "The text run had an initial false audit failure caused by native log redaction of public API-key placeholders; original and corrected audits are retained. No model rerun was made for that parser correction.",
+    "delivery_protocol.py is identical for both runs; delivery_runner.py changed only in post-run audit to account for native log redaction. Source hashes are recorded in each policy.",
+    "Single task, single trial per arm, no seed or explicit effort/temperature: descriptive comparison only, not a causal or statistical claim.",
+    "Token totals include one automatic title call per arm. Cached tokens are a subset of input tokens. Costs are framework-reported estimates, not invoices.",
+    "The initial launch stopped before model execution because of an obsolete Harbor-version recording dependency; launcher now requires only SkillsBench and BenchFlow."
+  ],
+  "reduction_percent": {
+    "tools": 57.895,
+    "main_calls": 53.333,
+    "total_tokens": 67.169,
+    "agent_execution_sec": 75.697,
+    "estimated_cost_usd": 63.959
+  }
+}

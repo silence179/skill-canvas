@@ -1,0 +1,34 @@
+@startuml
+!pragma useVerticalIf on
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+skinparam defaultFontName SansSerif
+skinparam defaultFontSize 18
+skinparam ArrowColor #46566F
+skinparam activity {
+  BackgroundColor #EEF5FF
+  BorderColor #365A82
+  FontColor #152B44
+  DiamondBackgroundColor #FFF3D6
+  DiamondBorderColor #BA842A
+}
+skinparam noteBackgroundColor #FFF8DE
+skinparam noteBorderColor #BEA45C
+skinparam wrapWidth 360
+title Cache policy comparison - preserve each policy's state rules
+start
+:Read declared policy and common capacity;\nuse identical trace and request accounting;
+if (Policy?) then (LRU)
+  :OrderedDict; on hit move key to tail;\non miss append; evict head if over capacity;
+elseif (LFU?) then (yes)
+  :Increment frequency on hit;\nevict minimum frequency on admission;\nbreak ties by oldest insertion order;
+elseif (FIFO?) then (yes)
+  :Append on admission; evict queue head;\non hit do NOT change insertion order;
+else (S3FIFO)
+  :Use prefix-cache-replay's full algorithm;\nS / M / G + saturated frequency;\nM uses second chance; G is nonresident;
+endif
+:For each request: inspect pre-access residency;\nthen apply all policy access side effects;
+:Replay the same trace separately per policy;\nreport token-weighted hit rate, final residency,\nper-request distribution, admission effort;
+:Check ghost exclusion and frequency bounds;\nmeasure workload behavior; do not assume a winner;
+stop
+@enduml

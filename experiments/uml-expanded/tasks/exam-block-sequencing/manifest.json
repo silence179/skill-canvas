@@ -1,0 +1,53 @@
+{
+  "task": "exam-block-sequencing",
+  "skillsbench_commit": "f860ecf02ef53412a030f8661c83d644b739ff01",
+  "comparison": "forced full skill text vs PNG-first plus identical full text",
+  "diagram_basis": "only original SKILL.md; no oracle/verifier content",
+  "renderer": {
+    "name": "PlantUML MIT",
+    "sha256": "30a66b81a16127fd3ec560992f31964fe9ae3f1233c614ef4558a4558a21489e",
+    "version": "1.2026.10"
+  },
+  "source_files": {
+    "mip-solver-and-solution-audit/SKILL.md": "34ab1c8cd80ab01f65ad7287776994efeceb15fe454c36216d7d4ba2fee442f7",
+    "ordered-window-sequencing-mip/SKILL.md": "0e1aa2b96b164e0cb06045b8d6b3fdd56d693c002a7dbbf8fb093bca3216c514"
+  },
+  "skills": {
+    "mip-solver-and-solution-audit": {
+      "guide_sha256": "34ab1c8cd80ab01f65ad7287776994efeceb15fe454c36216d7d4ba2fee442f7",
+      "uml_sha256": "787be694490fd0ac918e7e443db73e325e8cd7e860f72911c6cd010fa563ee4e",
+      "png_sha256": "ffdc956265f7d40c7a1df8d91deceeea79ca90ca095644745d25fbe707f3d53b",
+      "png_dimensions": [
+        716,
+        1814
+      ],
+      "guide_bytes": 10797
+    },
+    "ordered-window-sequencing-mip": {
+      "guide_sha256": "0e1aa2b96b164e0cb06045b8d6b3fdd56d693c002a7dbbf8fb093bca3216c514",
+      "uml_sha256": "df8cbcce2b9ec336da57caef80d2e550c591a95fc3f20f8dcf73849b0b880f41",
+      "png_sha256": "6536b052c2ee814065b860b19d34e1de7e5239a81cd2e4bd6e0b4c3dc69ce0ca",
+      "png_dimensions": [
+        990,
+        1478
+      ],
+      "guide_bytes": 10905
+    }
+  },
+  "bundles": {
+    "text": {
+      "mip-solver-and-solution-audit/GUIDE.md": "34ab1c8cd80ab01f65ad7287776994efeceb15fe454c36216d7d4ba2fee442f7",
+      "mip-solver-and-solution-audit/SKILL.md": "fcb72210a78d919b8549bed86d0659ede08f0210a716870f56cd438b561a5b30",
+      "ordered-window-sequencing-mip/GUIDE.md": "0e1aa2b96b164e0cb06045b8d6b3fdd56d693c002a7dbbf8fb093bca3216c514",
+      "ordered-window-sequencing-mip/SKILL.md": "3e5b2094c5c9afb814bdec3e87a2fbac6a8d07feb12db031f9717393595623ba"
+    },
+    "image": {
+      "mip-solver-and-solution-audit/GUIDE.md": "34ab1c8cd80ab01f65ad7287776994efeceb15fe454c36216d7d4ba2fee442f7",
+      "mip-solver-and-solution-audit/SKILL.md": "432833217e226da5d074bd483ed57312092a4cc67176a66c15617d68c8bd87e4",
+      "mip-solver-and-solution-audit/assets/flowchart.png": "ffdc956265f7d40c7a1df8d91deceeea79ca90ca095644745d25fbe707f3d53b",
+      "ordered-window-sequencing-mip/GUIDE.md": "0e1aa2b96b164e0cb06045b8d6b3fdd56d693c002a7dbbf8fb093bca3216c514",
+      "ordered-window-sequencing-mip/SKILL.md": "407b4690a8e75079d9d0cfe2763a06b581e1b15cc00e5b2d2359c3e70702ab52",
+      "ordered-window-sequencing-mip/assets/flowchart.png": "6536b052c2ee814065b860b19d34e1de7e5239a81cd2e4bd6e0b4c3dc69ce0ca"
+    }
+  }
+}

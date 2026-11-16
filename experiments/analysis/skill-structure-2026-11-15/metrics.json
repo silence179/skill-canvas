@@ -1,0 +1,769 @@
+{
+  "scope": "Descriptive pilots; task is outcome unit; versions not independent randomized replicates",
+  "pairs": [
+    {
+      "version": "v1",
+      "task": "llm-prefix-cache-replay",
+      "structure": "状态迁移／策略比较",
+      "admitted": true,
+      "both_pass": true,
+      "text": {
+        "trial": "jobs/uml-expanded/paired-five-v1/llm-prefix-cache-replay/text/2026-11-14__21-41-13/llm-prefix-cache-replay__ea6444ba",
+        "reward": 1.0,
+        "total_tokens": 68624,
+        "tool_calls": 5,
+        "main_calls": 5,
+        "agent_seconds": 12.0,
+        "estimated_cost_usd": 0.00624684,
+        "test_summary": {
+          "tests": 6,
+          "passed": 6,
+          "failed": 0,
+          "skipped": 0,
+          "pending": 0,
+          "other": 0,
+          "start": 1794663719.9182653,
+          "stop": 1794663719.9719436
+        }
+      },
+      "image": {
+        "trial": "jobs/uml-expanded/paired-five-v1/llm-prefix-cache-replay/image/2026-11-14__21-42-02/llm-prefix-cache-replay__e6631438",
+        "reward": 1.0,
+        "total_tokens": 77396,
+        "tool_calls": 4,
+        "main_calls": 5,
+        "agent_seconds": 17.2,
+        "estimated_cost_usd": 0.00746748,
+        "test_summary": {
+          "tests": 6,
+          "passed": 6,
+          "failed": 0,
+          "skipped": 0,
+          "pending": 0,
+          "other": 0,
+          "start": 1794663778.036663,
+          "stop": 1794663778.089323
+        }
+      },
+      "total_tokens_change_pct": 12.782699930053631,
+      "tool_calls_change_pct": -19.999999999999996,
+      "main_calls_change_pct": 0.0,
+      "agent_seconds_change_pct": 43.333333333333336,
+      "estimated_cost_usd_change_pct": 19.54011948441132
+    },
+    {
+      "version": "v1",
+      "task": "energy-market-pricing",
+      "structure": "数据契约／网络约束／数值优化",
+      "admitted": true,
+      "both_pass": true,
+      "text": {
+        "trial": "jobs/uml-expanded/paired-five-v1/energy-market-pricing/text/2026-11-14__21-50-30/energy-market-pricing__f430f1c0",
+        "reward": 1.0,
+        "total_tokens": 718480,
+        "tool_calls": 25,
+        "main_calls": 26,
+        "agent_seconds": 232.5,
+        "estimated_cost_usd": 0.034733916,
+        "test_summary": {
+          "tests": 4,
+          "passed": 4,
+          "failed": 0,
+          "skipped": 0,
+          "pending": 0,
+          "other": 0,
+          "start": 1794664502.574975,
+          "stop": 1794664521.626614
+        }
+      },
+      "image": {
+        "trial": "jobs/uml-expanded/paired-five-v1/energy-market-pricing/image/2026-11-14__21-43-00/energy-market-pricing__cbab5e5b",
+        "reward": 1.0,
+        "total_tokens": 703491,
+        "tool_calls": 22,
+        "main_calls": 22,
+        "agent_seconds": 387.8,
+        "estimated_cost_usd": 0.04043226,
+        "test_summary": {
+          "tests": 4,
+          "passed": 4,
+          "failed": 0,
+          "skipped": 0,
+          "pending": 0,
+          "other": 0,
+          "start": 1794664207.6345885,
+          "stop": 1794664226.4965792
+        }
+      },
+      "total_tokens_change_pct": -2.0862097761941922,
+      "tool_calls_change_pct": -12.0,
+      "main_calls_change_pct": -15.384615384615385,
+      "agent_seconds_change_pct": 66.79569892473118,
+      "estimated_cost_usd_change_pct": 16.405705593345708
+    },
+    {
+      "version": "v1",
+      "task": "r2r-mpc-control",
+      "structure": "数学递推／反馈控制／参数权衡",
+      "admitted": true,
+      "both_pass": true,
+      "text": {
+        "trial": "jobs/uml-expanded/paired-five-v1/r2r-mpc-control/text/2026-11-14__21-55-25/r2r-mpc-control__cdd8d0d1",
+        "reward": 1.0,
+        "total_tokens": 1021273,
+        "tool_calls": 31,
+        "main_calls": 24,
+        "agent_seconds": 509.1,
+        "estimated_cost_usd": 0.060975108,
+        "test_summary": {
+          "tests": 6,
+          "passed": 6,
+          "failed": 0,
+          "skipped": 0,
+          "pending": 0,
+          "other": 0,
+          "start": 1794665078.9782367,
+          "stop": 1794665079.3806825
+        }
+      },
+      "image": {
+        "trial": "jobs/uml-expanded/paired-five-v1/r2r-mpc-control/image/2026-11-14__22-04-43/r2r-mpc-control__115ad66b",
+        "reward": 1.0,
+        "total_tokens": 2071916,
+        "tool_calls": 40,
+        "main_calls": 38,
+        "agent_seconds": 649.2,
+        "estimated_cost_usd": 0.08589804,
+        "test_summary": {
+          "tests": 6,
+          "passed": 6,
+          "failed": 0,
+          "skipped": 0,
+          "pending": 0,
+          "other": 0,
+          "start": 1794665776.5504532,
+          "stop": 1794665776.9220881
+        }
+      },
+      "total_tokens_change_pct": 102.87582262529216,
+      "tool_calls_change_pct": 29.032258064516125,
+      "main_calls_change_pct": 58.33333333333333,
+      "agent_seconds_change_pct": 27.519151443724233,
+      "estimated_cost_usd_change_pct": 40.873944823517164
+    },
+    {
+      "version": "v1",
+      "task": "exam-block-sequencing",
+      "structure": "有序窗口约束／求解交付",
+      "admitted": false,
+      "both_pass": false,
+      "text": {
+        "trial": "jobs/uml-expanded/paired-five-v1-recovery/exam-block-sequencing/text/2026-11-14__23-23-22/exam-block-sequencing__ea18964a",
+        "reward": 1.0,
+        "total_tokens": 1734749,
+        "tool_calls": 38,
+        "main_calls": 33,
+        "agent_seconds": 722.7,
+        "estimated_cost_usd": 0.077986656,
+        "test_summary": {
+          "tests": 3,
+          "passed": 3,
+          "failed": 0,
+          "skipped": 0,
+          "pending": 0,
+          "other": 0,
+          "start": 1794670568.7113976,
+          "stop": 1794670568.8186812
+        }
+      },
+      "image": {
+        "trial": "jobs/uml-expanded/paired-five-v1-recovery/exam-block-sequencing/image/2026-11-14__22-57-32/exam-block-sequencing__628a2a93",
+        "reward": 0.0,
+        "total_tokens": 1766242,
+        "tool_calls": 35,
+        "main_calls": 35,
+        "agent_seconds": 1500.1,
+        "estimated_cost_usd": 0.086161776,
+        "test_summary": {
+          "tests": 3,
+          "passed": 0,
+          "failed": 3,
+          "skipped": 0,
+          "pending": 0,
+          "other": 0,
+          "start": 1794669795.8051763,
+          "stop": 1794669795.9165146
+        }
+      },
+      "total_tokens_change_pct": 1.8154211358530903,
+      "tool_calls_change_pct": -7.8947368421052655,
+      "main_calls_change_pct": 6.060606060606055,
+      "agent_seconds_change_pct": 107.56883907568837,
+      "estimated_cost_usd_change_pct": 10.482716427795014
+    },
+    {
+      "version": "v1",
+      "task": "manufacturing-fjsp-optimization",
+      "structure": "时序资源约束／局部修复",
+      "admitted": true,
+      "both_pass": false,
+      "text": {
+        "trial": "jobs/uml-expanded/paired-five-v1-recovery/manufacturing-fjsp-optimization/text/2026-11-14__23-36-14/manufacturing-fjsp-optimization__24b9f178",
+        "reward": 0.0,
+        "total_tokens": 703904,
+        "tool_calls": 23,
+        "main_calls": 22,
+        "agent_seconds": 340.7,
+        "estimated_cost_usd": 0.044698176,
+        "test_summary": {
+          "tests": 15,
+          "passed": 14,
+          "failed": 1,
+          "skipped": 0,
+          "pending": 0,
+          "other": 0,
+          "start": 1794670947.2256527,
+          "stop": 1794670947.2753403
+        }
+      },
+      "image": {
+        "trial": "jobs/uml-expanded/paired-five-v1-recovery/manufacturing-fjsp-optimization/image/2026-11-14__23-42-31/manufacturing-fjsp-optimization__8bb2ea6d",
+        "reward": 1.0,
+        "total_tokens": 639778,
+        "tool_calls": 26,
+        "main_calls": 20,
+        "agent_seconds": 1294.5,
+        "estimated_cost_usd": 0.045676644,
+        "test_summary": {
+          "tests": 15,
+          "passed": 15,
+          "failed": 0,
+          "skipped": 0,
+          "pending": 0,
+          "other": 0,
+          "start": 1794672277.3210633,
+          "stop": 1794672277.3571138
+        }
+      },
+      "total_tokens_change_pct": -9.110049097604222,
+      "tool_calls_change_pct": 13.043478260869556,
+      "main_calls_change_pct": -9.090909090909093,
+      "agent_seconds_change_pct": 279.9530378632228,
+      "estimated_cost_usd_change_pct": 2.1890557681816913
+    },
+    {
+      "version": "v2",
+      "task": "llm-prefix-cache-replay",
+      "structure": "状态迁移／策略比较",
+      "admitted": true,
+      "both_pass": true,
+      "text": {
+        "trial": "jobs/uml-expanded/paired-five-full-skill-v2/llm-prefix-cache-replay/text/2026-11-15__20-20-10/llm-prefix-cache-replay__a5b26930",
+        "reward": 1.0,
+        "total_tokens": 67276,
+        "tool_calls": 4,
+        "main_calls": 5,
+        "agent_seconds": 10.4,
+        "estimated_cost_usd": 0.005992464,
+        "test_summary": {
+          "tests": 6,
+          "passed": 6,
+          "failed": 0,
+          "skipped": 0,
+          "pending": 0,
+          "other": 0,
+          "start": 1794745251.6328847,
+          "stop": 1794745251.6748652
+        }
+      },
+      "image": {
+        "trial": "jobs/uml-expanded/paired-five-full-skill-v2/llm-prefix-cache-replay/image/2026-11-15__20-20-53/llm-prefix-cache-replay__b1e3222a",
+        "reward": 1.0,
+        "total_tokens": 61117,
+        "tool_calls": 3,
+        "main_calls": 4,
+        "agent_seconds": 9.0,
+        "estimated_cost_usd": 0.00607092,
+        "test_summary": {
+          "tests": 6,
+          "passed": 6,
+          "failed": 0,
+          "skipped": 0,
+          "pending": 0,
+          "other": 0,
+          "start": 1794745295.7238362,
+          "stop": 1794745295.7660558
+        }
+      },
+      "total_tokens_change_pct": -9.154824900410253,
+      "tool_calls_change_pct": -25.0,
+      "main_calls_change_pct": -19.999999999999996,
+      "agent_seconds_change_pct": -13.461538461538469,
+      "estimated_cost_usd_change_pct": 1.3092444109801704
+    },
+    {
+      "version": "v2",
+      "task": "energy-market-pricing",
+      "structure": "数据契约／网络约束／数值优化",
+      "admitted": true,
+      "both_pass": true,
+      "image": {
+        "trial": "jobs/uml-expanded/paired-five-full-skill-v2/energy-market-pricing/image/2026-11-15__20-21-38/energy-market-pricing__a74b3ca2",
+        "reward": 1.0,
+        "total_tokens": 366785,
+        "tool_calls": 14,
+        "main_calls": 15,
+        "agent_seconds": 127.9,
+        "estimated_cost_usd": 0.019185168,
+        "test_summary": {
+          "tests": 4,
+          "passed": 4,
+          "failed": 0,
+          "skipped": 0,
+          "pending": 0,
+          "other": 0,
+          "start": 1794745458.2759488,
+          "stop": 1794745473.5223293
+        }
+      },
+      "text": {
+        "trial": "jobs/uml-expanded/paired-five-full-skill-v2/energy-market-pricing/text/2026-11-15__20-24-36/energy-market-pricing__f06765a4",
+        "reward": 1.0,
+        "total_tokens": 1534634,
+        "tool_calls": 38,
+        "main_calls": 36,
+        "agent_seconds": 595.4,
+        "estimated_cost_usd": 0.072573612,
+        "test_summary": {
+          "tests": 4,
+          "passed": 4,
+          "failed": 0,
+          "skipped": 0,
+          "pending": 0,
+          "other": 0,
+          "start": 1794746096.9047644,
+          "stop": 1794746112.22911
+        }
+      },
+      "total_tokens_change_pct": -76.09951297833881,
+      "tool_calls_change_pct": -63.1578947368421,
+      "main_calls_change_pct": -58.33333333333333,
+      "agent_seconds_change_pct": -78.51864292912327,
+      "estimated_cost_usd_change_pct": -73.5645402353682
+    },
+    {
+      "version": "v2",
+      "task": "r2r-mpc-control",
+      "structure": "数学递推／反馈控制／参数权衡",
+      "admitted": true,
+      "both_pass": false,
+      "text": {
+        "trial": "jobs/uml-expanded/paired-five-full-skill-v2/r2r-mpc-control/text/2026-11-15__20-35-16/r2r-mpc-control__6ff65f1a",
+        "reward": 1.0,
+        "total_tokens": 516242,
+        "tool_calls": 21,
+        "main_calls": 19,
+        "agent_seconds": 132.2,
+        "estimated_cost_usd": 0.033619068,
+        "test_summary": {
+          "tests": 6,
+          "passed": 6,
+          "failed": 0,
+          "skipped": 0,
+          "pending": 0,
+          "other": 0,
+          "start": 1794746278.6407752,
+          "stop": 1794746278.958968
+        }
+      },
+      "image": {
+        "trial": "jobs/uml-expanded/paired-five-full-skill-v2/r2r-mpc-control/image/2026-11-15__20-38-02/r2r-mpc-control__d47da638",
+        "reward": 0.0,
+        "total_tokens": 172688,
+        "tool_calls": 10,
+        "main_calls": 9,
+        "agent_seconds": 51.3,
+        "estimated_cost_usd": 0.014420928,
+        "test_summary": {
+          "tests": 6,
+          "passed": 5,
+          "failed": 1,
+          "skipped": 0,
+          "pending": 0,
+          "other": 0,
+          "start": 1794746364.3976305,
+          "stop": 1794746364.7815306
+        }
+      },
+      "total_tokens_change_pct": -66.54902158290103,
+      "tool_calls_change_pct": -52.38095238095239,
+      "main_calls_change_pct": -52.63157894736843,
+      "agent_seconds_change_pct": -61.195158850226925,
+      "estimated_cost_usd_change_pct": -57.104914389655306
+    },
+    {
+      "version": "v2",
+      "task": "exam-block-sequencing",
+      "structure": "有序窗口约束／求解交付",
+      "admitted": false,
+      "both_pass": false,
+      "image": {
+        "trial": "jobs/uml-expanded/paired-five-full-skill-v2/exam-block-sequencing/image/2026-11-15__20-39-27/exam-block-sequencing__6ef7f3b5",
+        "reward": 0.0,
+        "total_tokens": 997719,
+        "tool_calls": 21,
+        "main_calls": 21,
+        "agent_seconds": 1500.1,
+        "estimated_cost_usd": 0.073613208,
+        "test_summary": {
+          "tests": 3,
+          "passed": 0,
+          "failed": 3,
+          "skipped": 0,
+          "pending": 0,
+          "other": 0,
+          "start": 1794747900.5104003,
+          "stop": 1794747900.5995548
+        }
+      },
+      "text": {
+        "trial": "jobs/uml-expanded/paired-five-full-skill-v2/exam-block-sequencing/text/2026-11-15__21-05-05/exam-block-sequencing__22bddce0",
+        "reward": 0.0,
+        "total_tokens": 2808117,
+        "tool_calls": 50,
+        "main_calls": 43,
+        "agent_seconds": 1500.1,
+        "estimated_cost_usd": 0.116887164,
+        "test_summary": {
+          "tests": 3,
+          "passed": 0,
+          "failed": 3,
+          "skipped": 0,
+          "pending": 0,
+          "other": 0,
+          "start": 1794749436.8420553,
+          "stop": 1794749436.9357355
+        }
+      },
+      "total_tokens_change_pct": -64.47017699048865,
+      "tool_calls_change_pct": -58.00000000000001,
+      "main_calls_change_pct": -51.162790697674424,
+      "agent_seconds_change_pct": 0.0,
+      "estimated_cost_usd_change_pct": -37.021991567867964
+    },
+    {
+      "version": "v2",
+      "task": "manufacturing-fjsp-optimization",
+      "structure": "时序资源约束／局部修复",
+      "admitted": true,
+      "both_pass": true,
+      "text": {
+        "trial": "jobs/uml-expanded/paired-five-full-skill-v2/manufacturing-fjsp-optimization/text/2026-11-15__21-30-42/manufacturing-fjsp-optimization__d46a53fb",
+        "reward": 1.0,
+        "total_tokens": 325994,
+        "tool_calls": 15,
+        "main_calls": 12,
+        "agent_seconds": 494.1,
+        "estimated_cost_usd": 0.04219062,
+        "test_summary": {
+          "tests": 15,
+          "passed": 15,
+          "failed": 0,
+          "skipped": 0,
+          "pending": 0,
+          "other": 0,
+          "start": 1794749959.9805484,
+          "stop": 1794749960.009104
+        }
+      },
+      "image": {
+        "trial": "jobs/uml-expanded/paired-five-full-skill-v2/manufacturing-fjsp-optimization/image/2026-11-15__21-39-23/manufacturing-fjsp-optimization__76670963",
+        "reward": 1.0,
+        "total_tokens": 746114,
+        "tool_calls": 26,
+        "main_calls": 22,
+        "agent_seconds": 377.4,
+        "estimated_cost_usd": 0.054033876,
+        "test_summary": {
+          "tests": 15,
+          "passed": 15,
+          "failed": 0,
+          "skipped": 0,
+          "pending": 0,
+          "other": 0,
+          "start": 1794750364.6885722,
+          "stop": 1794750364.7165117
+        }
+      },
+      "total_tokens_change_pct": 128.87353754977084,
+      "tool_calls_change_pct": 73.33333333333334,
+      "main_calls_change_pct": 83.33333333333333,
+      "agent_seconds_change_pct": -23.618700667880997,
+      "estimated_cost_usd_change_pct": 28.070827117496734
+    },
+    {
+      "version": "crystal-v1",
+      "task": "crystallographic-wyckoff-position-analysis",
+      "structure": "大型 API 参考／任务入口",
+      "admitted": true,
+      "both_pass": true,
+      "text": {
+        "trial": "jobs/uml-flowchart/forced-v1/text/2026-11-14__18-08-54/crystallographic-wyckoff-position-analysis__5ca3d85c",
+        "reward": 1,
+        "total_tokens": 491396,
+        "tool_calls": 19,
+        "main_calls": 15,
+        "agent_seconds": 64.6,
+        "estimated_cost_usd": 0.023412756
+      },
+      "image": {
+        "trial": "jobs/uml-flowchart/forced-v1/image/2026-11-14__18-59-18/crystallographic-wyckoff-position-analysis__9701e12d",
+        "reward": 1,
+        "total_tokens": 161328,
+        "tool_calls": 8,
+        "main_calls": 7,
+        "agent_seconds": 15.7,
+        "estimated_cost_usd": 0.008438184
+      },
+      "total_tokens_change_pct": -67.16945192879062,
+      "tool_calls_change_pct": -57.89473684210527,
+      "main_calls_change_pct": -53.333333333333336,
+      "agent_seconds_change_pct": -75.69659442724458,
+      "estimated_cost_usd_change_pct": -63.959031563819316
+    }
+  ],
+  "aggregates": {
+    "v1": {
+      "tasks": 5,
+      "admitted_pairs": 4,
+      "all_recorded": {
+        "n": 5,
+        "totals": {
+          "text": {
+            "total_tokens": 4247030,
+            "tool_calls": 122,
+            "agent_seconds": 1817.0,
+            "estimated_cost_usd": 0.224640696
+          },
+          "image": {
+            "total_tokens": 5258823,
+            "tool_calls": 127,
+            "agent_seconds": 3848.8,
+            "estimated_cost_usd": 0.2656362
+          }
+        },
+        "token_change_pct": 23.823542569748746,
+        "median_task_token_change_pct": 1.8154211358530903
+      },
+      "complete": {
+        "n": 4,
+        "totals": {
+          "text": {
+            "total_tokens": 2512281,
+            "tool_calls": 84,
+            "agent_seconds": 1094.3,
+            "estimated_cost_usd": 0.14665403999999999
+          },
+          "image": {
+            "total_tokens": 3492581,
+            "tool_calls": 92,
+            "agent_seconds": 2348.7000000000003,
+            "estimated_cost_usd": 0.179474424
+          }
+        },
+        "token_change_pct": 39.02031659675011,
+        "median_task_token_change_pct": 5.34824507692972
+      },
+      "both_pass_complete": {
+        "n": 3,
+        "totals": {
+          "text": {
+            "total_tokens": 1808377,
+            "tool_calls": 61,
+            "agent_seconds": 753.6,
+            "estimated_cost_usd": 0.101955864
+          },
+          "image": {
+            "total_tokens": 2852803,
+            "tool_calls": 66,
+            "agent_seconds": 1054.2,
+            "estimated_cost_usd": 0.13379778
+          }
+        },
+        "token_change_pct": 57.754881863682186,
+        "median_task_token_change_pct": 12.782699930053631
+      },
+      "passes": {
+        "text": 4,
+        "image": 4
+      }
+    },
+    "v2": {
+      "tasks": 5,
+      "admitted_pairs": 4,
+      "all_recorded": {
+        "n": 5,
+        "totals": {
+          "text": {
+            "total_tokens": 5252263,
+            "tool_calls": 128,
+            "agent_seconds": 2732.2,
+            "estimated_cost_usd": 0.271262928
+          },
+          "image": {
+            "total_tokens": 2344423,
+            "tool_calls": 74,
+            "agent_seconds": 2065.7,
+            "estimated_cost_usd": 0.1673241
+          }
+        },
+        "token_change_pct": -55.363564238881416,
+        "median_task_token_change_pct": -64.47017699048865
+      },
+      "complete": {
+        "n": 4,
+        "totals": {
+          "text": {
+            "total_tokens": 2444146,
+            "tool_calls": 78,
+            "agent_seconds": 1232.1,
+            "estimated_cost_usd": 0.154375764
+          },
+          "image": {
+            "total_tokens": 1346704,
+            "tool_calls": 53,
+            "agent_seconds": 565.6,
+            "estimated_cost_usd": 0.093710892
+          }
+        },
+        "token_change_pct": -44.90083652940536,
+        "median_task_token_change_pct": -37.85192324165564
+      },
+      "both_pass_complete": {
+        "n": 3,
+        "totals": {
+          "text": {
+            "total_tokens": 1927904,
+            "tool_calls": 57,
+            "agent_seconds": 1099.9,
+            "estimated_cost_usd": 0.120756696
+          },
+          "image": {
+            "total_tokens": 1174016,
+            "tool_calls": 43,
+            "agent_seconds": 514.3,
+            "estimated_cost_usd": 0.079289964
+          }
+        },
+        "token_change_pct": -39.10402177701794,
+        "median_task_token_change_pct": -9.154824900410253
+      },
+      "passes": {
+        "text": 4,
+        "image": 3
+      }
+    },
+    "crystal-v1": {
+      "tasks": 1,
+      "admitted_pairs": 1,
+      "all_recorded": {
+        "n": 1,
+        "totals": {
+          "text": {
+            "total_tokens": 491396,
+            "tool_calls": 19,
+            "agent_seconds": 64.6,
+            "estimated_cost_usd": 0.023412756
+          },
+          "image": {
+            "total_tokens": 161328,
+            "tool_calls": 8,
+            "agent_seconds": 15.7,
+            "estimated_cost_usd": 0.008438184
+          }
+        },
+        "token_change_pct": -67.16945192879062,
+        "median_task_token_change_pct": -67.16945192879062
+      },
+      "complete": {
+        "n": 1,
+        "totals": {
+          "text": {
+            "total_tokens": 491396,
+            "tool_calls": 19,
+            "agent_seconds": 64.6,
+            "estimated_cost_usd": 0.023412756
+          },
+          "image": {
+            "total_tokens": 161328,
+            "tool_calls": 8,
+            "agent_seconds": 15.7,
+            "estimated_cost_usd": 0.008438184
+          }
+        },
+        "token_change_pct": -67.16945192879062,
+        "median_task_token_change_pct": -67.16945192879062
+      },
+      "both_pass_complete": {
+        "n": 1,
+        "totals": {
+          "text": {
+            "total_tokens": 491396,
+            "tool_calls": 19,
+            "agent_seconds": 64.6,
+            "estimated_cost_usd": 0.023412756
+          },
+          "image": {
+            "total_tokens": 161328,
+            "tool_calls": 8,
+            "agent_seconds": 15.7,
+            "estimated_cost_usd": 0.008438184
+          }
+        },
+        "token_change_pct": -67.16945192879062,
+        "median_task_token_change_pct": -67.16945192879062
+      },
+      "passes": {
+        "text": 1,
+        "image": 1
+      }
+    }
+  },
+  "text_control_drift": [
+    {
+      "task": "llm-prefix-cache-replay",
+      "text_token_change_pct": -1.9643273490324131,
+      "text_reward_v1": 1.0,
+      "text_reward_v2": 1.0,
+      "image_effect_sign_flip": true
+    },
+    {
+      "task": "energy-market-pricing",
+      "text_token_change_pct": 113.5945329027948,
+      "text_reward_v1": 1.0,
+      "text_reward_v2": 1.0,
+      "image_effect_sign_flip": false
+    },
+    {
+      "task": "r2r-mpc-control",
+      "text_token_change_pct": -49.4511261925068,
+      "text_reward_v1": 1.0,
+      "text_reward_v2": 1.0,
+      "image_effect_sign_flip": true
+    },
+    {
+      "task": "exam-block-sequencing",
+      "text_token_change_pct": 61.87454208072754,
+      "text_reward_v1": 1.0,
+      "text_reward_v2": 0.0,
+      "image_effect_sign_flip": null
+    },
+    {
+      "task": "manufacturing-fjsp-optimization",
+      "text_token_change_pct": -53.68771877983362,
+      "text_reward_v1": 0.0,
+      "text_reward_v2": 1.0,
+      "image_effect_sign_flip": true
+    }
+  ]
+}

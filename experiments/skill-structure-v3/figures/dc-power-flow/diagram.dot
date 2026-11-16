@@ -1,0 +1,26 @@
+digraph skill {
+graph [bgcolor="white", pad="0.28", nodesep="0.38", ranksep="0.5", fontname="DejaVu Sans", fontsize=22, labelloc=t, labeljust=l];
+node [shape=box, style="rounded,filled", fillcolor="#eef5ff", color="#365a82", fontcolor="#152b44", fontname="DejaVu Sans", fontsize=17, margin="0.16,0.12", penwidth=1.3];
+edge [color="#46566f", fontname="DejaVu Sans", fontsize=14, arrowsize=.8];
+label="dc-power-flow | typed data dependencies and script contracts";
+rankdir=TB;
+input [label="buses + branches + baseMVA [S1,S2]\nmap ORIGINAL bus IDs -> array indices; never ID-1\nDC: lossless, flat voltage, small angles [S1]"];
+builder [label="build_susceptance_matrix(branches,buses) [S2]\nx=branch[3]; b=1/x if x!=0 else 0\nB_ff+=b; B_tt+=b; B_ft-=b; B_tf-=b"];
+input -> builder [label="arrays"];
+matrix [label="B [n_bus x n_bus]"];
+sus [label="branch_susceptances\none saved b per branch"];
+mapping [label="bus_num_to_idx\noriginal ID -> position"];
+builder -> matrix [label="return 1"];
+builder -> sus [label="return 2"];
+builder -> mapping [label="return 3"];
+balance [label="nodal equation [S1]\nPg_pu - Pd_pu = B[i,:] @ theta\nreference bus type=3: theta[slack]=0"];
+matrix -> balance [label="model coefficient"];
+theta [label="theta [radians]\nfrom the specified model/solve"];
+balance -> theta [label="defines constraint",style=dashed];
+flows [label="calculate_line_flows(...) [S2]\nflow_MW = saved_b*(theta[f]-theta[t])*baseMVA\nkeep ORIGINAL IDs in returned records\nlimit=branch[5]; loading=abs(flow)/limit*100\nif limit<=0, helper reports loading=0"];
+sus -> flows; mapping -> flows; theta -> flows; input -> flows [label="branch data / baseMVA"];
+output [label="list of from/to/flow_MW/limit_MW/loading_pct [S2]\nFor OPF: -rate <= flow_MW <= rate [S1]"];
+flows -> output;
+cli [shape=note,fillcolor="#fff8de",label="CLI prints B size/nonzeros/symmetry only [S2].\nIt does not return a solved OPF or dispatch.\nUse stored susceptances for the flow helper;\nsource inline example and zero-X guard differ."];
+builder -> cli [style=dotted,arrowhead=none];
+}

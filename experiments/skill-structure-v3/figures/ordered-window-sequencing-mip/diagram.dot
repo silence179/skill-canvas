@@ -1,0 +1,27 @@
+digraph skill {
+graph [bgcolor="white", pad="0.28", nodesep="0.38", ranksep="0.5", fontname="DejaVu Sans", fontsize=22, labelloc=t, labeljust=l];
+node [shape=box, style="rounded,filled", fillcolor="#eef5ff", color="#365a82", fontcolor="#152b44", fontname="DejaVu Sans", fontsize=17, margin="0.16,0.12", penwidth=1.3];
+edge [color="#46566f", fontname="DejaVu Sans", fontsize=14, arrowsize=.8];
+label="ordered-window-sequencing-mip | aligned ordered windows + constraints";
+rankdir=TB;
+positions [shape=plain,label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="12">
+<TR><TD BGCOLOR="#dae7f8">position</TD><TD>t</TD><TD>next(t)</TD><TD>next(next(t))</TD><TD>next^3(t)</TD></TR>
+<TR><TD BGCOLOR="#dae7f8">item</TD><TD>a</TD><TD>b</TD><TD>c</TD><TD>d</TD></TR>
+<TR><TD BGCOLOR="#dae7f8">window A</TD><TD BGCOLOR="#dceee4">a</TD><TD BGCOLOR="#dceee4">b</TD><TD BGCOLOR="#dceee4">c</TD><TD></TD></TR>
+<TR><TD BGCOLOR="#dae7f8">window B</TD><TD></TD><TD BGCOLOR="#fff0cd">b</TD><TD BGCOLOR="#fff0cd">c</TD><TD BGCOLOR="#fff0cd">d</TD></TR>
+<TR><TD COLSPAN="5">SCHEMATIC adjacency only [S1]: shared suffix/prefix (b,c); labels need not be integers.</TD></TR>
+</TABLE>>];
+continuity [label="Direct W model: shared ordered prefix/suffix [S1]\nsum_a0 W[t,a0,q1,...,q(r-1)]\n= sum_ar W[next(t),q1,...,q(r-1),ar]\none window per eligible start; required item-role counts\nno repeated items when sequence is a permutation"];
+positions -> continuity [label="adjacent windows must agree"];
+assignment [label="Alternative: assignment-linked length-r windows [S1]\nz <= each matching assign variable\nz >= sum(matching assign variables) - (r-1)\neach item / required position appears as required"];
+positions -> assignment [label="alternative representation"];
+active [label="ACTIVE PATTERN contract [S1]\nprimitive offsets + eligible starts + successor map\nbuild active ordered tuples from the global sequence\nfor each candidate extended tuple:\nleft IN active AND right IN active"];
+overlap [label="binary overlap O = A AND B [S1]\nO<=A; O<=B; O>=A+B-1\nattach only the defined ordered overlap cost\nkeep it INSIDE the minimized objective"];
+active -> overlap [label="membership, not all subsets"];
+continuity -> active; assignment -> active;
+objective [label="sum named weighted components [S1]\neach uses its own eligible-start mask / tuple offsets\ninclude pairs, triples and required high-order terms\nextract ONE global sequence; independent evaluate(sequence,data)"];
+overlap -> objective;
+note [shape=note,fillcolor="#fff8de",label="Never sort tuple keys / add reverse pairs without a rule.\nThe drawing above does NOT define every overlap as adjacency:\nactual overlap uses the specified active-pattern membership.\nMissing tuples: follow supplied data contract.\nCyclic continuity ONLY when explicitly defined;\nreporting masks may still exclude boundary starts. [S1]"];
+positions -> note [style=dotted,arrowhead=none];
+}

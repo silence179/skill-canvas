@@ -1,0 +1,53 @@
+{
+  "task": "llm-prefix-cache-replay",
+  "skillsbench_commit": "f860ecf02ef53412a030f8661c83d644b739ff01",
+  "comparison": "forced full skill text vs PNG-first plus identical full text",
+  "diagram_basis": "only original SKILL.md; no oracle/verifier content",
+  "renderer": {
+    "name": "PlantUML MIT",
+    "sha256": "30a66b81a16127fd3ec560992f31964fe9ae3f1233c614ef4558a4558a21489e",
+    "version": "1.2026.10"
+  },
+  "source_files": {
+    "cache-policy-comparison/SKILL.md": "353a7215727695b01e48ea69e63ed92c0b32174534a6bda38cee9b91382e5963",
+    "prefix-cache-replay/SKILL.md": "28ced940ec272cc01cf06519912077492d948b10e08a933acba12dd9907220cf"
+  },
+  "skills": {
+    "cache-policy-comparison": {
+      "guide_sha256": "353a7215727695b01e48ea69e63ed92c0b32174534a6bda38cee9b91382e5963",
+      "uml_sha256": "5c21e54812629de35d0561f0b11f8c42197ea2b142649867a38fc5b7ed9f1d91",
+      "png_sha256": "51d431b40a76bafeb0881abc0c8030a1caeb48214da3169a838b52646249fd50",
+      "png_dimensions": [
+        508,
+        1217
+      ],
+      "guide_bytes": 5970
+    },
+    "prefix-cache-replay": {
+      "guide_sha256": "28ced940ec272cc01cf06519912077492d948b10e08a933acba12dd9907220cf",
+      "uml_sha256": "69545f4689aaa3dae62b5cd00a6c219399862ac4fc9f652be6b6ffd88f46041b",
+      "png_sha256": "4be13bc22de0b66f0f0dee788f576b824793ee0d44d13807d2e231ac69e703c9",
+      "png_dimensions": [
+        1215,
+        1814
+      ],
+      "guide_bytes": 9283
+    }
+  },
+  "bundles": {
+    "text": {
+      "cache-policy-comparison/GUIDE.md": "353a7215727695b01e48ea69e63ed92c0b32174534a6bda38cee9b91382e5963",
+      "cache-policy-comparison/SKILL.md": "07380de21788e4ce5c90be4816f55c4a2f447fbd7d56027737fbd24c3afdbc67",
+      "prefix-cache-replay/GUIDE.md": "28ced940ec272cc01cf06519912077492d948b10e08a933acba12dd9907220cf",
+      "prefix-cache-replay/SKILL.md": "9ddc44bd384dd615a472b6522b8bc9f4b1cf040485706d79080e87794e456f01"
+    },
+    "image": {
+      "cache-policy-comparison/GUIDE.md": "353a7215727695b01e48ea69e63ed92c0b32174534a6bda38cee9b91382e5963",
+      "cache-policy-comparison/SKILL.md": "7e25bcbe0d1ff3abb0aa5d2a69f0ac5a7927696b7b16358ae514dbecbff99ea4",
+      "cache-policy-comparison/assets/flowchart.png": "51d431b40a76bafeb0881abc0c8030a1caeb48214da3169a838b52646249fd50",
+      "prefix-cache-replay/GUIDE.md": "28ced940ec272cc01cf06519912077492d948b10e08a933acba12dd9907220cf",
+      "prefix-cache-replay/SKILL.md": "2b6f1eca4da90bc63af7d2f1247f312a4547b782a3aca6b440c51226774b1bcc",
+      "prefix-cache-replay/assets/flowchart.png": "4be13bc22de0b66f0f0dee788f576b824793ee0d44d13807d2e231ac69e703c9"
+    }
+  }
+}

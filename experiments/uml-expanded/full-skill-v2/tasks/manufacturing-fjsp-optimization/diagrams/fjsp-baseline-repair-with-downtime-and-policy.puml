@@ -1,0 +1,64 @@
+@startuml
+!pragma useVerticalIf on
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+skinparam defaultFontName SansSerif
+skinparam defaultFontSize 17
+skinparam ArrowColor #46566F
+skinparam activity {
+  BackgroundColor #EEF5FF
+  BorderColor #365A82
+  FontColor #152B44
+  DiamondBackgroundColor #FFF3D6
+  DiamondBorderColor #BA842A
+}
+skinparam noteBackgroundColor #FFF8DE
+skinparam noteBorderColor #BEA45C
+skinparam wrapWidth 370
+title FJSP baseline repair | commitments, integer scan and budgets
+start
+partition "Repair scope and input [S1, S2]" {
+ :Restore baseline feasibility while limiting change;\nread eligible machines and machine-specific times,\ndowntime, baseline and change budgets;
+ :Sort downtime; retain ORIGINAL machine/start\nfor MC and L1 accounting;
+ :Sort operations by (op index, baseline start,\noriginal baseline list index) [S1];
+}
+while (Another operation in that order?) is (yes)
+ :anchor = max(baseline start,\nnew end of previous operation of this job) [S1];
+ :List only legal machines; try baseline machine first;\nif baseline machine illegal, choose a legal default\n(minimum duration is one stated heuristic) [S1];
+ partition "Candidate timing for EACH considered machine [S1]" {
+  :Use this machine's own duration; set t=anchor;
+  while (Conflict with committed work or downtime?) is (yes)
+   :Increment t by exactly 1; test again;
+  endwhile (first feasible integer)
+  :Candidate interval is [t,t+duration);
+ }
+ if (Large shift and change budget remains?) then (yes)
+  :Consider legal alternates with the SAME scan;\nsource suggests accepting an earlier-start alternate [S1];
+ endif
+ :Choose using stated change/shift priorities\nand remaining MC/L1 budgets [S1];
+ note right
+  S1 gives both lexicographic machine-change-first
+  scoring and an earlier-alternate trigger.
+  These are heuristic suggestions: state a consistent
+  priority rather than claiming both always agree.
+ end note
+ :Commit immediately in the SAME repair order;\nupdate machine intervals, predecessor end,\nMC and L1 totals [S1];
+endwhile (done)
+:Check legal machine/duration, precedence,\nno earlier-than-baseline starts, no overlap/downtime,\nMC/L1 budgets and makespan improvement [S1];
+:Replay local placement in repair order: when\nstart > anchor, start-1 must be infeasible [S1];
+note right
+ Half-open overlap: s < b AND a < e.
+ MC compares to ORIGINAL baseline machine.
+ L1 = sum(abs(new_start - baseline_start)).
+ The sample helper's safety-bound return alone
+ is not a proof that the returned slot is feasible.
+end note
+:Return the repaired schedule and measured changes;
+stop
+legend bottom
+ S2 shared reference.md: baseline repair preserves production commitments.
+ FJSPLib provenance, difficulty labels and bibliography provide context;
+ they do not supply a new repair algorithm or a task runtime budget.
+endlegend
+footer Full-skill v2 | S1: SKILL.md | S2: reference.md
+@enduml

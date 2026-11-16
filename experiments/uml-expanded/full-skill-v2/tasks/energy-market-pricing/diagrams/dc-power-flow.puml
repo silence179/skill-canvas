@@ -1,0 +1,45 @@
+@startuml
+!pragma useVerticalIf on
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+skinparam defaultFontName SansSerif
+skinparam defaultFontSize 17
+skinparam ArrowColor #46566F
+skinparam activity {
+  BackgroundColor #EEF5FF
+  BorderColor #365A82
+  FontColor #152B44
+  DiamondBackgroundColor #FFF3D6
+  DiamondBorderColor #BA842A
+}
+skinparam noteBackgroundColor #FFF8DE
+skinparam noteBorderColor #BEA45C
+skinparam wrapWidth 370
+title DC power flow | use the supplied helper implementation
+start
+:Use lossless lines, unit voltage magnitudes\nand small angle differences [S1];
+partition "Build B with scripts/build_b_matrix.py [S2]" {
+ :Call build_susceptance_matrix(branches, buses);\nbuild bus-ID mapping; initialize zero B;
+ while (Another branch?) is (yes)
+  :Map endpoints; read reactance x;
+  if (x != 0?) then (yes)
+   :b = 1/x; add b to B[f,f], B[t,t];\nsubtract b from B[f,t], B[t,f];
+  else (zero)
+   :b = 0; do not update B;
+  endif
+  :Append b to branch_susceptances\nin the original branch order;
+ endwhile (done)
+ :Return B, branch_susceptances, bus_num_to_idx;
+}
+if (Only matrix diagnostics needed?) then (yes)
+ :CLI: python scripts/build_b_matrix.py network.json;\nreports matrix size, nonzero count, symmetry [S2];
+else (DC model / OPF)
+ :Add nodal balance Pg_pu - Pd_pu = B * theta;\nfix type-3 slack angle to zero [S1];
+ :Apply line bounds in MW using saved b;\nsolve for theta in the surrounding model [S1];
+ :Call calculate_line_flows(branches, saved_b,\ntheta, baseMVA, bus-ID mapping) [S2];
+ :For every branch: flow_MW = b*(theta_f-theta_t)*baseMVA;\nlimit_MW = RATE_A; loading = abs(flow)/limit*100\nwhen limit > 0, otherwise 0 [S2];
+ :Return original from/to bus IDs, flow_MW,\nlimit_MW and loading_pct [S2];
+endif
+stop
+footer Full-skill v2 | S1: SKILL.md | S2: build_b_matrix.py
+@enduml

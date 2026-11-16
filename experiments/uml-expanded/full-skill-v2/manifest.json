@@ -1,0 +1,1223 @@
+{
+  "schema": 2,
+  "version": "full-skill-v2",
+  "created_at_utc": "2026-11-15T12:10:05.399148+00:00",
+  "skillsbench_commit": "f860ecf02ef53412a030f8661c83d644b739ff01",
+  "basis": "Complete local skill folders, explicitly linked sibling skills, and shared skills-root resources.",
+  "revision_context": "Post-results material revision requested by user; not a blinded pre-results generation and no new model evaluation.",
+  "renderer": {
+    "name": "PlantUML MIT",
+    "version": "1.2026.10",
+    "sha256": "30a66b81a16127fd3ec560992f31964fe9ae3f1233c614ef4558a4558a21489e"
+  },
+  "generator_sha256": {
+    "build.py": "851b4873cce310cca24e62b2943f0a856ab0318b3e6f483c69e04df655d8b1f3",
+    "diagrams.py": "be9501ed4b5283c219627746f0a4dfd8428d7a188579211864e5384f71a8a16c",
+    "renderer_helper": "a14bdd9244e59df2bfc64a0be185f010d9f171e47e3fbe96ea1b27b5110706c3"
+  },
+  "tasks": {
+    "llm-prefix-cache-replay": {
+      "source_files": {
+        "cache-policy-comparison/SKILL.md": "353a7215727695b01e48ea69e63ed92c0b32174534a6bda38cee9b91382e5963",
+        "prefix-cache-replay/SKILL.md": "28ced940ec272cc01cf06519912077492d948b10e08a933acba12dd9907220cf"
+      },
+      "skills": {
+        "prefix-cache-replay": {
+          "sources": {
+            "S1": {
+              "path": "prefix-cache-replay/SKILL.md",
+              "sha256": "28ced940ec272cc01cf06519912077492d948b10e08a933acba12dd9907220cf",
+              "bytes": 9283,
+              "lines": 110,
+              "review": "Keep pre-access hit accounting distinct from all-hash mutation; show M/G helper transitions, preserved promotion frequency, rounding and ghost exclusion.",
+              "headings": [
+                {
+                  "line": 6,
+                  "heading": "# Overview"
+                },
+                {
+                  "line": 12,
+                  "heading": "# Longest-prefix hit semantics (policy-independent)"
+                },
+                {
+                  "line": 24,
+                  "heading": "# S3FIFO (Yang et al., SOSP 2023 — \"FIFO queues are all you need\")"
+                },
+                {
+                  "line": 35,
+                  "heading": "## Access rule (per `h` in a request's `hash_ids`)"
+                },
+                {
+                  "line": 41,
+                  "heading": "## Admission to S (drains old S entries when S is full)"
+                },
+                {
+                  "line": 54,
+                  "heading": "## Admission to M (second-chance, drains until one real eviction when M is full)"
+                },
+                {
+                  "line": 71,
+                  "heading": "## Ghost insertion"
+                },
+                {
+                  "line": 75,
+                  "heading": "## Residency and final size"
+                },
+                {
+                  "line": 79,
+                  "heading": "# Trace format"
+                },
+                {
+                  "line": 89,
+                  "heading": "# Common mistakes"
+                },
+                {
+                  "line": 104,
+                  "heading": "# Quick sanity checks on your output"
+                }
+              ]
+            },
+            "S2": {
+              "path": "cache-policy-comparison/SKILL.md",
+              "sha256": "353a7215727695b01e48ea69e63ed92c0b32174534a6bda38cee9b91382e5963",
+              "bytes": 5970,
+              "lines": 85,
+              "review": "Companion policy specification: do not follow S3FIFO transitions when a different eviction policy is declared.",
+              "headings": [
+                {
+                  "line": 6,
+                  "heading": "# Overview"
+                },
+                {
+                  "line": 19,
+                  "heading": "# LRU"
+                },
+                {
+                  "line": 44,
+                  "heading": "# LFU"
+                },
+                {
+                  "line": 53,
+                  "heading": "# FIFO"
+                },
+                {
+                  "line": 59,
+                  "heading": "# S3FIFO"
+                },
+                {
+                  "line": 63,
+                  "heading": "# Workload implications"
+                },
+                {
+                  "line": 70,
+                  "heading": "# Comparing hit rates on a trace"
+                },
+                {
+                  "line": 78,
+                  "heading": "# Common mistakes"
+                }
+              ]
+            }
+          },
+          "review": "Keep pre-access hit accounting distinct from all-hash mutation; show M/G helper transitions, preserved promotion frequency, rounding and ghost exclusion.",
+          "png_dimensions": [
+            708,
+            2151
+          ],
+          "artifacts": {
+            "diagrams/prefix-cache-replay.puml": "35cc9d2937eb333e162779cc2ef86077e58cf3f87fc43a809b5555c4d4417bef",
+            "previews/prefix-cache-replay.png": "617a6c6cd5cc7614e2a9e1deddce402da00cc81e7bb57d20385022dbbdb7cfc9",
+            "previews/prefix-cache-replay.svg": "b6d17b41f086158ef06527787f1bcdb8f5aa4d0c4547f1730d7f07d1fd2e2fd9"
+          }
+        },
+        "cache-policy-comparison": {
+          "sources": {
+            "S1": {
+              "path": "cache-policy-comparison/SKILL.md",
+              "sha256": "353a7215727695b01e48ea69e63ed92c0b32174534a6bda38cee9b91382e5963",
+              "bytes": 5970,
+              "lines": 85,
+              "review": "Include LFU initial frequency=1 and insertion-order ties; follow the linked full S3FIFO skill. ARC is named but no algorithm is supplied.",
+              "headings": [
+                {
+                  "line": 6,
+                  "heading": "# Overview"
+                },
+                {
+                  "line": 19,
+                  "heading": "# LRU"
+                },
+                {
+                  "line": 44,
+                  "heading": "# LFU"
+                },
+                {
+                  "line": 53,
+                  "heading": "# FIFO"
+                },
+                {
+                  "line": 59,
+                  "heading": "# S3FIFO"
+                },
+                {
+                  "line": 63,
+                  "heading": "# Workload implications"
+                },
+                {
+                  "line": 70,
+                  "heading": "# Comparing hit rates on a trace"
+                },
+                {
+                  "line": 78,
+                  "heading": "# Common mistakes"
+                }
+              ]
+            },
+            "S2": {
+              "path": "prefix-cache-replay/SKILL.md",
+              "sha256": "28ced940ec272cc01cf06519912077492d948b10e08a933acba12dd9907220cf",
+              "bytes": 9283,
+              "lines": 110,
+              "review": "Explicitly linked sibling: full S3FIFO transitions and prefix-hit accounting.",
+              "headings": [
+                {
+                  "line": 6,
+                  "heading": "# Overview"
+                },
+                {
+                  "line": 12,
+                  "heading": "# Longest-prefix hit semantics (policy-independent)"
+                },
+                {
+                  "line": 24,
+                  "heading": "# S3FIFO (Yang et al., SOSP 2023 — \"FIFO queues are all you need\")"
+                },
+                {
+                  "line": 35,
+                  "heading": "## Access rule (per `h` in a request's `hash_ids`)"
+                },
+                {
+                  "line": 41,
+                  "heading": "## Admission to S (drains old S entries when S is full)"
+                },
+                {
+                  "line": 54,
+                  "heading": "## Admission to M (second-chance, drains until one real eviction when M is full)"
+                },
+                {
+                  "line": 71,
+                  "heading": "## Ghost insertion"
+                },
+                {
+                  "line": 75,
+                  "heading": "## Residency and final size"
+                },
+                {
+                  "line": 79,
+                  "heading": "# Trace format"
+                },
+                {
+                  "line": 89,
+                  "heading": "# Common mistakes"
+                },
+                {
+                  "line": 104,
+                  "heading": "# Quick sanity checks on your output"
+                }
+              ]
+            }
+          },
+          "review": "Include LFU initial frequency=1 and insertion-order ties; follow the linked full S3FIFO skill. ARC is named but no algorithm is supplied.",
+          "png_dimensions": [
+            601,
+            1516
+          ],
+          "artifacts": {
+            "diagrams/cache-policy-comparison.puml": "16fd9186e4062204568cf591314e478347db5f0c407028944cbc3d0ad974a558",
+            "previews/cache-policy-comparison.png": "985529ae3381d1b5867612b01a88e5ce13cd0842d4e65d51bd06cf693806ca03",
+            "previews/cache-policy-comparison.svg": "264f02af1850ea0be37d8d407bf4877cca77d3f965c953bbe4c97027a2f98e0f"
+          }
+        }
+      },
+      "bundles": {
+        "text": {
+          "cache-policy-comparison/GUIDE.md": "353a7215727695b01e48ea69e63ed92c0b32174534a6bda38cee9b91382e5963",
+          "cache-policy-comparison/SKILL.md": "07380de21788e4ce5c90be4816f55c4a2f447fbd7d56027737fbd24c3afdbc67",
+          "prefix-cache-replay/GUIDE.md": "28ced940ec272cc01cf06519912077492d948b10e08a933acba12dd9907220cf",
+          "prefix-cache-replay/SKILL.md": "9ddc44bd384dd615a472b6522b8bc9f4b1cf040485706d79080e87794e456f01"
+        },
+        "image": {
+          "cache-policy-comparison/GUIDE.md": "353a7215727695b01e48ea69e63ed92c0b32174534a6bda38cee9b91382e5963",
+          "cache-policy-comparison/SKILL.md": "7e25bcbe0d1ff3abb0aa5d2a69f0ac5a7927696b7b16358ae514dbecbff99ea4",
+          "cache-policy-comparison/assets/flowchart.png": "985529ae3381d1b5867612b01a88e5ce13cd0842d4e65d51bd06cf693806ca03",
+          "prefix-cache-replay/GUIDE.md": "28ced940ec272cc01cf06519912077492d948b10e08a933acba12dd9907220cf",
+          "prefix-cache-replay/SKILL.md": "2b6f1eca4da90bc63af7d2f1247f312a4547b782a3aca6b440c51226774b1bcc",
+          "prefix-cache-replay/assets/flowchart.png": "617a6c6cd5cc7614e2a9e1deddce402da00cc81e7bb57d20385022dbbdb7cfc9"
+        }
+      },
+      "source_map_sha256": "a04c5d40960aed73aaa9f1251fd63c4e2b98ed2527558f6f741028c852bbfc74"
+    },
+    "energy-market-pricing": {
+      "source_files": {
+        "dc-power-flow/SKILL.md": "461a4a93c6baf5f84eaa16881b11d76d0542907c8bb50745eceeb21d217e480e",
+        "dc-power-flow/scripts/build_b_matrix.py": "8ed65d06fe16b87b13eadf33397b3986de95afa515ec5dcb6f22df8201a44095",
+        "economic-dispatch/SKILL.md": "907586a8ab5d697d20efaafb190809fbe737bcbac4082c0f94458c1e6489b82f",
+        "economic-dispatch/references/cost-functions.md": "a9bf78f5dd90f559d50872d526c1c7bf6685f6c8147c95ec701d1628d318d0ee",
+        "locational-marginal-prices/SKILL.md": "c48851e863afad9f416e52d57f5b065cc9a7a1ab2146b829abae4ac85412f2ac",
+        "power-flow-data/SKILL.md": "7c6544423d4106746ca831e431e6725292015c768e7958a168c57db140051846"
+      },
+      "skills": {
+        "power-flow-data": {
+          "sources": {
+            "S1": {
+              "path": "power-flow-data/SKILL.md",
+              "sha256": "7c6544423d4106746ca831e431e6725292015c768e7958a168c57db140051846",
+              "bytes": 4367,
+              "lines": 151,
+              "review": "Preserve MATPOWER columns, non-contiguous bus labels, MW/per-unit conversion, reserve fields and large-JSON reading advice.",
+              "headings": [
+                {
+                  "line": 6,
+                  "heading": "# Power Flow Data Guide"
+                },
+                {
+                  "line": 10,
+                  "heading": "## ⚠️ Important: Handling Large Network Files"
+                },
+                {
+                  "line": 19,
+                  "heading": "# This is fast even for multi-MB files"
+                },
+                {
+                  "line": 23,
+                  "heading": "# Quick summary (do this first!)"
+                },
+                {
+                  "line": 36,
+                  "heading": "## Network Topology Concepts"
+                },
+                {
+                  "line": 38,
+                  "heading": "### Bus Types"
+                },
+                {
+                  "line": 47,
+                  "heading": "### Per-Unit System"
+                },
+                {
+                  "line": 53,
+                  "heading": "# Conversions"
+                },
+                {
+                  "line": 59,
+                  "heading": "## Loading Network Data"
+                },
+                {
+                  "line": 81,
+                  "heading": "## Reserve Data"
+                },
+                {
+                  "line": 95,
+                  "heading": "## Bus Number Mapping"
+                },
+                {
+                  "line": 100,
+                  "heading": "# Create mapping: bus_number -> 0-indexed position"
+                },
+                {
+                  "line": 103,
+                  "heading": "# Map generator to bus index"
+                },
+                {
+                  "line": 107,
+                  "heading": "## Identifying Bus Connections"
+                },
+                {
+                  "line": 127,
+                  "heading": "## Branch Data Interpretation"
+                },
+                {
+                  "line": 145,
+                  "heading": "## Computing Total Load"
+                }
+              ]
+            }
+          },
+          "review": "Preserve MATPOWER columns, non-contiguous bus labels, MW/per-unit conversion, reserve fields and large-JSON reading advice.",
+          "png_dimensions": [
+            796,
+            893
+          ],
+          "artifacts": {
+            "diagrams/power-flow-data.puml": "ef5e04b45270cc030dda04856109b14eea6820565b3bdc714fc6b824b229151a",
+            "previews/power-flow-data.png": "c31a490fda9fab3781719075f960f24075e5d9d1f3fe6e534147a98cf9c55003",
+            "previews/power-flow-data.svg": "2d55fb1700b818dedec49318d5a42169f125d21ad6fb41db4e5afd9827f932a4"
+          }
+        },
+        "dc-power-flow": {
+          "sources": {
+            "S1": {
+              "path": "dc-power-flow/SKILL.md",
+              "sha256": "461a4a93c6baf5f84eaa16881b11d76d0542907c8bb50745eceeb21d217e480e",
+              "bytes": 2882,
+              "lines": 116,
+              "review": "Add executable-resource contract: build_susceptance_matrix returns three objects; calculate_line_flows reuses saved susceptances, keeps original IDs and uses zero loading when rating<=0. CLI only prints matrix diagnostics.",
+              "headings": [
+                {
+                  "line": 6,
+                  "heading": "# DC Power Flow"
+                },
+                {
+                  "line": 10,
+                  "heading": "## DC Approximations"
+                },
+                {
+                  "line": 18,
+                  "heading": "## Bus Number Mapping"
+                },
+                {
+                  "line": 23,
+                  "heading": "# Create mapping: bus_number -> 0-indexed position"
+                },
+                {
+                  "line": 26,
+                  "heading": "# Use mapping for branch endpoints"
+                },
+                {
+                  "line": 31,
+                  "heading": "## Susceptance Matrix (B)"
+                },
+                {
+                  "line": 36,
+                  "heading": "# Run: scripts/build_b_matrix.py"
+                },
+                {
+                  "line": 37,
+                  "heading": "# Or inline:"
+                },
+                {
+                  "line": 53,
+                  "heading": "## Power Balance Equation"
+                },
+                {
+                  "line": 62,
+                  "heading": "## Slack Bus"
+                },
+                {
+                  "line": 75,
+                  "heading": "## Line Flow Calculation"
+                },
+                {
+                  "line": 87,
+                  "heading": "## Line Loading Percentage"
+                },
+                {
+                  "line": 95,
+                  "heading": "## Branch Susceptances for Constraints"
+                },
+                {
+                  "line": 107,
+                  "heading": "## Line Flow Limits (for OPF)"
+                },
+                {
+                  "line": 112,
+                  "heading": "# |flow| <= rating  →  -rating <= flow <= rating"
+                }
+              ]
+            },
+            "S2": {
+              "path": "dc-power-flow/scripts/build_b_matrix.py",
+              "sha256": "8ed65d06fe16b87b13eadf33397b3986de95afa515ec5dcb6f22df8201a44095",
+              "bytes": 3161,
+              "lines": 108,
+              "review": "Both callable helpers, their return contracts, zero-X/zero-rating behavior and diagnostic CLI.",
+              "headings": [],
+              "functions": [
+                {
+                  "name": "build_susceptance_matrix",
+                  "line": 7,
+                  "arguments": [
+                    "branches",
+                    "buses"
+                  ]
+                },
+                {
+                  "name": "calculate_line_flows",
+                  "line": 52,
+                  "arguments": [
+                    "branches",
+                    "branch_susceptances",
+                    "theta",
+                    "baseMVA",
+                    "bus_num_to_idx"
+                  ]
+                }
+              ]
+            }
+          },
+          "review": "Add executable-resource contract: build_susceptance_matrix returns three objects; calculate_line_flows reuses saved susceptances, keeps original IDs and uses zero loading when rating<=0. CLI only prints matrix diagnostics.",
+          "png_dimensions": [
+            818,
+            1457
+          ],
+          "artifacts": {
+            "diagrams/dc-power-flow.puml": "8eaa0e64539fb6b8b8be773e92b42a153dfe2faac8abf66da2bafb1b065baa94",
+            "previews/dc-power-flow.png": "71a9005073ac48f740500ee9005e01d0be0a417c01410bd7af7ef00b19130cb7",
+            "previews/dc-power-flow.svg": "bc7074f115aeb267b497da87779d802728dfe281b99f675eca180ae2bcbed08e"
+          }
+        },
+        "economic-dispatch": {
+          "sources": {
+            "S1": {
+              "path": "economic-dispatch/SKILL.md",
+              "sha256": "907586a8ab5d697d20efaafb190809fbe737bcbac4082c0f94458c1e6489b82f",
+              "bytes": 4932,
+              "lines": 173,
+              "review": "Add reference-only MODEL=1 breakpoint costs and marginal costs. Flag general-polynomial layout versus the GUIDE example treating NCOST>=3 as quadratic; do not invent an unprovided piecewise optimization implementation.",
+              "headings": [
+                {
+                  "line": 6,
+                  "heading": "# Economic Dispatch"
+                },
+                {
+                  "line": 10,
+                  "heading": "## Generator Data Indices"
+                },
+                {
+                  "line": 21,
+                  "heading": "# Use bus number mapping (handles non-contiguous bus numbers)"
+                },
+                {
+                  "line": 29,
+                  "heading": "## Cost Function Format"
+                },
+                {
+                  "line": 46,
+                  "heading": "## Optimization Formulation"
+                },
+                {
+                  "line": 53,
+                  "heading": "# Objective: minimize total cost (handles variable NCOST)"
+                },
+                {
+                  "line": 71,
+                  "heading": "# Generator limits (convert MW to per-unit)"
+                },
+                {
+                  "line": 80,
+                  "heading": "## Power Balance Constraint"
+                },
+                {
+                  "line": 91,
+                  "heading": "## Reserve Co-optimization"
+                },
+                {
+                  "line": 96,
+                  "heading": "# Reserve data from network.json"
+                },
+                {
+                  "line": 100,
+                  "heading": "# Decision variables"
+                },
+                {
+                  "line": 104,
+                  "heading": "# Reserve constraints"
+                },
+                {
+                  "line": 116,
+                  "heading": "# System must have adequate total reserves"
+                },
+                {
+                  "line": 120,
+                  "heading": "## Operating Margin"
+                },
+                {
+                  "line": 132,
+                  "heading": "## Dispatch Output Format"
+                },
+                {
+                  "line": 149,
+                  "heading": "## Totals Calculation"
+                },
+                {
+                  "line": 164,
+                  "heading": "## Solver Selection"
+                }
+              ]
+            },
+            "S2": {
+              "path": "economic-dispatch/references/cost-functions.md",
+              "sha256": "a9bf78f5dd90f559d50872d526c1c7bf6685f6c8147c95ec701d1628d318d0ee",
+              "bytes": 1597,
+              "lines": 73,
+              "review": "Polynomial and piecewise-linear formats, coefficient units, marginal-cost formula; examples and bibliography context reviewed.",
+              "headings": [
+                {
+                  "line": 1,
+                  "heading": "# Generator Cost Functions Reference"
+                },
+                {
+                  "line": 3,
+                  "heading": "## Polynomial Cost (Type 2)"
+                },
+                {
+                  "line": 7,
+                  "heading": "### MATPOWER Format"
+                },
+                {
+                  "line": 26,
+                  "heading": "### Example"
+                },
+                {
+                  "line": 29,
+                  "heading": "# Generator with:"
+                },
+                {
+                  "line": 30,
+                  "heading": "# - No-load cost: $100/hr"
+                },
+                {
+                  "line": 31,
+                  "heading": "# - Incremental: $20/MWh at 0 MW, increasing $0.02/MWh per MW"
+                },
+                {
+                  "line": 34,
+                  "heading": "# At P = 50 MW:"
+                },
+                {
+                  "line": 35,
+                  "heading": "# Cost = 0.01*(50)² + 20*(50) + 100 = 25 + 1000 + 100 = $1125/hr"
+                },
+                {
+                  "line": 38,
+                  "heading": "## Piecewise Linear Cost (Type 1)"
+                },
+                {
+                  "line": 42,
+                  "heading": "### MATPOWER Format"
+                },
+                {
+                  "line": 50,
+                  "heading": "### Example"
+                },
+                {
+                  "line": 53,
+                  "heading": "# 3 breakpoints: (0, 0), (50, 1000), (100, 2500)"
+                },
+                {
+                  "line": 57,
+                  "heading": "## Marginal Cost"
+                },
+                {
+                  "line": 62,
+                  "heading": "# Marginal cost at power P"
+                },
+                {
+                  "line": 66,
+                  "heading": "## Typical Values"
+                }
+              ]
+            }
+          },
+          "review": "Add reference-only MODEL=1 breakpoint costs and marginal costs. Flag general-polynomial layout versus the GUIDE example treating NCOST>=3 as quadratic; do not invent an unprovided piecewise optimization implementation.",
+          "png_dimensions": [
+            1611,
+            1287
+          ],
+          "artifacts": {
+            "diagrams/economic-dispatch.puml": "9e2e3f7986812b5a9d45ffcdbc7b467df866e658691374fb3ee1a4a9db6a571b",
+            "previews/economic-dispatch.png": "c6df0d528db63d3b5f109d843062effd1818dbe7e1de4e0adeb9eba96ab7f5bc",
+            "previews/economic-dispatch.svg": "8e24bf2068207cb9aac80afcc36d5d801c6ea941cc1f8ff58a38b02a82655e7c"
+          }
+        },
+        "locational-marginal-prices": {
+          "sources": {
+            "S1": {
+              "path": "locational-marginal-prices/SKILL.md",
+              "sha256": "c48851e863afad9f416e52d57f5b065cc9a7a1ab2146b829abae4ac85412f2ac",
+              "bytes": 4746,
+              "lines": 139,
+              "review": "Preserve source extraction and counterfactual workflow. Mark source dual*baseMVA scaling / sign as requiring review of the actual equation; do not inject a formula learned from previous verifier outcomes. Distinguish None->0 source fallback from an available market dual.",
+              "headings": [
+                {
+                  "line": 6,
+                  "heading": "# Locational Marginal Prices (LMPs)"
+                },
+                {
+                  "line": 10,
+                  "heading": "## LMP Extraction from CVXPY"
+                },
+                {
+                  "line": 20,
+                  "heading": "# Store balance constraints separately for dual extraction"
+                },
+                {
+                  "line": 32,
+                  "heading": "# Solve"
+                },
+                {
+                  "line": 36,
+                  "heading": "# Extract LMPs from duals"
+                },
+                {
+                  "line": 50,
+                  "heading": "## LMP Sign Convention"
+                },
+                {
+                  "line": 63,
+                  "heading": "## Reserve Clearing Price"
+                },
+                {
+                  "line": 68,
+                  "heading": "# Store reference to reserve constraint"
+                },
+                {
+                  "line": 72,
+                  "heading": "# After solving:"
+                },
+                {
+                  "line": 78,
+                  "heading": "## Finding Binding Lines"
+                },
+                {
+                  "line": 105,
+                  "heading": "## Counterfactual Analysis"
+                },
+                {
+                  "line": 115,
+                  "heading": "# Modify line limit (e.g., increase by 20%)"
+                },
+                {
+                  "line": 123,
+                  "heading": "# After solving both cases:"
+                },
+                {
+                  "line": 126,
+                  "heading": "# LMP changes per bus"
+                },
+                {
+                  "line": 131,
+                  "heading": "# Congestion relieved if line was binding in base but not in counterfactual"
+                },
+                {
+                  "line": 135,
+                  "heading": "### Economic Intuition"
+                }
+              ]
+            }
+          },
+          "review": "Preserve source extraction and counterfactual workflow. Mark source dual*baseMVA scaling / sign as requiring review of the actual equation; do not inject a formula learned from previous verifier outcomes. Distinguish None->0 source fallback from an available market dual.",
+          "png_dimensions": [
+            778,
+            1158
+          ],
+          "artifacts": {
+            "diagrams/locational-marginal-prices.puml": "24d279f9a9eb2bf10d68d137149c4cf66c9927885ae7966b5fbae1eab07f626e",
+            "previews/locational-marginal-prices.png": "2ad20c6d835fe6f363346c6fdcfd03cf90dafd953f817af997c6cabc4d094057",
+            "previews/locational-marginal-prices.svg": "3b3a8f2d65297f5de538bd6c856fd7967b874bcbc0635361676bb51111d4b157"
+          }
+        }
+      },
+      "bundles": {
+        "text": {
+          "dc-power-flow/GUIDE.md": "461a4a93c6baf5f84eaa16881b11d76d0542907c8bb50745eceeb21d217e480e",
+          "dc-power-flow/SKILL.md": "1a8d5eca974505c8b1b7e5771b7371abfad2509c2f578701e6877996389699fa",
+          "dc-power-flow/scripts/build_b_matrix.py": "8ed65d06fe16b87b13eadf33397b3986de95afa515ec5dcb6f22df8201a44095",
+          "economic-dispatch/GUIDE.md": "907586a8ab5d697d20efaafb190809fbe737bcbac4082c0f94458c1e6489b82f",
+          "economic-dispatch/SKILL.md": "7d0fec6619487b12c327543734bf96d9956af7aaaa03116dffc7a691daf1ce6a",
+          "economic-dispatch/references/cost-functions.md": "a9bf78f5dd90f559d50872d526c1c7bf6685f6c8147c95ec701d1628d318d0ee",
+          "locational-marginal-prices/GUIDE.md": "c48851e863afad9f416e52d57f5b065cc9a7a1ab2146b829abae4ac85412f2ac",
+          "locational-marginal-prices/SKILL.md": "5c5cc8c4fd108b95aa3c367e57a3a4c09a08912cde245c9a897543eeb7ff81e5",
+          "power-flow-data/GUIDE.md": "7c6544423d4106746ca831e431e6725292015c768e7958a168c57db140051846",
+          "power-flow-data/SKILL.md": "838d6c687bb548a35f17a7e4ab76926b85b19cd1e65dbcbc891b35c0edcef98d"
+        },
+        "image": {
+          "dc-power-flow/GUIDE.md": "461a4a93c6baf5f84eaa16881b11d76d0542907c8bb50745eceeb21d217e480e",
+          "dc-power-flow/SKILL.md": "293bdfe7c3b44e972e1c300264d7fa66c21bb973420b03913d26f92f91537085",
+          "dc-power-flow/assets/flowchart.png": "71a9005073ac48f740500ee9005e01d0be0a417c01410bd7af7ef00b19130cb7",
+          "dc-power-flow/scripts/build_b_matrix.py": "8ed65d06fe16b87b13eadf33397b3986de95afa515ec5dcb6f22df8201a44095",
+          "economic-dispatch/GUIDE.md": "907586a8ab5d697d20efaafb190809fbe737bcbac4082c0f94458c1e6489b82f",
+          "economic-dispatch/SKILL.md": "3ea95a07d7ccaa64182ec40d7f58432799478b7574df1ac2f96dc2fe6897476a",
+          "economic-dispatch/assets/flowchart.png": "c6df0d528db63d3b5f109d843062effd1818dbe7e1de4e0adeb9eba96ab7f5bc",
+          "economic-dispatch/references/cost-functions.md": "a9bf78f5dd90f559d50872d526c1c7bf6685f6c8147c95ec701d1628d318d0ee",
+          "locational-marginal-prices/GUIDE.md": "c48851e863afad9f416e52d57f5b065cc9a7a1ab2146b829abae4ac85412f2ac",
+          "locational-marginal-prices/SKILL.md": "eb99a6a724a09d10bcb9bf4369c7da2dc9d213abdf2e15b53fe4da08cf4b2f7b",
+          "locational-marginal-prices/assets/flowchart.png": "2ad20c6d835fe6f363346c6fdcfd03cf90dafd953f817af997c6cabc4d094057",
+          "power-flow-data/GUIDE.md": "7c6544423d4106746ca831e431e6725292015c768e7958a168c57db140051846",
+          "power-flow-data/SKILL.md": "56fb9dc00f8b075af6117017042485a3a9c38cc27bab8ead0d6854f79dd9d21c",
+          "power-flow-data/assets/flowchart.png": "c31a490fda9fab3781719075f960f24075e5d9d1f3fe6e534147a98cf9c55003"
+        }
+      },
+      "source_map_sha256": "e726566ea161c369da843455121e576198d4e53beaf377cd5438b9ae7e8ffd6f"
+    },
+    "r2r-mpc-control": {
+      "source_files": {
+        "finite-horizon-lqr/SKILL.md": "8ce87c503270a401f9bce17518a8f11d8cc421de2f15984678ddeb0b8c27575f",
+        "integral-action-design/SKILL.md": "e3368f03c7c53e47f650272a2225602b0d437ae82c825b049291b02006d43220",
+        "mpc-horizon-tuning/SKILL.md": "fa85a6c22e728d92176f4aace0a3ad65e280bd4ecd061d1037a042b29ec47123",
+        "state-space-linearization/SKILL.md": "1cd18b96f4f55ff004aa92c0acbf0cab2744032c94a42d750ce749055038835b"
+      },
+      "skills": {
+        "state-space-linearization": {
+          "sources": {
+            "S1": {
+              "path": "state-space-linearization/SKILL.md",
+              "sha256": "1cd18b96f4f55ff004aa92c0acbf0cab2744032c94a42d750ce749055038835b",
+              "bytes": 1018,
+              "lines": 48,
+              "review": "Include all four stated R2R partial derivatives and both discretization choices. Invertibility is an explicit mathematical precondition of the supplied inverse expression, not a new discretization algorithm.",
+              "headings": [
+                {
+                  "line": 6,
+                  "heading": "# State-Space Linearization"
+                },
+                {
+                  "line": 8,
+                  "heading": "## Jacobian Computation"
+                },
+                {
+                  "line": 17,
+                  "heading": "## Discretization"
+                },
+                {
+                  "line": 33,
+                  "heading": "## For R2R Systems"
+                },
+                {
+                  "line": 44,
+                  "heading": "## Tips"
+                }
+              ]
+            }
+          },
+          "review": "Include all four stated R2R partial derivatives and both discretization choices. Invertibility is an explicit mathematical precondition of the supplied inverse expression, not a new discretization algorithm.",
+          "png_dimensions": [
+            1026,
+            1009
+          ],
+          "artifacts": {
+            "diagrams/state-space-linearization.puml": "08057fa59d36db3d8f4ecee12964c2fb2a1300abc78b8d02467b1cb9f8ec72ef",
+            "previews/state-space-linearization.png": "03535233b61d0a522481ba44b606a2a0caf577bca1fed6ad0117705547243945",
+            "previews/state-space-linearization.svg": "f6e3652d456cd515a61f0ffb13a211c9fd75cbc0cae0e043d4e700cf8a537341"
+          }
+        },
+        "finite-horizon-lqr": {
+          "sources": {
+            "S1": {
+              "path": "finite-horizon-lqr/SKILL.md",
+              "sha256": "8ce87c503270a401f9bce17518a8f11d8cc421de2f15984678ddeb0b8c27575f",
+              "bytes": 1078,
+              "lines": 56,
+              "review": "Preserve P-next versus P-current order, gain storage and first-action-only receding horizon. Returned/logged states are an interface summary, not a new controller.",
+              "headings": [
+                {
+                  "line": 6,
+                  "heading": "# Finite-Horizon LQR for MPC"
+                },
+                {
+                  "line": 8,
+                  "heading": "## Problem Formulation"
+                },
+                {
+                  "line": 15,
+                  "heading": "## Backward Riccati Recursion"
+                },
+                {
+                  "line": 25,
+                  "heading": "## Forward Simulation"
+                },
+                {
+                  "line": 33,
+                  "heading": "## Python Implementation"
+                },
+                {
+                  "line": 50,
+                  "heading": "## MPC Application"
+                }
+              ]
+            }
+          },
+          "review": "Preserve P-next versus P-current order, gain storage and first-action-only receding horizon. Returned/logged states are an interface summary, not a new controller.",
+          "png_dimensions": [
+            832,
+            881
+          ],
+          "artifacts": {
+            "diagrams/finite-horizon-lqr.puml": "1920e56f34259b58a748e302040d6e582a8a3df2f99e496ae356dd66ee94206e",
+            "previews/finite-horizon-lqr.png": "42fe2a72ed5cdba47e79d5278e033dd9a6b6ee4daf5db60cb688fb2e3e2c045c",
+            "previews/finite-horizon-lqr.svg": "6e7fb5c30b61d10793694ff1e6cd21ac8ba7fae99c0afc8aebed0088777eac86"
+          }
+        },
+        "mpc-horizon-tuning": {
+          "sources": {
+            "S1": {
+              "path": "mpc-horizon-tuning/SKILL.md",
+              "sha256": "fa85a6c22e728d92176f4aace0a3ad65e280bd4ecd061d1037a042b29ec47123",
+              "bytes": 1197,
+              "lines": 48,
+              "review": "Separate parameter selection and evaluation. Show both horizon guidelines without making them simultaneous hard limits; flag continuous ARE example versus discrete-model conventions.",
+              "headings": [
+                {
+                  "line": 6,
+                  "heading": "# MPC Tuning for Tension Control"
+                },
+                {
+                  "line": 8,
+                  "heading": "## Prediction Horizon Selection"
+                },
+                {
+                  "line": 17,
+                  "heading": "## Cost Matrix Design"
+                },
+                {
+                  "line": 31,
+                  "heading": "## Trade-offs"
+                },
+                {
+                  "line": 43,
+                  "heading": "## Terminal Cost"
+                }
+              ]
+            }
+          },
+          "review": "Separate parameter selection and evaluation. Show both horizon guidelines without making them simultaneous hard limits; flag continuous ARE example versus discrete-model conventions.",
+          "png_dimensions": [
+            1011,
+            841
+          ],
+          "artifacts": {
+            "diagrams/mpc-horizon-tuning.puml": "a66be187423f9f39fe5cd90a928c4d524952e1e562d8d7d0780ffac84decd798",
+            "previews/mpc-horizon-tuning.png": "59badbc75938ce9967bd4e59004dec6825dc0b4f8e8d527dd7f3e7382d899fb4",
+            "previews/mpc-horizon-tuning.svg": "84b56188cc5022be25b9adc364366b16184f5761fbd2b3956f6c668e7ef0b87e"
+          }
+        },
+        "integral-action-design": {
+          "sources": {
+            "S1": {
+              "path": "integral-action-design/SKILL.md",
+              "sha256": "e3368f03c7c53e47f650272a2225602b0d437ae82c825b049291b02006d43220",
+              "bytes": 1104,
+              "lines": 50,
+              "review": "Separate timestep integration/clipping from post-trial tuning advice. This is an editorial clarification: the source gives tuning advice but does not mandate online gain adaptation.",
+              "headings": [
+                {
+                  "line": 6,
+                  "heading": "# Integral Action for Offset-Free Control"
+                },
+                {
+                  "line": 8,
+                  "heading": "## Why Integral Action?"
+                },
+                {
+                  "line": 12,
+                  "heading": "## Implementation"
+                },
+                {
+                  "line": 25,
+                  "heading": "## Tuning Guidelines"
+                },
+                {
+                  "line": 37,
+                  "heading": "## Anti-Windup"
+                },
+                {
+                  "line": 44,
+                  "heading": "## For R2R Systems"
+                }
+              ]
+            }
+          },
+          "review": "Separate timestep integration/clipping from post-trial tuning advice. This is an editorial clarification: the source gives tuning advice but does not mandate online gain adaptation.",
+          "png_dimensions": [
+            653,
+            1178
+          ],
+          "artifacts": {
+            "diagrams/integral-action-design.puml": "2846f8472bb746fe5ff939a130b81a410f25a0d6ca44776964a1d5c49ba817f7",
+            "previews/integral-action-design.png": "85d0662bcf8380add9d3f1e1857f6a0539ac5bd7c85c13d43dec06e497c5f0c2",
+            "previews/integral-action-design.svg": "15ff571b607314a63b6f6093cba39d36328891cd1e2fe72bcede359eee1b91e6"
+          }
+        }
+      },
+      "bundles": {
+        "text": {
+          "finite-horizon-lqr/GUIDE.md": "8ce87c503270a401f9bce17518a8f11d8cc421de2f15984678ddeb0b8c27575f",
+          "finite-horizon-lqr/SKILL.md": "8d62461cfd294eef5f4f277a9a260a16febef58f9ebf8a1cb5663bbff54d9278",
+          "integral-action-design/GUIDE.md": "e3368f03c7c53e47f650272a2225602b0d437ae82c825b049291b02006d43220",
+          "integral-action-design/SKILL.md": "f4f2c5bf29ada47dafa3b70d8c50da4587f01236d80713a163a9122198c0f3e9",
+          "mpc-horizon-tuning/GUIDE.md": "fa85a6c22e728d92176f4aace0a3ad65e280bd4ecd061d1037a042b29ec47123",
+          "mpc-horizon-tuning/SKILL.md": "f9b979c7ec99b632a5d3e9666c91571690d5ef38051d40080636840c7cf47bbc",
+          "state-space-linearization/GUIDE.md": "1cd18b96f4f55ff004aa92c0acbf0cab2744032c94a42d750ce749055038835b",
+          "state-space-linearization/SKILL.md": "71045f8dac07b4d95be6bb11effa7a06ff4558654b6f5dd85078f2f8320f7696"
+        },
+        "image": {
+          "finite-horizon-lqr/GUIDE.md": "8ce87c503270a401f9bce17518a8f11d8cc421de2f15984678ddeb0b8c27575f",
+          "finite-horizon-lqr/SKILL.md": "fdd69d0d797ae8b7761690db7f052460313c32b29c16ee513baa336d68c201df",
+          "finite-horizon-lqr/assets/flowchart.png": "42fe2a72ed5cdba47e79d5278e033dd9a6b6ee4daf5db60cb688fb2e3e2c045c",
+          "integral-action-design/GUIDE.md": "e3368f03c7c53e47f650272a2225602b0d437ae82c825b049291b02006d43220",
+          "integral-action-design/SKILL.md": "ffb492de2a955b7ea63dbe2443a700be2d2cbe3b2e82f0759aa234246b2130ef",
+          "integral-action-design/assets/flowchart.png": "85d0662bcf8380add9d3f1e1857f6a0539ac5bd7c85c13d43dec06e497c5f0c2",
+          "mpc-horizon-tuning/GUIDE.md": "fa85a6c22e728d92176f4aace0a3ad65e280bd4ecd061d1037a042b29ec47123",
+          "mpc-horizon-tuning/SKILL.md": "ac2448839467feb2d2c503aebc1b8df65db001b735bfb78777ed2df917f44191",
+          "mpc-horizon-tuning/assets/flowchart.png": "59badbc75938ce9967bd4e59004dec6825dc0b4f8e8d527dd7f3e7382d899fb4",
+          "state-space-linearization/GUIDE.md": "1cd18b96f4f55ff004aa92c0acbf0cab2744032c94a42d750ce749055038835b",
+          "state-space-linearization/SKILL.md": "afad4503f8469985862a5dbbf0c1e804cd7d5d5f1e1f394fb7e4848525e55aa8",
+          "state-space-linearization/assets/flowchart.png": "03535233b61d0a522481ba44b606a2a0caf577bca1fed6ad0117705547243945"
+        }
+      },
+      "source_map_sha256": "9bdea279d91bbe5a10042ba6a76fe53d9b50f5fac923dc4f9a154e26d6daaf03"
+    },
+    "exam-block-sequencing": {
+      "source_files": {
+        "mip-solver-and-solution-audit/SKILL.md": "34ab1c8cd80ab01f65ad7287776994efeceb15fe454c36216d7d4ba2fee442f7",
+        "ordered-window-sequencing-mip/SKILL.md": "0e1aa2b96b164e0cb06045b8d6b3fdd56d693c002a7dbbf8fb093bca3216c514"
+      },
+      "skills": {
+        "mip-solver-and-solution-audit": {
+          "sources": {
+            "S1": {
+              "path": "mip-solver-and-solution-audit/SKILL.md",
+              "sha256": "34ab1c8cd80ab01f65ad7287776994efeceb15fe454c36216d7d4ba2fee442f7",
+              "bytes": 10797,
+              "lines": 285,
+              "review": "Preserve installed-solver discovery, solver-required method, incumbent extraction, truthful certificates, exact disk reload before metrics, objective consistency and explicit formulation contents.",
+              "headings": [
+                {
+                  "line": 6,
+                  "heading": "# MIP Solver and Solution Audit"
+                },
+                {
+                  "line": 8,
+                  "heading": "## Core principle"
+                },
+                {
+                  "line": 17,
+                  "heading": "## Solver discovery"
+                },
+                {
+                  "line": 42,
+                  "heading": "## Minimal PySCIPOpt pattern"
+                },
+                {
+                  "line": 50,
+                  "heading": "# create binary/integer variables"
+                },
+                {
+                  "line": 51,
+                  "heading": "# add hard constraints"
+                },
+                {
+                  "line": 52,
+                  "heading": "# build named objective components"
+                },
+                {
+                  "line": 78,
+                  "heading": "## Incumbent, bound, and gap"
+                },
+                {
+                  "line": 105,
+                  "heading": "## Extraction discipline"
+                },
+                {
+                  "line": 131,
+                  "heading": "## Independent metric evaluator"
+                },
+                {
+                  "line": 203,
+                  "heading": "## Post-processing rule"
+                },
+                {
+                  "line": 214,
+                  "heading": "## Writing a formulation report"
+                },
+                {
+                  "line": 250,
+                  "heading": "## Output consistency workflow"
+                },
+                {
+                  "line": 266,
+                  "heading": "## Common mistakes"
+                }
+              ]
+            }
+          },
+          "review": "Preserve installed-solver discovery, solver-required method, incumbent extraction, truthful certificates, exact disk reload before metrics, objective consistency and explicit formulation contents.",
+          "png_dimensions": [
+            803,
+            2081
+          ],
+          "artifacts": {
+            "diagrams/mip-solver-and-solution-audit.puml": "3480cf2fbeb1b303b41061dead4d5f439d450d09471bfa1796efd8c53f305041",
+            "previews/mip-solver-and-solution-audit.png": "0ed781645eaea904b51908ec8883d4e1d250504cceb44618477e461cedf5558c",
+            "previews/mip-solver-and-solution-audit.svg": "b53cb2e569f1684d363bf889d249c53e29f1d6185dd8b2d03bc2e89cdfbe6391"
+          }
+        },
+        "ordered-window-sequencing-mip": {
+          "sources": {
+            "S1": {
+              "path": "ordered-window-sequencing-mip/SKILL.md",
+              "sha256": "0e1aa2b96b164e0cb06045b8d6b3fdd56d693c002a7dbbf8fb093bca3216c514",
+              "bytes": 10905,
+              "lines": 292,
+              "review": "Retain both representations, all linearization bounds, ordered keys, successor labels, masks, boundary conditions, active-pattern overlap and full optimized objective.",
+              "headings": [
+                {
+                  "line": 6,
+                  "heading": "# Ordered-Window Sequencing MIPs"
+                },
+                {
+                  "line": 8,
+                  "heading": "## Core idea"
+                },
+                {
+                  "line": 19,
+                  "heading": "## Modeling workflow"
+                },
+                {
+                  "line": 39,
+                  "heading": "## Preserve ordered tuple data"
+                },
+                {
+                  "line": 55,
+                  "heading": "# Wrong for directed or ordered sequence costs unless explicitly allowed."
+                },
+                {
+                  "line": 87,
+                  "heading": "## Assignment-linked local windows"
+                },
+                {
+                  "line": 114,
+                  "heading": "## Direct ordered-window model"
+                },
+                {
+                  "line": 135,
+                  "heading": "## Prefix/suffix continuity"
+                },
+                {
+                  "line": 156,
+                  "heading": "## Overlap penalties"
+                },
+                {
+                  "line": 187,
+                  "heading": "## Active-pattern overlap rule"
+                },
+                {
+                  "line": 230,
+                  "heading": "## Start-position masks and boundary rules"
+                },
+                {
+                  "line": 262,
+                  "heading": "## Objective semantics audit"
+                },
+                {
+                  "line": 279,
+                  "heading": "## Common mistakes"
+                }
+              ]
+            }
+          },
+          "review": "Retain both representations, all linearization bounds, ordered keys, successor labels, masks, boundary conditions, active-pattern overlap and full optimized objective.",
+          "png_dimensions": [
+            1024,
+            1539
+          ],
+          "artifacts": {
+            "diagrams/ordered-window-sequencing-mip.puml": "8717916329c4b0c5655d8a2c91732211193a0cb45db9ee9277ee5e9b3726bce3",
+            "previews/ordered-window-sequencing-mip.png": "6db37ba712e6e2a292e8fa30fbcb00bfeb730c78d32f60aa2e52575dff34ead9",
+            "previews/ordered-window-sequencing-mip.svg": "c83b54886bf37f3b8fa1f801ab451ba33eaf57b642fb09763a2a0290829137af"
+          }
+        }
+      },
+      "bundles": {
+        "text": {
+          "mip-solver-and-solution-audit/GUIDE.md": "34ab1c8cd80ab01f65ad7287776994efeceb15fe454c36216d7d4ba2fee442f7",
+          "mip-solver-and-solution-audit/SKILL.md": "fcb72210a78d919b8549bed86d0659ede08f0210a716870f56cd438b561a5b30",
+          "ordered-window-sequencing-mip/GUIDE.md": "0e1aa2b96b164e0cb06045b8d6b3fdd56d693c002a7dbbf8fb093bca3216c514",
+          "ordered-window-sequencing-mip/SKILL.md": "3e5b2094c5c9afb814bdec3e87a2fbac6a8d07feb12db031f9717393595623ba"
+        },
+        "image": {
+          "mip-solver-and-solution-audit/GUIDE.md": "34ab1c8cd80ab01f65ad7287776994efeceb15fe454c36216d7d4ba2fee442f7",
+          "mip-solver-and-solution-audit/SKILL.md": "432833217e226da5d074bd483ed57312092a4cc67176a66c15617d68c8bd87e4",
+          "mip-solver-and-solution-audit/assets/flowchart.png": "0ed781645eaea904b51908ec8883d4e1d250504cceb44618477e461cedf5558c",
+          "ordered-window-sequencing-mip/GUIDE.md": "0e1aa2b96b164e0cb06045b8d6b3fdd56d693c002a7dbbf8fb093bca3216c514",
+          "ordered-window-sequencing-mip/SKILL.md": "407b4690a8e75079d9d0cfe2763a06b581e1b15cc00e5b2d2359c3e70702ab52",
+          "ordered-window-sequencing-mip/assets/flowchart.png": "6db37ba712e6e2a292e8fa30fbcb00bfeb730c78d32f60aa2e52575dff34ead9"
+        }
+      },
+      "source_map_sha256": "7cad10d6c5dc523267411f394b23436ab5b214f24a1452899c6f9050a09f7207"
+    },
+    "manufacturing-fjsp-optimization": {
+      "source_files": {
+        "fjsp-baseline-repair-with-downtime-and-policy/SKILL.md": "2668bd6b9c6977ccedcf1f1d4af4401afdfe215666d68f82df41b662852b2125",
+        "reference.md": "46f76e2898e1f1a3d7f0d8c7ee4e5390f7e9f8e57c1695dd5eb3ddf739f71743"
+      },
+      "skills": {
+        "fjsp-baseline-repair-with-downtime-and-policy": {
+          "sources": {
+            "S1": {
+              "path": "fjsp-baseline-repair-with-downtime-and-policy/SKILL.md",
+              "sha256": "2668bd6b9c6977ccedcf1f1d4af4401afdfe215666d68f82df41b662852b2125",
+              "bytes": 4824,
+              "lines": 78,
+              "review": "Incorporate the shared baseline-repair context. Keep integer scan and same-order commitment explicit. Flag conflicting heuristic priorities and the sample safety-bound return not proving feasibility; preserve all original guidance/resources.",
+              "headings": [
+                {
+                  "line": 12,
+                  "heading": "# sorted Downtime windows"
+                },
+                {
+                  "line": 19,
+                  "heading": "# Precedence-aware repair order"
+                },
+                {
+                  "line": 50,
+                  "heading": "# Baseline machine may be illegal"
+                },
+                {
+                  "line": 70,
+                  "heading": "# First try baseline machine"
+                },
+                {
+                  "line": 73,
+                  "heading": "# If shift is large and we still can change machines, search alternates"
+                }
+              ]
+            },
+            "S2": {
+              "path": "reference.md",
+              "sha256": "46f76e2898e1f1a3d7f0d8c7ee4e5390f7e9f8e57c1695dd5eb3ddf739f71743",
+              "bytes": 4091,
+              "lines": 50,
+              "review": "Shared skills-root resource: baseline-repair commitments, FJSPLib provenance, difficulty taxonomy and literature. No instance-specific solution is supplied.",
+              "headings": []
+            }
+          },
+          "review": "Incorporate the shared baseline-repair context. Keep integer scan and same-order commitment explicit. Flag conflicting heuristic priorities and the sample safety-bound return not proving feasibility; preserve all original guidance/resources.",
+          "png_dimensions": [
+            975,
+            2268
+          ],
+          "artifacts": {
+            "diagrams/fjsp-baseline-repair-with-downtime-and-policy.puml": "b6e61f9a72291512f0d240f1e638eba8b0ebbbc3ecf85a61dcf6b90e8ab76136",
+            "previews/fjsp-baseline-repair-with-downtime-and-policy.png": "eea4b605e9135f60be906315cd8ba736e93b3e54ed72b214e2e8760a31e3f540",
+            "previews/fjsp-baseline-repair-with-downtime-and-policy.svg": "973bdae52cb0176397eb694ac69bccfe26e6c92e9727470460ad69796feac137"
+          }
+        }
+      },
+      "bundles": {
+        "text": {
+          "fjsp-baseline-repair-with-downtime-and-policy/GUIDE.md": "2668bd6b9c6977ccedcf1f1d4af4401afdfe215666d68f82df41b662852b2125",
+          "fjsp-baseline-repair-with-downtime-and-policy/SKILL.md": "1214eb2eb7a89be592619c34e61efc0e03234a1d90efe1f533da30fc0816c306",
+          "reference.md": "46f76e2898e1f1a3d7f0d8c7ee4e5390f7e9f8e57c1695dd5eb3ddf739f71743"
+        },
+        "image": {
+          "fjsp-baseline-repair-with-downtime-and-policy/GUIDE.md": "2668bd6b9c6977ccedcf1f1d4af4401afdfe215666d68f82df41b662852b2125",
+          "fjsp-baseline-repair-with-downtime-and-policy/SKILL.md": "935a3e955d09b7f571486a57d98b99cd995bcb7fa97940e171a1d07dab136fd5",
+          "fjsp-baseline-repair-with-downtime-and-policy/assets/flowchart.png": "eea4b605e9135f60be906315cd8ba736e93b3e54ed72b214e2e8760a31e3f540",
+          "reference.md": "46f76e2898e1f1a3d7f0d8c7ee4e5390f7e9f8e57c1695dd5eb3ddf739f71743"
+        }
+      },
+      "source_map_sha256": "bbc07447c9ac5e23ed4adf04ebed032b895e624dbb812af32bef6947e4a2b071"
+    }
+  }
+}

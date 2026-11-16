@@ -1,0 +1,20 @@
+{
+  "method": "skill-on-demand-v1",
+  "task": "exam-block-sequencing",
+  "arm": "image",
+  "figures": "uml-v1",
+  "source_files": {
+    "mip-solver-and-solution-audit/SKILL.md": "34ab1c8cd80ab01f65ad7287776994efeceb15fe454c36216d7d4ba2fee442f7",
+    "ordered-window-sequencing-mip/SKILL.md": "0e1aa2b96b164e0cb06045b8d6b3fdd56d693c002a7dbbf8fb093bca3216c514"
+  },
+  "figure_hashes": {
+    "mip-solver-and-solution-audit": "ffdc956265f7d40c7a1df8d91deceeea79ca90ca095644745d25fbe707f3d53b",
+    "ordered-window-sequencing-mip": "6536b052c2ee814065b860b19d34e1de7e5239a81cd2e4bd6e0b4c3dc69ce0ca"
+  },
+  "bundle_files": {
+    "mip-solver-and-solution-audit/SKILL.md": "34ab1c8cd80ab01f65ad7287776994efeceb15fe454c36216d7d4ba2fee442f7",
+    "mip-solver-and-solution-audit/assets/skillcanvas-diagram.png": "ffdc956265f7d40c7a1df8d91deceeea79ca90ca095644745d25fbe707f3d53b",
+    "ordered-window-sequencing-mip/SKILL.md": "0e1aa2b96b164e0cb06045b8d6b3fdd56d693c002a7dbbf8fb093bca3216c514",
+    "ordered-window-sequencing-mip/assets/skillcanvas-diagram.png": "6536b052c2ee814065b860b19d34e1de7e5239a81cd2e4bd6e0b4c3dc69ce0ca"
+  }
+}

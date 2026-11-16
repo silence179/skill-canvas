@@ -1,0 +1,2554 @@
+[
+  {
+    "version": "v1",
+    "task": "llm-prefix-cache-replay",
+    "arm": "text",
+    "status": "finished",
+    "trial": "jobs/uml-expanded/paired-five-v1/llm-prefix-cache-replay/text/2026-11-14__21-41-13/llm-prefix-cache-replay__ea6444ba",
+    "reward": 1.0,
+    "error": null,
+    "error_category": null,
+    "verifier_error": null,
+    "task_digest": "sha256:6e625578b9977265fdb8b1fccacda6fd109fd3097e8991125f99bb99d4931cf7",
+    "tool_calls": 5,
+    "trajectory": {
+      "steps": 10,
+      "tool_call_steps": 5,
+      "user_message_steps": 1,
+      "agent_message_steps": 2,
+      "agent_thought_steps": 2,
+      "other_steps": 0,
+      "event_type_counts": {
+        "user_message": 1,
+        "agent_message": 2,
+        "tool_call": 5,
+        "agent_thought": 2
+      },
+      "tool_call_status_counts": {
+        "completed": 5
+      },
+      "partial_trajectory": false,
+      "trajectory_source": "acp"
+    },
+    "input_tokens": 66578,
+    "output_tokens": 2046,
+    "cached_tokens": 55040,
+    "estimated_cost_usd": 0.00624684,
+    "agent_seconds": 12.0,
+    "timing": {
+      "slot_wait": 0.0,
+      "environment_setup": 19.8,
+      "install_agent": 0.761,
+      "sandbox_ready": 23.357,
+      "proxy_health_wait": 0.0,
+      "firewall_power": 0.069,
+      "cloud_metadata_block": 0.648,
+      "acp_connect": 2.217,
+      "agent_setup": 3.0,
+      "agent_execution": 12.0,
+      "harden_before_verify": {
+        "kill_sandbox_user_procs": 0.039,
+        "restore_disarmed_delegates": 0.059,
+        "clear_verifier_output": 0.0,
+        "prepare_app_dir": 0.0,
+        "reclaim_disk": 0.02,
+        "freeze_workspace": 0.14,
+        "cleanup_conftests": 0.06,
+        "build_verifier_env": 0.519,
+        "total": 0.961
+      },
+      "verifier": 7.7,
+      "agent_stop_to_reward": 8.037,
+      "provider_wait": 11.8,
+      "provider_retry_wait": 0.0,
+      "agent_without_provider_wait": 0.2,
+      "cleanup": 1.027,
+      "total": 47.7
+    },
+    "delivery_valid": true,
+    "main_calls": 5,
+    "helper_calls": 1,
+    "delivery_errors": [],
+    "actual_versions": {
+      "schema": 1,
+      "identity": {
+        "agent": "opencode",
+        "harness": "acp",
+        "install_sha256": "c67e56103012b7e12464dc28773188bfd283de83ec2f2cefb0dcc2000b7b2a2d"
+      },
+      "adapter": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      },
+      "cli": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      },
+      "engine": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      }
+    },
+    "raw_usage": {
+      "calls": 6,
+      "input": 66578,
+      "output": 2046,
+      "cached": 55040,
+      "complete": true
+    },
+    "shared_tools_confirmed": true,
+    "evidence_sha256": {
+      "result.json": "49c5ba6a63b5be9d5d16217ac4d164c7d2ce9615c37edaff35a8b061916b5d6e",
+      "skill-delivery.json": "965ee11c171335288589ddee5631b5e458cd7964c37f1edc825d9679576e25c9",
+      "trajectory/llm_trajectory.jsonl": "23257c7f4cda9453569e26c0da153d385dbea2f0f360c637f48905a7bd7c6888",
+      "trajectory/acp_trajectory.jsonl": "06e1d0c12b99a44bbf05cc36a3c7e1f1ab05038a446445de7717b56a97b58c27",
+      "shared-opencode.json": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+      "verifier/test-stdout.txt": "5322dc471a78c2742c3bc4a7c2146bd6209be5c0d1caf357e5c22fee48b13f21"
+    },
+    "total_tokens": 68624,
+    "usage_matches_raw": true,
+    "metric_admitted": true,
+    "test_execution_confirmed": true,
+    "test_summary": {
+      "tests": 6,
+      "passed": 6,
+      "failed": 0,
+      "skipped": 0,
+      "pending": 0,
+      "other": 0,
+      "start": 1794663719.9182653,
+      "stop": 1794663719.9719436
+    },
+    "ctrf_sha256": "52768dacd94c99273f85c53167432144daf7ede5594e1675017e4e7fa2c01741",
+    "first_successful_main_prompt_tokens": 11859,
+    "uncached_input_tokens": 11538
+  },
+  {
+    "version": "v1",
+    "task": "llm-prefix-cache-replay",
+    "arm": "image",
+    "status": "finished",
+    "trial": "jobs/uml-expanded/paired-five-v1/llm-prefix-cache-replay/image/2026-11-14__21-42-02/llm-prefix-cache-replay__e6631438",
+    "reward": 1.0,
+    "error": null,
+    "error_category": null,
+    "verifier_error": null,
+    "task_digest": "sha256:6e625578b9977265fdb8b1fccacda6fd109fd3097e8991125f99bb99d4931cf7",
+    "tool_calls": 4,
+    "trajectory": {
+      "steps": 10,
+      "tool_call_steps": 4,
+      "user_message_steps": 1,
+      "agent_message_steps": 1,
+      "agent_thought_steps": 4,
+      "other_steps": 0,
+      "event_type_counts": {
+        "user_message": 1,
+        "agent_thought": 4,
+        "tool_call": 4,
+        "agent_message": 1
+      },
+      "tool_call_status_counts": {
+        "completed": 4
+      },
+      "partial_trajectory": false,
+      "trajectory_source": "acp"
+    },
+    "input_tokens": 74618,
+    "output_tokens": 2778,
+    "cached_tokens": 62080,
+    "estimated_cost_usd": 0.00746748,
+    "agent_seconds": 17.2,
+    "timing": {
+      "slot_wait": 0.0,
+      "environment_setup": 20.1,
+      "install_agent": 0.715,
+      "sandbox_ready": 23.599,
+      "proxy_health_wait": 0.0,
+      "firewall_power": 0.07,
+      "cloud_metadata_block": 0.645,
+      "acp_connect": 2.218,
+      "agent_setup": 3.0,
+      "agent_execution": 17.2,
+      "harden_before_verify": {
+        "kill_sandbox_user_procs": 0.038,
+        "restore_disarmed_delegates": 0.058,
+        "clear_verifier_output": 0.06,
+        "prepare_app_dir": 0.0,
+        "reclaim_disk": 0.02,
+        "freeze_workspace": 0.12,
+        "cleanup_conftests": 0.09,
+        "build_verifier_env": 0.414,
+        "total": 0.891
+      },
+      "verifier": 11.2,
+      "agent_stop_to_reward": 11.547,
+      "provider_wait": 17.0,
+      "provider_retry_wait": 0.0,
+      "agent_without_provider_wait": 0.2,
+      "cleanup": 1.046,
+      "total": 56.6
+    },
+    "delivery_valid": true,
+    "main_calls": 5,
+    "helper_calls": 1,
+    "delivery_errors": [],
+    "actual_versions": {
+      "schema": 1,
+      "identity": {
+        "agent": "opencode",
+        "harness": "acp",
+        "install_sha256": "c67e56103012b7e12464dc28773188bfd283de83ec2f2cefb0dcc2000b7b2a2d"
+      },
+      "adapter": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      },
+      "cli": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      },
+      "engine": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      }
+    },
+    "raw_usage": {
+      "calls": 6,
+      "input": 74618,
+      "output": 2778,
+      "cached": 62080,
+      "complete": true
+    },
+    "shared_tools_confirmed": true,
+    "evidence_sha256": {
+      "result.json": "ff1c357708535c325a7e1b904db32d0bd6c92f3a25375681a62c4c73a018a00b",
+      "skill-delivery.json": "cffb37c0e2699b5a68e0973e6e5f9fdf352ab7ea5f0a95536c90e1eb22a3b3cd",
+      "trajectory/llm_trajectory.jsonl": "92ccab63edf08ac35ddb843a73164374e17abe58623b4add216d08950fd20bd5",
+      "trajectory/acp_trajectory.jsonl": "6396d6de82280d56915212bb84075928148df9a3bc312e61184451891df63e4b",
+      "shared-opencode.json": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+      "verifier/test-stdout.txt": "927ed00b4cc85673ab845939c4178dfad28a34693701469646dbc02f5dd5e803"
+    },
+    "total_tokens": 77396,
+    "usage_matches_raw": true,
+    "metric_admitted": true,
+    "test_execution_confirmed": true,
+    "test_summary": {
+      "tests": 6,
+      "passed": 6,
+      "failed": 0,
+      "skipped": 0,
+      "pending": 0,
+      "other": 0,
+      "start": 1794663778.036663,
+      "stop": 1794663778.089323
+    },
+    "ctrf_sha256": "50fa297930405bdaf7ee3b2d0a4c3d1361dd76c0ce5b578fb10edeb2fb52da34",
+    "first_successful_main_prompt_tokens": 13260,
+    "uncached_input_tokens": 12538
+  },
+  {
+    "version": "v1",
+    "task": "energy-market-pricing",
+    "arm": "text",
+    "status": "finished",
+    "trial": "jobs/uml-expanded/paired-five-v1/energy-market-pricing/text/2026-11-14__21-50-30/energy-market-pricing__f430f1c0",
+    "reward": 1.0,
+    "error": null,
+    "error_category": null,
+    "verifier_error": null,
+    "task_digest": "sha256:e722a071d27ef633f8f56ef981efa22b3cb5fbf3e02c326472908192f10c369d",
+    "tool_calls": 25,
+    "trajectory": {
+      "steps": 50,
+      "tool_call_steps": 25,
+      "user_message_steps": 1,
+      "agent_message_steps": 1,
+      "agent_thought_steps": 23,
+      "other_steps": 0,
+      "event_type_counts": {
+        "user_message": 1,
+        "agent_thought": 23,
+        "tool_call": 25,
+        "agent_message": 1
+      },
+      "tool_call_status_counts": {
+        "completed": 25
+      },
+      "partial_trajectory": false,
+      "trajectory_source": "acp"
+    },
+    "input_tokens": 698313,
+    "output_tokens": 20167,
+    "cached_tokens": 676736,
+    "estimated_cost_usd": 0.034733916,
+    "agent_seconds": 232.5,
+    "timing": {
+      "slot_wait": 0.0,
+      "environment_setup": 19.5,
+      "install_agent": 0.697,
+      "sandbox_ready": 23.152,
+      "proxy_health_wait": 0.0,
+      "firewall_power": 0.057,
+      "cloud_metadata_block": 0.738,
+      "acp_connect": 2.26,
+      "agent_setup": 3.1,
+      "agent_execution": 232.5,
+      "harden_before_verify": {
+        "kill_sandbox_user_procs": 0.067,
+        "restore_disarmed_delegates": 0.063,
+        "clear_verifier_output": 0.01,
+        "prepare_app_dir": 0.0,
+        "reclaim_disk": 0.02,
+        "freeze_workspace": 0.19,
+        "cleanup_conftests": 0.13,
+        "build_verifier_env": 0.604,
+        "total": 1.567
+      },
+      "verifier": 22.8,
+      "agent_stop_to_reward": 31.972,
+      "provider_wait": 123.4,
+      "provider_retry_wait": 0.0,
+      "agent_without_provider_wait": 109.0,
+      "cleanup": 1.092,
+      "total": 292.1
+    },
+    "delivery_valid": true,
+    "main_calls": 26,
+    "helper_calls": 1,
+    "delivery_errors": [],
+    "actual_versions": {
+      "schema": 1,
+      "identity": {
+        "agent": "opencode",
+        "harness": "acp",
+        "install_sha256": "c67e56103012b7e12464dc28773188bfd283de83ec2f2cefb0dcc2000b7b2a2d"
+      },
+      "adapter": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      },
+      "cli": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      },
+      "engine": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      }
+    },
+    "raw_usage": {
+      "calls": 27,
+      "input": 698313,
+      "output": 20167,
+      "cached": 676736,
+      "complete": true
+    },
+    "shared_tools_confirmed": true,
+    "evidence_sha256": {
+      "result.json": "9b637e4bf5f276c2b310187285bba65410d6bc0fdfd36f277f2c83acda0c7060",
+      "skill-delivery.json": "7de460b61173b7c642101b7b020c9329a73c0b7ea57c616eec902632e3fae079",
+      "trajectory/llm_trajectory.jsonl": "7ad2e9d8942ca53c57c5479c76a7b57dcc4642a5cd03ec8dfcf7edee6f9e8a35",
+      "trajectory/acp_trajectory.jsonl": "61798d2ef1a11df3838c5a28e4a262ba8e5430c9c25093a63005305946f71b47",
+      "shared-opencode.json": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+      "verifier/test-stdout.txt": "d145792fa75cc58fad06639cae976bc03b424a58d2d5d7c0e9baad3f58391cfb"
+    },
+    "total_tokens": 718480,
+    "usage_matches_raw": true,
+    "metric_admitted": true,
+    "test_execution_confirmed": true,
+    "test_summary": {
+      "tests": 4,
+      "passed": 4,
+      "failed": 0,
+      "skipped": 0,
+      "pending": 0,
+      "other": 0,
+      "start": 1794664502.574975,
+      "stop": 1794664521.626614
+    },
+    "ctrf_sha256": "d2d0df3cfbf6bf648d51f9d733acd440c1fa5b9bfd55686c74f9f8e7652f19ff",
+    "first_successful_main_prompt_tokens": 13467,
+    "uncached_input_tokens": 21577
+  },
+  {
+    "version": "v1",
+    "task": "energy-market-pricing",
+    "arm": "image",
+    "status": "finished",
+    "trial": "jobs/uml-expanded/paired-five-v1/energy-market-pricing/image/2026-11-14__21-43-00/energy-market-pricing__cbab5e5b",
+    "reward": 1.0,
+    "error": null,
+    "error_category": null,
+    "verifier_error": null,
+    "task_digest": "sha256:e722a071d27ef633f8f56ef981efa22b3cb5fbf3e02c326472908192f10c369d",
+    "tool_calls": 22,
+    "trajectory": {
+      "steps": 45,
+      "tool_call_steps": 22,
+      "user_message_steps": 1,
+      "agent_message_steps": 1,
+      "agent_thought_steps": 21,
+      "other_steps": 0,
+      "event_type_counts": {
+        "user_message": 1,
+        "agent_thought": 21,
+        "tool_call": 22,
+        "agent_message": 1
+      },
+      "tool_call_status_counts": {
+        "completed": 22
+      },
+      "partial_trajectory": false,
+      "trajectory_source": "acp"
+    },
+    "input_tokens": 678979,
+    "output_tokens": 24512,
+    "cached_tokens": 655360,
+    "estimated_cost_usd": 0.04043226,
+    "agent_seconds": 387.8,
+    "timing": {
+      "slot_wait": 0.0,
+      "environment_setup": 20.2,
+      "install_agent": 0.69,
+      "sandbox_ready": 23.644,
+      "proxy_health_wait": 0.0,
+      "firewall_power": 0.058,
+      "cloud_metadata_block": 0.733,
+      "acp_connect": 2.265,
+      "agent_setup": 3.1,
+      "agent_execution": 387.8,
+      "harden_before_verify": {
+        "kill_sandbox_user_procs": 0.032,
+        "restore_disarmed_delegates": 0.048,
+        "clear_verifier_output": 0.01,
+        "prepare_app_dir": 0.0,
+        "reclaim_disk": 0.01,
+        "freeze_workspace": 0.18,
+        "cleanup_conftests": 0.12,
+        "build_verifier_env": 0.49,
+        "total": 1.324
+      },
+      "verifier": 22.4,
+      "agent_stop_to_reward": 31.031,
+      "provider_wait": 148.7,
+      "provider_retry_wait": 0.0,
+      "agent_without_provider_wait": 239.2,
+      "cleanup": 1.105,
+      "total": 447.0
+    },
+    "delivery_valid": true,
+    "main_calls": 22,
+    "helper_calls": 1,
+    "delivery_errors": [],
+    "actual_versions": {
+      "schema": 1,
+      "identity": {
+        "agent": "opencode",
+        "harness": "acp",
+        "install_sha256": "c67e56103012b7e12464dc28773188bfd283de83ec2f2cefb0dcc2000b7b2a2d"
+      },
+      "adapter": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      },
+      "cli": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      },
+      "engine": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      }
+    },
+    "raw_usage": {
+      "calls": 23,
+      "input": 678979,
+      "output": 24512,
+      "cached": 655360,
+      "complete": true
+    },
+    "shared_tools_confirmed": true,
+    "evidence_sha256": {
+      "result.json": "5cb6790866b1f0994520818ad41c1fd0a98ded14968603565e78b5764bb52326",
+      "skill-delivery.json": "754b07d6b2e416a78f5bde5788649c32804ca16c895ea1b346cf9bc2fcf4ea93",
+      "trajectory/llm_trajectory.jsonl": "b90f7102f57597ebce85a13ae3b07e252ed926e6d7dec9f455695f58cba78c48",
+      "trajectory/acp_trajectory.jsonl": "df102ebdf21d5217e917fbb46bdad3f597af4cad31c33369229eb538cf60406f",
+      "shared-opencode.json": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+      "verifier/test-stdout.txt": "7244e2ee87a094297cb4a62ade6d2318471df56c2dfd97ceaa4a62a42cc74719"
+    },
+    "total_tokens": 703491,
+    "usage_matches_raw": true,
+    "metric_admitted": true,
+    "test_execution_confirmed": true,
+    "test_summary": {
+      "tests": 4,
+      "passed": 4,
+      "failed": 0,
+      "skipped": 0,
+      "pending": 0,
+      "other": 0,
+      "start": 1794664207.6345885,
+      "stop": 1794664226.4965792
+    },
+    "ctrf_sha256": "e54737334358db1e7ef536c8fd85fe58b3e149dccebb5568d682a4a9e9aa95c1",
+    "first_successful_main_prompt_tokens": 15718,
+    "uncached_input_tokens": 23619
+  },
+  {
+    "version": "v1",
+    "task": "r2r-mpc-control",
+    "arm": "text",
+    "status": "finished",
+    "trial": "jobs/uml-expanded/paired-five-v1/r2r-mpc-control/text/2026-11-14__21-55-25/r2r-mpc-control__cdd8d0d1",
+    "reward": 1.0,
+    "error": null,
+    "error_category": null,
+    "verifier_error": null,
+    "task_digest": "sha256:56caf760c2411c1d1e4fb20faa30c82a1a1de4b58fbfafe03fcce5e3d6d1f31b",
+    "tool_calls": 31,
+    "trajectory": {
+      "steps": 58,
+      "tool_call_steps": 31,
+      "user_message_steps": 1,
+      "agent_message_steps": 4,
+      "agent_thought_steps": 22,
+      "other_steps": 0,
+      "event_type_counts": {
+        "user_message": 1,
+        "agent_message": 4,
+        "tool_call": 31,
+        "agent_thought": 22
+      },
+      "tool_call_status_counts": {
+        "completed": 30,
+        "failed": 1
+      },
+      "partial_trajectory": false,
+      "trajectory_source": "acp"
+    },
+    "input_tokens": 982187,
+    "output_tokens": 39086,
+    "cached_tokens": 954368,
+    "estimated_cost_usd": 0.060975108,
+    "agent_seconds": 509.1,
+    "timing": {
+      "slot_wait": 0.0,
+      "environment_setup": 23.8,
+      "install_agent": 0.74,
+      "sandbox_ready": 28.155,
+      "proxy_health_wait": 0.0,
+      "firewall_power": 0.105,
+      "cloud_metadata_block": 0.988,
+      "acp_connect": 1.461,
+      "agent_setup": 2.7,
+      "agent_execution": 509.1,
+      "harden_before_verify": {
+        "kill_sandbox_user_procs": 0.063,
+        "restore_disarmed_delegates": 0.093,
+        "clear_verifier_output": 0.01,
+        "prepare_app_dir": 0.0,
+        "reclaim_disk": 0.04,
+        "freeze_workspace": 0.17,
+        "cleanup_conftests": 0.1,
+        "build_verifier_env": 0.585,
+        "total": 1.545
+      },
+      "verifier": 3.9,
+      "agent_stop_to_reward": 13.22,
+      "provider_wait": 235.3,
+      "provider_retry_wait": 0.0,
+      "agent_without_provider_wait": 273.8,
+      "cleanup": 1.118,
+      "total": 554.6
+    },
+    "delivery_valid": true,
+    "main_calls": 24,
+    "helper_calls": 1,
+    "delivery_errors": [],
+    "actual_versions": {
+      "schema": 1,
+      "identity": {
+        "agent": "opencode",
+        "harness": "acp",
+        "install_sha256": "c67e56103012b7e12464dc28773188bfd283de83ec2f2cefb0dcc2000b7b2a2d"
+      },
+      "adapter": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      },
+      "cli": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      },
+      "engine": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      }
+    },
+    "raw_usage": {
+      "calls": 25,
+      "input": 982187,
+      "output": 39086,
+      "cached": 954368,
+      "complete": true
+    },
+    "shared_tools_confirmed": true,
+    "evidence_sha256": {
+      "result.json": "eed4c3a29f8c2add790a9a6570d39342877a44cd533bfb72db8bb3c158d77720",
+      "skill-delivery.json": "fae5c5ab2321397dc51b5368caf7a138a0f5a1777e138ac1bc3a9e1add9c6a74",
+      "trajectory/llm_trajectory.jsonl": "a42c7dae78a2fd9cc7cbaf60e8e042b02d927b683741b72d99babbd1ecabe612",
+      "trajectory/acp_trajectory.jsonl": "047861a4a10f350c07fca3ab50db3d4c6e816a6255b9bf547dccb1d40fe6ba42",
+      "shared-opencode.json": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+      "verifier/test-stdout.txt": "c97476ee9010d7eb2ef9d3887593139fafa23b78cff3233b0bddce144f2f8e42"
+    },
+    "total_tokens": 1021273,
+    "usage_matches_raw": true,
+    "metric_admitted": true,
+    "test_execution_confirmed": true,
+    "test_summary": {
+      "tests": 6,
+      "passed": 6,
+      "failed": 0,
+      "skipped": 0,
+      "pending": 0,
+      "other": 0,
+      "start": 1794665078.9782367,
+      "stop": 1794665079.3806825
+    },
+    "ctrf_sha256": "ad46554b04d8ba2a909790d87599b8a3022e95cfc4c708d502c2d4ff165806cf",
+    "first_successful_main_prompt_tokens": 9819,
+    "uncached_input_tokens": 27819
+  },
+  {
+    "version": "v1",
+    "task": "r2r-mpc-control",
+    "arm": "image",
+    "status": "finished",
+    "trial": "jobs/uml-expanded/paired-five-v1/r2r-mpc-control/image/2026-11-14__22-04-43/r2r-mpc-control__115ad66b",
+    "reward": 1.0,
+    "error": null,
+    "error_category": null,
+    "verifier_error": null,
+    "task_digest": "sha256:56caf760c2411c1d1e4fb20faa30c82a1a1de4b58fbfafe03fcce5e3d6d1f31b",
+    "tool_calls": 40,
+    "trajectory": {
+      "steps": 80,
+      "tool_call_steps": 40,
+      "user_message_steps": 1,
+      "agent_message_steps": 1,
+      "agent_thought_steps": 38,
+      "other_steps": 0,
+      "event_type_counts": {
+        "user_message": 1,
+        "agent_thought": 38,
+        "tool_call": 40,
+        "agent_message": 1
+      },
+      "tool_call_status_counts": {
+        "completed": 40
+      },
+      "partial_trajectory": false,
+      "trajectory_source": "acp"
+    },
+    "input_tokens": 2019842,
+    "output_tokens": 52074,
+    "cached_tokens": 1981440,
+    "estimated_cost_usd": 0.08589804,
+    "agent_seconds": 649.2,
+    "timing": {
+      "slot_wait": 0.0,
+      "environment_setup": 23.7,
+      "install_agent": 0.745,
+      "sandbox_ready": 28.119,
+      "proxy_health_wait": 0.0,
+      "firewall_power": 0.118,
+      "cloud_metadata_block": 1.011,
+      "acp_connect": 1.488,
+      "agent_setup": 2.7,
+      "agent_execution": 649.2,
+      "harden_before_verify": {
+        "kill_sandbox_user_procs": 0.039,
+        "restore_disarmed_delegates": 0.083,
+        "clear_verifier_output": 0.01,
+        "prepare_app_dir": 0.0,
+        "reclaim_disk": 0.03,
+        "freeze_workspace": 0.17,
+        "cleanup_conftests": 0.09,
+        "build_verifier_env": 0.58,
+        "total": 1.466
+      },
+      "verifier": 3.8,
+      "agent_stop_to_reward": 12.845,
+      "provider_wait": 298.2,
+      "provider_retry_wait": 0.0,
+      "agent_without_provider_wait": 351.0,
+      "cleanup": 1.251,
+      "total": 694.4
+    },
+    "delivery_valid": true,
+    "main_calls": 38,
+    "helper_calls": 1,
+    "delivery_errors": [],
+    "actual_versions": {
+      "schema": 1,
+      "identity": {
+        "agent": "opencode",
+        "harness": "acp",
+        "install_sha256": "c67e56103012b7e12464dc28773188bfd283de83ec2f2cefb0dcc2000b7b2a2d"
+      },
+      "adapter": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      },
+      "cli": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      },
+      "engine": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      }
+    },
+    "raw_usage": {
+      "calls": 39,
+      "input": 2019842,
+      "output": 52074,
+      "cached": 1981440,
+      "complete": true
+    },
+    "shared_tools_confirmed": true,
+    "evidence_sha256": {
+      "result.json": "426414ba3522771456a0704c772f2f2ba76be214685b8096eca93a96d349fb8c",
+      "skill-delivery.json": "04ce1ebd619102d4de9760f786aeaf2e729605bcc981f209c0ba01bf89212e71",
+      "trajectory/llm_trajectory.jsonl": "e0802639972c927aeaaa05f06dd2c83c40f4f8f68dd364528e18eb2c62ed161e",
+      "trajectory/acp_trajectory.jsonl": "c7b3c7c2c3e06c65c6a8846e2fdb76e75926656130eaa689090987928d141366",
+      "shared-opencode.json": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+      "verifier/test-stdout.txt": "e092b86b21af9a83e274a43e066bb27574a3d82238770094bfc55c48e11dabac"
+    },
+    "total_tokens": 2071916,
+    "usage_matches_raw": true,
+    "metric_admitted": true,
+    "test_execution_confirmed": true,
+    "test_summary": {
+      "tests": 6,
+      "passed": 6,
+      "failed": 0,
+      "skipped": 0,
+      "pending": 0,
+      "other": 0,
+      "start": 1794665776.5504532,
+      "stop": 1794665776.9220881
+    },
+    "ctrf_sha256": "5af4b711a14d9805bb797185717cb3fc189dfe493d80d5a8d5fcd01ef4c205e1",
+    "first_successful_main_prompt_tokens": 11599,
+    "uncached_input_tokens": 38402
+  },
+  {
+    "version": "v1",
+    "task": "exam-block-sequencing",
+    "arm": "text",
+    "status": "finished",
+    "trial": "jobs/uml-expanded/paired-five-v1-recovery/exam-block-sequencing/text/2026-11-14__23-23-22/exam-block-sequencing__ea18964a",
+    "reward": 1.0,
+    "error": null,
+    "error_category": null,
+    "verifier_error": null,
+    "task_digest": "sha256:95ae80d185fcca7a6537462b0daf3e8ef0a867e69be8626bf67e2dc7954ad922",
+    "tool_calls": 38,
+    "trajectory": {
+      "steps": 71,
+      "tool_call_steps": 38,
+      "user_message_steps": 1,
+      "agent_message_steps": 1,
+      "agent_thought_steps": 31,
+      "other_steps": 0,
+      "event_type_counts": {
+        "user_message": 1,
+        "agent_thought": 31,
+        "tool_call": 38,
+        "agent_message": 1
+      },
+      "tool_call_status_counts": {
+        "completed": 38
+      },
+      "partial_trajectory": false,
+      "trajectory_source": "acp"
+    },
+    "input_tokens": 1686244,
+    "output_tokens": 48505,
+    "cached_tokens": 1653376,
+    "estimated_cost_usd": 0.077986656,
+    "agent_seconds": 722.7,
+    "timing": {
+      "slot_wait": 0.0,
+      "environment_setup": 21.9,
+      "install_agent": 0.752,
+      "sandbox_ready": 26.891,
+      "proxy_health_wait": 0.0,
+      "firewall_power": 0.108,
+      "cloud_metadata_block": 1.054,
+      "acp_connect": 2.448,
+      "agent_setup": 3.7,
+      "agent_execution": 722.7,
+      "harden_before_verify": {
+        "kill_sandbox_user_procs": 0.079,
+        "restore_disarmed_delegates": 0.103,
+        "clear_verifier_output": 0.01,
+        "prepare_app_dir": 0.0,
+        "reclaim_disk": 0.03,
+        "freeze_workspace": 0.19,
+        "cleanup_conftests": 0.15,
+        "build_verifier_env": 0.637,
+        "total": 1.849
+      },
+      "verifier": 2.7,
+      "agent_stop_to_reward": 12.109,
+      "provider_wait": 277.1,
+      "provider_retry_wait": 0.0,
+      "agent_without_provider_wait": 445.6,
+      "cleanup": 1.174,
+      "total": 766.9
+    },
+    "delivery_valid": true,
+    "main_calls": 33,
+    "helper_calls": 1,
+    "delivery_errors": [],
+    "actual_versions": {
+      "schema": 1,
+      "identity": {
+        "agent": "opencode",
+        "harness": "acp",
+        "install_sha256": "c67e56103012b7e12464dc28773188bfd283de83ec2f2cefb0dcc2000b7b2a2d"
+      },
+      "adapter": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      },
+      "cli": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      },
+      "engine": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      }
+    },
+    "raw_usage": {
+      "calls": 34,
+      "input": 1686244,
+      "output": 48505,
+      "cached": 1653376,
+      "complete": true
+    },
+    "shared_tools_confirmed": true,
+    "evidence_sha256": {
+      "result.json": "9a1d24ac52f23e26debc269c9cb59fd5b0b4c6901fc64cccd78484a342218015",
+      "skill-delivery.json": "344984b57dacdc80fa78354a6edf72d79ffa2cdebb3e89191df89e2de694158a",
+      "trajectory/llm_trajectory.jsonl": "bab437bf5f7e019e7eb3f252a251c7aefd4ce242fb894ed87da36526925e4a94",
+      "trajectory/acp_trajectory.jsonl": "2ae47cf98f5027767f4fe355ee5f970b0bd1144e70c6fc42eb41e0e13e2b791f",
+      "shared-opencode.json": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+      "verifier/test-stdout.txt": "514a0c07337f0515d276229e99b494c3064d89e73ce923efd2ff94289f272401"
+    },
+    "total_tokens": 1734749,
+    "usage_matches_raw": true,
+    "metric_admitted": true,
+    "test_execution_confirmed": true,
+    "test_summary": {
+      "tests": 3,
+      "passed": 3,
+      "failed": 0,
+      "skipped": 0,
+      "pending": 0,
+      "other": 0,
+      "start": 1794670568.7113976,
+      "stop": 1794670568.8186812
+    },
+    "ctrf_sha256": "3c572be2277501e7711749a9e8e309cb09acef81bd50150dfdd9ebcf8040f817",
+    "first_successful_main_prompt_tokens": 12938,
+    "uncached_input_tokens": 32868
+  },
+  {
+    "version": "v1",
+    "task": "exam-block-sequencing",
+    "arm": "image",
+    "status": "failed",
+    "trial": "jobs/uml-expanded/paired-five-v1-recovery/exam-block-sequencing/image/2026-11-14__22-57-32/exam-block-sequencing__628a2a93",
+    "reward": 0.0,
+    "error": "Agent prompt exceeded wall-clock budget 1500s",
+    "error_category": "timeout",
+    "verifier_error": null,
+    "task_digest": "sha256:95ae80d185fcca7a6537462b0daf3e8ef0a867e69be8626bf67e2dc7954ad922",
+    "tool_calls": 35,
+    "trajectory": {
+      "steps": 69,
+      "tool_call_steps": 35,
+      "user_message_steps": 1,
+      "agent_message_steps": 0,
+      "agent_thought_steps": 32,
+      "other_steps": 1,
+      "event_type_counts": {
+        "user_message": 1,
+        "agent_thought": 32,
+        "tool_call": 35,
+        "agent_timeout": 1
+      },
+      "tool_call_status_counts": {
+        "completed": 34,
+        "failed": 1
+      },
+      "partial_trajectory": false,
+      "trajectory_source": "acp"
+    },
+    "input_tokens": 1709116,
+    "output_tokens": 57126,
+    "cached_tokens": 1684096,
+    "estimated_cost_usd": 0.086161776,
+    "agent_seconds": 1500.1,
+    "timing": {
+      "slot_wait": 0.0,
+      "environment_setup": 21.6,
+      "install_agent": 0.758,
+      "sandbox_ready": 26.48,
+      "proxy_health_wait": 0.0,
+      "firewall_power": 0.227,
+      "cloud_metadata_block": 1.08,
+      "acp_connect": 2.431,
+      "agent_setup": 3.8,
+      "agent_execution": 1500.1,
+      "harden_before_verify": {
+        "kill_sandbox_user_procs": 0.073,
+        "restore_disarmed_delegates": 0.087,
+        "clear_verifier_output": 0.01,
+        "prepare_app_dir": 0.0,
+        "reclaim_disk": 0.04,
+        "freeze_workspace": 0.18,
+        "cleanup_conftests": 0.18,
+        "build_verifier_env": 0.731,
+        "total": 1.835
+      },
+      "verifier": 2.7,
+      "agent_stop_to_reward": 12.512,
+      "provider_wait": 334.5,
+      "provider_retry_wait": 0.0,
+      "agent_without_provider_wait": 1165.6,
+      "cleanup": 1.309,
+      "total": 1544.6
+    },
+    "delivery_valid": false,
+    "main_calls": 35,
+    "helper_calls": 1,
+    "delivery_errors": [
+      "experiment_fidelity/skill_delivery: run failed or trajectory is partial"
+    ],
+    "actual_versions": {
+      "schema": 1,
+      "identity": {
+        "agent": "opencode",
+        "harness": "acp",
+        "install_sha256": "c67e56103012b7e12464dc28773188bfd283de83ec2f2cefb0dcc2000b7b2a2d"
+      },
+      "adapter": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      },
+      "cli": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      },
+      "engine": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      }
+    },
+    "raw_usage": {
+      "calls": 36,
+      "input": 1709116,
+      "output": 57126,
+      "cached": 1684096,
+      "complete": true
+    },
+    "shared_tools_confirmed": true,
+    "evidence_sha256": {
+      "result.json": "407cee371591912678b21b9de7fbf2fa2113132a050ad6a4da17545f86272260",
+      "skill-delivery.json": "53eabb4ebbae11f4db6f21a0b68e4e3e73728184200b981cb01f3ef436942ac2",
+      "trajectory/llm_trajectory.jsonl": "33ff64e063095fe389423ec05f1a58ea950a63c309d12bcc75c01fdb639baef6",
+      "trajectory/acp_trajectory.jsonl": "710a0a97043151c65116ac5e087d8fc03f53de63641f5edb0216db0f366dbabf",
+      "shared-opencode.json": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+      "verifier/test-stdout.txt": "ba56fc850436dafd347866fa00e9b7637895d35ac96f2ba1f11650d8b5518009"
+    },
+    "total_tokens": 1766242,
+    "usage_matches_raw": true,
+    "metric_admitted": false,
+    "test_execution_confirmed": true,
+    "test_summary": {
+      "tests": 3,
+      "passed": 0,
+      "failed": 3,
+      "skipped": 0,
+      "pending": 0,
+      "other": 0,
+      "start": 1794669795.8051763,
+      "stop": 1794669795.9165146
+    },
+    "ctrf_sha256": "8ac6a5e0601269f6f5640a63f994a78dd09976d5d34619d369620d43987169cd",
+    "first_successful_main_prompt_tokens": 14720,
+    "uncached_input_tokens": 25020
+  },
+  {
+    "version": "v1",
+    "task": "manufacturing-fjsp-optimization",
+    "arm": "text",
+    "status": "finished",
+    "trial": "jobs/uml-expanded/paired-five-v1-recovery/manufacturing-fjsp-optimization/text/2026-11-14__23-36-14/manufacturing-fjsp-optimization__24b9f178",
+    "reward": 0.0,
+    "error": null,
+    "error_category": null,
+    "verifier_error": null,
+    "task_digest": "sha256:fcbecdd0787726916a1072273fe8571639e2ee7d12cb1f33afdee25e08dc57af",
+    "tool_calls": 23,
+    "trajectory": {
+      "steps": 46,
+      "tool_call_steps": 23,
+      "user_message_steps": 1,
+      "agent_message_steps": 1,
+      "agent_thought_steps": 21,
+      "other_steps": 0,
+      "event_type_counts": {
+        "user_message": 1,
+        "agent_thought": 21,
+        "tool_call": 23,
+        "agent_message": 1
+      },
+      "tool_call_status_counts": {
+        "completed": 23
+      },
+      "partial_trajectory": false,
+      "trajectory_source": "acp"
+    },
+    "input_tokens": 674288,
+    "output_tokens": 29616,
+    "cached_tokens": 656896,
+    "estimated_cost_usd": 0.044698176,
+    "agent_seconds": 340.7,
+    "timing": {
+      "slot_wait": 0.0,
+      "environment_setup": 21.7,
+      "install_agent": 0.75,
+      "sandbox_ready": 26.236,
+      "proxy_health_wait": 0.0,
+      "firewall_power": 0.152,
+      "cloud_metadata_block": 0.94,
+      "acp_connect": 1.527,
+      "agent_setup": 2.7,
+      "agent_execution": 340.7,
+      "harden_before_verify": {
+        "kill_sandbox_user_procs": 0.042,
+        "restore_disarmed_delegates": 0.08,
+        "clear_verifier_output": 0.01,
+        "prepare_app_dir": 0.0,
+        "reclaim_disk": 0.03,
+        "freeze_workspace": 0.09,
+        "cleanup_conftests": 0.11,
+        "build_verifier_env": 0.504,
+        "total": 1.185
+      },
+      "verifier": 2.1,
+      "agent_stop_to_reward": 2.531,
+      "provider_wait": 154.4,
+      "provider_retry_wait": 0.0,
+      "agent_without_provider_wait": 186.3,
+      "cleanup": 1.034,
+      "total": 373.5
+    },
+    "delivery_valid": true,
+    "main_calls": 22,
+    "helper_calls": 1,
+    "delivery_errors": [],
+    "actual_versions": {
+      "schema": 1,
+      "identity": {
+        "agent": "opencode",
+        "harness": "acp",
+        "install_sha256": "c67e56103012b7e12464dc28773188bfd283de83ec2f2cefb0dcc2000b7b2a2d"
+      },
+      "adapter": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      },
+      "cli": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      },
+      "engine": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      }
+    },
+    "raw_usage": {
+      "calls": 23,
+      "input": 674288,
+      "output": 29616,
+      "cached": 656896,
+      "complete": true
+    },
+    "shared_tools_confirmed": true,
+    "evidence_sha256": {
+      "result.json": "a42de2ff6d429a426bde3377b722ef104ed3603c48663720055f6a9444db062d",
+      "skill-delivery.json": "0ef3ca7fba22a80a71cdadabe95cf9c5941efbc04957ca32961a36404dd6119e",
+      "trajectory/llm_trajectory.jsonl": "633d5d40ff6aabf9a54b730814ed7bd63bc67f5b49ce2a711244f4a0849c6407",
+      "trajectory/acp_trajectory.jsonl": "361dbdd377caf4e3b7666643315e560867eeb286db74d1dbdae4b48d69cd20c0",
+      "shared-opencode.json": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+      "verifier/test-stdout.txt": "586f903d0fee31879e00534f46d7caf54f72a9173f69dcdbf4b7ce1538e2f03c"
+    },
+    "total_tokens": 703904,
+    "usage_matches_raw": true,
+    "metric_admitted": true,
+    "test_execution_confirmed": true,
+    "test_summary": {
+      "tests": 15,
+      "passed": 14,
+      "failed": 1,
+      "skipped": 0,
+      "pending": 0,
+      "other": 0,
+      "start": 1794670947.2256527,
+      "stop": 1794670947.2753403
+    },
+    "ctrf_sha256": "c2037c0e4495ccd950bdb54625e00445c192e05400d3a321dfa76b22a360b0cf",
+    "first_successful_main_prompt_tokens": 9017,
+    "uncached_input_tokens": 17392
+  },
+  {
+    "version": "v1",
+    "task": "manufacturing-fjsp-optimization",
+    "arm": "image",
+    "status": "finished",
+    "trial": "jobs/uml-expanded/paired-five-v1-recovery/manufacturing-fjsp-optimization/image/2026-11-14__23-42-31/manufacturing-fjsp-optimization__8bb2ea6d",
+    "reward": 1.0,
+    "error": null,
+    "error_category": null,
+    "verifier_error": null,
+    "task_digest": "sha256:fcbecdd0787726916a1072273fe8571639e2ee7d12cb1f33afdee25e08dc57af",
+    "tool_calls": 26,
+    "trajectory": {
+      "steps": 52,
+      "tool_call_steps": 26,
+      "user_message_steps": 1,
+      "agent_message_steps": 9,
+      "agent_thought_steps": 16,
+      "other_steps": 0,
+      "event_type_counts": {
+        "user_message": 1,
+        "agent_message": 9,
+        "tool_call": 26,
+        "agent_thought": 16
+      },
+      "tool_call_status_counts": {
+        "failed": 1,
+        "completed": 25
+      },
+      "partial_trajectory": false,
+      "trajectory_source": "acp"
+    },
+    "input_tokens": 607519,
+    "output_tokens": 32259,
+    "cached_tokens": 596224,
+    "estimated_cost_usd": 0.045676644,
+    "agent_seconds": 1294.5,
+    "timing": {
+      "slot_wait": 0.0,
+      "environment_setup": 21.5,
+      "install_agent": 0.744,
+      "sandbox_ready": 25.876,
+      "proxy_health_wait": 0.0,
+      "firewall_power": 0.09,
+      "cloud_metadata_block": 0.952,
+      "acp_connect": 1.491,
+      "agent_setup": 2.6,
+      "agent_execution": 1294.5,
+      "harden_before_verify": {
+        "kill_sandbox_user_procs": 0.057,
+        "restore_disarmed_delegates": 0.074,
+        "clear_verifier_output": 0.0,
+        "prepare_app_dir": 0.01,
+        "reclaim_disk": 0.03,
+        "freeze_workspace": 0.09,
+        "cleanup_conftests": 0.11,
+        "build_verifier_env": 0.573,
+        "total": 1.275
+      },
+      "verifier": 2.3,
+      "agent_stop_to_reward": 2.712,
+      "provider_wait": 166.3,
+      "provider_retry_wait": 0.0,
+      "agent_without_provider_wait": 1128.2,
+      "cleanup": 1.126,
+      "total": 1327.1
+    },
+    "delivery_valid": true,
+    "main_calls": 20,
+    "helper_calls": 1,
+    "delivery_errors": [],
+    "actual_versions": {
+      "schema": 1,
+      "identity": {
+        "agent": "opencode",
+        "harness": "acp",
+        "install_sha256": "c67e56103012b7e12464dc28773188bfd283de83ec2f2cefb0dcc2000b7b2a2d"
+      },
+      "adapter": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      },
+      "cli": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      },
+      "engine": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      }
+    },
+    "raw_usage": {
+      "calls": 21,
+      "input": 607519,
+      "output": 32259,
+      "cached": 596224,
+      "complete": true
+    },
+    "shared_tools_confirmed": true,
+    "evidence_sha256": {
+      "result.json": "d20fa65816f5dd9ece367ecfbaba5ed5575119db233d9ed8c45d02bbb04bd159",
+      "skill-delivery.json": "69f16a776aaf82f1f1933b7c688b09c7cf05328f85fe277eefe896bdb601735b",
+      "trajectory/llm_trajectory.jsonl": "1393620a7fedd43348338c6597f3bfffd988100f261310e622334e5c6a73b9ea",
+      "trajectory/acp_trajectory.jsonl": "a6d34adcaf0e5665a687d0ee518ccdec997ccd1ffc4c8177f90f1d43d885aa2c",
+      "shared-opencode.json": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+      "verifier/test-stdout.txt": "bca933faa2da1b356c5e7f22397072cc22c4a72348a07ef3326f4c932a9276da"
+    },
+    "total_tokens": 639778,
+    "usage_matches_raw": true,
+    "metric_admitted": true,
+    "test_execution_confirmed": true,
+    "test_summary": {
+      "tests": 15,
+      "passed": 15,
+      "failed": 0,
+      "skipped": 0,
+      "pending": 0,
+      "other": 0,
+      "start": 1794672277.3210633,
+      "stop": 1794672277.3571138
+    },
+    "ctrf_sha256": "d1781dff0bc9f4fb701f03594288ac451f655cb239b0022e612b53e8ce63287f",
+    "first_successful_main_prompt_tokens": 9984,
+    "uncached_input_tokens": 11295
+  },
+  {
+    "version": "v2",
+    "task": "llm-prefix-cache-replay",
+    "arm": "text",
+    "status": "finished",
+    "trial": "jobs/uml-expanded/paired-five-full-skill-v2/llm-prefix-cache-replay/text/2026-11-15__20-20-10/llm-prefix-cache-replay__a5b26930",
+    "reward": 1.0,
+    "error": null,
+    "error_category": null,
+    "verifier_error": null,
+    "task_digest": "sha256:6e625578b9977265fdb8b1fccacda6fd109fd3097e8991125f99bb99d4931cf7",
+    "tool_calls": 4,
+    "trajectory": {
+      "steps": 10,
+      "tool_call_steps": 4,
+      "user_message_steps": 1,
+      "agent_message_steps": 1,
+      "agent_thought_steps": 4,
+      "other_steps": 0,
+      "event_type_counts": {
+        "user_message": 1,
+        "agent_thought": 4,
+        "tool_call": 4,
+        "agent_message": 1
+      },
+      "tool_call_status_counts": {
+        "completed": 4
+      },
+      "partial_trajectory": false,
+      "trajectory_source": "acp"
+    },
+    "input_tokens": 65356,
+    "output_tokens": 1920,
+    "cached_tokens": 54144,
+    "estimated_cost_usd": 0.005992464,
+    "agent_seconds": 10.4,
+    "timing": {
+      "slot_wait": 0.0,
+      "environment_setup": 16.9,
+      "install_agent": 0.593,
+      "sandbox_ready": 19.956,
+      "proxy_health_wait": 0.0,
+      "firewall_power": 0.063,
+      "cloud_metadata_block": 0.571,
+      "acp_connect": 1.827,
+      "agent_setup": 2.5,
+      "agent_execution": 10.4,
+      "harden_before_verify": {
+        "kill_sandbox_user_procs": 0.033,
+        "restore_disarmed_delegates": 0.049,
+        "clear_verifier_output": 0.0,
+        "prepare_app_dir": 0.0,
+        "reclaim_disk": 0.02,
+        "freeze_workspace": 0.11,
+        "cleanup_conftests": 0.07,
+        "build_verifier_env": 0.36,
+        "total": 0.75
+      },
+      "verifier": 7.7,
+      "agent_stop_to_reward": 8.0,
+      "provider_wait": 10.2,
+      "provider_retry_wait": 0.0,
+      "agent_without_provider_wait": 0.2,
+      "cleanup": 1.026,
+      "total": 42.2
+    },
+    "delivery_valid": true,
+    "main_calls": 5,
+    "helper_calls": 1,
+    "delivery_errors": [],
+    "actual_versions": {
+      "schema": 1,
+      "identity": {
+        "agent": "opencode",
+        "harness": "acp",
+        "install_sha256": "c67e56103012b7e12464dc28773188bfd283de83ec2f2cefb0dcc2000b7b2a2d"
+      },
+      "adapter": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      },
+      "cli": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      },
+      "engine": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      }
+    },
+    "raw_usage": {
+      "calls": 6,
+      "input": 65356,
+      "output": 1920,
+      "cached": 54144,
+      "complete": true
+    },
+    "shared_tools_confirmed": true,
+    "evidence_sha256": {
+      "result.json": "0de46368ca80a99d9f3b8b29a26a715167236ab2fb3c5f8e03548b6c3725d3c0",
+      "skill-delivery.json": "d3569ee61cdfd6615976189dc3ae288a920fbde1f2bf133a5696513c3937ffae",
+      "trajectory/llm_trajectory.jsonl": "c2912d3f3ad276a7fd424aec6a6d3b7358c7f67035672f80dd1706e7a7377df8",
+      "trajectory/acp_trajectory.jsonl": "42a24381c96d9dbb70c70d489613827eac9d31507a232bebac1556f582f4f9ab",
+      "shared-opencode.json": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+      "verifier/test-stdout.txt": "616d4f7c2c5b7aa5c5c2ebbc5846137a411675aa60c656bd48b15145fdfb0b5c"
+    },
+    "total_tokens": 67276,
+    "usage_matches_raw": true,
+    "metric_admitted": true,
+    "test_summary": {
+      "tests": 6,
+      "passed": 6,
+      "failed": 0,
+      "skipped": 0,
+      "pending": 0,
+      "other": 0,
+      "start": 1794745251.6328847,
+      "stop": 1794745251.6748652
+    },
+    "test_execution_confirmed": true,
+    "matches_healthy_oracle_digest": true,
+    "ctrf_sha256": "3d35e786b65884bd3f0c2c713f719735578fa695b1ff4e61446bc9f6fcb1f361",
+    "uncached_input_tokens": 11212
+  },
+  {
+    "version": "v2",
+    "task": "llm-prefix-cache-replay",
+    "arm": "image",
+    "status": "finished",
+    "trial": "jobs/uml-expanded/paired-five-full-skill-v2/llm-prefix-cache-replay/image/2026-11-15__20-20-53/llm-prefix-cache-replay__b1e3222a",
+    "reward": 1.0,
+    "error": null,
+    "error_category": null,
+    "verifier_error": null,
+    "task_digest": "sha256:6e625578b9977265fdb8b1fccacda6fd109fd3097e8991125f99bb99d4931cf7",
+    "tool_calls": 3,
+    "trajectory": {
+      "steps": 8,
+      "tool_call_steps": 3,
+      "user_message_steps": 1,
+      "agent_message_steps": 1,
+      "agent_thought_steps": 3,
+      "other_steps": 0,
+      "event_type_counts": {
+        "user_message": 1,
+        "agent_thought": 3,
+        "tool_call": 3,
+        "agent_message": 1
+      },
+      "tool_call_status_counts": {
+        "completed": 3
+      },
+      "partial_trajectory": false,
+      "trajectory_source": "acp"
+    },
+    "input_tokens": 59482,
+    "output_tokens": 1635,
+    "cached_tokens": 46720,
+    "estimated_cost_usd": 0.00607092,
+    "agent_seconds": 9.0,
+    "timing": {
+      "slot_wait": 0.0,
+      "environment_setup": 17.1,
+      "install_agent": 0.58,
+      "sandbox_ready": 19.984,
+      "proxy_health_wait": 0.0,
+      "firewall_power": 0.062,
+      "cloud_metadata_block": 0.554,
+      "acp_connect": 1.897,
+      "agent_setup": 2.6,
+      "agent_execution": 9.0,
+      "harden_before_verify": {
+        "kill_sandbox_user_procs": 0.033,
+        "restore_disarmed_delegates": 0.051,
+        "clear_verifier_output": 0.0,
+        "prepare_app_dir": 0.0,
+        "reclaim_disk": 0.02,
+        "freeze_workspace": 0.09,
+        "cleanup_conftests": 0.05,
+        "build_verifier_env": 0.358,
+        "total": 0.727
+      },
+      "verifier": 9.7,
+      "agent_stop_to_reward": 9.921,
+      "provider_wait": 8.8,
+      "provider_retry_wait": 0.0,
+      "agent_without_provider_wait": 0.1,
+      "cleanup": 1.038,
+      "total": 42.7
+    },
+    "delivery_valid": true,
+    "main_calls": 4,
+    "helper_calls": 1,
+    "delivery_errors": [],
+    "actual_versions": {
+      "schema": 1,
+      "identity": {
+        "agent": "opencode",
+        "harness": "acp",
+        "install_sha256": "c67e56103012b7e12464dc28773188bfd283de83ec2f2cefb0dcc2000b7b2a2d"
+      },
+      "adapter": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      },
+      "cli": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      },
+      "engine": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      }
+    },
+    "raw_usage": {
+      "calls": 5,
+      "input": 59482,
+      "output": 1635,
+      "cached": 46720,
+      "complete": true
+    },
+    "shared_tools_confirmed": true,
+    "evidence_sha256": {
+      "result.json": "3afea9f23b87541757020afd21c8bf88410d83dcb4981303c380c2a7cae7ebd2",
+      "skill-delivery.json": "e08ef4a93e98b3cf1d06502111adff12704b10932c18d9bfbdb480175d9c1405",
+      "trajectory/llm_trajectory.jsonl": "96cbaa037a258a0833fee73862e29508cb17ae85ed09164634cb8563a932749a",
+      "trajectory/acp_trajectory.jsonl": "42059be5a9fe75765541ae11a51ae2692e32c5f1b7c45f39861c9069353dc829",
+      "shared-opencode.json": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+      "verifier/test-stdout.txt": "616d4f7c2c5b7aa5c5c2ebbc5846137a411675aa60c656bd48b15145fdfb0b5c"
+    },
+    "total_tokens": 61117,
+    "usage_matches_raw": true,
+    "metric_admitted": true,
+    "test_summary": {
+      "tests": 6,
+      "passed": 6,
+      "failed": 0,
+      "skipped": 0,
+      "pending": 0,
+      "other": 0,
+      "start": 1794745295.7238362,
+      "stop": 1794745295.7660558
+    },
+    "test_execution_confirmed": true,
+    "matches_healthy_oracle_digest": true,
+    "ctrf_sha256": "4e00ab5ac88eb43849fa588bd41aea1301c79bc34cb49f6093ac955f51e9b7a0",
+    "uncached_input_tokens": 12762
+  },
+  {
+    "version": "v2",
+    "task": "energy-market-pricing",
+    "arm": "image",
+    "status": "finished",
+    "trial": "jobs/uml-expanded/paired-five-full-skill-v2/energy-market-pricing/image/2026-11-15__20-21-38/energy-market-pricing__a74b3ca2",
+    "reward": 1.0,
+    "error": null,
+    "error_category": null,
+    "verifier_error": null,
+    "task_digest": "sha256:e722a071d27ef633f8f56ef981efa22b3cb5fbf3e02c326472908192f10c369d",
+    "tool_calls": 14,
+    "trajectory": {
+      "steps": 27,
+      "tool_call_steps": 14,
+      "user_message_steps": 1,
+      "agent_message_steps": 1,
+      "agent_thought_steps": 11,
+      "other_steps": 0,
+      "event_type_counts": {
+        "user_message": 1,
+        "agent_thought": 11,
+        "tool_call": 14,
+        "agent_message": 1
+      },
+      "tool_call_status_counts": {
+        "completed": 14
+      },
+      "partial_trajectory": false,
+      "trajectory_source": "acp"
+    },
+    "input_tokens": 357928,
+    "output_tokens": 8857,
+    "cached_tokens": 336128,
+    "estimated_cost_usd": 0.019185168,
+    "agent_seconds": 127.9,
+    "timing": {
+      "slot_wait": 0.0,
+      "environment_setup": 16.6,
+      "install_agent": 0.571,
+      "sandbox_ready": 19.889,
+      "proxy_health_wait": 0.0,
+      "firewall_power": 0.051,
+      "cloud_metadata_block": 0.628,
+      "acp_connect": 1.921,
+      "agent_setup": 2.6,
+      "agent_execution": 127.9,
+      "harden_before_verify": {
+        "kill_sandbox_user_procs": 0.028,
+        "restore_disarmed_delegates": 0.043,
+        "clear_verifier_output": 0.0,
+        "prepare_app_dir": 0.0,
+        "reclaim_disk": 0.02,
+        "freeze_workspace": 0.15,
+        "cleanup_conftests": 0.09,
+        "build_verifier_env": 0.396,
+        "total": 1.068
+      },
+      "verifier": 18.1,
+      "agent_stop_to_reward": 24.84,
+      "provider_wait": 51.6,
+      "provider_retry_wait": 0.0,
+      "agent_without_provider_wait": 76.2,
+      "cleanup": 1.099,
+      "total": 176.6
+    },
+    "delivery_valid": true,
+    "main_calls": 15,
+    "helper_calls": 1,
+    "delivery_errors": [],
+    "actual_versions": {
+      "schema": 1,
+      "identity": {
+        "agent": "opencode",
+        "harness": "acp",
+        "install_sha256": "c67e56103012b7e12464dc28773188bfd283de83ec2f2cefb0dcc2000b7b2a2d"
+      },
+      "adapter": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      },
+      "cli": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      },
+      "engine": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      }
+    },
+    "raw_usage": {
+      "calls": 16,
+      "input": 357928,
+      "output": 8857,
+      "cached": 336128,
+      "complete": true
+    },
+    "shared_tools_confirmed": true,
+    "evidence_sha256": {
+      "result.json": "a26387cc121c2c061d994d1650dbad741fb63d84b3cb15cc37903c34efd9a9d7",
+      "skill-delivery.json": "107986e68a6402efef39ccfda88f2c4ac0e1176e831ddc6ce9423122f9517bd5",
+      "trajectory/llm_trajectory.jsonl": "62a2df4ce40e6f3aefb4e8990851fc79f5e3231bd66500e5b26d866900043ad3",
+      "trajectory/acp_trajectory.jsonl": "72b0084d84852573a0b1e157f8811784a5e21c9bdd2649f3ea6169f04bfa143e",
+      "shared-opencode.json": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+      "verifier/test-stdout.txt": "500aadbdc38bf93c598c812411a295d81ed6acebb494d4712b6694956378a30a"
+    },
+    "total_tokens": 366785,
+    "usage_matches_raw": true,
+    "metric_admitted": true,
+    "test_summary": {
+      "tests": 4,
+      "passed": 4,
+      "failed": 0,
+      "skipped": 0,
+      "pending": 0,
+      "other": 0,
+      "start": 1794745458.2759488,
+      "stop": 1794745473.5223293
+    },
+    "test_execution_confirmed": true,
+    "matches_healthy_oracle_digest": true,
+    "ctrf_sha256": "fae57a3421c53e6ee357db7f6439074b0683313f836c9e4a1bd8f1c1e42c7f0f",
+    "uncached_input_tokens": 21800
+  },
+  {
+    "version": "v2",
+    "task": "energy-market-pricing",
+    "arm": "text",
+    "status": "finished",
+    "trial": "jobs/uml-expanded/paired-five-full-skill-v2/energy-market-pricing/text/2026-11-15__20-24-36/energy-market-pricing__f06765a4",
+    "reward": 1.0,
+    "error": null,
+    "error_category": null,
+    "verifier_error": null,
+    "task_digest": "sha256:e722a071d27ef633f8f56ef981efa22b3cb5fbf3e02c326472908192f10c369d",
+    "tool_calls": 38,
+    "trajectory": {
+      "steps": 76,
+      "tool_call_steps": 38,
+      "user_message_steps": 1,
+      "agent_message_steps": 2,
+      "agent_thought_steps": 35,
+      "other_steps": 0,
+      "event_type_counts": {
+        "user_message": 1,
+        "agent_message": 2,
+        "tool_call": 38,
+        "agent_thought": 35
+      },
+      "tool_call_status_counts": {
+        "completed": 38
+      },
+      "partial_trajectory": false,
+      "trajectory_source": "acp"
+    },
+    "input_tokens": 1488493,
+    "output_tokens": 46141,
+    "cached_tokens": 1460352,
+    "estimated_cost_usd": 0.072573612,
+    "agent_seconds": 595.4,
+    "timing": {
+      "slot_wait": 0.0,
+      "environment_setup": 15.3,
+      "install_agent": 0.575,
+      "sandbox_ready": 18.397,
+      "proxy_health_wait": 0.0,
+      "firewall_power": 0.052,
+      "cloud_metadata_block": 0.703,
+      "acp_connect": 1.87,
+      "agent_setup": 2.7,
+      "agent_execution": 595.4,
+      "harden_before_verify": {
+        "kill_sandbox_user_procs": 0.029,
+        "restore_disarmed_delegates": 0.053,
+        "clear_verifier_output": 0.0,
+        "prepare_app_dir": 0.0,
+        "reclaim_disk": 0.01,
+        "freeze_workspace": 0.11,
+        "cleanup_conftests": 0.1,
+        "build_verifier_env": 0.415,
+        "total": 0.999
+      },
+      "verifier": 18.0,
+      "agent_stop_to_reward": 18.521,
+      "provider_wait": 286.8,
+      "provider_retry_wait": 0.0,
+      "agent_without_provider_wait": 308.6,
+      "cleanup": 1.116,
+      "total": 636.4
+    },
+    "delivery_valid": true,
+    "main_calls": 36,
+    "helper_calls": 1,
+    "delivery_errors": [],
+    "actual_versions": {
+      "schema": 1,
+      "identity": {
+        "agent": "opencode",
+        "harness": "acp",
+        "install_sha256": "c67e56103012b7e12464dc28773188bfd283de83ec2f2cefb0dcc2000b7b2a2d"
+      },
+      "adapter": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      },
+      "cli": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      },
+      "engine": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      }
+    },
+    "raw_usage": {
+      "calls": 37,
+      "input": 1488493,
+      "output": 46141,
+      "cached": 1460352,
+      "complete": true
+    },
+    "shared_tools_confirmed": true,
+    "evidence_sha256": {
+      "result.json": "e0bd00e36e21483e19d881c37a45ac07fad4ad454216b244885a40171195420f",
+      "skill-delivery.json": "7d634e60ac4066cefabea8bb5b9ad46682fd31e4f1ca24f544f58cfc2a6b467f",
+      "trajectory/llm_trajectory.jsonl": "0e5aa7db04f3def4e8a8f850c240e60488087d21f91c2912fc7aac5193166814",
+      "trajectory/acp_trajectory.jsonl": "a718f937df6ad9030c95b13d85be7499a3ae08ad442301f66f8acafac37279f5",
+      "shared-opencode.json": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+      "verifier/test-stdout.txt": "c38b96c274abbb32f04092a56770221d814a337bd8983fc528cd3f71afb16bc6"
+    },
+    "total_tokens": 1534634,
+    "usage_matches_raw": true,
+    "metric_admitted": true,
+    "test_summary": {
+      "tests": 4,
+      "passed": 4,
+      "failed": 0,
+      "skipped": 0,
+      "pending": 0,
+      "other": 0,
+      "start": 1794746096.9047644,
+      "stop": 1794746112.22911
+    },
+    "test_execution_confirmed": true,
+    "matches_healthy_oracle_digest": true,
+    "ctrf_sha256": "f2fbc1ba3bb0219b9662475e236f9fd7d2a3a55bd7e39fa2eb44a47f15ddbb8d",
+    "uncached_input_tokens": 28141
+  },
+  {
+    "version": "v2",
+    "task": "r2r-mpc-control",
+    "arm": "text",
+    "status": "finished",
+    "trial": "jobs/uml-expanded/paired-five-full-skill-v2/r2r-mpc-control/text/2026-11-15__20-35-16/r2r-mpc-control__6ff65f1a",
+    "reward": 1.0,
+    "error": null,
+    "error_category": null,
+    "verifier_error": null,
+    "task_digest": "sha256:56caf760c2411c1d1e4fb20faa30c82a1a1de4b58fbfafe03fcce5e3d6d1f31b",
+    "tool_calls": 21,
+    "trajectory": {
+      "steps": 41,
+      "tool_call_steps": 21,
+      "user_message_steps": 1,
+      "agent_message_steps": 1,
+      "agent_thought_steps": 18,
+      "other_steps": 0,
+      "event_type_counts": {
+        "user_message": 1,
+        "agent_thought": 18,
+        "tool_call": 21,
+        "agent_message": 1
+      },
+      "tool_call_status_counts": {
+        "completed": 21
+      },
+      "partial_trajectory": false,
+      "trajectory_source": "acp"
+    },
+    "input_tokens": 496217,
+    "output_tokens": 20025,
+    "cached_tokens": 473728,
+    "estimated_cost_usd": 0.033619068,
+    "agent_seconds": 132.2,
+    "timing": {
+      "slot_wait": 0.0,
+      "environment_setup": 15.4,
+      "install_agent": 0.577,
+      "sandbox_ready": 18.364,
+      "proxy_health_wait": 0.0,
+      "firewall_power": 0.053,
+      "cloud_metadata_block": 0.672,
+      "acp_connect": 1.189,
+      "agent_setup": 2.0,
+      "agent_execution": 132.2,
+      "harden_before_verify": {
+        "kill_sandbox_user_procs": 0.028,
+        "restore_disarmed_delegates": 0.042,
+        "clear_verifier_output": 0.0,
+        "prepare_app_dir": 0.0,
+        "reclaim_disk": 0.02,
+        "freeze_workspace": 0.12,
+        "cleanup_conftests": 0.08,
+        "build_verifier_env": 0.418,
+        "total": 1.003
+      },
+      "verifier": 2.9,
+      "agent_stop_to_reward": 9.88,
+      "provider_wait": 107.2,
+      "provider_retry_wait": 0.0,
+      "agent_without_provider_wait": 25.0,
+      "cleanup": 1.05,
+      "total": 163.7
+    },
+    "delivery_valid": true,
+    "main_calls": 19,
+    "helper_calls": 1,
+    "delivery_errors": [],
+    "actual_versions": {
+      "schema": 1,
+      "identity": {
+        "agent": "opencode",
+        "harness": "acp",
+        "install_sha256": "c67e56103012b7e12464dc28773188bfd283de83ec2f2cefb0dcc2000b7b2a2d"
+      },
+      "adapter": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      },
+      "cli": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      },
+      "engine": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      }
+    },
+    "raw_usage": {
+      "calls": 20,
+      "input": 496217,
+      "output": 20025,
+      "cached": 473728,
+      "complete": true
+    },
+    "shared_tools_confirmed": true,
+    "evidence_sha256": {
+      "result.json": "2314a3e2f68116d158977195afb3b7cc44c3dc600a83446ee7f3f8d99af9ad3e",
+      "skill-delivery.json": "38a3214eb5cc029f775eb479041ed7270bb0ba6e143fef8d332899cb58787abb",
+      "trajectory/llm_trajectory.jsonl": "25a9b3dc199468c5f9b8e43714d8dd0b9aefc0f1c0e1f7d5b90d691a06a245aa",
+      "trajectory/acp_trajectory.jsonl": "ede70e133555b2331322ef23e478927f85a84d024d7a52722ffe973c42b52611",
+      "shared-opencode.json": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+      "verifier/test-stdout.txt": "591cecce3e7e65f7df06559b3b21b09a8ffbb3ce30d62ec5071c8028549bfc2b"
+    },
+    "total_tokens": 516242,
+    "usage_matches_raw": true,
+    "metric_admitted": true,
+    "test_summary": {
+      "tests": 6,
+      "passed": 6,
+      "failed": 0,
+      "skipped": 0,
+      "pending": 0,
+      "other": 0,
+      "start": 1794746278.6407752,
+      "stop": 1794746278.958968
+    },
+    "test_execution_confirmed": true,
+    "matches_healthy_oracle_digest": true,
+    "ctrf_sha256": "fa4dc08bf28dd0e32c5dcecae026b028dd62248060d385833893c6af0d756d7d",
+    "uncached_input_tokens": 22489
+  },
+  {
+    "version": "v2",
+    "task": "r2r-mpc-control",
+    "arm": "image",
+    "status": "finished",
+    "trial": "jobs/uml-expanded/paired-five-full-skill-v2/r2r-mpc-control/image/2026-11-15__20-38-02/r2r-mpc-control__d47da638",
+    "reward": 0.0,
+    "error": null,
+    "error_category": null,
+    "verifier_error": null,
+    "task_digest": "sha256:56caf760c2411c1d1e4fb20faa30c82a1a1de4b58fbfafe03fcce5e3d6d1f31b",
+    "tool_calls": 10,
+    "trajectory": {
+      "steps": 18,
+      "tool_call_steps": 10,
+      "user_message_steps": 1,
+      "agent_message_steps": 1,
+      "agent_thought_steps": 6,
+      "other_steps": 0,
+      "event_type_counts": {
+        "user_message": 1,
+        "agent_thought": 6,
+        "tool_call": 10,
+        "agent_message": 1
+      },
+      "tool_call_status_counts": {
+        "completed": 10
+      },
+      "partial_trajectory": false,
+      "trajectory_source": "acp"
+    },
+    "input_tokens": 165264,
+    "output_tokens": 7424,
+    "cached_tokens": 149888,
+    "estimated_cost_usd": 0.014420928,
+    "agent_seconds": 51.3,
+    "timing": {
+      "slot_wait": 0.0,
+      "environment_setup": 16.6,
+      "install_agent": 0.553,
+      "sandbox_ready": 19.325,
+      "proxy_health_wait": 0.0,
+      "firewall_power": 0.053,
+      "cloud_metadata_block": 0.613,
+      "acp_connect": 1.184,
+      "agent_setup": 1.9,
+      "agent_execution": 51.3,
+      "harden_before_verify": {
+        "kill_sandbox_user_procs": 0.028,
+        "restore_disarmed_delegates": 0.041,
+        "clear_verifier_output": 0.01,
+        "prepare_app_dir": 0.0,
+        "reclaim_disk": 0.01,
+        "freeze_workspace": 0.13,
+        "cleanup_conftests": 0.08,
+        "build_verifier_env": 0.365,
+        "total": 0.899
+      },
+      "verifier": 2.9,
+      "agent_stop_to_reward": 9.862,
+      "provider_wait": 39.7,
+      "provider_retry_wait": 0.0,
+      "agent_without_provider_wait": 11.6,
+      "cleanup": 1.069,
+      "total": 83.7
+    },
+    "delivery_valid": true,
+    "main_calls": 9,
+    "helper_calls": 1,
+    "delivery_errors": [],
+    "actual_versions": {
+      "schema": 1,
+      "identity": {
+        "agent": "opencode",
+        "harness": "acp",
+        "install_sha256": "c67e56103012b7e12464dc28773188bfd283de83ec2f2cefb0dcc2000b7b2a2d"
+      },
+      "adapter": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      },
+      "cli": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      },
+      "engine": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      }
+    },
+    "raw_usage": {
+      "calls": 10,
+      "input": 165264,
+      "output": 7424,
+      "cached": 149888,
+      "complete": true
+    },
+    "shared_tools_confirmed": true,
+    "evidence_sha256": {
+      "result.json": "d8d020b3a04b276551d68b7f95989198f21e93384d01e6835422ec89eaffeb0a",
+      "skill-delivery.json": "4303928fa7de6d8b419b6a73724c2a95ee4dbcd9f33a8f7df5e27cf9c9613f59",
+      "trajectory/llm_trajectory.jsonl": "b79ad3f921f91886d6233d03dc4717cfd099478cb235d88ddc1c2df43ce7a3b7",
+      "trajectory/acp_trajectory.jsonl": "c8cb31c4d6a09c41ee77ed2bea1785eaec9a0a67c7fe0bfe2dff741f7fe16a3d",
+      "shared-opencode.json": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+      "verifier/test-stdout.txt": "e02cfb0ae71862eb2714f5517089fc24c69fd2bf7046d6d86473912b50e7e278"
+    },
+    "total_tokens": 172688,
+    "usage_matches_raw": true,
+    "metric_admitted": true,
+    "test_summary": {
+      "tests": 6,
+      "passed": 5,
+      "failed": 1,
+      "skipped": 0,
+      "pending": 0,
+      "other": 0,
+      "start": 1794746364.3976305,
+      "stop": 1794746364.7815306
+    },
+    "test_execution_confirmed": true,
+    "matches_healthy_oracle_digest": true,
+    "ctrf_sha256": "672eca3a09dcea52aaf7619ae40e53bbdce17b10299dda432d75c91a764a1676",
+    "uncached_input_tokens": 15376
+  },
+  {
+    "version": "v2",
+    "task": "exam-block-sequencing",
+    "arm": "image",
+    "status": "failed",
+    "trial": "jobs/uml-expanded/paired-five-full-skill-v2/exam-block-sequencing/image/2026-11-15__20-39-27/exam-block-sequencing__6ef7f3b5",
+    "reward": 0.0,
+    "error": "Agent prompt exceeded wall-clock budget 1500s",
+    "error_category": "timeout",
+    "verifier_error": null,
+    "task_digest": "sha256:95ae80d185fcca7a6537462b0daf3e8ef0a867e69be8626bf67e2dc7954ad922",
+    "tool_calls": 21,
+    "trajectory": {
+      "steps": 44,
+      "tool_call_steps": 21,
+      "user_message_steps": 1,
+      "agent_message_steps": 0,
+      "agent_thought_steps": 21,
+      "other_steps": 1,
+      "event_type_counts": {
+        "user_message": 1,
+        "agent_thought": 21,
+        "tool_call": 21,
+        "agent_timeout": 1
+      },
+      "tool_call_status_counts": {
+        "completed": 18,
+        "failed": 3
+      },
+      "partial_trajectory": false,
+      "trajectory_source": "acp"
+    },
+    "input_tokens": 957646,
+    "output_tokens": 40073,
+    "cached_tokens": 890368,
+    "estimated_cost_usd": 0.073613208,
+    "agent_seconds": 1500.1,
+    "timing": {
+      "slot_wait": 0.0,
+      "environment_setup": 16.7,
+      "install_agent": 0.566,
+      "sandbox_ready": 20.052,
+      "proxy_health_wait": 0.0,
+      "firewall_power": 0.061,
+      "cloud_metadata_block": 0.692,
+      "acp_connect": 1.886,
+      "agent_setup": 2.7,
+      "agent_execution": 1500.1,
+      "harden_before_verify": {
+        "kill_sandbox_user_procs": 0.034,
+        "restore_disarmed_delegates": 0.051,
+        "clear_verifier_output": 0.0,
+        "prepare_app_dir": 0.0,
+        "reclaim_disk": 0.02,
+        "freeze_workspace": 0.14,
+        "cleanup_conftests": 0.14,
+        "build_verifier_env": 0.507,
+        "total": 1.277
+      },
+      "verifier": 2.0,
+      "agent_stop_to_reward": 9.713,
+      "provider_wait": 226.5,
+      "provider_retry_wait": 0.0,
+      "agent_without_provider_wait": 1273.6,
+      "cleanup": 1.203,
+      "total": 1534.1
+    },
+    "delivery_valid": false,
+    "main_calls": 21,
+    "helper_calls": 1,
+    "delivery_errors": [
+      "experiment_fidelity/skill_delivery: run failed or trajectory is partial"
+    ],
+    "actual_versions": {
+      "schema": 1,
+      "identity": {
+        "agent": "opencode",
+        "harness": "acp",
+        "install_sha256": "c67e56103012b7e12464dc28773188bfd283de83ec2f2cefb0dcc2000b7b2a2d"
+      },
+      "adapter": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      },
+      "cli": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      },
+      "engine": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      }
+    },
+    "raw_usage": {
+      "calls": 22,
+      "input": 957646,
+      "output": 40073,
+      "cached": 890368,
+      "complete": true
+    },
+    "shared_tools_confirmed": true,
+    "evidence_sha256": {
+      "result.json": "e2633c5cf717614e04c89d09e655eae88e01907a9d271681ba821910ead8dff6",
+      "skill-delivery.json": "99cd4725db7460d3446b3804a653c634ab4d5c7c6bfc2c806e0eaa5fa8c5cb36",
+      "trajectory/llm_trajectory.jsonl": "1fc4199c653de99e1f2ac18a7f60325fa08d370989f62d07c8f097dad531e831",
+      "trajectory/acp_trajectory.jsonl": "9f815cb82e559cfdcc04d30579d4b32b0ee8e9c2f9aacc02e1ca8beef8a48b8b",
+      "shared-opencode.json": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+      "verifier/test-stdout.txt": "fbf29e633428b4aedc4c21104171769619c3afc4d8aca7ff019bb22be2f24771"
+    },
+    "total_tokens": 997719,
+    "usage_matches_raw": true,
+    "metric_admitted": false,
+    "test_summary": {
+      "tests": 3,
+      "passed": 0,
+      "failed": 3,
+      "skipped": 0,
+      "pending": 0,
+      "other": 0,
+      "start": 1794747900.5104003,
+      "stop": 1794747900.5995548
+    },
+    "test_execution_confirmed": true,
+    "matches_healthy_oracle_digest": true,
+    "ctrf_sha256": "aebf5a2e40cd3ef6f7b9c1d512b72959944722595c76bdea328fc7242953c9de",
+    "uncached_input_tokens": 67278
+  },
+  {
+    "version": "v2",
+    "task": "exam-block-sequencing",
+    "arm": "text",
+    "status": "failed",
+    "trial": "jobs/uml-expanded/paired-five-full-skill-v2/exam-block-sequencing/text/2026-11-15__21-05-05/exam-block-sequencing__22bddce0",
+    "reward": 0.0,
+    "error": "Agent prompt exceeded wall-clock budget 1500s",
+    "error_category": "timeout",
+    "verifier_error": null,
+    "task_digest": "sha256:95ae80d185fcca7a6537462b0daf3e8ef0a867e69be8626bf67e2dc7954ad922",
+    "tool_calls": 50,
+    "trajectory": {
+      "steps": 94,
+      "tool_call_steps": 50,
+      "user_message_steps": 1,
+      "agent_message_steps": 0,
+      "agent_thought_steps": 42,
+      "other_steps": 1,
+      "event_type_counts": {
+        "user_message": 1,
+        "agent_thought": 42,
+        "tool_call": 50,
+        "agent_timeout": 1
+      },
+      "tool_call_status_counts": {
+        "completed": 48,
+        "failed": 2
+      },
+      "partial_trajectory": false,
+      "trajectory_source": "acp"
+    },
+    "input_tokens": 2761373,
+    "output_tokens": 46744,
+    "cached_tokens": 2610944,
+    "estimated_cost_usd": 0.116887164,
+    "agent_seconds": 1500.1,
+    "timing": {
+      "slot_wait": 0.0,
+      "environment_setup": 16.1,
+      "install_agent": 0.778,
+      "sandbox_ready": 19.655,
+      "proxy_health_wait": 0.0,
+      "firewall_power": 0.064,
+      "cloud_metadata_block": 0.719,
+      "acp_connect": 1.861,
+      "agent_setup": 2.7,
+      "agent_execution": 1500.1,
+      "harden_before_verify": {
+        "kill_sandbox_user_procs": 0.034,
+        "restore_disarmed_delegates": 0.05,
+        "clear_verifier_output": 0.0,
+        "prepare_app_dir": 0.0,
+        "reclaim_disk": 0.02,
+        "freeze_workspace": 0.14,
+        "cleanup_conftests": 0.12,
+        "build_verifier_env": 0.482,
+        "total": 1.237
+      },
+      "verifier": 1.9,
+      "agent_stop_to_reward": 9.176,
+      "provider_wait": 285.4,
+      "provider_retry_wait": 0.0,
+      "agent_without_provider_wait": 1214.7,
+      "cleanup": 1.166,
+      "total": 1533.0
+    },
+    "delivery_valid": false,
+    "main_calls": 43,
+    "helper_calls": 1,
+    "delivery_errors": [
+      "experiment_fidelity/skill_delivery: provider rejected main call at line 45"
+    ],
+    "actual_versions": {
+      "schema": 1,
+      "identity": {
+        "agent": "opencode",
+        "harness": "acp",
+        "install_sha256": "c67e56103012b7e12464dc28773188bfd283de83ec2f2cefb0dcc2000b7b2a2d"
+      },
+      "adapter": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      },
+      "cli": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      },
+      "engine": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      }
+    },
+    "raw_usage": {
+      "calls": 45,
+      "input": 2761373,
+      "output": 46744,
+      "cached": 2610944,
+      "complete": false
+    },
+    "shared_tools_confirmed": true,
+    "evidence_sha256": {
+      "result.json": "aac2d810bc047f82c3ba665df6be1a01cf63a384e58dae5f083510432ef0ebef",
+      "skill-delivery.json": "e99578db0eb542c5e7fc204c6eb3686637398d700b1e07b6141b52517b689e9a",
+      "trajectory/llm_trajectory.jsonl": "6ec85c47c6bbe59511192323299ce9a6f4885b38705c6c95963b1a86621c2073",
+      "trajectory/acp_trajectory.jsonl": "058926f116d70b29aace320090edd859f5f39595967ad2ada62b012f90986ba4",
+      "shared-opencode.json": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+      "verifier/test-stdout.txt": "3da84799132553572664bb629dc118b1bcbdf735adff2787c91ea9bc8c188626"
+    },
+    "total_tokens": 2808117,
+    "usage_matches_raw": false,
+    "metric_admitted": false,
+    "test_summary": {
+      "tests": 3,
+      "passed": 0,
+      "failed": 3,
+      "skipped": 0,
+      "pending": 0,
+      "other": 0,
+      "start": 1794749436.8420553,
+      "stop": 1794749436.9357355
+    },
+    "test_execution_confirmed": true,
+    "matches_healthy_oracle_digest": true,
+    "ctrf_sha256": "7c0af46689cb3d2f0fb3fb1a929fc959b848016ed36d328620ae0ae3dbfe74b1",
+    "uncached_input_tokens": 150429
+  },
+  {
+    "version": "v2",
+    "task": "manufacturing-fjsp-optimization",
+    "arm": "text",
+    "status": "finished",
+    "trial": "jobs/uml-expanded/paired-five-full-skill-v2/manufacturing-fjsp-optimization/text/2026-11-15__21-30-42/manufacturing-fjsp-optimization__d46a53fb",
+    "reward": 1.0,
+    "error": null,
+    "error_category": null,
+    "verifier_error": null,
+    "task_digest": "sha256:fcbecdd0787726916a1072273fe8571639e2ee7d12cb1f33afdee25e08dc57af",
+    "tool_calls": 15,
+    "trajectory": {
+      "steps": 28,
+      "tool_call_steps": 15,
+      "user_message_steps": 1,
+      "agent_message_steps": 3,
+      "agent_thought_steps": 9,
+      "other_steps": 0,
+      "event_type_counts": {
+        "user_message": 1,
+        "agent_message": 3,
+        "tool_call": 15,
+        "agent_thought": 9
+      },
+      "tool_call_status_counts": {
+        "completed": 14,
+        "failed": 1
+      },
+      "partial_trajectory": false,
+      "trajectory_source": "acp"
+    },
+    "input_tokens": 296209,
+    "output_tokens": 29785,
+    "cached_tokens": 280320,
+    "estimated_cost_usd": 0.04219062,
+    "agent_seconds": 494.1,
+    "timing": {
+      "slot_wait": 0.0,
+      "environment_setup": 15.8,
+      "install_agent": 0.584,
+      "sandbox_ready": 18.729,
+      "proxy_health_wait": 0.0,
+      "firewall_power": 0.061,
+      "cloud_metadata_block": 0.647,
+      "acp_connect": 1.299,
+      "agent_setup": 2.1,
+      "agent_execution": 494.1,
+      "harden_before_verify": {
+        "kill_sandbox_user_procs": 0.035,
+        "restore_disarmed_delegates": 0.05,
+        "clear_verifier_output": 0.0,
+        "prepare_app_dir": 0.0,
+        "reclaim_disk": 0.02,
+        "freeze_workspace": 0.07,
+        "cleanup_conftests": 0.09,
+        "build_verifier_env": 0.374,
+        "total": 0.877
+      },
+      "verifier": 1.7,
+      "agent_stop_to_reward": 1.947,
+      "provider_wait": 156.0,
+      "provider_retry_wait": 0.0,
+      "agent_without_provider_wait": 338.1,
+      "cleanup": 0.994,
+      "total": 518.1
+    },
+    "delivery_valid": true,
+    "main_calls": 12,
+    "helper_calls": 1,
+    "delivery_errors": [],
+    "actual_versions": {
+      "schema": 1,
+      "identity": {
+        "agent": "opencode",
+        "harness": "acp",
+        "install_sha256": "c67e56103012b7e12464dc28773188bfd283de83ec2f2cefb0dcc2000b7b2a2d"
+      },
+      "adapter": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      },
+      "cli": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      },
+      "engine": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      }
+    },
+    "raw_usage": {
+      "calls": 13,
+      "input": 296209,
+      "output": 29785,
+      "cached": 280320,
+      "complete": true
+    },
+    "shared_tools_confirmed": true,
+    "evidence_sha256": {
+      "result.json": "4b3735a78f680949bac0ee44cdd6cbf723b15b9a5eb072a3b9ef6045c1335fb6",
+      "skill-delivery.json": "061d34d33ecc4dbc30666191a0342e734b2dc2fe93fc49fd8458e33fb50b395e",
+      "trajectory/llm_trajectory.jsonl": "8eb91a217d68a4030ee3e1eb589c1e507e1c3dba94d614b5c140b2b34b08a2c5",
+      "trajectory/acp_trajectory.jsonl": "36e93f36b75c8550491754c3945d06fe396505ae6765c62ef1786cb1bd282d25",
+      "shared-opencode.json": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+      "verifier/test-stdout.txt": "a56ac6703531ae00f16a025f6220ee062c30a50ad6b3bf667b975bba865399c6"
+    },
+    "total_tokens": 325994,
+    "usage_matches_raw": true,
+    "metric_admitted": true,
+    "test_summary": {
+      "tests": 15,
+      "passed": 15,
+      "failed": 0,
+      "skipped": 0,
+      "pending": 0,
+      "other": 0,
+      "start": 1794749959.9805484,
+      "stop": 1794749960.009104
+    },
+    "test_execution_confirmed": true,
+    "matches_healthy_oracle_digest": true,
+    "ctrf_sha256": "9641cb700ea1c113349dd05e4127c5174d9528a290eb42c340390d33ebf85dee",
+    "uncached_input_tokens": 15889
+  },
+  {
+    "version": "v2",
+    "task": "manufacturing-fjsp-optimization",
+    "arm": "image",
+    "status": "finished",
+    "trial": "jobs/uml-expanded/paired-five-full-skill-v2/manufacturing-fjsp-optimization/image/2026-11-15__21-39-23/manufacturing-fjsp-optimization__76670963",
+    "reward": 1.0,
+    "error": null,
+    "error_category": null,
+    "verifier_error": null,
+    "task_digest": "sha256:fcbecdd0787726916a1072273fe8571639e2ee7d12cb1f33afdee25e08dc57af",
+    "tool_calls": 26,
+    "trajectory": {
+      "steps": 51,
+      "tool_call_steps": 26,
+      "user_message_steps": 1,
+      "agent_message_steps": 3,
+      "agent_thought_steps": 21,
+      "other_steps": 0,
+      "event_type_counts": {
+        "user_message": 1,
+        "agent_message": 3,
+        "tool_call": 26,
+        "agent_thought": 21
+      },
+      "tool_call_status_counts": {
+        "completed": 26
+      },
+      "partial_trajectory": false,
+      "trajectory_source": "acp"
+    },
+    "input_tokens": 707651,
+    "output_tokens": 38463,
+    "cached_tokens": 695296,
+    "estimated_cost_usd": 0.054033876,
+    "agent_seconds": 377.4,
+    "timing": {
+      "slot_wait": 0.0,
+      "environment_setup": 17.1,
+      "install_agent": 0.579,
+      "sandbox_ready": 19.982,
+      "proxy_health_wait": 0.0,
+      "firewall_power": 0.062,
+      "cloud_metadata_block": 0.628,
+      "acp_connect": 1.227,
+      "agent_setup": 2.0,
+      "agent_execution": 377.4,
+      "harden_before_verify": {
+        "kill_sandbox_user_procs": 0.034,
+        "restore_disarmed_delegates": 0.048,
+        "clear_verifier_output": 0.0,
+        "prepare_app_dir": 0.0,
+        "reclaim_disk": 0.02,
+        "freeze_workspace": 0.08,
+        "cleanup_conftests": 0.08,
+        "build_verifier_env": 0.404,
+        "total": 0.896
+      },
+      "verifier": 1.6,
+      "agent_stop_to_reward": 1.925,
+      "provider_wait": 215.4,
+      "provider_retry_wait": 0.0,
+      "agent_without_provider_wait": 162.0,
+      "cleanup": 1.118,
+      "total": 402.6
+    },
+    "delivery_valid": true,
+    "main_calls": 22,
+    "helper_calls": 1,
+    "delivery_errors": [],
+    "actual_versions": {
+      "schema": 1,
+      "identity": {
+        "agent": "opencode",
+        "harness": "acp",
+        "install_sha256": "c67e56103012b7e12464dc28773188bfd283de83ec2f2cefb0dcc2000b7b2a2d"
+      },
+      "adapter": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      },
+      "cli": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      },
+      "engine": {
+        "package": "opencode-ai",
+        "version": "1.19.5",
+        "source": "installed-package"
+      }
+    },
+    "raw_usage": {
+      "calls": 23,
+      "input": 707651,
+      "output": 38463,
+      "cached": 695296,
+      "complete": true
+    },
+    "shared_tools_confirmed": true,
+    "evidence_sha256": {
+      "result.json": "47b61ae1452cba48e4df50ff230e763efdf5622d277e307d021096a18417bca4",
+      "skill-delivery.json": "a6831c8b39bdbd7569847ee5bfa39fa61b8023df4ca7b219f5d3c49b84b65979",
+      "trajectory/llm_trajectory.jsonl": "aab9b68c25e14e8c71a71f82ef6696bd3c329f1c9f3449628c324a747c503bc2",
+      "trajectory/acp_trajectory.jsonl": "6b8f204291bff5d4023e06b64f70af9c0df2b8413f667231e8040e0f326c79fd",
+      "shared-opencode.json": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+      "verifier/test-stdout.txt": "a56ac6703531ae00f16a025f6220ee062c30a50ad6b3bf667b975bba865399c6"
+    },
+    "total_tokens": 746114,
+    "usage_matches_raw": true,
+    "metric_admitted": true,
+    "test_summary": {
+      "tests": 15,
+      "passed": 15,
+      "failed": 0,
+      "skipped": 0,
+      "pending": 0,
+      "other": 0,
+      "start": 1794750364.6885722,
+      "stop": 1794750364.7165117
+    },
+    "test_execution_confirmed": true,
+    "matches_healthy_oracle_digest": true,
+    "ctrf_sha256": "7811a9e9af30c09f0e07cccb1e678be00083f34621941c1f0f1785a3aaeb853b",
+    "uncached_input_tokens": 12355
+  }
+]

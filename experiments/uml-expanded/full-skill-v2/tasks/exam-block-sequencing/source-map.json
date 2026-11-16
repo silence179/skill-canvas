@@ -1,0 +1,132 @@
+{
+  "mip-solver-and-solution-audit": {
+    "S1": {
+      "path": "mip-solver-and-solution-audit/SKILL.md",
+      "sha256": "34ab1c8cd80ab01f65ad7287776994efeceb15fe454c36216d7d4ba2fee442f7",
+      "bytes": 10797,
+      "lines": 285,
+      "review": "Preserve installed-solver discovery, solver-required method, incumbent extraction, truthful certificates, exact disk reload before metrics, objective consistency and explicit formulation contents.",
+      "headings": [
+        {
+          "line": 6,
+          "heading": "# MIP Solver and Solution Audit"
+        },
+        {
+          "line": 8,
+          "heading": "## Core principle"
+        },
+        {
+          "line": 17,
+          "heading": "## Solver discovery"
+        },
+        {
+          "line": 42,
+          "heading": "## Minimal PySCIPOpt pattern"
+        },
+        {
+          "line": 50,
+          "heading": "# create binary/integer variables"
+        },
+        {
+          "line": 51,
+          "heading": "# add hard constraints"
+        },
+        {
+          "line": 52,
+          "heading": "# build named objective components"
+        },
+        {
+          "line": 78,
+          "heading": "## Incumbent, bound, and gap"
+        },
+        {
+          "line": 105,
+          "heading": "## Extraction discipline"
+        },
+        {
+          "line": 131,
+          "heading": "## Independent metric evaluator"
+        },
+        {
+          "line": 203,
+          "heading": "## Post-processing rule"
+        },
+        {
+          "line": 214,
+          "heading": "## Writing a formulation report"
+        },
+        {
+          "line": 250,
+          "heading": "## Output consistency workflow"
+        },
+        {
+          "line": 266,
+          "heading": "## Common mistakes"
+        }
+      ]
+    }
+  },
+  "ordered-window-sequencing-mip": {
+    "S1": {
+      "path": "ordered-window-sequencing-mip/SKILL.md",
+      "sha256": "0e1aa2b96b164e0cb06045b8d6b3fdd56d693c002a7dbbf8fb093bca3216c514",
+      "bytes": 10905,
+      "lines": 292,
+      "review": "Retain both representations, all linearization bounds, ordered keys, successor labels, masks, boundary conditions, active-pattern overlap and full optimized objective.",
+      "headings": [
+        {
+          "line": 6,
+          "heading": "# Ordered-Window Sequencing MIPs"
+        },
+        {
+          "line": 8,
+          "heading": "## Core idea"
+        },
+        {
+          "line": 19,
+          "heading": "## Modeling workflow"
+        },
+        {
+          "line": 39,
+          "heading": "## Preserve ordered tuple data"
+        },
+        {
+          "line": 55,
+          "heading": "# Wrong for directed or ordered sequence costs unless explicitly allowed."
+        },
+        {
+          "line": 87,
+          "heading": "## Assignment-linked local windows"
+        },
+        {
+          "line": 114,
+          "heading": "## Direct ordered-window model"
+        },
+        {
+          "line": 135,
+          "heading": "## Prefix/suffix continuity"
+        },
+        {
+          "line": 156,
+          "heading": "## Overlap penalties"
+        },
+        {
+          "line": 187,
+          "heading": "## Active-pattern overlap rule"
+        },
+        {
+          "line": 230,
+          "heading": "## Start-position masks and boundary rules"
+        },
+        {
+          "line": 262,
+          "heading": "## Objective semantics audit"
+        },
+        {
+          "line": 279,
+          "heading": "## Common mistakes"
+        }
+      ]
+    }
+  }
+}

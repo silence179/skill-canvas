@@ -1,0 +1,42 @@
+@startuml
+!pragma useVerticalIf on
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+skinparam defaultFontName SansSerif
+skinparam defaultFontSize 17
+skinparam ArrowColor #46566F
+skinparam activity {
+  BackgroundColor #EEF5FF
+  BorderColor #365A82
+  FontColor #152B44
+  DiamondBackgroundColor #FFF3D6
+  DiamondBorderColor #BA842A
+}
+skinparam noteBackgroundColor #FFF8DE
+skinparam noteBorderColor #BEA45C
+skinparam wrapWidth 370
+title MPC tuning | select parameters, then evaluate a trial
+start
+partition "Parameter selection before a control trial [S1]" {
+ :Choose horizon considering response and compute;\nGUIDE: N=5..15 typical for dt=0.01s;\nN<5 may reject disturbances poorly; N>20 costs more;
+ note right
+  S1 also gives N approx 2..3 * settling_time / dt.
+  Treat these as context-dependent guidelines,
+  not simultaneously enforced hard constraints.
+ end note
+ :Set Q tension weights 100/T_ref^2;\nvelocity weights 0.1/v_ref^2;\nR = (0.01..0.1)*I [S1];
+ :Choose LQR terminal cost with consistent\ncontinuous/discrete model conventions [S1];
+ note right
+  S1 shows solve_continuous_are(A,B,Q,R).
+  Check the supplied A,B convention before use.
+ end note
+}
+:Run a trial with this fixed parameter choice;\nobserve tracking, effort and compute cost [S1];
+if (Trial indicates retuning?) then (yes)
+ :Plan the next trial: higher Q gives faster\ntracking / more effort; higher R gives smoother\ncontrol / slower response; reconsider N [S1];
+else (no)
+ :Retain selected N,Q,R and terminal cost [S1];
+endif
+stop
+footer Full-skill v2 | S1: SKILL.md
+@enduml

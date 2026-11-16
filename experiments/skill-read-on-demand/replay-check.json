@@ -1,0 +1,163 @@
+{
+  "valid": true,
+  "scope": "Offline reconstruction only. No requests sent, no agent actions or scores regenerated.",
+  "paid_model_calls": 0,
+  "original_campaign": "/home/silence/myfiles/SkillCanvas/jobs/skill-on-demand-v1/two-task-2026-11-16",
+  "rows": [
+    {
+      "task": "crystallographic-wyckoff-position-analysis",
+      "original_arm": "text",
+      "original_images_delivered": false,
+      "main_calls": 12,
+      "recognized_read_events": [
+        {
+          "skill": "pymatgen",
+          "trigger": "file_read",
+          "tool": "bash",
+          "content_match": "complete",
+          "call_id": "call_00_cHZK4bxOVF6ZrCYhKYiM3589",
+          "tool_result_index": 19,
+          "image_attached": true,
+          "first_captured_request": 9
+        }
+      ],
+      "recognized_skills": [
+        "pymatgen"
+      ],
+      "would_deliver_image": true,
+      "first_image_request": 9,
+      "trace_sha256": "12ccfe65b956089e9daeaf8094e3facb9a1f66892cc5cf47308943b40aaf8d40"
+    },
+    {
+      "task": "crystallographic-wyckoff-position-analysis",
+      "original_arm": "image",
+      "original_images_delivered": false,
+      "main_calls": 9,
+      "recognized_read_events": [],
+      "recognized_skills": [],
+      "would_deliver_image": false,
+      "first_image_request": null,
+      "trace_sha256": "1a80676b9dbd34039ac4b07d24f1f0d41f7e5768236019281d5090cac4fc9569"
+    },
+    {
+      "task": "r2r-mpc-control",
+      "original_arm": "image",
+      "original_images_delivered": false,
+      "main_calls": 21,
+      "recognized_read_events": [
+        {
+          "skill": "finite-horizon-lqr",
+          "trigger": "file_read",
+          "tool": "bash",
+          "content_match": "complete",
+          "call_id": "call_00_5PlX3jiwsBXrCeckbwSF4234",
+          "tool_result_index": 32,
+          "image_attached": true,
+          "first_captured_request": 17
+        },
+        {
+          "skill": "integral-action-design",
+          "trigger": "file_read",
+          "tool": "bash",
+          "content_match": "complete",
+          "call_id": "call_00_5PlX3jiwsBXrCeckbwSF4234",
+          "tool_result_index": 32,
+          "image_attached": true,
+          "first_captured_request": 17
+        },
+        {
+          "skill": "mpc-horizon-tuning",
+          "trigger": "file_read",
+          "tool": "bash",
+          "content_match": "complete",
+          "call_id": "call_00_5PlX3jiwsBXrCeckbwSF4234",
+          "tool_result_index": 32,
+          "image_attached": true,
+          "first_captured_request": 17
+        },
+        {
+          "skill": "state-space-linearization",
+          "trigger": "file_read",
+          "tool": "bash",
+          "content_match": "complete",
+          "call_id": "call_00_5PlX3jiwsBXrCeckbwSF4234",
+          "tool_result_index": 32,
+          "image_attached": true,
+          "first_captured_request": 17
+        }
+      ],
+      "recognized_skills": [
+        "finite-horizon-lqr",
+        "integral-action-design",
+        "mpc-horizon-tuning",
+        "state-space-linearization"
+      ],
+      "would_deliver_image": true,
+      "first_image_request": 17,
+      "trace_sha256": "1388ffbe8d02af9e16aee9da48247f3cfd8167c3c44cabda532008c2d69b7f72"
+    },
+    {
+      "task": "r2r-mpc-control",
+      "original_arm": "text",
+      "original_images_delivered": false,
+      "main_calls": 24,
+      "recognized_read_events": [
+        {
+          "skill": "finite-horizon-lqr",
+          "trigger": "file_read",
+          "tool": "bash",
+          "content_match": "complete",
+          "call_id": "call_00_dDJRSnRiH2lGOncAiMCQ1785",
+          "tool_result_index": 9,
+          "image_attached": true,
+          "first_captured_request": 5
+        },
+        {
+          "skill": "integral-action-design",
+          "trigger": "file_read",
+          "tool": "bash",
+          "content_match": "complete",
+          "call_id": "call_00_dDJRSnRiH2lGOncAiMCQ1785",
+          "tool_result_index": 9,
+          "image_attached": true,
+          "first_captured_request": 5
+        },
+        {
+          "skill": "mpc-horizon-tuning",
+          "trigger": "file_read",
+          "tool": "bash",
+          "content_match": "complete",
+          "call_id": "call_00_dDJRSnRiH2lGOncAiMCQ1785",
+          "tool_result_index": 9,
+          "image_attached": true,
+          "first_captured_request": 5
+        },
+        {
+          "skill": "state-space-linearization",
+          "trigger": "file_read",
+          "tool": "bash",
+          "content_match": "complete",
+          "call_id": "call_00_dDJRSnRiH2lGOncAiMCQ1785",
+          "tool_result_index": 9,
+          "image_attached": true,
+          "first_captured_request": 5
+        }
+      ],
+      "recognized_skills": [
+        "finite-horizon-lqr",
+        "integral-action-design",
+        "mpc-horizon-tuning",
+        "state-space-linearization"
+      ],
+      "would_deliver_image": true,
+      "first_image_request": 5,
+      "trace_sha256": "efa155c2822d9b0e82cab7799776e77e0013f51ffc812901b710d6a6fe343b34"
+    }
+  ],
+  "code_sha256": {
+    "protocol.py": "72f8efe3a3a67e2cb6caecd26829f530ee1078bd494e8cc14e5f21c8c0c97fc8",
+    "prepare.py": "ac285d20495fb5ef6dda6ec54444e8ac9746f3ba41335dc1334e84166ac7889c",
+    "runner.py": "7091cf8c6bb86464c8b552a414bdd53bc51531eeb8f0573635cf01528de5804e",
+    "replay_check.py": "4b4facb361d780e355d8ad20ede50609f5df034af474b5d3f7ef56b1845ccb1d"
+  }
+}

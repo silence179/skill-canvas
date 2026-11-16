@@ -1,0 +1,44 @@
+@startuml
+!pragma useVerticalIf on
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+skinparam defaultFontName SansSerif
+skinparam defaultFontSize 18
+skinparam ArrowColor #46566F
+skinparam activity {
+  BackgroundColor #EEF5FF
+  BorderColor #365A82
+  FontColor #152B44
+  DiamondBackgroundColor #FFF3D6
+  DiamondBorderColor #BA842A
+}
+skinparam noteBackgroundColor #FFF8DE
+skinparam noteBorderColor #BEA45C
+skinparam wrapWidth 360
+title MIP execution - one solution, one evaluator, truthful certificate
+start
+:Discover callable installed solvers;\ntry PySCIPOpt before concluding none is available;
+:Build intended integer model, hard constraints,\nlinked auxiliary variables and complete objective;
+:Set time limit; optimize;\ncapture status, incumbent, bound and gap;
+if (Feasible incumbent exists?) then (yes)
+  :Extract assignments from the selected incumbent;\nuse model.getSolVal(sol,var), not var.getVal();
+else (no)
+  :Report no feasible solution;\ndo not invent a certificate or valid schedule;
+  stop
+endif
+:Validate extracted hard rules, counts,\neligibility, finite numbers and no duplicates;
+:Use pure input + final-output evaluator;\ncompare its objective to the solver objective;
+if (Post-processing changed the solution?) then (yes)
+  :Disclose change; recompute all metrics;\ndo not transfer old optimality claims blindly;
+endif
+:Write one final schedule / assignment;
+:RELOAD that exact disk artifact;\nvalidate and recompute metrics before writing metrics file;
+:Write formulation and report for that same solution;\ninclude variables, constraints, linearization,\nobjective, method, status, limit, bound and gap;
+if (Solver certified optimality?) then (yes)
+  :Report the supported optimality claim;
+else (time / other limit)
+  :Report a feasible incumbent and its known gap;
+endif
+:Reload outputs again; confirm metric consistency;\nfix extraction / semantics before submission if mismatched;
+stop
+@enduml

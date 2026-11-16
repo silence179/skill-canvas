@@ -1,0 +1,992 @@
+{
+  "schema": 3,
+  "frozen": true,
+  "created_at_utc": "2026-11-15T14:52:46.821070+00:00",
+  "generation_unit": "skill",
+  "intervention": "exactly one skill PNG replaced; all other bundle bytes identical",
+  "generator_sha256": {
+    "materials.py": "c423c039540c917df9081cf1aa43fa99b0187486b49763cb703d28e1e408d80d",
+    "diagrams.py": "b1137d4a5863d5c1f6285ad2c36bcf2d7db1938a0b36ea4478fba3b12bac9774"
+  },
+  "old_manifest_sha256": "480970c3c740126a3ab2d82e3493319b28f603bbaa5d1563e3b7ab0de02bbe1b",
+  "renderer": "dot - graphviz version 16.1.0 (0)",
+  "tasks": {
+    "llm-prefix-cache-replay": {
+      "source_files": {
+        "cache-policy-comparison/SKILL.md": "353a7215727695b01e48ea69e63ed92c0b32174534a6bda38cee9b91382e5963",
+        "prefix-cache-replay/SKILL.md": "28ced940ec272cc01cf06519912077492d948b10e08a933acba12dd9907220cf"
+      },
+      "skills": [
+        "cache-policy-comparison",
+        "prefix-cache-replay"
+      ],
+      "variants": {
+        "baseline": {
+          "bundle": "tasks/llm-prefix-cache-replay/variants/baseline/bundle",
+          "files": {
+            "cache-policy-comparison/GUIDE.md": "353a7215727695b01e48ea69e63ed92c0b32174534a6bda38cee9b91382e5963",
+            "cache-policy-comparison/SKILL.md": "7e25bcbe0d1ff3abb0aa5d2a69f0ac5a7927696b7b16358ae514dbecbff99ea4",
+            "cache-policy-comparison/assets/flowchart.png": "985529ae3381d1b5867612b01a88e5ce13cd0842d4e65d51bd06cf693806ca03",
+            "prefix-cache-replay/GUIDE.md": "28ced940ec272cc01cf06519912077492d948b10e08a933acba12dd9907220cf",
+            "prefix-cache-replay/SKILL.md": "2b6f1eca4da90bc63af7d2f1247f312a4547b782a3aca6b440c51226774b1bcc",
+            "prefix-cache-replay/assets/flowchart.png": "617a6c6cd5cc7614e2a9e1deddce402da00cc81e7bb57d20385022dbbdb7cfc9"
+          },
+          "changed_skill": null
+        },
+        "prefix-cache-replay": {
+          "bundle": "tasks/llm-prefix-cache-replay/variants/prefix-cache-replay/bundle",
+          "files": {
+            "cache-policy-comparison/GUIDE.md": "353a7215727695b01e48ea69e63ed92c0b32174534a6bda38cee9b91382e5963",
+            "cache-policy-comparison/SKILL.md": "7e25bcbe0d1ff3abb0aa5d2a69f0ac5a7927696b7b16358ae514dbecbff99ea4",
+            "cache-policy-comparison/assets/flowchart.png": "985529ae3381d1b5867612b01a88e5ce13cd0842d4e65d51bd06cf693806ca03",
+            "prefix-cache-replay/GUIDE.md": "28ced940ec272cc01cf06519912077492d948b10e08a933acba12dd9907220cf",
+            "prefix-cache-replay/SKILL.md": "2b6f1eca4da90bc63af7d2f1247f312a4547b782a3aca6b440c51226774b1bcc",
+            "prefix-cache-replay/assets/flowchart.png": "7b5d4157a967913cedd1b53c063b82c7a977e61f39542b306ae433bbee9a073c"
+          },
+          "changed_skill": "prefix-cache-replay"
+        }
+      }
+    },
+    "energy-market-pricing": {
+      "source_files": {
+        "dc-power-flow/SKILL.md": "461a4a93c6baf5f84eaa16881b11d76d0542907c8bb50745eceeb21d217e480e",
+        "dc-power-flow/scripts/build_b_matrix.py": "8ed65d06fe16b87b13eadf33397b3986de95afa515ec5dcb6f22df8201a44095",
+        "economic-dispatch/SKILL.md": "907586a8ab5d697d20efaafb190809fbe737bcbac4082c0f94458c1e6489b82f",
+        "economic-dispatch/references/cost-functions.md": "a9bf78f5dd90f559d50872d526c1c7bf6685f6c8147c95ec701d1628d318d0ee",
+        "locational-marginal-prices/SKILL.md": "c48851e863afad9f416e52d57f5b065cc9a7a1ab2146b829abae4ac85412f2ac",
+        "power-flow-data/SKILL.md": "7c6544423d4106746ca831e431e6725292015c768e7958a168c57db140051846"
+      },
+      "skills": [
+        "dc-power-flow",
+        "economic-dispatch",
+        "locational-marginal-prices",
+        "power-flow-data"
+      ],
+      "variants": {
+        "baseline": {
+          "bundle": "tasks/energy-market-pricing/variants/baseline/bundle",
+          "files": {
+            "dc-power-flow/GUIDE.md": "461a4a93c6baf5f84eaa16881b11d76d0542907c8bb50745eceeb21d217e480e",
+            "dc-power-flow/SKILL.md": "293bdfe7c3b44e972e1c300264d7fa66c21bb973420b03913d26f92f91537085",
+            "dc-power-flow/assets/flowchart.png": "71a9005073ac48f740500ee9005e01d0be0a417c01410bd7af7ef00b19130cb7",
+            "dc-power-flow/scripts/build_b_matrix.py": "8ed65d06fe16b87b13eadf33397b3986de95afa515ec5dcb6f22df8201a44095",
+            "economic-dispatch/GUIDE.md": "907586a8ab5d697d20efaafb190809fbe737bcbac4082c0f94458c1e6489b82f",
+            "economic-dispatch/SKILL.md": "3ea95a07d7ccaa64182ec40d7f58432799478b7574df1ac2f96dc2fe6897476a",
+            "economic-dispatch/assets/flowchart.png": "c6df0d528db63d3b5f109d843062effd1818dbe7e1de4e0adeb9eba96ab7f5bc",
+            "economic-dispatch/references/cost-functions.md": "a9bf78f5dd90f559d50872d526c1c7bf6685f6c8147c95ec701d1628d318d0ee",
+            "locational-marginal-prices/GUIDE.md": "c48851e863afad9f416e52d57f5b065cc9a7a1ab2146b829abae4ac85412f2ac",
+            "locational-marginal-prices/SKILL.md": "eb99a6a724a09d10bcb9bf4369c7da2dc9d213abdf2e15b53fe4da08cf4b2f7b",
+            "locational-marginal-prices/assets/flowchart.png": "2ad20c6d835fe6f363346c6fdcfd03cf90dafd953f817af997c6cabc4d094057",
+            "power-flow-data/GUIDE.md": "7c6544423d4106746ca831e431e6725292015c768e7958a168c57db140051846",
+            "power-flow-data/SKILL.md": "56fb9dc00f8b075af6117017042485a3a9c38cc27bab8ead0d6854f79dd9d21c",
+            "power-flow-data/assets/flowchart.png": "c31a490fda9fab3781719075f960f24075e5d9d1f3fe6e534147a98cf9c55003"
+          },
+          "changed_skill": null
+        },
+        "dc-power-flow": {
+          "bundle": "tasks/energy-market-pricing/variants/dc-power-flow/bundle",
+          "files": {
+            "dc-power-flow/GUIDE.md": "461a4a93c6baf5f84eaa16881b11d76d0542907c8bb50745eceeb21d217e480e",
+            "dc-power-flow/SKILL.md": "293bdfe7c3b44e972e1c300264d7fa66c21bb973420b03913d26f92f91537085",
+            "dc-power-flow/assets/flowchart.png": "11cd84101d1349f0c545b6b516711cb188f4b1aeb56ce17e46487cbb760a38ee",
+            "dc-power-flow/scripts/build_b_matrix.py": "8ed65d06fe16b87b13eadf33397b3986de95afa515ec5dcb6f22df8201a44095",
+            "economic-dispatch/GUIDE.md": "907586a8ab5d697d20efaafb190809fbe737bcbac4082c0f94458c1e6489b82f",
+            "economic-dispatch/SKILL.md": "3ea95a07d7ccaa64182ec40d7f58432799478b7574df1ac2f96dc2fe6897476a",
+            "economic-dispatch/assets/flowchart.png": "c6df0d528db63d3b5f109d843062effd1818dbe7e1de4e0adeb9eba96ab7f5bc",
+            "economic-dispatch/references/cost-functions.md": "a9bf78f5dd90f559d50872d526c1c7bf6685f6c8147c95ec701d1628d318d0ee",
+            "locational-marginal-prices/GUIDE.md": "c48851e863afad9f416e52d57f5b065cc9a7a1ab2146b829abae4ac85412f2ac",
+            "locational-marginal-prices/SKILL.md": "eb99a6a724a09d10bcb9bf4369c7da2dc9d213abdf2e15b53fe4da08cf4b2f7b",
+            "locational-marginal-prices/assets/flowchart.png": "2ad20c6d835fe6f363346c6fdcfd03cf90dafd953f817af997c6cabc4d094057",
+            "power-flow-data/GUIDE.md": "7c6544423d4106746ca831e431e6725292015c768e7958a168c57db140051846",
+            "power-flow-data/SKILL.md": "56fb9dc00f8b075af6117017042485a3a9c38cc27bab8ead0d6854f79dd9d21c",
+            "power-flow-data/assets/flowchart.png": "c31a490fda9fab3781719075f960f24075e5d9d1f3fe6e534147a98cf9c55003"
+          },
+          "changed_skill": "dc-power-flow"
+        },
+        "economic-dispatch": {
+          "bundle": "tasks/energy-market-pricing/variants/economic-dispatch/bundle",
+          "files": {
+            "dc-power-flow/GUIDE.md": "461a4a93c6baf5f84eaa16881b11d76d0542907c8bb50745eceeb21d217e480e",
+            "dc-power-flow/SKILL.md": "293bdfe7c3b44e972e1c300264d7fa66c21bb973420b03913d26f92f91537085",
+            "dc-power-flow/assets/flowchart.png": "71a9005073ac48f740500ee9005e01d0be0a417c01410bd7af7ef00b19130cb7",
+            "dc-power-flow/scripts/build_b_matrix.py": "8ed65d06fe16b87b13eadf33397b3986de95afa515ec5dcb6f22df8201a44095",
+            "economic-dispatch/GUIDE.md": "907586a8ab5d697d20efaafb190809fbe737bcbac4082c0f94458c1e6489b82f",
+            "economic-dispatch/SKILL.md": "3ea95a07d7ccaa64182ec40d7f58432799478b7574df1ac2f96dc2fe6897476a",
+            "economic-dispatch/assets/flowchart.png": "ec69547a95477261f4925c8c3263d327a7cc1a078f8a006afac83716b0371e60",
+            "economic-dispatch/references/cost-functions.md": "a9bf78f5dd90f559d50872d526c1c7bf6685f6c8147c95ec701d1628d318d0ee",
+            "locational-marginal-prices/GUIDE.md": "c48851e863afad9f416e52d57f5b065cc9a7a1ab2146b829abae4ac85412f2ac",
+            "locational-marginal-prices/SKILL.md": "eb99a6a724a09d10bcb9bf4369c7da2dc9d213abdf2e15b53fe4da08cf4b2f7b",
+            "locational-marginal-prices/assets/flowchart.png": "2ad20c6d835fe6f363346c6fdcfd03cf90dafd953f817af997c6cabc4d094057",
+            "power-flow-data/GUIDE.md": "7c6544423d4106746ca831e431e6725292015c768e7958a168c57db140051846",
+            "power-flow-data/SKILL.md": "56fb9dc00f8b075af6117017042485a3a9c38cc27bab8ead0d6854f79dd9d21c",
+            "power-flow-data/assets/flowchart.png": "c31a490fda9fab3781719075f960f24075e5d9d1f3fe6e534147a98cf9c55003"
+          },
+          "changed_skill": "economic-dispatch"
+        },
+        "locational-marginal-prices": {
+          "bundle": "tasks/energy-market-pricing/variants/locational-marginal-prices/bundle",
+          "files": {
+            "dc-power-flow/GUIDE.md": "461a4a93c6baf5f84eaa16881b11d76d0542907c8bb50745eceeb21d217e480e",
+            "dc-power-flow/SKILL.md": "293bdfe7c3b44e972e1c300264d7fa66c21bb973420b03913d26f92f91537085",
+            "dc-power-flow/assets/flowchart.png": "71a9005073ac48f740500ee9005e01d0be0a417c01410bd7af7ef00b19130cb7",
+            "dc-power-flow/scripts/build_b_matrix.py": "8ed65d06fe16b87b13eadf33397b3986de95afa515ec5dcb6f22df8201a44095",
+            "economic-dispatch/GUIDE.md": "907586a8ab5d697d20efaafb190809fbe737bcbac4082c0f94458c1e6489b82f",
+            "economic-dispatch/SKILL.md": "3ea95a07d7ccaa64182ec40d7f58432799478b7574df1ac2f96dc2fe6897476a",
+            "economic-dispatch/assets/flowchart.png": "c6df0d528db63d3b5f109d843062effd1818dbe7e1de4e0adeb9eba96ab7f5bc",
+            "economic-dispatch/references/cost-functions.md": "a9bf78f5dd90f559d50872d526c1c7bf6685f6c8147c95ec701d1628d318d0ee",
+            "locational-marginal-prices/GUIDE.md": "c48851e863afad9f416e52d57f5b065cc9a7a1ab2146b829abae4ac85412f2ac",
+            "locational-marginal-prices/SKILL.md": "eb99a6a724a09d10bcb9bf4369c7da2dc9d213abdf2e15b53fe4da08cf4b2f7b",
+            "locational-marginal-prices/assets/flowchart.png": "ab7192389b69198590639f1ac616e6244b4a8b679d1387da967ff147dfd817c3",
+            "power-flow-data/GUIDE.md": "7c6544423d4106746ca831e431e6725292015c768e7958a168c57db140051846",
+            "power-flow-data/SKILL.md": "56fb9dc00f8b075af6117017042485a3a9c38cc27bab8ead0d6854f79dd9d21c",
+            "power-flow-data/assets/flowchart.png": "c31a490fda9fab3781719075f960f24075e5d9d1f3fe6e534147a98cf9c55003"
+          },
+          "changed_skill": "locational-marginal-prices"
+        }
+      }
+    },
+    "r2r-mpc-control": {
+      "source_files": {
+        "finite-horizon-lqr/SKILL.md": "8ce87c503270a401f9bce17518a8f11d8cc421de2f15984678ddeb0b8c27575f",
+        "integral-action-design/SKILL.md": "e3368f03c7c53e47f650272a2225602b0d437ae82c825b049291b02006d43220",
+        "mpc-horizon-tuning/SKILL.md": "fa85a6c22e728d92176f4aace0a3ad65e280bd4ecd061d1037a042b29ec47123",
+        "state-space-linearization/SKILL.md": "1cd18b96f4f55ff004aa92c0acbf0cab2744032c94a42d750ce749055038835b"
+      },
+      "skills": [
+        "finite-horizon-lqr",
+        "integral-action-design",
+        "mpc-horizon-tuning",
+        "state-space-linearization"
+      ],
+      "variants": {
+        "baseline": {
+          "bundle": "tasks/r2r-mpc-control/variants/baseline/bundle",
+          "files": {
+            "finite-horizon-lqr/GUIDE.md": "8ce87c503270a401f9bce17518a8f11d8cc421de2f15984678ddeb0b8c27575f",
+            "finite-horizon-lqr/SKILL.md": "fdd69d0d797ae8b7761690db7f052460313c32b29c16ee513baa336d68c201df",
+            "finite-horizon-lqr/assets/flowchart.png": "42fe2a72ed5cdba47e79d5278e033dd9a6b6ee4daf5db60cb688fb2e3e2c045c",
+            "integral-action-design/GUIDE.md": "e3368f03c7c53e47f650272a2225602b0d437ae82c825b049291b02006d43220",
+            "integral-action-design/SKILL.md": "ffb492de2a955b7ea63dbe2443a700be2d2cbe3b2e82f0759aa234246b2130ef",
+            "integral-action-design/assets/flowchart.png": "85d0662bcf8380add9d3f1e1857f6a0539ac5bd7c85c13d43dec06e497c5f0c2",
+            "mpc-horizon-tuning/GUIDE.md": "fa85a6c22e728d92176f4aace0a3ad65e280bd4ecd061d1037a042b29ec47123",
+            "mpc-horizon-tuning/SKILL.md": "ac2448839467feb2d2c503aebc1b8df65db001b735bfb78777ed2df917f44191",
+            "mpc-horizon-tuning/assets/flowchart.png": "59badbc75938ce9967bd4e59004dec6825dc0b4f8e8d527dd7f3e7382d899fb4",
+            "state-space-linearization/GUIDE.md": "1cd18b96f4f55ff004aa92c0acbf0cab2744032c94a42d750ce749055038835b",
+            "state-space-linearization/SKILL.md": "afad4503f8469985862a5dbbf0c1e804cd7d5d5f1e1f394fb7e4848525e55aa8",
+            "state-space-linearization/assets/flowchart.png": "03535233b61d0a522481ba44b606a2a0caf577bca1fed6ad0117705547243945"
+          },
+          "changed_skill": null
+        },
+        "finite-horizon-lqr": {
+          "bundle": "tasks/r2r-mpc-control/variants/finite-horizon-lqr/bundle",
+          "files": {
+            "finite-horizon-lqr/GUIDE.md": "8ce87c503270a401f9bce17518a8f11d8cc421de2f15984678ddeb0b8c27575f",
+            "finite-horizon-lqr/SKILL.md": "fdd69d0d797ae8b7761690db7f052460313c32b29c16ee513baa336d68c201df",
+            "finite-horizon-lqr/assets/flowchart.png": "3f97c238eaedf67ce22d42d8630c5fec08697ba4dd379ce1cd98a27f10ccc4c2",
+            "integral-action-design/GUIDE.md": "e3368f03c7c53e47f650272a2225602b0d437ae82c825b049291b02006d43220",
+            "integral-action-design/SKILL.md": "ffb492de2a955b7ea63dbe2443a700be2d2cbe3b2e82f0759aa234246b2130ef",
+            "integral-action-design/assets/flowchart.png": "85d0662bcf8380add9d3f1e1857f6a0539ac5bd7c85c13d43dec06e497c5f0c2",
+            "mpc-horizon-tuning/GUIDE.md": "fa85a6c22e728d92176f4aace0a3ad65e280bd4ecd061d1037a042b29ec47123",
+            "mpc-horizon-tuning/SKILL.md": "ac2448839467feb2d2c503aebc1b8df65db001b735bfb78777ed2df917f44191",
+            "mpc-horizon-tuning/assets/flowchart.png": "59badbc75938ce9967bd4e59004dec6825dc0b4f8e8d527dd7f3e7382d899fb4",
+            "state-space-linearization/GUIDE.md": "1cd18b96f4f55ff004aa92c0acbf0cab2744032c94a42d750ce749055038835b",
+            "state-space-linearization/SKILL.md": "afad4503f8469985862a5dbbf0c1e804cd7d5d5f1e1f394fb7e4848525e55aa8",
+            "state-space-linearization/assets/flowchart.png": "03535233b61d0a522481ba44b606a2a0caf577bca1fed6ad0117705547243945"
+          },
+          "changed_skill": "finite-horizon-lqr"
+        },
+        "integral-action-design": {
+          "bundle": "tasks/r2r-mpc-control/variants/integral-action-design/bundle",
+          "files": {
+            "finite-horizon-lqr/GUIDE.md": "8ce87c503270a401f9bce17518a8f11d8cc421de2f15984678ddeb0b8c27575f",
+            "finite-horizon-lqr/SKILL.md": "fdd69d0d797ae8b7761690db7f052460313c32b29c16ee513baa336d68c201df",
+            "finite-horizon-lqr/assets/flowchart.png": "42fe2a72ed5cdba47e79d5278e033dd9a6b6ee4daf5db60cb688fb2e3e2c045c",
+            "integral-action-design/GUIDE.md": "e3368f03c7c53e47f650272a2225602b0d437ae82c825b049291b02006d43220",
+            "integral-action-design/SKILL.md": "ffb492de2a955b7ea63dbe2443a700be2d2cbe3b2e82f0759aa234246b2130ef",
+            "integral-action-design/assets/flowchart.png": "fac55b6c9d2442481c34f600f8deb3f381835487dee48c65560db0ad2886d67d",
+            "mpc-horizon-tuning/GUIDE.md": "fa85a6c22e728d92176f4aace0a3ad65e280bd4ecd061d1037a042b29ec47123",
+            "mpc-horizon-tuning/SKILL.md": "ac2448839467feb2d2c503aebc1b8df65db001b735bfb78777ed2df917f44191",
+            "mpc-horizon-tuning/assets/flowchart.png": "59badbc75938ce9967bd4e59004dec6825dc0b4f8e8d527dd7f3e7382d899fb4",
+            "state-space-linearization/GUIDE.md": "1cd18b96f4f55ff004aa92c0acbf0cab2744032c94a42d750ce749055038835b",
+            "state-space-linearization/SKILL.md": "afad4503f8469985862a5dbbf0c1e804cd7d5d5f1e1f394fb7e4848525e55aa8",
+            "state-space-linearization/assets/flowchart.png": "03535233b61d0a522481ba44b606a2a0caf577bca1fed6ad0117705547243945"
+          },
+          "changed_skill": "integral-action-design"
+        }
+      }
+    },
+    "exam-block-sequencing": {
+      "source_files": {
+        "mip-solver-and-solution-audit/SKILL.md": "34ab1c8cd80ab01f65ad7287776994efeceb15fe454c36216d7d4ba2fee442f7",
+        "ordered-window-sequencing-mip/SKILL.md": "0e1aa2b96b164e0cb06045b8d6b3fdd56d693c002a7dbbf8fb093bca3216c514"
+      },
+      "skills": [
+        "mip-solver-and-solution-audit",
+        "ordered-window-sequencing-mip"
+      ],
+      "variants": {
+        "baseline": {
+          "bundle": "tasks/exam-block-sequencing/variants/baseline/bundle",
+          "files": {
+            "mip-solver-and-solution-audit/GUIDE.md": "34ab1c8cd80ab01f65ad7287776994efeceb15fe454c36216d7d4ba2fee442f7",
+            "mip-solver-and-solution-audit/SKILL.md": "432833217e226da5d074bd483ed57312092a4cc67176a66c15617d68c8bd87e4",
+            "mip-solver-and-solution-audit/assets/flowchart.png": "0ed781645eaea904b51908ec8883d4e1d250504cceb44618477e461cedf5558c",
+            "ordered-window-sequencing-mip/GUIDE.md": "0e1aa2b96b164e0cb06045b8d6b3fdd56d693c002a7dbbf8fb093bca3216c514",
+            "ordered-window-sequencing-mip/SKILL.md": "407b4690a8e75079d9d0cfe2763a06b581e1b15cc00e5b2d2359c3e70702ab52",
+            "ordered-window-sequencing-mip/assets/flowchart.png": "6db37ba712e6e2a292e8fa30fbcb00bfeb730c78d32f60aa2e52575dff34ead9"
+          },
+          "changed_skill": null
+        },
+        "ordered-window-sequencing-mip": {
+          "bundle": "tasks/exam-block-sequencing/variants/ordered-window-sequencing-mip/bundle",
+          "files": {
+            "mip-solver-and-solution-audit/GUIDE.md": "34ab1c8cd80ab01f65ad7287776994efeceb15fe454c36216d7d4ba2fee442f7",
+            "mip-solver-and-solution-audit/SKILL.md": "432833217e226da5d074bd483ed57312092a4cc67176a66c15617d68c8bd87e4",
+            "mip-solver-and-solution-audit/assets/flowchart.png": "0ed781645eaea904b51908ec8883d4e1d250504cceb44618477e461cedf5558c",
+            "ordered-window-sequencing-mip/GUIDE.md": "0e1aa2b96b164e0cb06045b8d6b3fdd56d693c002a7dbbf8fb093bca3216c514",
+            "ordered-window-sequencing-mip/SKILL.md": "407b4690a8e75079d9d0cfe2763a06b581e1b15cc00e5b2d2359c3e70702ab52",
+            "ordered-window-sequencing-mip/assets/flowchart.png": "b6d4ac6537faad738386ff8a32b5c4e351167bd90c8e04005c0aa96f13f817cf"
+          },
+          "changed_skill": "ordered-window-sequencing-mip"
+        }
+      }
+    },
+    "manufacturing-fjsp-optimization": {
+      "source_files": {
+        "fjsp-baseline-repair-with-downtime-and-policy/SKILL.md": "2668bd6b9c6977ccedcf1f1d4af4401afdfe215666d68f82df41b662852b2125",
+        "reference.md": "46f76e2898e1f1a3d7f0d8c7ee4e5390f7e9f8e57c1695dd5eb3ddf739f71743"
+      },
+      "skills": [
+        "fjsp-baseline-repair-with-downtime-and-policy"
+      ],
+      "variants": {
+        "baseline": {
+          "bundle": "tasks/manufacturing-fjsp-optimization/variants/baseline/bundle",
+          "files": {
+            "fjsp-baseline-repair-with-downtime-and-policy/GUIDE.md": "2668bd6b9c6977ccedcf1f1d4af4401afdfe215666d68f82df41b662852b2125",
+            "fjsp-baseline-repair-with-downtime-and-policy/SKILL.md": "935a3e955d09b7f571486a57d98b99cd995bcb7fa97940e171a1d07dab136fd5",
+            "fjsp-baseline-repair-with-downtime-and-policy/assets/flowchart.png": "eea4b605e9135f60be906315cd8ba736e93b3e54ed72b214e2e8760a31e3f540",
+            "reference.md": "46f76e2898e1f1a3d7f0d8c7ee4e5390f7e9f8e57c1695dd5eb3ddf739f71743"
+          },
+          "changed_skill": null
+        },
+        "fjsp-baseline-repair-with-downtime-and-policy": {
+          "bundle": "tasks/manufacturing-fjsp-optimization/variants/fjsp-baseline-repair-with-downtime-and-policy/bundle",
+          "files": {
+            "fjsp-baseline-repair-with-downtime-and-policy/GUIDE.md": "2668bd6b9c6977ccedcf1f1d4af4401afdfe215666d68f82df41b662852b2125",
+            "fjsp-baseline-repair-with-downtime-and-policy/SKILL.md": "935a3e955d09b7f571486a57d98b99cd995bcb7fa97940e171a1d07dab136fd5",
+            "fjsp-baseline-repair-with-downtime-and-policy/assets/flowchart.png": "a8acf7dd005eb5d42b204ed94ded845085a4a8008b456aba04f215241036ac10",
+            "reference.md": "46f76e2898e1f1a3d7f0d8c7ee4e5390f7e9f8e57c1695dd5eb3ddf739f71743"
+          },
+          "changed_skill": "fjsp-baseline-repair-with-downtime-and-policy"
+        }
+      }
+    }
+  },
+  "figures": {
+    "prefix-cache-replay": {
+      "diagram_type": "state_machine",
+      "dimensions": [
+        2766,
+        1041
+      ],
+      "sources": {
+        "S1": {
+          "path": "prefix-cache-replay/SKILL.md",
+          "sha256": "28ced940ec272cc01cf06519912077492d948b10e08a933acba12dd9907220cf",
+          "bytes": 9283,
+          "lines": 110,
+          "review": "Keep pre-access hit accounting distinct from all-hash mutation; show M/G helper transitions, preserved promotion frequency, rounding and ghost exclusion.",
+          "headings": [
+            {
+              "line": 6,
+              "heading": "# Overview"
+            },
+            {
+              "line": 12,
+              "heading": "# Longest-prefix hit semantics (policy-independent)"
+            },
+            {
+              "line": 24,
+              "heading": "# S3FIFO (Yang et al., SOSP 2023 — \"FIFO queues are all you need\")"
+            },
+            {
+              "line": 35,
+              "heading": "## Access rule (per `h` in a request's `hash_ids`)"
+            },
+            {
+              "line": 41,
+              "heading": "## Admission to S (drains old S entries when S is full)"
+            },
+            {
+              "line": 54,
+              "heading": "## Admission to M (second-chance, drains until one real eviction when M is full)"
+            },
+            {
+              "line": 71,
+              "heading": "## Ghost insertion"
+            },
+            {
+              "line": 75,
+              "heading": "## Residency and final size"
+            },
+            {
+              "line": 79,
+              "heading": "# Trace format"
+            },
+            {
+              "line": 89,
+              "heading": "# Common mistakes"
+            },
+            {
+              "line": 104,
+              "heading": "# Quick sanity checks on your output"
+            }
+          ],
+          "verified_sha256": "28ced940ec272cc01cf06519912077492d948b10e08a933acba12dd9907220cf"
+        },
+        "S2": {
+          "path": "cache-policy-comparison/SKILL.md",
+          "sha256": "353a7215727695b01e48ea69e63ed92c0b32174534a6bda38cee9b91382e5963",
+          "bytes": 5970,
+          "lines": 85,
+          "review": "Companion policy specification: do not follow S3FIFO transitions when a different eviction policy is declared.",
+          "headings": [
+            {
+              "line": 6,
+              "heading": "# Overview"
+            },
+            {
+              "line": 19,
+              "heading": "# LRU"
+            },
+            {
+              "line": 44,
+              "heading": "# LFU"
+            },
+            {
+              "line": 53,
+              "heading": "# FIFO"
+            },
+            {
+              "line": 59,
+              "heading": "# S3FIFO"
+            },
+            {
+              "line": 63,
+              "heading": "# Workload implications"
+            },
+            {
+              "line": 70,
+              "heading": "# Comparing hit rates on a trace"
+            },
+            {
+              "line": 78,
+              "heading": "# Common mistakes"
+            }
+          ],
+          "verified_sha256": "353a7215727695b01e48ea69e63ed92c0b32174534a6bda38cee9b91382e5963"
+        }
+      },
+      "artifacts": {
+        "figures/prefix-cache-replay/diagram.dot": "b93be82c47aff3f0b03eb4e1c02af549a797ca29ba3e7e132f1b485e3d4d752a",
+        "figures/prefix-cache-replay/diagram.png": "7b5d4157a967913cedd1b53c063b82c7a977e61f39542b306ae433bbee9a073c",
+        "figures/prefix-cache-replay/diagram.svg": "de6b1fc4ad7b9d95b17eef3c03275d49383cde1725fcfb792dcb9441ac5d826f"
+      }
+    },
+    "dc-power-flow": {
+      "diagram_type": "typed_dataflow",
+      "dimensions": [
+        1601,
+        1487
+      ],
+      "sources": {
+        "S1": {
+          "path": "dc-power-flow/SKILL.md",
+          "sha256": "461a4a93c6baf5f84eaa16881b11d76d0542907c8bb50745eceeb21d217e480e",
+          "bytes": 2882,
+          "lines": 116,
+          "review": "Add executable-resource contract: build_susceptance_matrix returns three objects; calculate_line_flows reuses saved susceptances, keeps original IDs and uses zero loading when rating<=0. CLI only prints matrix diagnostics.",
+          "headings": [
+            {
+              "line": 6,
+              "heading": "# DC Power Flow"
+            },
+            {
+              "line": 10,
+              "heading": "## DC Approximations"
+            },
+            {
+              "line": 18,
+              "heading": "## Bus Number Mapping"
+            },
+            {
+              "line": 23,
+              "heading": "# Create mapping: bus_number -> 0-indexed position"
+            },
+            {
+              "line": 26,
+              "heading": "# Use mapping for branch endpoints"
+            },
+            {
+              "line": 31,
+              "heading": "## Susceptance Matrix (B)"
+            },
+            {
+              "line": 36,
+              "heading": "# Run: scripts/build_b_matrix.py"
+            },
+            {
+              "line": 37,
+              "heading": "# Or inline:"
+            },
+            {
+              "line": 53,
+              "heading": "## Power Balance Equation"
+            },
+            {
+              "line": 62,
+              "heading": "## Slack Bus"
+            },
+            {
+              "line": 75,
+              "heading": "## Line Flow Calculation"
+            },
+            {
+              "line": 87,
+              "heading": "## Line Loading Percentage"
+            },
+            {
+              "line": 95,
+              "heading": "## Branch Susceptances for Constraints"
+            },
+            {
+              "line": 107,
+              "heading": "## Line Flow Limits (for OPF)"
+            },
+            {
+              "line": 112,
+              "heading": "# |flow| <= rating  →  -rating <= flow <= rating"
+            }
+          ],
+          "verified_sha256": "461a4a93c6baf5f84eaa16881b11d76d0542907c8bb50745eceeb21d217e480e"
+        },
+        "S2": {
+          "path": "dc-power-flow/scripts/build_b_matrix.py",
+          "sha256": "8ed65d06fe16b87b13eadf33397b3986de95afa515ec5dcb6f22df8201a44095",
+          "bytes": 3161,
+          "lines": 108,
+          "review": "Both callable helpers, their return contracts, zero-X/zero-rating behavior and diagnostic CLI.",
+          "headings": [],
+          "functions": [
+            {
+              "name": "build_susceptance_matrix",
+              "line": 7,
+              "arguments": [
+                "branches",
+                "buses"
+              ]
+            },
+            {
+              "name": "calculate_line_flows",
+              "line": 52,
+              "arguments": [
+                "branches",
+                "branch_susceptances",
+                "theta",
+                "baseMVA",
+                "bus_num_to_idx"
+              ]
+            }
+          ],
+          "verified_sha256": "8ed65d06fe16b87b13eadf33397b3986de95afa515ec5dcb6f22df8201a44095"
+        }
+      },
+      "artifacts": {
+        "figures/dc-power-flow/diagram.dot": "0172601c45f1f64678f4c555e1b0da8abfd3f6fafe94acc8b78c2e9011cf0322",
+        "figures/dc-power-flow/diagram.png": "11cd84101d1349f0c545b6b516711cb188f4b1aeb56ce17e46487cbb760a38ee",
+        "figures/dc-power-flow/diagram.svg": "c4d71b7b907adb48326b660b04c97eab85c930c31317b90344c72378bb5b1370"
+      }
+    },
+    "economic-dispatch": {
+      "diagram_type": "variable_constraint_graph",
+      "dimensions": [
+        2687,
+        882
+      ],
+      "sources": {
+        "S1": {
+          "path": "economic-dispatch/SKILL.md",
+          "sha256": "907586a8ab5d697d20efaafb190809fbe737bcbac4082c0f94458c1e6489b82f",
+          "bytes": 4932,
+          "lines": 173,
+          "review": "Add reference-only MODEL=1 breakpoint costs and marginal costs. Flag general-polynomial layout versus the GUIDE example treating NCOST>=3 as quadratic; do not invent an unprovided piecewise optimization implementation.",
+          "headings": [
+            {
+              "line": 6,
+              "heading": "# Economic Dispatch"
+            },
+            {
+              "line": 10,
+              "heading": "## Generator Data Indices"
+            },
+            {
+              "line": 21,
+              "heading": "# Use bus number mapping (handles non-contiguous bus numbers)"
+            },
+            {
+              "line": 29,
+              "heading": "## Cost Function Format"
+            },
+            {
+              "line": 46,
+              "heading": "## Optimization Formulation"
+            },
+            {
+              "line": 53,
+              "heading": "# Objective: minimize total cost (handles variable NCOST)"
+            },
+            {
+              "line": 71,
+              "heading": "# Generator limits (convert MW to per-unit)"
+            },
+            {
+              "line": 80,
+              "heading": "## Power Balance Constraint"
+            },
+            {
+              "line": 91,
+              "heading": "## Reserve Co-optimization"
+            },
+            {
+              "line": 96,
+              "heading": "# Reserve data from network.json"
+            },
+            {
+              "line": 100,
+              "heading": "# Decision variables"
+            },
+            {
+              "line": 104,
+              "heading": "# Reserve constraints"
+            },
+            {
+              "line": 116,
+              "heading": "# System must have adequate total reserves"
+            },
+            {
+              "line": 120,
+              "heading": "## Operating Margin"
+            },
+            {
+              "line": 132,
+              "heading": "## Dispatch Output Format"
+            },
+            {
+              "line": 149,
+              "heading": "## Totals Calculation"
+            },
+            {
+              "line": 164,
+              "heading": "## Solver Selection"
+            }
+          ],
+          "verified_sha256": "907586a8ab5d697d20efaafb190809fbe737bcbac4082c0f94458c1e6489b82f"
+        },
+        "S2": {
+          "path": "economic-dispatch/references/cost-functions.md",
+          "sha256": "a9bf78f5dd90f559d50872d526c1c7bf6685f6c8147c95ec701d1628d318d0ee",
+          "bytes": 1597,
+          "lines": 73,
+          "review": "Polynomial and piecewise-linear formats, coefficient units, marginal-cost formula; examples and bibliography context reviewed.",
+          "headings": [
+            {
+              "line": 1,
+              "heading": "# Generator Cost Functions Reference"
+            },
+            {
+              "line": 3,
+              "heading": "## Polynomial Cost (Type 2)"
+            },
+            {
+              "line": 7,
+              "heading": "### MATPOWER Format"
+            },
+            {
+              "line": 26,
+              "heading": "### Example"
+            },
+            {
+              "line": 29,
+              "heading": "# Generator with:"
+            },
+            {
+              "line": 30,
+              "heading": "# - No-load cost: $100/hr"
+            },
+            {
+              "line": 31,
+              "heading": "# - Incremental: $20/MWh at 0 MW, increasing $0.02/MWh per MW"
+            },
+            {
+              "line": 34,
+              "heading": "# At P = 50 MW:"
+            },
+            {
+              "line": 35,
+              "heading": "# Cost = 0.01*(50)² + 20*(50) + 100 = 25 + 1000 + 100 = $1125/hr"
+            },
+            {
+              "line": 38,
+              "heading": "## Piecewise Linear Cost (Type 1)"
+            },
+            {
+              "line": 42,
+              "heading": "### MATPOWER Format"
+            },
+            {
+              "line": 50,
+              "heading": "### Example"
+            },
+            {
+              "line": 53,
+              "heading": "# 3 breakpoints: (0, 0), (50, 1000), (100, 2500)"
+            },
+            {
+              "line": 57,
+              "heading": "## Marginal Cost"
+            },
+            {
+              "line": 62,
+              "heading": "# Marginal cost at power P"
+            },
+            {
+              "line": 66,
+              "heading": "## Typical Values"
+            }
+          ],
+          "verified_sha256": "a9bf78f5dd90f559d50872d526c1c7bf6685f6c8147c95ec701d1628d318d0ee"
+        }
+      },
+      "artifacts": {
+        "figures/economic-dispatch/diagram.dot": "2be3381e79bc3d7f9a6034d07c196545e09e835de31c80f6aa9965b4dcf1d124",
+        "figures/economic-dispatch/diagram.png": "ec69547a95477261f4925c8c3263d327a7cc1a078f8a006afac83716b0371e60",
+        "figures/economic-dispatch/diagram.svg": "9e8cfcb8b912a26d7c92cb869bbd8481cd84dbed81ca679b7cf568e7b44acb2b"
+      }
+    },
+    "locational-marginal-prices": {
+      "diagram_type": "paired_dependency_graph",
+      "dimensions": [
+        1901,
+        946
+      ],
+      "sources": {
+        "S1": {
+          "path": "locational-marginal-prices/SKILL.md",
+          "sha256": "c48851e863afad9f416e52d57f5b065cc9a7a1ab2146b829abae4ac85412f2ac",
+          "bytes": 4746,
+          "lines": 139,
+          "review": "Preserve source extraction and counterfactual workflow. Mark source dual*baseMVA scaling / sign as requiring review of the actual equation; do not inject a formula learned from previous verifier outcomes. Distinguish None->0 source fallback from an available market dual.",
+          "headings": [
+            {
+              "line": 6,
+              "heading": "# Locational Marginal Prices (LMPs)"
+            },
+            {
+              "line": 10,
+              "heading": "## LMP Extraction from CVXPY"
+            },
+            {
+              "line": 20,
+              "heading": "# Store balance constraints separately for dual extraction"
+            },
+            {
+              "line": 32,
+              "heading": "# Solve"
+            },
+            {
+              "line": 36,
+              "heading": "# Extract LMPs from duals"
+            },
+            {
+              "line": 50,
+              "heading": "## LMP Sign Convention"
+            },
+            {
+              "line": 63,
+              "heading": "## Reserve Clearing Price"
+            },
+            {
+              "line": 68,
+              "heading": "# Store reference to reserve constraint"
+            },
+            {
+              "line": 72,
+              "heading": "# After solving:"
+            },
+            {
+              "line": 78,
+              "heading": "## Finding Binding Lines"
+            },
+            {
+              "line": 105,
+              "heading": "## Counterfactual Analysis"
+            },
+            {
+              "line": 115,
+              "heading": "# Modify line limit (e.g., increase by 20%)"
+            },
+            {
+              "line": 123,
+              "heading": "# After solving both cases:"
+            },
+            {
+              "line": 126,
+              "heading": "# LMP changes per bus"
+            },
+            {
+              "line": 131,
+              "heading": "# Congestion relieved if line was binding in base but not in counterfactual"
+            },
+            {
+              "line": 135,
+              "heading": "### Economic Intuition"
+            }
+          ],
+          "verified_sha256": "c48851e863afad9f416e52d57f5b065cc9a7a1ab2146b829abae4ac85412f2ac"
+        }
+      },
+      "artifacts": {
+        "figures/locational-marginal-prices/diagram.dot": "73cdccf76feb2e789edf8fb1acaa2e7168daf287bd921580fc83628413ee061a",
+        "figures/locational-marginal-prices/diagram.png": "ab7192389b69198590639f1ac616e6244b4a8b679d1387da967ff147dfd817c3",
+        "figures/locational-marginal-prices/diagram.svg": "7fb2721a63ffe7ea893a242cb0356d8224cd1ec2c1957281ce1f3a39d0183c46"
+      }
+    },
+    "finite-horizon-lqr": {
+      "diagram_type": "indexed_recurrence",
+      "dimensions": [
+        2284,
+        475
+      ],
+      "sources": {
+        "S1": {
+          "path": "finite-horizon-lqr/SKILL.md",
+          "sha256": "8ce87c503270a401f9bce17518a8f11d8cc421de2f15984678ddeb0b8c27575f",
+          "bytes": 1078,
+          "lines": 56,
+          "review": "Preserve P-next versus P-current order, gain storage and first-action-only receding horizon. Returned/logged states are an interface summary, not a new controller.",
+          "headings": [
+            {
+              "line": 6,
+              "heading": "# Finite-Horizon LQR for MPC"
+            },
+            {
+              "line": 8,
+              "heading": "## Problem Formulation"
+            },
+            {
+              "line": 15,
+              "heading": "## Backward Riccati Recursion"
+            },
+            {
+              "line": 25,
+              "heading": "## Forward Simulation"
+            },
+            {
+              "line": 33,
+              "heading": "## Python Implementation"
+            },
+            {
+              "line": 50,
+              "heading": "## MPC Application"
+            }
+          ],
+          "verified_sha256": "8ce87c503270a401f9bce17518a8f11d8cc421de2f15984678ddeb0b8c27575f"
+        }
+      },
+      "artifacts": {
+        "figures/finite-horizon-lqr/diagram.dot": "074b9965fe5063cb51f7ee7e8df7912c10ddddbca0eb8e14e5c1b3e4f09fd5b4",
+        "figures/finite-horizon-lqr/diagram.png": "3f97c238eaedf67ce22d42d8630c5fec08697ba4dd379ce1cd98a27f10ccc4c2",
+        "figures/finite-horizon-lqr/diagram.svg": "83d464b953b8f489a3df92e9db54fe93fd50ae63cbd8f0510e213cd37a7ba887"
+      }
+    },
+    "integral-action-design": {
+      "diagram_type": "feedback_block",
+      "dimensions": [
+        2639,
+        579
+      ],
+      "sources": {
+        "S1": {
+          "path": "integral-action-design/SKILL.md",
+          "sha256": "e3368f03c7c53e47f650272a2225602b0d437ae82c825b049291b02006d43220",
+          "bytes": 1104,
+          "lines": 50,
+          "review": "Separate timestep integration/clipping from post-trial tuning advice. This is an editorial clarification: the source gives tuning advice but does not mandate online gain adaptation.",
+          "headings": [
+            {
+              "line": 6,
+              "heading": "# Integral Action for Offset-Free Control"
+            },
+            {
+              "line": 8,
+              "heading": "## Why Integral Action?"
+            },
+            {
+              "line": 12,
+              "heading": "## Implementation"
+            },
+            {
+              "line": 25,
+              "heading": "## Tuning Guidelines"
+            },
+            {
+              "line": 37,
+              "heading": "## Anti-Windup"
+            },
+            {
+              "line": 44,
+              "heading": "## For R2R Systems"
+            }
+          ],
+          "verified_sha256": "e3368f03c7c53e47f650272a2225602b0d437ae82c825b049291b02006d43220"
+        }
+      },
+      "artifacts": {
+        "figures/integral-action-design/diagram.dot": "5562a620d7cf44e9184b042d70c0b6a86fd3348c17d55b8f7dee3d37743d4b73",
+        "figures/integral-action-design/diagram.png": "fac55b6c9d2442481c34f600f8deb3f381835487dee48c65560db0ad2886d67d",
+        "figures/integral-action-design/diagram.svg": "776f72a2bf183136d5ddbfcb0d19008a4ca7e71fcebedcf0b3a78ff5f6cad305"
+      }
+    },
+    "ordered-window-sequencing-mip": {
+      "diagram_type": "aligned_windows_and_constraints",
+      "dimensions": [
+        2064,
+        1386
+      ],
+      "sources": {
+        "S1": {
+          "path": "ordered-window-sequencing-mip/SKILL.md",
+          "sha256": "0e1aa2b96b164e0cb06045b8d6b3fdd56d693c002a7dbbf8fb093bca3216c514",
+          "bytes": 10905,
+          "lines": 292,
+          "review": "Retain both representations, all linearization bounds, ordered keys, successor labels, masks, boundary conditions, active-pattern overlap and full optimized objective.",
+          "headings": [
+            {
+              "line": 6,
+              "heading": "# Ordered-Window Sequencing MIPs"
+            },
+            {
+              "line": 8,
+              "heading": "## Core idea"
+            },
+            {
+              "line": 19,
+              "heading": "## Modeling workflow"
+            },
+            {
+              "line": 39,
+              "heading": "## Preserve ordered tuple data"
+            },
+            {
+              "line": 55,
+              "heading": "# Wrong for directed or ordered sequence costs unless explicitly allowed."
+            },
+            {
+              "line": 87,
+              "heading": "## Assignment-linked local windows"
+            },
+            {
+              "line": 114,
+              "heading": "## Direct ordered-window model"
+            },
+            {
+              "line": 135,
+              "heading": "## Prefix/suffix continuity"
+            },
+            {
+              "line": 156,
+              "heading": "## Overlap penalties"
+            },
+            {
+              "line": 187,
+              "heading": "## Active-pattern overlap rule"
+            },
+            {
+              "line": 230,
+              "heading": "## Start-position masks and boundary rules"
+            },
+            {
+              "line": 262,
+              "heading": "## Objective semantics audit"
+            },
+            {
+              "line": 279,
+              "heading": "## Common mistakes"
+            }
+          ],
+          "verified_sha256": "0e1aa2b96b164e0cb06045b8d6b3fdd56d693c002a7dbbf8fb093bca3216c514"
+        }
+      },
+      "artifacts": {
+        "figures/ordered-window-sequencing-mip/diagram.dot": "ba2e72e05e1423aef3c965c6659b69443a6d3098da0a095b91a96881a46c7ff0",
+        "figures/ordered-window-sequencing-mip/diagram.png": "b6d4ac6537faad738386ff8a32b5c4e351167bd90c8e04005c0aa96f13f817cf",
+        "figures/ordered-window-sequencing-mip/diagram.svg": "700e9e95b1aa4a9c1758867210af8ed6edde493ee7fbd82f696e20a7a14478dc"
+      }
+    },
+    "fjsp-baseline-repair-with-downtime-and-policy": {
+      "diagram_type": "resource_timeline",
+      "dimensions": [
+        2132,
+        1319
+      ],
+      "sources": {
+        "S1": {
+          "path": "fjsp-baseline-repair-with-downtime-and-policy/SKILL.md",
+          "sha256": "2668bd6b9c6977ccedcf1f1d4af4401afdfe215666d68f82df41b662852b2125",
+          "bytes": 4824,
+          "lines": 78,
+          "review": "Incorporate the shared baseline-repair context. Keep integer scan and same-order commitment explicit. Flag conflicting heuristic priorities and the sample safety-bound return not proving feasibility; preserve all original guidance/resources.",
+          "headings": [
+            {
+              "line": 12,
+              "heading": "# sorted Downtime windows"
+            },
+            {
+              "line": 19,
+              "heading": "# Precedence-aware repair order"
+            },
+            {
+              "line": 50,
+              "heading": "# Baseline machine may be illegal"
+            },
+            {
+              "line": 70,
+              "heading": "# First try baseline machine"
+            },
+            {
+              "line": 73,
+              "heading": "# If shift is large and we still can change machines, search alternates"
+            }
+          ],
+          "verified_sha256": "2668bd6b9c6977ccedcf1f1d4af4401afdfe215666d68f82df41b662852b2125"
+        },
+        "S2": {
+          "path": "reference.md",
+          "sha256": "46f76e2898e1f1a3d7f0d8c7ee4e5390f7e9f8e57c1695dd5eb3ddf739f71743",
+          "bytes": 4091,
+          "lines": 50,
+          "review": "Shared skills-root resource: baseline-repair commitments, FJSPLib provenance, difficulty taxonomy and literature. No instance-specific solution is supplied.",
+          "headings": [],
+          "verified_sha256": "46f76e2898e1f1a3d7f0d8c7ee4e5390f7e9f8e57c1695dd5eb3ddf739f71743"
+        }
+      },
+      "artifacts": {
+        "figures/fjsp-baseline-repair-with-downtime-and-policy/diagram.dot": "6dd0c972bb02217aa203dcfd15017a7fab98331f28d4d83b6d48be2be3a34b0f",
+        "figures/fjsp-baseline-repair-with-downtime-and-policy/diagram.png": "a8acf7dd005eb5d42b204ed94ded845085a4a8008b456aba04f215241036ac10",
+        "figures/fjsp-baseline-repair-with-downtime-and-policy/diagram.svg": "17d2f4b4e6cb44608a912f1bbca2c86adf92f91739e0a2297c7fdf77dc7019b3"
+      }
+    }
+  },
+  "selection_sha256": "9d34e0795f65266fc6c552e6048bd6f5e1f8e62c8d2027c190ead4c7d36c5a1f"
+}

@@ -1,0 +1,116 @@
+[
+  {
+    "valid": true,
+    "task": "r2r-mpc-control",
+    "kind": "local-wire",
+    "policy": {
+      "method": "forced-prefix-v1",
+      "arm": "image",
+      "id": "08d0f53c63e7d7ec99bf3332337567c4d1d9b58db597e82420fd0e2289e7f688",
+      "adapter_sha256": {
+        "experiments/skill-structure-v3-combined/combined.py": "772101a1e70af267666990549c5cb0b3cc4ac5beafd30af27f7b70dbe1124d0c",
+        "experiments/uml-flowchart/delivery_runner.py": "8127af3eee6b96c0a53fe83239c83995fff8618e188a4463eeb5dab04add6a70",
+        "experiments/uml-flowchart/delivery_protocol.py": "25141e86639e76aed37c03fc98be180f7b9c11754f95a63a33cc5f8214af8977"
+      },
+      "task": "r2r-mpc-control",
+      "skill_names": [
+        "finite-horizon-lqr",
+        "integral-action-design",
+        "mpc-horizon-tuning",
+        "state-space-linearization"
+      ],
+      "study_sha256": "5c09310dadb9467bdd5dac390ccce7ccec256404f00b4b9241ef318d7f0198b0",
+      "assets": [
+        {
+          "skill": "finite-horizon-lqr",
+          "guide_sha256": "8ce87c503270a401f9bce17518a8f11d8cc421de2f15984678ddeb0b8c27575f",
+          "image_sha256": "3f97c238eaedf67ce22d42d8630c5fec08697ba4dd379ce1cd98a27f10ccc4c2"
+        },
+        {
+          "skill": "integral-action-design",
+          "guide_sha256": "e3368f03c7c53e47f650272a2225602b0d437ae82c825b049291b02006d43220",
+          "image_sha256": "fac55b6c9d2442481c34f600f8deb3f381835487dee48c65560db0ad2886d67d"
+        },
+        {
+          "skill": "mpc-horizon-tuning",
+          "guide_sha256": "fa85a6c22e728d92176f4aace0a3ad65e280bd4ecd061d1037a042b29ec47123",
+          "image_sha256": "59badbc75938ce9967bd4e59004dec6825dc0b4f8e8d527dd7f3e7382d899fb4"
+        },
+        {
+          "skill": "state-space-linearization",
+          "guide_sha256": "1cd18b96f4f55ff004aa92c0acbf0cab2744032c94a42d750ce749055038835b",
+          "image_sha256": "03535233b61d0a522481ba44b606a2a0caf577bca1fed6ad0117705547243945"
+        }
+      ]
+    },
+    "image_count": 4,
+    "reply": "OK",
+    "usage": null
+  },
+  {
+    "valid": true,
+    "task": "exam-block-sequencing",
+    "kind": "local-wire",
+    "policy": {
+      "method": "forced-prefix-v1",
+      "arm": "image",
+      "id": "7c3a647290ebab87e5fdaf2ecff1916c38749e01b3fceda2cfa7d0a830efd98c",
+      "adapter_sha256": {
+        "experiments/skill-structure-v3-combined/combined.py": "772101a1e70af267666990549c5cb0b3cc4ac5beafd30af27f7b70dbe1124d0c",
+        "experiments/uml-flowchart/delivery_runner.py": "8127af3eee6b96c0a53fe83239c83995fff8618e188a4463eeb5dab04add6a70",
+        "experiments/uml-flowchart/delivery_protocol.py": "25141e86639e76aed37c03fc98be180f7b9c11754f95a63a33cc5f8214af8977"
+      },
+      "task": "exam-block-sequencing",
+      "skill_names": [
+        "mip-solver-and-solution-audit",
+        "ordered-window-sequencing-mip"
+      ],
+      "study_sha256": "5c09310dadb9467bdd5dac390ccce7ccec256404f00b4b9241ef318d7f0198b0",
+      "assets": [
+        {
+          "skill": "mip-solver-and-solution-audit",
+          "guide_sha256": "34ab1c8cd80ab01f65ad7287776994efeceb15fe454c36216d7d4ba2fee442f7",
+          "image_sha256": "0ed781645eaea904b51908ec8883d4e1d250504cceb44618477e461cedf5558c"
+        },
+        {
+          "skill": "ordered-window-sequencing-mip",
+          "guide_sha256": "0e1aa2b96b164e0cb06045b8d6b3fdd56d693c002a7dbbf8fb093bca3216c514",
+          "image_sha256": "b6d4ac6537faad738386ff8a32b5c4e351167bd90c8e04005c0aa96f13f817cf"
+        }
+      ]
+    },
+    "image_count": 2,
+    "reply": "OK",
+    "usage": null
+  },
+  {
+    "valid": true,
+    "task": "manufacturing-fjsp-optimization",
+    "kind": "local-wire",
+    "policy": {
+      "method": "forced-prefix-v1",
+      "arm": "image",
+      "id": "31f8e226c97f137ed5e69ec2207e4a7b113cb93b5be704b23d4949e52fa3a7f1",
+      "adapter_sha256": {
+        "experiments/skill-structure-v3-combined/combined.py": "772101a1e70af267666990549c5cb0b3cc4ac5beafd30af27f7b70dbe1124d0c",
+        "experiments/uml-flowchart/delivery_runner.py": "8127af3eee6b96c0a53fe83239c83995fff8618e188a4463eeb5dab04add6a70",
+        "experiments/uml-flowchart/delivery_protocol.py": "25141e86639e76aed37c03fc98be180f7b9c11754f95a63a33cc5f8214af8977"
+      },
+      "task": "manufacturing-fjsp-optimization",
+      "skill_names": [
+        "fjsp-baseline-repair-with-downtime-and-policy"
+      ],
+      "study_sha256": "5c09310dadb9467bdd5dac390ccce7ccec256404f00b4b9241ef318d7f0198b0",
+      "assets": [
+        {
+          "skill": "fjsp-baseline-repair-with-downtime-and-policy",
+          "guide_sha256": "2668bd6b9c6977ccedcf1f1d4af4401afdfe215666d68f82df41b662852b2125",
+          "image_sha256": "a8acf7dd005eb5d42b204ed94ded845085a4a8008b456aba04f215241036ac10"
+        }
+      ]
+    },
+    "image_count": 1,
+    "reply": "OK",
+    "usage": null
+  }
+]

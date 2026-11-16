@@ -1,0 +1,47 @@
+@startuml
+!pragma useVerticalIf on
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+skinparam defaultFontName SansSerif
+skinparam defaultFontSize 18
+skinparam ArrowColor #46566F
+skinparam activity {
+  BackgroundColor #EEF5FF
+  BorderColor #365A82
+  FontColor #152B44
+  DiamondBackgroundColor #FFF3D6
+  DiamondBorderColor #BA842A
+}
+skinparam noteBackgroundColor #FFF8DE
+skinparam noteBorderColor #BEA45C
+skinparam wrapWidth 360
+title Flexible job shop repair - precedence, earliest start and budgets
+start
+:Load baseline, allowed machine durations,\nsorted downtime and policy budgets;
+:Sort repair order by operation index,\nbaseline start, then original baseline list index;
+while (More operations in precedence-aware order?) is (yes)
+  :anchor = max(baseline start,\nnew end of this job's previous operation);
+  if (Baseline machine legal?) then (yes)
+    :Try baseline machine first;
+  else (no)
+    :Choose a legal default;\nminimum duration is a suggested heuristic;
+  endif
+  :For a candidate machine use THAT machine's duration;\nstart t at integer anchor;
+  while (Overlap with machine work or downtime?) is (yes)
+    :Increment t by exactly +1;\nnever skip unchecked integer start times;
+  endwhile (earliest feasible start)
+  if (Shift large and machine-change budget remains?) then (yes)
+    :Evaluate legal alternate machines with same scan;\nconsider alternate if it reduces start shift;
+  endif
+  :Choose candidate with policy-aware priorities:\nmachine changes, L1 shift, start, machine ID;\nrespect remaining budgets;
+  :Immediately commit operation to machine timeline;\nupdate job predecessor end, change count and L1 shift;
+endwhile (no)
+:Validate no earlier-than-baseline starts, precedence,\nlegal machines and durations, no work/downtime overlaps;
+:Check MC = count(new machine != ORIGINAL machine);\nShift_L1 = sum(abs(new start - baseline start));\nverify budgets and makespan improvement;
+note right
+  If start > anchor, start - 1 must be infeasible.
+  Half-open overlap: s < b AND a < e.
+  Preserve the same repair order when committing intervals.
+end note
+stop
+@enduml

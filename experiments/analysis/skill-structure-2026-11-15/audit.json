@@ -1,0 +1,672 @@
+{
+  "source_reports": [
+    {
+      "path": "experiments/uml-expanded/results/paired-five-v1-recovery.json",
+      "sha256": "198a47fd975971feb5e2966056b58f8ae45bb452e6ff186bd1dde0fd7db5525a"
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/comparison.json",
+      "sha256": "197535c3214feded0cedc0d353e52c78ec322b934a7a5e0ef76ea35968279341"
+    },
+    {
+      "path": "experiments/uml-flowchart/results/2026-11-14-forced-v1-180854-185918.json",
+      "sha256": "18e37394c25e4030d19e3d86fc11dd825d5f2f1f5c387d262c4a72e779e76fe8"
+    }
+  ],
+  "raw_evidence_checks": [
+    {
+      "path": "jobs/uml-expanded/paired-five-v1/llm-prefix-cache-replay/text/2026-11-14__21-41-13/llm-prefix-cache-replay__ea6444ba/result.json",
+      "sha256": "49c5ba6a63b5be9d5d16217ac4d164c7d2ce9615c37edaff35a8b061916b5d6e",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1/llm-prefix-cache-replay/text/2026-11-14__21-41-13/llm-prefix-cache-replay__ea6444ba/skill-delivery.json",
+      "sha256": "965ee11c171335288589ddee5631b5e458cd7964c37f1edc825d9679576e25c9",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1/llm-prefix-cache-replay/text/2026-11-14__21-41-13/llm-prefix-cache-replay__ea6444ba/trajectory/llm_trajectory.jsonl",
+      "sha256": "23257c7f4cda9453569e26c0da153d385dbea2f0f360c637f48905a7bd7c6888",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1/llm-prefix-cache-replay/text/2026-11-14__21-41-13/llm-prefix-cache-replay__ea6444ba/trajectory/acp_trajectory.jsonl",
+      "sha256": "06e1d0c12b99a44bbf05cc36a3c7e1f1ab05038a446445de7717b56a97b58c27",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1/llm-prefix-cache-replay/text/2026-11-14__21-41-13/llm-prefix-cache-replay__ea6444ba/shared-opencode.json",
+      "sha256": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1/llm-prefix-cache-replay/text/2026-11-14__21-41-13/llm-prefix-cache-replay__ea6444ba/verifier/test-stdout.txt",
+      "sha256": "5322dc471a78c2742c3bc4a7c2146bd6209be5c0d1caf357e5c22fee48b13f21",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1/llm-prefix-cache-replay/image/2026-11-14__21-42-02/llm-prefix-cache-replay__e6631438/result.json",
+      "sha256": "ff1c357708535c325a7e1b904db32d0bd6c92f3a25375681a62c4c73a018a00b",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1/llm-prefix-cache-replay/image/2026-11-14__21-42-02/llm-prefix-cache-replay__e6631438/skill-delivery.json",
+      "sha256": "cffb37c0e2699b5a68e0973e6e5f9fdf352ab7ea5f0a95536c90e1eb22a3b3cd",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1/llm-prefix-cache-replay/image/2026-11-14__21-42-02/llm-prefix-cache-replay__e6631438/trajectory/llm_trajectory.jsonl",
+      "sha256": "92ccab63edf08ac35ddb843a73164374e17abe58623b4add216d08950fd20bd5",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1/llm-prefix-cache-replay/image/2026-11-14__21-42-02/llm-prefix-cache-replay__e6631438/trajectory/acp_trajectory.jsonl",
+      "sha256": "6396d6de82280d56915212bb84075928148df9a3bc312e61184451891df63e4b",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1/llm-prefix-cache-replay/image/2026-11-14__21-42-02/llm-prefix-cache-replay__e6631438/shared-opencode.json",
+      "sha256": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1/llm-prefix-cache-replay/image/2026-11-14__21-42-02/llm-prefix-cache-replay__e6631438/verifier/test-stdout.txt",
+      "sha256": "927ed00b4cc85673ab845939c4178dfad28a34693701469646dbc02f5dd5e803",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1/energy-market-pricing/text/2026-11-14__21-50-30/energy-market-pricing__f430f1c0/result.json",
+      "sha256": "9b637e4bf5f276c2b310187285bba65410d6bc0fdfd36f277f2c83acda0c7060",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1/energy-market-pricing/text/2026-11-14__21-50-30/energy-market-pricing__f430f1c0/skill-delivery.json",
+      "sha256": "7de460b61173b7c642101b7b020c9329a73c0b7ea57c616eec902632e3fae079",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1/energy-market-pricing/text/2026-11-14__21-50-30/energy-market-pricing__f430f1c0/trajectory/llm_trajectory.jsonl",
+      "sha256": "7ad2e9d8942ca53c57c5479c76a7b57dcc4642a5cd03ec8dfcf7edee6f9e8a35",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1/energy-market-pricing/text/2026-11-14__21-50-30/energy-market-pricing__f430f1c0/trajectory/acp_trajectory.jsonl",
+      "sha256": "61798d2ef1a11df3838c5a28e4a262ba8e5430c9c25093a63005305946f71b47",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1/energy-market-pricing/text/2026-11-14__21-50-30/energy-market-pricing__f430f1c0/shared-opencode.json",
+      "sha256": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1/energy-market-pricing/text/2026-11-14__21-50-30/energy-market-pricing__f430f1c0/verifier/test-stdout.txt",
+      "sha256": "d145792fa75cc58fad06639cae976bc03b424a58d2d5d7c0e9baad3f58391cfb",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1/energy-market-pricing/image/2026-11-14__21-43-00/energy-market-pricing__cbab5e5b/result.json",
+      "sha256": "5cb6790866b1f0994520818ad41c1fd0a98ded14968603565e78b5764bb52326",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1/energy-market-pricing/image/2026-11-14__21-43-00/energy-market-pricing__cbab5e5b/skill-delivery.json",
+      "sha256": "754b07d6b2e416a78f5bde5788649c32804ca16c895ea1b346cf9bc2fcf4ea93",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1/energy-market-pricing/image/2026-11-14__21-43-00/energy-market-pricing__cbab5e5b/trajectory/llm_trajectory.jsonl",
+      "sha256": "b90f7102f57597ebce85a13ae3b07e252ed926e6d7dec9f455695f58cba78c48",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1/energy-market-pricing/image/2026-11-14__21-43-00/energy-market-pricing__cbab5e5b/trajectory/acp_trajectory.jsonl",
+      "sha256": "df102ebdf21d5217e917fbb46bdad3f597af4cad31c33369229eb538cf60406f",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1/energy-market-pricing/image/2026-11-14__21-43-00/energy-market-pricing__cbab5e5b/shared-opencode.json",
+      "sha256": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1/energy-market-pricing/image/2026-11-14__21-43-00/energy-market-pricing__cbab5e5b/verifier/test-stdout.txt",
+      "sha256": "7244e2ee87a094297cb4a62ade6d2318471df56c2dfd97ceaa4a62a42cc74719",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1/r2r-mpc-control/text/2026-11-14__21-55-25/r2r-mpc-control__cdd8d0d1/result.json",
+      "sha256": "eed4c3a29f8c2add790a9a6570d39342877a44cd533bfb72db8bb3c158d77720",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1/r2r-mpc-control/text/2026-11-14__21-55-25/r2r-mpc-control__cdd8d0d1/skill-delivery.json",
+      "sha256": "fae5c5ab2321397dc51b5368caf7a138a0f5a1777e138ac1bc3a9e1add9c6a74",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1/r2r-mpc-control/text/2026-11-14__21-55-25/r2r-mpc-control__cdd8d0d1/trajectory/llm_trajectory.jsonl",
+      "sha256": "a42c7dae78a2fd9cc7cbaf60e8e042b02d927b683741b72d99babbd1ecabe612",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1/r2r-mpc-control/text/2026-11-14__21-55-25/r2r-mpc-control__cdd8d0d1/trajectory/acp_trajectory.jsonl",
+      "sha256": "047861a4a10f350c07fca3ab50db3d4c6e816a6255b9bf547dccb1d40fe6ba42",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1/r2r-mpc-control/text/2026-11-14__21-55-25/r2r-mpc-control__cdd8d0d1/shared-opencode.json",
+      "sha256": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1/r2r-mpc-control/text/2026-11-14__21-55-25/r2r-mpc-control__cdd8d0d1/verifier/test-stdout.txt",
+      "sha256": "c97476ee9010d7eb2ef9d3887593139fafa23b78cff3233b0bddce144f2f8e42",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1/r2r-mpc-control/image/2026-11-14__22-04-43/r2r-mpc-control__115ad66b/result.json",
+      "sha256": "426414ba3522771456a0704c772f2f2ba76be214685b8096eca93a96d349fb8c",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1/r2r-mpc-control/image/2026-11-14__22-04-43/r2r-mpc-control__115ad66b/skill-delivery.json",
+      "sha256": "04ce1ebd619102d4de9760f786aeaf2e729605bcc981f209c0ba01bf89212e71",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1/r2r-mpc-control/image/2026-11-14__22-04-43/r2r-mpc-control__115ad66b/trajectory/llm_trajectory.jsonl",
+      "sha256": "e0802639972c927aeaaa05f06dd2c83c40f4f8f68dd364528e18eb2c62ed161e",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1/r2r-mpc-control/image/2026-11-14__22-04-43/r2r-mpc-control__115ad66b/trajectory/acp_trajectory.jsonl",
+      "sha256": "c7b3c7c2c3e06c65c6a8846e2fdb76e75926656130eaa689090987928d141366",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1/r2r-mpc-control/image/2026-11-14__22-04-43/r2r-mpc-control__115ad66b/shared-opencode.json",
+      "sha256": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1/r2r-mpc-control/image/2026-11-14__22-04-43/r2r-mpc-control__115ad66b/verifier/test-stdout.txt",
+      "sha256": "e092b86b21af9a83e274a43e066bb27574a3d82238770094bfc55c48e11dabac",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1-recovery/exam-block-sequencing/text/2026-11-14__23-23-22/exam-block-sequencing__ea18964a/result.json",
+      "sha256": "9a1d24ac52f23e26debc269c9cb59fd5b0b4c6901fc64cccd78484a342218015",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1-recovery/exam-block-sequencing/text/2026-11-14__23-23-22/exam-block-sequencing__ea18964a/skill-delivery.json",
+      "sha256": "344984b57dacdc80fa78354a6edf72d79ffa2cdebb3e89191df89e2de694158a",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1-recovery/exam-block-sequencing/text/2026-11-14__23-23-22/exam-block-sequencing__ea18964a/trajectory/llm_trajectory.jsonl",
+      "sha256": "bab437bf5f7e019e7eb3f252a251c7aefd4ce242fb894ed87da36526925e4a94",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1-recovery/exam-block-sequencing/text/2026-11-14__23-23-22/exam-block-sequencing__ea18964a/trajectory/acp_trajectory.jsonl",
+      "sha256": "2ae47cf98f5027767f4fe355ee5f970b0bd1144e70c6fc42eb41e0e13e2b791f",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1-recovery/exam-block-sequencing/text/2026-11-14__23-23-22/exam-block-sequencing__ea18964a/shared-opencode.json",
+      "sha256": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1-recovery/exam-block-sequencing/text/2026-11-14__23-23-22/exam-block-sequencing__ea18964a/verifier/test-stdout.txt",
+      "sha256": "514a0c07337f0515d276229e99b494c3064d89e73ce923efd2ff94289f272401",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1-recovery/exam-block-sequencing/image/2026-11-14__22-57-32/exam-block-sequencing__628a2a93/result.json",
+      "sha256": "407cee371591912678b21b9de7fbf2fa2113132a050ad6a4da17545f86272260",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1-recovery/exam-block-sequencing/image/2026-11-14__22-57-32/exam-block-sequencing__628a2a93/skill-delivery.json",
+      "sha256": "53eabb4ebbae11f4db6f21a0b68e4e3e73728184200b981cb01f3ef436942ac2",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1-recovery/exam-block-sequencing/image/2026-11-14__22-57-32/exam-block-sequencing__628a2a93/trajectory/llm_trajectory.jsonl",
+      "sha256": "33ff64e063095fe389423ec05f1a58ea950a63c309d12bcc75c01fdb639baef6",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1-recovery/exam-block-sequencing/image/2026-11-14__22-57-32/exam-block-sequencing__628a2a93/trajectory/acp_trajectory.jsonl",
+      "sha256": "710a0a97043151c65116ac5e087d8fc03f53de63641f5edb0216db0f366dbabf",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1-recovery/exam-block-sequencing/image/2026-11-14__22-57-32/exam-block-sequencing__628a2a93/shared-opencode.json",
+      "sha256": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1-recovery/exam-block-sequencing/image/2026-11-14__22-57-32/exam-block-sequencing__628a2a93/verifier/test-stdout.txt",
+      "sha256": "ba56fc850436dafd347866fa00e9b7637895d35ac96f2ba1f11650d8b5518009",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1-recovery/manufacturing-fjsp-optimization/text/2026-11-14__23-36-14/manufacturing-fjsp-optimization__24b9f178/result.json",
+      "sha256": "a42de2ff6d429a426bde3377b722ef104ed3603c48663720055f6a9444db062d",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1-recovery/manufacturing-fjsp-optimization/text/2026-11-14__23-36-14/manufacturing-fjsp-optimization__24b9f178/skill-delivery.json",
+      "sha256": "0ef3ca7fba22a80a71cdadabe95cf9c5941efbc04957ca32961a36404dd6119e",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1-recovery/manufacturing-fjsp-optimization/text/2026-11-14__23-36-14/manufacturing-fjsp-optimization__24b9f178/trajectory/llm_trajectory.jsonl",
+      "sha256": "633d5d40ff6aabf9a54b730814ed7bd63bc67f5b49ce2a711244f4a0849c6407",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1-recovery/manufacturing-fjsp-optimization/text/2026-11-14__23-36-14/manufacturing-fjsp-optimization__24b9f178/trajectory/acp_trajectory.jsonl",
+      "sha256": "361dbdd377caf4e3b7666643315e560867eeb286db74d1dbdae4b48d69cd20c0",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1-recovery/manufacturing-fjsp-optimization/text/2026-11-14__23-36-14/manufacturing-fjsp-optimization__24b9f178/shared-opencode.json",
+      "sha256": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1-recovery/manufacturing-fjsp-optimization/text/2026-11-14__23-36-14/manufacturing-fjsp-optimization__24b9f178/verifier/test-stdout.txt",
+      "sha256": "586f903d0fee31879e00534f46d7caf54f72a9173f69dcdbf4b7ce1538e2f03c",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1-recovery/manufacturing-fjsp-optimization/image/2026-11-14__23-42-31/manufacturing-fjsp-optimization__8bb2ea6d/result.json",
+      "sha256": "d20fa65816f5dd9ece367ecfbaba5ed5575119db233d9ed8c45d02bbb04bd159",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1-recovery/manufacturing-fjsp-optimization/image/2026-11-14__23-42-31/manufacturing-fjsp-optimization__8bb2ea6d/skill-delivery.json",
+      "sha256": "69f16a776aaf82f1f1933b7c688b09c7cf05328f85fe277eefe896bdb601735b",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1-recovery/manufacturing-fjsp-optimization/image/2026-11-14__23-42-31/manufacturing-fjsp-optimization__8bb2ea6d/trajectory/llm_trajectory.jsonl",
+      "sha256": "1393620a7fedd43348338c6597f3bfffd988100f261310e622334e5c6a73b9ea",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1-recovery/manufacturing-fjsp-optimization/image/2026-11-14__23-42-31/manufacturing-fjsp-optimization__8bb2ea6d/trajectory/acp_trajectory.jsonl",
+      "sha256": "a6d34adcaf0e5665a687d0ee518ccdec997ccd1ffc4c8177f90f1d43d885aa2c",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1-recovery/manufacturing-fjsp-optimization/image/2026-11-14__23-42-31/manufacturing-fjsp-optimization__8bb2ea6d/shared-opencode.json",
+      "sha256": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-v1-recovery/manufacturing-fjsp-optimization/image/2026-11-14__23-42-31/manufacturing-fjsp-optimization__8bb2ea6d/verifier/test-stdout.txt",
+      "sha256": "bca933faa2da1b356c5e7f22397072cc22c4a72348a07ef3326f4c932a9276da",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/llm-prefix-cache-replay/text/2026-11-15__20-20-10/llm-prefix-cache-replay__a5b26930/result.json",
+      "sha256": "0de46368ca80a99d9f3b8b29a26a715167236ab2fb3c5f8e03548b6c3725d3c0",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/llm-prefix-cache-replay/text/2026-11-15__20-20-10/llm-prefix-cache-replay__a5b26930/skill-delivery.json",
+      "sha256": "d3569ee61cdfd6615976189dc3ae288a920fbde1f2bf133a5696513c3937ffae",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/llm-prefix-cache-replay/text/2026-11-15__20-20-10/llm-prefix-cache-replay__a5b26930/trajectory/llm_trajectory.jsonl",
+      "sha256": "c2912d3f3ad276a7fd424aec6a6d3b7358c7f67035672f80dd1706e7a7377df8",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/llm-prefix-cache-replay/text/2026-11-15__20-20-10/llm-prefix-cache-replay__a5b26930/trajectory/acp_trajectory.jsonl",
+      "sha256": "42a24381c96d9dbb70c70d489613827eac9d31507a232bebac1556f582f4f9ab",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/llm-prefix-cache-replay/text/2026-11-15__20-20-10/llm-prefix-cache-replay__a5b26930/shared-opencode.json",
+      "sha256": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/llm-prefix-cache-replay/text/2026-11-15__20-20-10/llm-prefix-cache-replay__a5b26930/verifier/test-stdout.txt",
+      "sha256": "616d4f7c2c5b7aa5c5c2ebbc5846137a411675aa60c656bd48b15145fdfb0b5c",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/llm-prefix-cache-replay/image/2026-11-15__20-20-53/llm-prefix-cache-replay__b1e3222a/result.json",
+      "sha256": "3afea9f23b87541757020afd21c8bf88410d83dcb4981303c380c2a7cae7ebd2",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/llm-prefix-cache-replay/image/2026-11-15__20-20-53/llm-prefix-cache-replay__b1e3222a/skill-delivery.json",
+      "sha256": "e08ef4a93e98b3cf1d06502111adff12704b10932c18d9bfbdb480175d9c1405",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/llm-prefix-cache-replay/image/2026-11-15__20-20-53/llm-prefix-cache-replay__b1e3222a/trajectory/llm_trajectory.jsonl",
+      "sha256": "96cbaa037a258a0833fee73862e29508cb17ae85ed09164634cb8563a932749a",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/llm-prefix-cache-replay/image/2026-11-15__20-20-53/llm-prefix-cache-replay__b1e3222a/trajectory/acp_trajectory.jsonl",
+      "sha256": "42059be5a9fe75765541ae11a51ae2692e32c5f1b7c45f39861c9069353dc829",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/llm-prefix-cache-replay/image/2026-11-15__20-20-53/llm-prefix-cache-replay__b1e3222a/shared-opencode.json",
+      "sha256": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/llm-prefix-cache-replay/image/2026-11-15__20-20-53/llm-prefix-cache-replay__b1e3222a/verifier/test-stdout.txt",
+      "sha256": "616d4f7c2c5b7aa5c5c2ebbc5846137a411675aa60c656bd48b15145fdfb0b5c",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/energy-market-pricing/image/2026-11-15__20-21-38/energy-market-pricing__a74b3ca2/result.json",
+      "sha256": "a26387cc121c2c061d994d1650dbad741fb63d84b3cb15cc37903c34efd9a9d7",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/energy-market-pricing/image/2026-11-15__20-21-38/energy-market-pricing__a74b3ca2/skill-delivery.json",
+      "sha256": "107986e68a6402efef39ccfda88f2c4ac0e1176e831ddc6ce9423122f9517bd5",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/energy-market-pricing/image/2026-11-15__20-21-38/energy-market-pricing__a74b3ca2/trajectory/llm_trajectory.jsonl",
+      "sha256": "62a2df4ce40e6f3aefb4e8990851fc79f5e3231bd66500e5b26d866900043ad3",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/energy-market-pricing/image/2026-11-15__20-21-38/energy-market-pricing__a74b3ca2/trajectory/acp_trajectory.jsonl",
+      "sha256": "72b0084d84852573a0b1e157f8811784a5e21c9bdd2649f3ea6169f04bfa143e",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/energy-market-pricing/image/2026-11-15__20-21-38/energy-market-pricing__a74b3ca2/shared-opencode.json",
+      "sha256": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/energy-market-pricing/image/2026-11-15__20-21-38/energy-market-pricing__a74b3ca2/verifier/test-stdout.txt",
+      "sha256": "500aadbdc38bf93c598c812411a295d81ed6acebb494d4712b6694956378a30a",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/energy-market-pricing/text/2026-11-15__20-24-36/energy-market-pricing__f06765a4/result.json",
+      "sha256": "e0bd00e36e21483e19d881c37a45ac07fad4ad454216b244885a40171195420f",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/energy-market-pricing/text/2026-11-15__20-24-36/energy-market-pricing__f06765a4/skill-delivery.json",
+      "sha256": "7d634e60ac4066cefabea8bb5b9ad46682fd31e4f1ca24f544f58cfc2a6b467f",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/energy-market-pricing/text/2026-11-15__20-24-36/energy-market-pricing__f06765a4/trajectory/llm_trajectory.jsonl",
+      "sha256": "0e5aa7db04f3def4e8a8f850c240e60488087d21f91c2912fc7aac5193166814",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/energy-market-pricing/text/2026-11-15__20-24-36/energy-market-pricing__f06765a4/trajectory/acp_trajectory.jsonl",
+      "sha256": "a718f937df6ad9030c95b13d85be7499a3ae08ad442301f66f8acafac37279f5",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/energy-market-pricing/text/2026-11-15__20-24-36/energy-market-pricing__f06765a4/shared-opencode.json",
+      "sha256": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/energy-market-pricing/text/2026-11-15__20-24-36/energy-market-pricing__f06765a4/verifier/test-stdout.txt",
+      "sha256": "c38b96c274abbb32f04092a56770221d814a337bd8983fc528cd3f71afb16bc6",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/r2r-mpc-control/text/2026-11-15__20-35-16/r2r-mpc-control__6ff65f1a/result.json",
+      "sha256": "2314a3e2f68116d158977195afb3b7cc44c3dc600a83446ee7f3f8d99af9ad3e",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/r2r-mpc-control/text/2026-11-15__20-35-16/r2r-mpc-control__6ff65f1a/skill-delivery.json",
+      "sha256": "38a3214eb5cc029f775eb479041ed7270bb0ba6e143fef8d332899cb58787abb",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/r2r-mpc-control/text/2026-11-15__20-35-16/r2r-mpc-control__6ff65f1a/trajectory/llm_trajectory.jsonl",
+      "sha256": "25a9b3dc199468c5f9b8e43714d8dd0b9aefc0f1c0e1f7d5b90d691a06a245aa",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/r2r-mpc-control/text/2026-11-15__20-35-16/r2r-mpc-control__6ff65f1a/trajectory/acp_trajectory.jsonl",
+      "sha256": "ede70e133555b2331322ef23e478927f85a84d024d7a52722ffe973c42b52611",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/r2r-mpc-control/text/2026-11-15__20-35-16/r2r-mpc-control__6ff65f1a/shared-opencode.json",
+      "sha256": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/r2r-mpc-control/text/2026-11-15__20-35-16/r2r-mpc-control__6ff65f1a/verifier/test-stdout.txt",
+      "sha256": "591cecce3e7e65f7df06559b3b21b09a8ffbb3ce30d62ec5071c8028549bfc2b",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/r2r-mpc-control/image/2026-11-15__20-38-02/r2r-mpc-control__d47da638/result.json",
+      "sha256": "d8d020b3a04b276551d68b7f95989198f21e93384d01e6835422ec89eaffeb0a",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/r2r-mpc-control/image/2026-11-15__20-38-02/r2r-mpc-control__d47da638/skill-delivery.json",
+      "sha256": "4303928fa7de6d8b419b6a73724c2a95ee4dbcd9f33a8f7df5e27cf9c9613f59",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/r2r-mpc-control/image/2026-11-15__20-38-02/r2r-mpc-control__d47da638/trajectory/llm_trajectory.jsonl",
+      "sha256": "b79ad3f921f91886d6233d03dc4717cfd099478cb235d88ddc1c2df43ce7a3b7",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/r2r-mpc-control/image/2026-11-15__20-38-02/r2r-mpc-control__d47da638/trajectory/acp_trajectory.jsonl",
+      "sha256": "c8cb31c4d6a09c41ee77ed2bea1785eaec9a0a67c7fe0bfe2dff741f7fe16a3d",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/r2r-mpc-control/image/2026-11-15__20-38-02/r2r-mpc-control__d47da638/shared-opencode.json",
+      "sha256": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/r2r-mpc-control/image/2026-11-15__20-38-02/r2r-mpc-control__d47da638/verifier/test-stdout.txt",
+      "sha256": "e02cfb0ae71862eb2714f5517089fc24c69fd2bf7046d6d86473912b50e7e278",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/exam-block-sequencing/image/2026-11-15__20-39-27/exam-block-sequencing__6ef7f3b5/result.json",
+      "sha256": "e2633c5cf717614e04c89d09e655eae88e01907a9d271681ba821910ead8dff6",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/exam-block-sequencing/image/2026-11-15__20-39-27/exam-block-sequencing__6ef7f3b5/skill-delivery.json",
+      "sha256": "99cd4725db7460d3446b3804a653c634ab4d5c7c6bfc2c806e0eaa5fa8c5cb36",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/exam-block-sequencing/image/2026-11-15__20-39-27/exam-block-sequencing__6ef7f3b5/trajectory/llm_trajectory.jsonl",
+      "sha256": "1fc4199c653de99e1f2ac18a7f60325fa08d370989f62d07c8f097dad531e831",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/exam-block-sequencing/image/2026-11-15__20-39-27/exam-block-sequencing__6ef7f3b5/trajectory/acp_trajectory.jsonl",
+      "sha256": "9f815cb82e559cfdcc04d30579d4b32b0ee8e9c2f9aacc02e1ca8beef8a48b8b",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/exam-block-sequencing/image/2026-11-15__20-39-27/exam-block-sequencing__6ef7f3b5/shared-opencode.json",
+      "sha256": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/exam-block-sequencing/image/2026-11-15__20-39-27/exam-block-sequencing__6ef7f3b5/verifier/test-stdout.txt",
+      "sha256": "fbf29e633428b4aedc4c21104171769619c3afc4d8aca7ff019bb22be2f24771",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/exam-block-sequencing/text/2026-11-15__21-05-05/exam-block-sequencing__22bddce0/result.json",
+      "sha256": "aac2d810bc047f82c3ba665df6be1a01cf63a384e58dae5f083510432ef0ebef",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/exam-block-sequencing/text/2026-11-15__21-05-05/exam-block-sequencing__22bddce0/skill-delivery.json",
+      "sha256": "e99578db0eb542c5e7fc204c6eb3686637398d700b1e07b6141b52517b689e9a",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/exam-block-sequencing/text/2026-11-15__21-05-05/exam-block-sequencing__22bddce0/trajectory/llm_trajectory.jsonl",
+      "sha256": "6ec85c47c6bbe59511192323299ce9a6f4885b38705c6c95963b1a86621c2073",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/exam-block-sequencing/text/2026-11-15__21-05-05/exam-block-sequencing__22bddce0/trajectory/acp_trajectory.jsonl",
+      "sha256": "058926f116d70b29aace320090edd859f5f39595967ad2ada62b012f90986ba4",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/exam-block-sequencing/text/2026-11-15__21-05-05/exam-block-sequencing__22bddce0/shared-opencode.json",
+      "sha256": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/exam-block-sequencing/text/2026-11-15__21-05-05/exam-block-sequencing__22bddce0/verifier/test-stdout.txt",
+      "sha256": "3da84799132553572664bb629dc118b1bcbdf735adff2787c91ea9bc8c188626",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/manufacturing-fjsp-optimization/text/2026-11-15__21-30-42/manufacturing-fjsp-optimization__d46a53fb/result.json",
+      "sha256": "4b3735a78f680949bac0ee44cdd6cbf723b15b9a5eb072a3b9ef6045c1335fb6",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/manufacturing-fjsp-optimization/text/2026-11-15__21-30-42/manufacturing-fjsp-optimization__d46a53fb/skill-delivery.json",
+      "sha256": "061d34d33ecc4dbc30666191a0342e734b2dc2fe93fc49fd8458e33fb50b395e",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/manufacturing-fjsp-optimization/text/2026-11-15__21-30-42/manufacturing-fjsp-optimization__d46a53fb/trajectory/llm_trajectory.jsonl",
+      "sha256": "8eb91a217d68a4030ee3e1eb589c1e507e1c3dba94d614b5c140b2b34b08a2c5",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/manufacturing-fjsp-optimization/text/2026-11-15__21-30-42/manufacturing-fjsp-optimization__d46a53fb/trajectory/acp_trajectory.jsonl",
+      "sha256": "36e93f36b75c8550491754c3945d06fe396505ae6765c62ef1786cb1bd282d25",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/manufacturing-fjsp-optimization/text/2026-11-15__21-30-42/manufacturing-fjsp-optimization__d46a53fb/shared-opencode.json",
+      "sha256": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/manufacturing-fjsp-optimization/text/2026-11-15__21-30-42/manufacturing-fjsp-optimization__d46a53fb/verifier/test-stdout.txt",
+      "sha256": "a56ac6703531ae00f16a025f6220ee062c30a50ad6b3bf667b975bba865399c6",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/manufacturing-fjsp-optimization/image/2026-11-15__21-39-23/manufacturing-fjsp-optimization__76670963/result.json",
+      "sha256": "47b61ae1452cba48e4df50ff230e763efdf5622d277e307d021096a18417bca4",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/manufacturing-fjsp-optimization/image/2026-11-15__21-39-23/manufacturing-fjsp-optimization__76670963/skill-delivery.json",
+      "sha256": "a6831c8b39bdbd7569847ee5bfa39fa61b8023df4ca7b219f5d3c49b84b65979",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/manufacturing-fjsp-optimization/image/2026-11-15__21-39-23/manufacturing-fjsp-optimization__76670963/trajectory/llm_trajectory.jsonl",
+      "sha256": "aab9b68c25e14e8c71a71f82ef6696bd3c329f1c9f3449628c324a747c503bc2",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/manufacturing-fjsp-optimization/image/2026-11-15__21-39-23/manufacturing-fjsp-optimization__76670963/trajectory/acp_trajectory.jsonl",
+      "sha256": "6b8f204291bff5d4023e06b64f70af9c0df2b8413f667231e8040e0f326c79fd",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/manufacturing-fjsp-optimization/image/2026-11-15__21-39-23/manufacturing-fjsp-optimization__76670963/shared-opencode.json",
+      "sha256": "697bb1af8a2fd239ec5112eb0878265c5cc5c44c3a7971419214df8a537e44f4",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-expanded/paired-five-full-skill-v2/manufacturing-fjsp-optimization/image/2026-11-15__21-39-23/manufacturing-fjsp-optimization__76670963/verifier/test-stdout.txt",
+      "sha256": "a56ac6703531ae00f16a025f6220ee062c30a50ad6b3bf667b975bba865399c6",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-flowchart/forced-v1/text/2026-11-14__18-08-54/crystallographic-wyckoff-position-analysis__5ca3d85c/result.json",
+      "sha256": "d6bcf6a9a699d6748be553b3b82c0203260e6a6a77662c74c24c07c56a770008",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-flowchart/forced-v1/text/2026-11-14__18-08-54/crystallographic-wyckoff-position-analysis__5ca3d85c/skill-delivery.json",
+      "sha256": "6229090b554964b3ed8f61158241e215a2a0b24d8bebb19aef82e78af885bd99",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-flowchart/forced-v1/text/2026-11-14__18-08-54/crystallographic-wyckoff-position-analysis__5ca3d85c/trajectory/llm_trajectory.jsonl",
+      "sha256": "c670b096cfc4bc66106f6fae4bb88c6d066dabeab7335bddf917a7e66e314536",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-flowchart/forced-v1/text/2026-11-14__18-08-54/crystallographic-wyckoff-position-analysis__5ca3d85c/trajectory/acp_trajectory.jsonl",
+      "sha256": "713bb193f243f9d4f5195e30a013cc6a2beadff15e7dddeb83c8df10d65e1a1a",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-flowchart/forced-v1/text/2026-11-14__18-08-54/crystallographic-wyckoff-position-analysis__5ca3d85c/verifier/test-stdout.txt",
+      "sha256": "ad414236640a3f7d2338cb790a01adb858c9a2c0c2adaedcdc373b49196c0b3d",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-flowchart/forced-v1/image/2026-11-14__18-59-18/crystallographic-wyckoff-position-analysis__9701e12d/result.json",
+      "sha256": "366f4178af79261460ab00b4912e7bb91b0429ac17b802856999a11565ab5340",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-flowchart/forced-v1/image/2026-11-14__18-59-18/crystallographic-wyckoff-position-analysis__9701e12d/skill-delivery.json",
+      "sha256": "b7078b5b4ff4c6e2a3453241f3cf5de87e89cbdf53b9db03e9f5bb109a441e42",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-flowchart/forced-v1/image/2026-11-14__18-59-18/crystallographic-wyckoff-position-analysis__9701e12d/trajectory/llm_trajectory.jsonl",
+      "sha256": "3b39c0a1b1c9ae404ced54baa57a96092ff064ee0f5bc8844ae3c7a62f2101cd",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-flowchart/forced-v1/image/2026-11-14__18-59-18/crystallographic-wyckoff-position-analysis__9701e12d/trajectory/acp_trajectory.jsonl",
+      "sha256": "25652a5d279fb732787e49f771a0d04292650d5e6d5d0cbd6572f507428be07a",
+      "matches": true
+    },
+    {
+      "path": "jobs/uml-flowchart/forced-v1/image/2026-11-14__18-59-18/crystallographic-wyckoff-position-analysis__9701e12d/verifier/test-stdout.txt",
+      "sha256": "12b143608925139c34b79843a36ac06eec365abcefe63f69bc06b362969aa3a2",
+      "matches": true
+    }
+  ],
+  "checks_passed": 130,
+  "selected_unique_runs": 22,
+  "historical_unique_runs": 26,
+  "note": "The 6 v1 trials referenced by recovery are counted once. 4 superseded v1 runs remain historical, outside selected effects."
+}

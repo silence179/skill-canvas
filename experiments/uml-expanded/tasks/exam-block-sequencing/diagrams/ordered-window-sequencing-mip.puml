@@ -1,0 +1,46 @@
+@startuml
+!pragma useVerticalIf on
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+skinparam defaultFontName SansSerif
+skinparam defaultFontSize 18
+skinparam ArrowColor #46566F
+skinparam activity {
+  BackgroundColor #EEF5FF
+  BorderColor #365A82
+  FontColor #152B44
+  DiamondBackgroundColor #FFF3D6
+  DiamondBorderColor #BA842A
+}
+skinparam noteBackgroundColor #FFF8DE
+skinparam noteBorderColor #BEA45C
+skinparam wrapWidth 360
+title Ordered-window sequencing - objective semantics before optimization
+start
+:Read ordered positions, items and cost tables;\nbuild successor map from declared position order;
+:Define tuple direction, eligible starts,\nboundaries and missing-row meaning;
+note right
+  Do not sort or symmetrize ordered tuples.
+  Do not add reverse pairs or all permutations.
+  Position labels need not be contiguous integers.
+end note
+if (Primary representation?) then (assignment-linked)
+  :Create assign[item,position];\nadd pair / triple / window indicators;\nlink with ALL upper and lower bounds;
+else (direct ordered windows)
+  :Create W[start,ordered_tuple];\nchoose windows and link adjacent suffix / prefix;
+endif
+:Add each-item and each-position requirements;\nblock repeats and ineligible placements;
+if (Overlap penalty present?) then (yes)
+  :Define primitive active patterns and start mask;\nlink overlap indicators to both active patterns;\nkeep overlap costs IN the optimized objective;
+  note right
+    Active adjacent patterns and all triples
+    inside a four-slot span are different rules.
+    Use the instance's declared semantics.
+  end note
+endif
+:Handle boundaries explicitly; use cyclic\nwraparound only when the source declares it;
+:Minimize the complete named weighted objective;
+:Extract one sequence; independently evaluate\nordered tuples, eligible starts and active overlaps;
+:Check feasibility and agreement with solver objective;\nuse exact final-output evaluation for metrics;
+stop
+@enduml

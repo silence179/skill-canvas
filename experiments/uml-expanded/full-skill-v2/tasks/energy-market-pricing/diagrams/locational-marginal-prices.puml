@@ -1,0 +1,37 @@
+@startuml
+!pragma useVerticalIf on
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+skinparam defaultFontName SansSerif
+skinparam defaultFontSize 17
+skinparam ArrowColor #46566F
+skinparam activity {
+  BackgroundColor #EEF5FF
+  BorderColor #365A82
+  FontColor #152B44
+  DiamondBackgroundColor #FFF3D6
+  DiamondBorderColor #BA842A
+}
+skinparam noteBackgroundColor #FFF8DE
+skinparam noteBorderColor #BEA45C
+skinparam wrapWidth 370
+title Locational prices | dual references and same-case comparisons
+start
+:Build DC-OPF and retain each bus balance\nconstraint plus the system reserve constraint [S1];
+:Solve base case with CLARABEL;\nread duals after solving [S1];
+:Associate each balance dual with its original bus ID;\ncheck constraint orientation and units\nbefore using the source's price convention [S1];
+note right
+ S1 sample: lmp = dual * baseMVA, or 0 if None.
+ Verify sign and scaling against the actual
+ balance equation and its power units.
+ Label missing-dual fallbacks as such.
+end note
+:Read reserve requirement dual as reserve MCP;\ncompute flows and loading; mark lines only if\nx != 0, RATE_A > 0 and loading >= 99% [S1];
+:Save base cost, all bus prices, binding lines\nand target-line binding state [S1];
+:Find target line in either direction;\nchange its requested thermal rating only [S1];
+:Re-solve counterfactual; extract prices, flows\nand binding lines with the same conventions [S1];
+:Compute base_cost - cf_cost;\nfor each bus: delta = cf_LMP - base_LMP;\ncompare target binding before/after [S1];
+:Check relaxation cannot increase optimal cost;\ninterpret price separation and congestion;\nnegative prices alone are not an error [S1];
+stop
+footer Full-skill v2 | S1: SKILL.md
+@enduml

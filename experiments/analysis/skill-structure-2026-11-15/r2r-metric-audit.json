@@ -1,0 +1,34 @@
+[
+  {
+    "arm": "text",
+    "reported": {
+      "steady_state_error": 0.38475408406760087,
+      "settling_time": 0.26000000000000045,
+      "max_tension": 45.33409581541996,
+      "min_tension": 19.377326168190258
+    },
+    "recomputed_settling_seconds": 1.2000000000000008,
+    "reference_band_N": 1.2000000000000002,
+    "horizon": 9,
+    "Q_velocity": 1.0,
+    "R": 10.0,
+    "log": "jobs/uml-expanded/paired-five-full-skill-v2/r2r-mpc-control/text/2026-11-15__20-35-16/r2r-mpc-control__6ff65f1a/evidence/workspace/control_log.json",
+    "note": "Replicates archived evaluator definition from visible failure output, not a new controller run."
+  },
+  {
+    "arm": "image",
+    "reported": {
+      "steady_state_error": 0.3719792899830423,
+      "settling_time": 0.06000000000000005,
+      "max_tension": 45.231588156207366,
+      "min_tension": 18.836345740446085
+    },
+    "recomputed_settling_seconds": 5.04,
+    "reference_band_N": 1.2000000000000002,
+    "horizon": 9,
+    "Q_velocity": 0.1,
+    "R": 0.033,
+    "log": "jobs/uml-expanded/paired-five-full-skill-v2/r2r-mpc-control/image/2026-11-15__20-38-02/r2r-mpc-control__d47da638/evidence/workspace/control_log.json",
+    "note": "Replicates archived evaluator definition from visible failure output, not a new controller run."
+  }
+]

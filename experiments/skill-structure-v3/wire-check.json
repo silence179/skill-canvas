@@ -1,0 +1,555 @@
+[
+  {
+    "valid": true,
+    "task": "llm-prefix-cache-replay",
+    "kind": "local-wire",
+    "policy": {
+      "method": "forced-prefix-v1",
+      "arm": "image",
+      "id": "05ae586edcffbc65b38b5987c2e78d8e1859d33cef99633d2fa0ee885ad548f4",
+      "adapter_sha256": {
+        "experiments/skill-structure-v3/delivery.py": "332b856032208f43deb9bdc0519dbf7ebda3c1dd1d1d36ce56f057f68d126938",
+        "experiments/uml-flowchart/delivery_runner.py": "8127af3eee6b96c0a53fe83239c83995fff8618e188a4463eeb5dab04add6a70",
+        "experiments/uml-flowchart/delivery_protocol.py": "25141e86639e76aed37c03fc98be180f7b9c11754f95a63a33cc5f8214af8977"
+      },
+      "task": "llm-prefix-cache-replay",
+      "skill_names": [
+        "cache-policy-comparison",
+        "prefix-cache-replay"
+      ],
+      "study_sha256": "ab47822a1e19541b2e37a95386cf53e1d680a312eaced525de9845b3204369af",
+      "assets": [
+        {
+          "skill": "cache-policy-comparison",
+          "guide_sha256": "353a7215727695b01e48ea69e63ed92c0b32174534a6bda38cee9b91382e5963",
+          "image_sha256": "985529ae3381d1b5867612b01a88e5ce13cd0842d4e65d51bd06cf693806ca03"
+        },
+        {
+          "skill": "prefix-cache-replay",
+          "guide_sha256": "28ced940ec272cc01cf06519912077492d948b10e08a933acba12dd9907220cf",
+          "image_sha256": "617a6c6cd5cc7614e2a9e1deddce402da00cc81e7bb57d20385022dbbdb7cfc9"
+        }
+      ]
+    },
+    "image_count": 2,
+    "reply": "OK",
+    "usage": null,
+    "variant": "baseline"
+  },
+  {
+    "valid": true,
+    "task": "llm-prefix-cache-replay",
+    "kind": "local-wire",
+    "policy": {
+      "method": "forced-prefix-v1",
+      "arm": "image",
+      "id": "dfac7becf9e2ac93bab9c60761a10a0ae5ceccb9cc31de9ad35c2c84a77c0035",
+      "adapter_sha256": {
+        "experiments/skill-structure-v3/delivery.py": "332b856032208f43deb9bdc0519dbf7ebda3c1dd1d1d36ce56f057f68d126938",
+        "experiments/uml-flowchart/delivery_runner.py": "8127af3eee6b96c0a53fe83239c83995fff8618e188a4463eeb5dab04add6a70",
+        "experiments/uml-flowchart/delivery_protocol.py": "25141e86639e76aed37c03fc98be180f7b9c11754f95a63a33cc5f8214af8977"
+      },
+      "task": "llm-prefix-cache-replay",
+      "skill_names": [
+        "cache-policy-comparison",
+        "prefix-cache-replay"
+      ],
+      "study_sha256": "ab47822a1e19541b2e37a95386cf53e1d680a312eaced525de9845b3204369af",
+      "assets": [
+        {
+          "skill": "cache-policy-comparison",
+          "guide_sha256": "353a7215727695b01e48ea69e63ed92c0b32174534a6bda38cee9b91382e5963",
+          "image_sha256": "985529ae3381d1b5867612b01a88e5ce13cd0842d4e65d51bd06cf693806ca03"
+        },
+        {
+          "skill": "prefix-cache-replay",
+          "guide_sha256": "28ced940ec272cc01cf06519912077492d948b10e08a933acba12dd9907220cf",
+          "image_sha256": "7b5d4157a967913cedd1b53c063b82c7a977e61f39542b306ae433bbee9a073c"
+        }
+      ]
+    },
+    "image_count": 2,
+    "reply": "OK",
+    "usage": null,
+    "variant": "prefix-cache-replay"
+  },
+  {
+    "valid": true,
+    "task": "energy-market-pricing",
+    "kind": "local-wire",
+    "policy": {
+      "method": "forced-prefix-v1",
+      "arm": "image",
+      "id": "0d457c400f6ce0f0551e20837ac7f5177e2547855b028ce82849f6b2ca111377",
+      "adapter_sha256": {
+        "experiments/skill-structure-v3/delivery.py": "332b856032208f43deb9bdc0519dbf7ebda3c1dd1d1d36ce56f057f68d126938",
+        "experiments/uml-flowchart/delivery_runner.py": "8127af3eee6b96c0a53fe83239c83995fff8618e188a4463eeb5dab04add6a70",
+        "experiments/uml-flowchart/delivery_protocol.py": "25141e86639e76aed37c03fc98be180f7b9c11754f95a63a33cc5f8214af8977"
+      },
+      "task": "energy-market-pricing",
+      "skill_names": [
+        "dc-power-flow",
+        "economic-dispatch",
+        "locational-marginal-prices",
+        "power-flow-data"
+      ],
+      "study_sha256": "ab47822a1e19541b2e37a95386cf53e1d680a312eaced525de9845b3204369af",
+      "assets": [
+        {
+          "skill": "dc-power-flow",
+          "guide_sha256": "461a4a93c6baf5f84eaa16881b11d76d0542907c8bb50745eceeb21d217e480e",
+          "image_sha256": "71a9005073ac48f740500ee9005e01d0be0a417c01410bd7af7ef00b19130cb7"
+        },
+        {
+          "skill": "economic-dispatch",
+          "guide_sha256": "907586a8ab5d697d20efaafb190809fbe737bcbac4082c0f94458c1e6489b82f",
+          "image_sha256": "c6df0d528db63d3b5f109d843062effd1818dbe7e1de4e0adeb9eba96ab7f5bc"
+        },
+        {
+          "skill": "locational-marginal-prices",
+          "guide_sha256": "c48851e863afad9f416e52d57f5b065cc9a7a1ab2146b829abae4ac85412f2ac",
+          "image_sha256": "2ad20c6d835fe6f363346c6fdcfd03cf90dafd953f817af997c6cabc4d094057"
+        },
+        {
+          "skill": "power-flow-data",
+          "guide_sha256": "7c6544423d4106746ca831e431e6725292015c768e7958a168c57db140051846",
+          "image_sha256": "c31a490fda9fab3781719075f960f24075e5d9d1f3fe6e534147a98cf9c55003"
+        }
+      ]
+    },
+    "image_count": 4,
+    "reply": "OK",
+    "usage": null,
+    "variant": "baseline"
+  },
+  {
+    "valid": true,
+    "task": "energy-market-pricing",
+    "kind": "local-wire",
+    "policy": {
+      "method": "forced-prefix-v1",
+      "arm": "image",
+      "id": "f3fe95b5827255df5ce7b99ebc793794e6453e9268e1c4d19834694897fabdce",
+      "adapter_sha256": {
+        "experiments/skill-structure-v3/delivery.py": "332b856032208f43deb9bdc0519dbf7ebda3c1dd1d1d36ce56f057f68d126938",
+        "experiments/uml-flowchart/delivery_runner.py": "8127af3eee6b96c0a53fe83239c83995fff8618e188a4463eeb5dab04add6a70",
+        "experiments/uml-flowchart/delivery_protocol.py": "25141e86639e76aed37c03fc98be180f7b9c11754f95a63a33cc5f8214af8977"
+      },
+      "task": "energy-market-pricing",
+      "skill_names": [
+        "dc-power-flow",
+        "economic-dispatch",
+        "locational-marginal-prices",
+        "power-flow-data"
+      ],
+      "study_sha256": "ab47822a1e19541b2e37a95386cf53e1d680a312eaced525de9845b3204369af",
+      "assets": [
+        {
+          "skill": "dc-power-flow",
+          "guide_sha256": "461a4a93c6baf5f84eaa16881b11d76d0542907c8bb50745eceeb21d217e480e",
+          "image_sha256": "11cd84101d1349f0c545b6b516711cb188f4b1aeb56ce17e46487cbb760a38ee"
+        },
+        {
+          "skill": "economic-dispatch",
+          "guide_sha256": "907586a8ab5d697d20efaafb190809fbe737bcbac4082c0f94458c1e6489b82f",
+          "image_sha256": "c6df0d528db63d3b5f109d843062effd1818dbe7e1de4e0adeb9eba96ab7f5bc"
+        },
+        {
+          "skill": "locational-marginal-prices",
+          "guide_sha256": "c48851e863afad9f416e52d57f5b065cc9a7a1ab2146b829abae4ac85412f2ac",
+          "image_sha256": "2ad20c6d835fe6f363346c6fdcfd03cf90dafd953f817af997c6cabc4d094057"
+        },
+        {
+          "skill": "power-flow-data",
+          "guide_sha256": "7c6544423d4106746ca831e431e6725292015c768e7958a168c57db140051846",
+          "image_sha256": "c31a490fda9fab3781719075f960f24075e5d9d1f3fe6e534147a98cf9c55003"
+        }
+      ]
+    },
+    "image_count": 4,
+    "reply": "OK",
+    "usage": null,
+    "variant": "dc-power-flow"
+  },
+  {
+    "valid": true,
+    "task": "energy-market-pricing",
+    "kind": "local-wire",
+    "policy": {
+      "method": "forced-prefix-v1",
+      "arm": "image",
+      "id": "092467295d707b797a6fc5779f7e765dca7c059b56f3fb1bec80d5d6e6880c7a",
+      "adapter_sha256": {
+        "experiments/skill-structure-v3/delivery.py": "332b856032208f43deb9bdc0519dbf7ebda3c1dd1d1d36ce56f057f68d126938",
+        "experiments/uml-flowchart/delivery_runner.py": "8127af3eee6b96c0a53fe83239c83995fff8618e188a4463eeb5dab04add6a70",
+        "experiments/uml-flowchart/delivery_protocol.py": "25141e86639e76aed37c03fc98be180f7b9c11754f95a63a33cc5f8214af8977"
+      },
+      "task": "energy-market-pricing",
+      "skill_names": [
+        "dc-power-flow",
+        "economic-dispatch",
+        "locational-marginal-prices",
+        "power-flow-data"
+      ],
+      "study_sha256": "ab47822a1e19541b2e37a95386cf53e1d680a312eaced525de9845b3204369af",
+      "assets": [
+        {
+          "skill": "dc-power-flow",
+          "guide_sha256": "461a4a93c6baf5f84eaa16881b11d76d0542907c8bb50745eceeb21d217e480e",
+          "image_sha256": "71a9005073ac48f740500ee9005e01d0be0a417c01410bd7af7ef00b19130cb7"
+        },
+        {
+          "skill": "economic-dispatch",
+          "guide_sha256": "907586a8ab5d697d20efaafb190809fbe737bcbac4082c0f94458c1e6489b82f",
+          "image_sha256": "ec69547a95477261f4925c8c3263d327a7cc1a078f8a006afac83716b0371e60"
+        },
+        {
+          "skill": "locational-marginal-prices",
+          "guide_sha256": "c48851e863afad9f416e52d57f5b065cc9a7a1ab2146b829abae4ac85412f2ac",
+          "image_sha256": "2ad20c6d835fe6f363346c6fdcfd03cf90dafd953f817af997c6cabc4d094057"
+        },
+        {
+          "skill": "power-flow-data",
+          "guide_sha256": "7c6544423d4106746ca831e431e6725292015c768e7958a168c57db140051846",
+          "image_sha256": "c31a490fda9fab3781719075f960f24075e5d9d1f3fe6e534147a98cf9c55003"
+        }
+      ]
+    },
+    "image_count": 4,
+    "reply": "OK",
+    "usage": null,
+    "variant": "economic-dispatch"
+  },
+  {
+    "valid": true,
+    "task": "energy-market-pricing",
+    "kind": "local-wire",
+    "policy": {
+      "method": "forced-prefix-v1",
+      "arm": "image",
+      "id": "e31fe27705a4445d182bab87b092c524b4138ee1d6f9091f4505ac812ea811d3",
+      "adapter_sha256": {
+        "experiments/skill-structure-v3/delivery.py": "332b856032208f43deb9bdc0519dbf7ebda3c1dd1d1d36ce56f057f68d126938",
+        "experiments/uml-flowchart/delivery_runner.py": "8127af3eee6b96c0a53fe83239c83995fff8618e188a4463eeb5dab04add6a70",
+        "experiments/uml-flowchart/delivery_protocol.py": "25141e86639e76aed37c03fc98be180f7b9c11754f95a63a33cc5f8214af8977"
+      },
+      "task": "energy-market-pricing",
+      "skill_names": [
+        "dc-power-flow",
+        "economic-dispatch",
+        "locational-marginal-prices",
+        "power-flow-data"
+      ],
+      "study_sha256": "ab47822a1e19541b2e37a95386cf53e1d680a312eaced525de9845b3204369af",
+      "assets": [
+        {
+          "skill": "dc-power-flow",
+          "guide_sha256": "461a4a93c6baf5f84eaa16881b11d76d0542907c8bb50745eceeb21d217e480e",
+          "image_sha256": "71a9005073ac48f740500ee9005e01d0be0a417c01410bd7af7ef00b19130cb7"
+        },
+        {
+          "skill": "economic-dispatch",
+          "guide_sha256": "907586a8ab5d697d20efaafb190809fbe737bcbac4082c0f94458c1e6489b82f",
+          "image_sha256": "c6df0d528db63d3b5f109d843062effd1818dbe7e1de4e0adeb9eba96ab7f5bc"
+        },
+        {
+          "skill": "locational-marginal-prices",
+          "guide_sha256": "c48851e863afad9f416e52d57f5b065cc9a7a1ab2146b829abae4ac85412f2ac",
+          "image_sha256": "ab7192389b69198590639f1ac616e6244b4a8b679d1387da967ff147dfd817c3"
+        },
+        {
+          "skill": "power-flow-data",
+          "guide_sha256": "7c6544423d4106746ca831e431e6725292015c768e7958a168c57db140051846",
+          "image_sha256": "c31a490fda9fab3781719075f960f24075e5d9d1f3fe6e534147a98cf9c55003"
+        }
+      ]
+    },
+    "image_count": 4,
+    "reply": "OK",
+    "usage": null,
+    "variant": "locational-marginal-prices"
+  },
+  {
+    "valid": true,
+    "task": "r2r-mpc-control",
+    "kind": "local-wire",
+    "policy": {
+      "method": "forced-prefix-v1",
+      "arm": "image",
+      "id": "34fae9d7b2408fd2d506cabd6598a1faca26dd3905f4b58605e2d5a27bff03e2",
+      "adapter_sha256": {
+        "experiments/skill-structure-v3/delivery.py": "332b856032208f43deb9bdc0519dbf7ebda3c1dd1d1d36ce56f057f68d126938",
+        "experiments/uml-flowchart/delivery_runner.py": "8127af3eee6b96c0a53fe83239c83995fff8618e188a4463eeb5dab04add6a70",
+        "experiments/uml-flowchart/delivery_protocol.py": "25141e86639e76aed37c03fc98be180f7b9c11754f95a63a33cc5f8214af8977"
+      },
+      "task": "r2r-mpc-control",
+      "skill_names": [
+        "finite-horizon-lqr",
+        "integral-action-design",
+        "mpc-horizon-tuning",
+        "state-space-linearization"
+      ],
+      "study_sha256": "ab47822a1e19541b2e37a95386cf53e1d680a312eaced525de9845b3204369af",
+      "assets": [
+        {
+          "skill": "finite-horizon-lqr",
+          "guide_sha256": "8ce87c503270a401f9bce17518a8f11d8cc421de2f15984678ddeb0b8c27575f",
+          "image_sha256": "42fe2a72ed5cdba47e79d5278e033dd9a6b6ee4daf5db60cb688fb2e3e2c045c"
+        },
+        {
+          "skill": "integral-action-design",
+          "guide_sha256": "e3368f03c7c53e47f650272a2225602b0d437ae82c825b049291b02006d43220",
+          "image_sha256": "85d0662bcf8380add9d3f1e1857f6a0539ac5bd7c85c13d43dec06e497c5f0c2"
+        },
+        {
+          "skill": "mpc-horizon-tuning",
+          "guide_sha256": "fa85a6c22e728d92176f4aace0a3ad65e280bd4ecd061d1037a042b29ec47123",
+          "image_sha256": "59badbc75938ce9967bd4e59004dec6825dc0b4f8e8d527dd7f3e7382d899fb4"
+        },
+        {
+          "skill": "state-space-linearization",
+          "guide_sha256": "1cd18b96f4f55ff004aa92c0acbf0cab2744032c94a42d750ce749055038835b",
+          "image_sha256": "03535233b61d0a522481ba44b606a2a0caf577bca1fed6ad0117705547243945"
+        }
+      ]
+    },
+    "image_count": 4,
+    "reply": "OK",
+    "usage": null,
+    "variant": "baseline"
+  },
+  {
+    "valid": true,
+    "task": "r2r-mpc-control",
+    "kind": "local-wire",
+    "policy": {
+      "method": "forced-prefix-v1",
+      "arm": "image",
+      "id": "e5ebf7c8aabea46e3cc5ed41e3ef885299296c436afca3c467137a3dfc21c9c3",
+      "adapter_sha256": {
+        "experiments/skill-structure-v3/delivery.py": "332b856032208f43deb9bdc0519dbf7ebda3c1dd1d1d36ce56f057f68d126938",
+        "experiments/uml-flowchart/delivery_runner.py": "8127af3eee6b96c0a53fe83239c83995fff8618e188a4463eeb5dab04add6a70",
+        "experiments/uml-flowchart/delivery_protocol.py": "25141e86639e76aed37c03fc98be180f7b9c11754f95a63a33cc5f8214af8977"
+      },
+      "task": "r2r-mpc-control",
+      "skill_names": [
+        "finite-horizon-lqr",
+        "integral-action-design",
+        "mpc-horizon-tuning",
+        "state-space-linearization"
+      ],
+      "study_sha256": "ab47822a1e19541b2e37a95386cf53e1d680a312eaced525de9845b3204369af",
+      "assets": [
+        {
+          "skill": "finite-horizon-lqr",
+          "guide_sha256": "8ce87c503270a401f9bce17518a8f11d8cc421de2f15984678ddeb0b8c27575f",
+          "image_sha256": "3f97c238eaedf67ce22d42d8630c5fec08697ba4dd379ce1cd98a27f10ccc4c2"
+        },
+        {
+          "skill": "integral-action-design",
+          "guide_sha256": "e3368f03c7c53e47f650272a2225602b0d437ae82c825b049291b02006d43220",
+          "image_sha256": "85d0662bcf8380add9d3f1e1857f6a0539ac5bd7c85c13d43dec06e497c5f0c2"
+        },
+        {
+          "skill": "mpc-horizon-tuning",
+          "guide_sha256": "fa85a6c22e728d92176f4aace0a3ad65e280bd4ecd061d1037a042b29ec47123",
+          "image_sha256": "59badbc75938ce9967bd4e59004dec6825dc0b4f8e8d527dd7f3e7382d899fb4"
+        },
+        {
+          "skill": "state-space-linearization",
+          "guide_sha256": "1cd18b96f4f55ff004aa92c0acbf0cab2744032c94a42d750ce749055038835b",
+          "image_sha256": "03535233b61d0a522481ba44b606a2a0caf577bca1fed6ad0117705547243945"
+        }
+      ]
+    },
+    "image_count": 4,
+    "reply": "OK",
+    "usage": null,
+    "variant": "finite-horizon-lqr"
+  },
+  {
+    "valid": true,
+    "task": "r2r-mpc-control",
+    "kind": "local-wire",
+    "policy": {
+      "method": "forced-prefix-v1",
+      "arm": "image",
+      "id": "cf6e87bdf73fc41d6131fd70bec0e765d2fdd6fb3927c2b63d70b925d09571fd",
+      "adapter_sha256": {
+        "experiments/skill-structure-v3/delivery.py": "332b856032208f43deb9bdc0519dbf7ebda3c1dd1d1d36ce56f057f68d126938",
+        "experiments/uml-flowchart/delivery_runner.py": "8127af3eee6b96c0a53fe83239c83995fff8618e188a4463eeb5dab04add6a70",
+        "experiments/uml-flowchart/delivery_protocol.py": "25141e86639e76aed37c03fc98be180f7b9c11754f95a63a33cc5f8214af8977"
+      },
+      "task": "r2r-mpc-control",
+      "skill_names": [
+        "finite-horizon-lqr",
+        "integral-action-design",
+        "mpc-horizon-tuning",
+        "state-space-linearization"
+      ],
+      "study_sha256": "ab47822a1e19541b2e37a95386cf53e1d680a312eaced525de9845b3204369af",
+      "assets": [
+        {
+          "skill": "finite-horizon-lqr",
+          "guide_sha256": "8ce87c503270a401f9bce17518a8f11d8cc421de2f15984678ddeb0b8c27575f",
+          "image_sha256": "42fe2a72ed5cdba47e79d5278e033dd9a6b6ee4daf5db60cb688fb2e3e2c045c"
+        },
+        {
+          "skill": "integral-action-design",
+          "guide_sha256": "e3368f03c7c53e47f650272a2225602b0d437ae82c825b049291b02006d43220",
+          "image_sha256": "fac55b6c9d2442481c34f600f8deb3f381835487dee48c65560db0ad2886d67d"
+        },
+        {
+          "skill": "mpc-horizon-tuning",
+          "guide_sha256": "fa85a6c22e728d92176f4aace0a3ad65e280bd4ecd061d1037a042b29ec47123",
+          "image_sha256": "59badbc75938ce9967bd4e59004dec6825dc0b4f8e8d527dd7f3e7382d899fb4"
+        },
+        {
+          "skill": "state-space-linearization",
+          "guide_sha256": "1cd18b96f4f55ff004aa92c0acbf0cab2744032c94a42d750ce749055038835b",
+          "image_sha256": "03535233b61d0a522481ba44b606a2a0caf577bca1fed6ad0117705547243945"
+        }
+      ]
+    },
+    "image_count": 4,
+    "reply": "OK",
+    "usage": null,
+    "variant": "integral-action-design"
+  },
+  {
+    "valid": true,
+    "task": "exam-block-sequencing",
+    "kind": "local-wire",
+    "policy": {
+      "method": "forced-prefix-v1",
+      "arm": "image",
+      "id": "df26ffe4daaf2e700da8fbafd640ebac5fe57d9e6e009a3913d4c41309b11471",
+      "adapter_sha256": {
+        "experiments/skill-structure-v3/delivery.py": "332b856032208f43deb9bdc0519dbf7ebda3c1dd1d1d36ce56f057f68d126938",
+        "experiments/uml-flowchart/delivery_runner.py": "8127af3eee6b96c0a53fe83239c83995fff8618e188a4463eeb5dab04add6a70",
+        "experiments/uml-flowchart/delivery_protocol.py": "25141e86639e76aed37c03fc98be180f7b9c11754f95a63a33cc5f8214af8977"
+      },
+      "task": "exam-block-sequencing",
+      "skill_names": [
+        "mip-solver-and-solution-audit",
+        "ordered-window-sequencing-mip"
+      ],
+      "study_sha256": "ab47822a1e19541b2e37a95386cf53e1d680a312eaced525de9845b3204369af",
+      "assets": [
+        {
+          "skill": "mip-solver-and-solution-audit",
+          "guide_sha256": "34ab1c8cd80ab01f65ad7287776994efeceb15fe454c36216d7d4ba2fee442f7",
+          "image_sha256": "0ed781645eaea904b51908ec8883d4e1d250504cceb44618477e461cedf5558c"
+        },
+        {
+          "skill": "ordered-window-sequencing-mip",
+          "guide_sha256": "0e1aa2b96b164e0cb06045b8d6b3fdd56d693c002a7dbbf8fb093bca3216c514",
+          "image_sha256": "6db37ba712e6e2a292e8fa30fbcb00bfeb730c78d32f60aa2e52575dff34ead9"
+        }
+      ]
+    },
+    "image_count": 2,
+    "reply": "OK",
+    "usage": null,
+    "variant": "baseline"
+  },
+  {
+    "valid": true,
+    "task": "exam-block-sequencing",
+    "kind": "local-wire",
+    "policy": {
+      "method": "forced-prefix-v1",
+      "arm": "image",
+      "id": "569e741ead9c1f09dd853b34fa10fa3599abeb2bef8134603c7c41847b20b413",
+      "adapter_sha256": {
+        "experiments/skill-structure-v3/delivery.py": "332b856032208f43deb9bdc0519dbf7ebda3c1dd1d1d36ce56f057f68d126938",
+        "experiments/uml-flowchart/delivery_runner.py": "8127af3eee6b96c0a53fe83239c83995fff8618e188a4463eeb5dab04add6a70",
+        "experiments/uml-flowchart/delivery_protocol.py": "25141e86639e76aed37c03fc98be180f7b9c11754f95a63a33cc5f8214af8977"
+      },
+      "task": "exam-block-sequencing",
+      "skill_names": [
+        "mip-solver-and-solution-audit",
+        "ordered-window-sequencing-mip"
+      ],
+      "study_sha256": "ab47822a1e19541b2e37a95386cf53e1d680a312eaced525de9845b3204369af",
+      "assets": [
+        {
+          "skill": "mip-solver-and-solution-audit",
+          "guide_sha256": "34ab1c8cd80ab01f65ad7287776994efeceb15fe454c36216d7d4ba2fee442f7",
+          "image_sha256": "0ed781645eaea904b51908ec8883d4e1d250504cceb44618477e461cedf5558c"
+        },
+        {
+          "skill": "ordered-window-sequencing-mip",
+          "guide_sha256": "0e1aa2b96b164e0cb06045b8d6b3fdd56d693c002a7dbbf8fb093bca3216c514",
+          "image_sha256": "b6d4ac6537faad738386ff8a32b5c4e351167bd90c8e04005c0aa96f13f817cf"
+        }
+      ]
+    },
+    "image_count": 2,
+    "reply": "OK",
+    "usage": null,
+    "variant": "ordered-window-sequencing-mip"
+  },
+  {
+    "valid": true,
+    "task": "manufacturing-fjsp-optimization",
+    "kind": "local-wire",
+    "policy": {
+      "method": "forced-prefix-v1",
+      "arm": "image",
+      "id": "3e015200a99e216ec451e44afd7cfe7cf361e1772bcd6281de6db59cdd52ab24",
+      "adapter_sha256": {
+        "experiments/skill-structure-v3/delivery.py": "332b856032208f43deb9bdc0519dbf7ebda3c1dd1d1d36ce56f057f68d126938",
+        "experiments/uml-flowchart/delivery_runner.py": "8127af3eee6b96c0a53fe83239c83995fff8618e188a4463eeb5dab04add6a70",
+        "experiments/uml-flowchart/delivery_protocol.py": "25141e86639e76aed37c03fc98be180f7b9c11754f95a63a33cc5f8214af8977"
+      },
+      "task": "manufacturing-fjsp-optimization",
+      "skill_names": [
+        "fjsp-baseline-repair-with-downtime-and-policy"
+      ],
+      "study_sha256": "ab47822a1e19541b2e37a95386cf53e1d680a312eaced525de9845b3204369af",
+      "assets": [
+        {
+          "skill": "fjsp-baseline-repair-with-downtime-and-policy",
+          "guide_sha256": "2668bd6b9c6977ccedcf1f1d4af4401afdfe215666d68f82df41b662852b2125",
+          "image_sha256": "eea4b605e9135f60be906315cd8ba736e93b3e54ed72b214e2e8760a31e3f540"
+        }
+      ]
+    },
+    "image_count": 1,
+    "reply": "OK",
+    "usage": null,
+    "variant": "baseline"
+  },
+  {
+    "valid": true,
+    "task": "manufacturing-fjsp-optimization",
+    "kind": "local-wire",
+    "policy": {
+      "method": "forced-prefix-v1",
+      "arm": "image",
+      "id": "7733beab5c2b10b10d42ddf2667c83b51aeba70e8e7c61285602119585043490",
+      "adapter_sha256": {
+        "experiments/skill-structure-v3/delivery.py": "332b856032208f43deb9bdc0519dbf7ebda3c1dd1d1d36ce56f057f68d126938",
+        "experiments/uml-flowchart/delivery_runner.py": "8127af3eee6b96c0a53fe83239c83995fff8618e188a4463eeb5dab04add6a70",
+        "experiments/uml-flowchart/delivery_protocol.py": "25141e86639e76aed37c03fc98be180f7b9c11754f95a63a33cc5f8214af8977"
+      },
+      "task": "manufacturing-fjsp-optimization",
+      "skill_names": [
+        "fjsp-baseline-repair-with-downtime-and-policy"
+      ],
+      "study_sha256": "ab47822a1e19541b2e37a95386cf53e1d680a312eaced525de9845b3204369af",
+      "assets": [
+        {
+          "skill": "fjsp-baseline-repair-with-downtime-and-policy",
+          "guide_sha256": "2668bd6b9c6977ccedcf1f1d4af4401afdfe215666d68f82df41b662852b2125",
+          "image_sha256": "a8acf7dd005eb5d42b204ed94ded845085a4a8008b456aba04f215241036ac10"
+        }
+      ]
+    },
+    "image_count": 1,
+    "reply": "OK",
+    "usage": null,
+    "variant": "fjsp-baseline-repair-with-downtime-and-policy"
+  }
+]

@@ -1,0 +1,70 @@
+@startuml
+!pragma useVerticalIf on
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+skinparam defaultFontName SansSerif
+skinparam defaultFontSize 17
+skinparam ArrowColor #46566F
+skinparam activity {
+  BackgroundColor #EEF5FF
+  BorderColor #365A82
+  FontColor #152B44
+  DiamondBackgroundColor #FFF3D6
+  DiamondBorderColor #A77D24
+  StartColor #365A82
+  EndColor #365A82
+}
+skinparam NoteBackgroundColor #FFF8E8
+skinparam NoteBorderColor #C9A34C
+title pymatgen | Materials workflow
+start
+:Identify the material, input format,\nand required analysis;
+if (Input comes from Materials Project?) then (yes)
+  :Use mp-api / MPRester with MP_API_KEY;
+  note right
+    Context manager; batch and filter queries.
+    references/materials_project_api.md
+  end note
+else (local / create)
+  :Load Structure.from_file(...),\nor create Structure / Lattice / Molecule;
+endif
+:Check structure and file format;
+note right
+  Overlapping sites or unreasonable bonds?
+  Inspect input; specify format if detection fails.
+  references/core_classes.md; io_formats.md
+end note
+if (Symmetry or Wyckoff analysis?) then (yes)
+  :Create SpacegroupAnalyzer(structure);
+  if (Need letters, multiplicities and coordinates?) then (yes)
+    :Read get_symmetry_dataset();
+    if (Dataset is available?) then (yes)
+      :Count dataset.wyckoffs letters over atoms;
+      :Group original sites by letter;
+      :Use first site's fractional coordinates;
+      :Express coordinates as bounded rationals;
+      note right
+        Use the full-structure dataset.
+        Do not count symmetrized orbits
+        or use labels such as "4a" as keys.
+        Exact convention and example:
+        references/wyckoff-positions-from-cif.md
+      end note
+    else (no)
+      :Use the empty-result convention\nfrom the Wyckoff reference;
+    endif
+  else (other symmetry)
+    :Inspect space group, standard cells\nor coordination environment;
+  endif
+else (other materials analysis)
+  :Choose the operation in GUIDE.md;\nfollow its linked module reference;
+endif
+:Use appropriate units and output format;
+note right
+  Check convergence for computed results.
+  Track transformations; preserve provenance.
+  Full code and caveats: GUIDE.md
+end note
+:Return / serialize / export requested results;
+stop
+@enduml

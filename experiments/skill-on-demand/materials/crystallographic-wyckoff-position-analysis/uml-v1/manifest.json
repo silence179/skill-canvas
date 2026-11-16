@@ -1,0 +1,48 @@
+{
+  "method": "skill-on-demand-v1",
+  "task": "crystallographic-wyckoff-position-analysis",
+  "arm": "image",
+  "figures": "uml-v1",
+  "source_files": {
+    "pymatgen/SKILL.md": "eeb3616b03e293072332847795e055413becfa42d74dfaeb48ac6aa90e21654f",
+    "pymatgen/references/analysis_modules.md": "5029f48a4744ed15043cfa0e46340933187a2c65e56b3d0883cae8ef5868a3e4",
+    "pymatgen/references/core_classes.md": "230c4a8be4467a7c712d95a0b4109af2b1427b9ea7cb191bc2ea78062d7143de",
+    "pymatgen/references/io_formats.md": "d31fab0646a5be2ceefadca786f079a6b0b62f93c502a668654548d8bae9c1d1",
+    "pymatgen/references/materials_project_api.md": "9af1daa4bc88a0774b93d238fdf203d8cf86b817ac642166e55abd5248eb5fbc",
+    "pymatgen/references/transformations_workflows.md": "7c7e4cc305c4c67cbcf8d56ba7bee08170ce5264e6bba964aa0b98de44001fb9",
+    "pymatgen/references/wyckoff-positions-from-cif.md": "141fdaeba57f807dc8b46f859028104e0d480a1a9091e66518e5a414021b111c",
+    "pymatgen/scripts/phase_diagram_generator.py": "be132bf108bb799d81f53e17280de05db286d85c80e1ff34efe1bb75640e947e",
+    "pymatgen/scripts/structure_analyzer.py": "efd488516026e53108af8f96872c1c30928de92efca9e083c15d620575cec76f",
+    "pymatgen/scripts/structure_converter.py": "a1ee392512f3e97fa014cbe2e3f290f5d049d0431e59f4dbbd80c2dce4293935",
+    "sympy/SKILL.md": "1464cb81c992472072bdd66249623f55fa1709a74ca4148f7f5f40fa6cbb6616",
+    "sympy/references/advanced-topics.md": "212b3d0c3b67a45160135a4ff8d9ae89e0064cf1c68adf408a6c2af5c0d82bb9",
+    "sympy/references/code-generation-printing.md": "b6f5e8b820823f70878e0b4238b582215e6b6ae6f63830766e28977d58c86f94",
+    "sympy/references/core-capabilities.md": "faa6c94d699a241d0ccaeaf79319abc5095fc90b7746fd7a94568161336ae7ce",
+    "sympy/references/matrices-linear-algebra.md": "f22d091d2a38957e0e820e859e172b2d535cc1eef4f98d32d4af02962bd9a73c",
+    "sympy/references/physics-mechanics.md": "e5853aa09e9bddc37134afd7469bc86b952edcbd9dd6d8a6ef9c2c24a2e0fbf3"
+  },
+  "figure_hashes": {
+    "pymatgen": "78d6969514609b483b2e6b34ac167db2afc20e396f1451a35c2bd3109b9ea9bd",
+    "sympy": "f83f060db0c5007381adac566ed9a571de613192a1d88cd6ec4ea6717a89292e"
+  },
+  "bundle_files": {
+    "pymatgen/SKILL.md": "eeb3616b03e293072332847795e055413becfa42d74dfaeb48ac6aa90e21654f",
+    "pymatgen/assets/skillcanvas-diagram.png": "78d6969514609b483b2e6b34ac167db2afc20e396f1451a35c2bd3109b9ea9bd",
+    "pymatgen/references/analysis_modules.md": "5029f48a4744ed15043cfa0e46340933187a2c65e56b3d0883cae8ef5868a3e4",
+    "pymatgen/references/core_classes.md": "230c4a8be4467a7c712d95a0b4109af2b1427b9ea7cb191bc2ea78062d7143de",
+    "pymatgen/references/io_formats.md": "d31fab0646a5be2ceefadca786f079a6b0b62f93c502a668654548d8bae9c1d1",
+    "pymatgen/references/materials_project_api.md": "9af1daa4bc88a0774b93d238fdf203d8cf86b817ac642166e55abd5248eb5fbc",
+    "pymatgen/references/transformations_workflows.md": "7c7e4cc305c4c67cbcf8d56ba7bee08170ce5264e6bba964aa0b98de44001fb9",
+    "pymatgen/references/wyckoff-positions-from-cif.md": "141fdaeba57f807dc8b46f859028104e0d480a1a9091e66518e5a414021b111c",
+    "pymatgen/scripts/phase_diagram_generator.py": "be132bf108bb799d81f53e17280de05db286d85c80e1ff34efe1bb75640e947e",
+    "pymatgen/scripts/structure_analyzer.py": "efd488516026e53108af8f96872c1c30928de92efca9e083c15d620575cec76f",
+    "pymatgen/scripts/structure_converter.py": "a1ee392512f3e97fa014cbe2e3f290f5d049d0431e59f4dbbd80c2dce4293935",
+    "sympy/SKILL.md": "1464cb81c992472072bdd66249623f55fa1709a74ca4148f7f5f40fa6cbb6616",
+    "sympy/assets/skillcanvas-diagram.png": "f83f060db0c5007381adac566ed9a571de613192a1d88cd6ec4ea6717a89292e",
+    "sympy/references/advanced-topics.md": "212b3d0c3b67a45160135a4ff8d9ae89e0064cf1c68adf408a6c2af5c0d82bb9",
+    "sympy/references/code-generation-printing.md": "b6f5e8b820823f70878e0b4238b582215e6b6ae6f63830766e28977d58c86f94",
+    "sympy/references/core-capabilities.md": "faa6c94d699a241d0ccaeaf79319abc5095fc90b7746fd7a94568161336ae7ce",
+    "sympy/references/matrices-linear-algebra.md": "f22d091d2a38957e0e820e859e172b2d535cc1eef4f98d32d4af02962bd9a73c",
+    "sympy/references/physics-mechanics.md": "e5853aa09e9bddc37134afd7469bc86b952edcbd9dd6d8a6ef9c2c24a2e0fbf3"
+  }
+}

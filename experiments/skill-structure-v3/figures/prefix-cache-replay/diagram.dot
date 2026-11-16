@@ -1,0 +1,31 @@
+digraph skill {
+graph [bgcolor="white", pad="0.28", nodesep="0.38", ranksep="0.5", fontname="DejaVu Sans", fontsize=22, labelloc=t, labeljust=l];
+node [shape=box, style="rounded,filled", fillcolor="#eef5ff", color="#365a82", fontcolor="#152b44", fontname="DejaVu Sans", fontsize=17, margin="0.16,0.12", penwidth=1.3];
+edge [color="#46566f", fontname="DejaVu Sans", fontsize=14, arrowsize=.8];
+label="prefix-cache-replay | residency states and event order";
+rankdir=LR;
+subgraph cluster_states {
+ label="Per-block states [S1] | solid edges are state transitions"; color="#ccd8e6";
+ absent [label="Absent\nno resident entry"];
+ small [label="S: small FIFO\nRESIDENT\nfreq in [0,max_freq]"];
+ main [label="M: main FIFO\nRESIDENT\nfreq in [0,max_freq]"];
+ ghost [label="G: ghost FIFO\nNOT resident\nhashes only",fillcolor="#fff3d6"];
+ absent -> small [label="new access / drain S if full;\nappend (h,0) to S tail"];
+ ghost -> main [label="ghost access / remove G;\nadmit_M(h,0)"];
+ small -> small [label="resident access / saturate freq;\nFIFO position unchanged"];
+ small -> main [label="S-head drained, freq>=1 /\nadmit_M(v,freq); PRESERVE freq"];
+ small -> ghost [label="S-head drained, freq=0 / insert_G"];
+ main -> main [label="access / saturate freq; no reorder\nM full + head.freq>=1 / pop head;\nfreq--; append TAIL; continue drain"];
+ main -> ghost [label="M full: head freq=0 /\npop; insert_G; STOP one real eviction"];
+ ghost -> ghost [label="insert_G existing / remove then append"];
+ ghost -> absent [label="insert_G new while full / discard oldest"];
+}
+subgraph cluster_order {
+ label="Per-request accounting [S1] | sequence, before state mutation"; color="#ccd8e6";
+ before [label="At request arrival:\nresident = S union M\nscan from hash_ids[0], stop at FIRST miss\nhit_tokens = min(k*block_size, input_length)"];
+ access [label="Then access EVERY hash in order\napply declared eviction policy\nDo not re-tokenize or re-hash hash_ids"];
+ before -> access [label="observe BEFORE mutate"];
+}
+caps [shape=note,fillcolor="#fff8de",label="S_cap = round(capacity*small_ratio)\nM_cap = capacity-S_cap; G_cap = M_cap\nNew S / ghost->M admissions start freq=0\nDrain before admission; cascades allowed\nfinal_blocks=|S|+|M|; exclude G\nSum per-request prompt/hit; rate=total_hit/total_prompt [S1]\nOther policy? use companion specification [S2]"];
+access -> small [style=dashed,label="events affect state",constraint=false];
+}

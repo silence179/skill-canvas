@@ -1,0 +1,19 @@
+{
+  "method": "skill-on-demand-v1",
+  "task": "r2r-mpc-control",
+  "arm": "text",
+  "figures": null,
+  "source_files": {
+    "finite-horizon-lqr/SKILL.md": "8ce87c503270a401f9bce17518a8f11d8cc421de2f15984678ddeb0b8c27575f",
+    "integral-action-design/SKILL.md": "e3368f03c7c53e47f650272a2225602b0d437ae82c825b049291b02006d43220",
+    "mpc-horizon-tuning/SKILL.md": "fa85a6c22e728d92176f4aace0a3ad65e280bd4ecd061d1037a042b29ec47123",
+    "state-space-linearization/SKILL.md": "1cd18b96f4f55ff004aa92c0acbf0cab2744032c94a42d750ce749055038835b"
+  },
+  "figure_hashes": {},
+  "bundle_files": {
+    "finite-horizon-lqr/SKILL.md": "8ce87c503270a401f9bce17518a8f11d8cc421de2f15984678ddeb0b8c27575f",
+    "integral-action-design/SKILL.md": "e3368f03c7c53e47f650272a2225602b0d437ae82c825b049291b02006d43220",
+    "mpc-horizon-tuning/SKILL.md": "fa85a6c22e728d92176f4aace0a3ad65e280bd4ecd061d1037a042b29ec47123",
+    "state-space-linearization/SKILL.md": "1cd18b96f4f55ff004aa92c0acbf0cab2744032c94a42d750ce749055038835b"
+  }
+}

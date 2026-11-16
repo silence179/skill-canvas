@@ -1,0 +1,63 @@
+@startuml
+!pragma useVerticalIf on
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+skinparam defaultFontName SansSerif
+skinparam defaultFontSize 18
+skinparam ArrowColor #46566F
+skinparam activity {
+  BackgroundColor #EEF5FF
+  BorderColor #365A82
+  FontColor #152B44
+  DiamondBackgroundColor #FFF3D6
+  DiamondBorderColor #BA842A
+}
+skinparam noteBackgroundColor #FFF8DE
+skinparam noteBorderColor #BEA45C
+skinparam wrapWidth 360
+title Prefix cache replay - request accounting and S3FIFO
+start
+:Read block_size, capacity, small_ratio, max_freq;\nS_cap = round(capacity * small_ratio);\nM_cap = capacity - S_cap; G_cap = M_cap;
+:Initialize empty FIFO queues S, M, G;\nresident = S union M; ghost is metadata only;
+while (More requests in trace order?) is (yes)
+  :Use residency BEFORE this request;\nscan hash_ids from index 0, stop at first miss;\nhit_tokens = min(k * block_size, input_length);
+  while (More hashes in this request?) is (yes)
+    :Take next hash h;
+    if (h in S or M?) then (resident)
+      :freq[h] = min(freq[h] + 1, max_freq);\nDo not reorder FIFO queues on a hit;
+    else (not resident)
+      if (h in G?) then (ghost hit)
+        :Remove h from G;\nadmit_M(h, freq=0);
+      else (new)
+        while (S is full?) is (yes)
+          :Pop head (victim, vf) from S;
+          if (vf >= 1?) then (warm)
+            :admit_M(victim, vf);\nPRESERVE the promoted frequency;
+          else (cold)
+            :insert_G(victim);
+          endif
+        endwhile (space)
+        :Append h to S tail with freq=0;
+      endif
+    endif
+  endwhile (all hashes accessed)
+  :Append per-request accounting;\naccumulate prompt and hit totals;
+endwhile (no)
+:Report total_hit / total_prompt;\nfinal_cache_blocks = size(S) + size(M);\ncheck per-request sums; exclude G;
+stop
+legend right
+  admit_M(h, f)
+  While M is full, inspect its head (v, vf).
+  vf >= 1: pop; decrement; append to TAIL; repeat.
+  vf == 0: pop; insert_G(v); stop draining.
+  Then append (h, f) to M tail.
+
+  insert_G(h)
+  Existing ghost: remove before re-appending.
+  Otherwise, if full: pop oldest ghost.
+  Append h; retain hashes only, no payload.
+
+  Count hits BEFORE accesses; access EVERY hash.
+  Never replace prefix scan with set intersection.
+endlegend
+@enduml

@@ -1,0 +1,404 @@
+{
+  "power-flow-data": {
+    "S1": {
+      "path": "power-flow-data/SKILL.md",
+      "sha256": "7c6544423d4106746ca831e431e6725292015c768e7958a168c57db140051846",
+      "bytes": 4367,
+      "lines": 151,
+      "review": "Preserve MATPOWER columns, non-contiguous bus labels, MW/per-unit conversion, reserve fields and large-JSON reading advice.",
+      "headings": [
+        {
+          "line": 6,
+          "heading": "# Power Flow Data Guide"
+        },
+        {
+          "line": 10,
+          "heading": "## ⚠️ Important: Handling Large Network Files"
+        },
+        {
+          "line": 19,
+          "heading": "# This is fast even for multi-MB files"
+        },
+        {
+          "line": 23,
+          "heading": "# Quick summary (do this first!)"
+        },
+        {
+          "line": 36,
+          "heading": "## Network Topology Concepts"
+        },
+        {
+          "line": 38,
+          "heading": "### Bus Types"
+        },
+        {
+          "line": 47,
+          "heading": "### Per-Unit System"
+        },
+        {
+          "line": 53,
+          "heading": "# Conversions"
+        },
+        {
+          "line": 59,
+          "heading": "## Loading Network Data"
+        },
+        {
+          "line": 81,
+          "heading": "## Reserve Data"
+        },
+        {
+          "line": 95,
+          "heading": "## Bus Number Mapping"
+        },
+        {
+          "line": 100,
+          "heading": "# Create mapping: bus_number -> 0-indexed position"
+        },
+        {
+          "line": 103,
+          "heading": "# Map generator to bus index"
+        },
+        {
+          "line": 107,
+          "heading": "## Identifying Bus Connections"
+        },
+        {
+          "line": 127,
+          "heading": "## Branch Data Interpretation"
+        },
+        {
+          "line": 145,
+          "heading": "## Computing Total Load"
+        }
+      ]
+    }
+  },
+  "dc-power-flow": {
+    "S1": {
+      "path": "dc-power-flow/SKILL.md",
+      "sha256": "461a4a93c6baf5f84eaa16881b11d76d0542907c8bb50745eceeb21d217e480e",
+      "bytes": 2882,
+      "lines": 116,
+      "review": "Add executable-resource contract: build_susceptance_matrix returns three objects; calculate_line_flows reuses saved susceptances, keeps original IDs and uses zero loading when rating<=0. CLI only prints matrix diagnostics.",
+      "headings": [
+        {
+          "line": 6,
+          "heading": "# DC Power Flow"
+        },
+        {
+          "line": 10,
+          "heading": "## DC Approximations"
+        },
+        {
+          "line": 18,
+          "heading": "## Bus Number Mapping"
+        },
+        {
+          "line": 23,
+          "heading": "# Create mapping: bus_number -> 0-indexed position"
+        },
+        {
+          "line": 26,
+          "heading": "# Use mapping for branch endpoints"
+        },
+        {
+          "line": 31,
+          "heading": "## Susceptance Matrix (B)"
+        },
+        {
+          "line": 36,
+          "heading": "# Run: scripts/build_b_matrix.py"
+        },
+        {
+          "line": 37,
+          "heading": "# Or inline:"
+        },
+        {
+          "line": 53,
+          "heading": "## Power Balance Equation"
+        },
+        {
+          "line": 62,
+          "heading": "## Slack Bus"
+        },
+        {
+          "line": 75,
+          "heading": "## Line Flow Calculation"
+        },
+        {
+          "line": 87,
+          "heading": "## Line Loading Percentage"
+        },
+        {
+          "line": 95,
+          "heading": "## Branch Susceptances for Constraints"
+        },
+        {
+          "line": 107,
+          "heading": "## Line Flow Limits (for OPF)"
+        },
+        {
+          "line": 112,
+          "heading": "# |flow| <= rating  →  -rating <= flow <= rating"
+        }
+      ]
+    },
+    "S2": {
+      "path": "dc-power-flow/scripts/build_b_matrix.py",
+      "sha256": "8ed65d06fe16b87b13eadf33397b3986de95afa515ec5dcb6f22df8201a44095",
+      "bytes": 3161,
+      "lines": 108,
+      "review": "Both callable helpers, their return contracts, zero-X/zero-rating behavior and diagnostic CLI.",
+      "headings": [],
+      "functions": [
+        {
+          "name": "build_susceptance_matrix",
+          "line": 7,
+          "arguments": [
+            "branches",
+            "buses"
+          ]
+        },
+        {
+          "name": "calculate_line_flows",
+          "line": 52,
+          "arguments": [
+            "branches",
+            "branch_susceptances",
+            "theta",
+            "baseMVA",
+            "bus_num_to_idx"
+          ]
+        }
+      ]
+    }
+  },
+  "economic-dispatch": {
+    "S1": {
+      "path": "economic-dispatch/SKILL.md",
+      "sha256": "907586a8ab5d697d20efaafb190809fbe737bcbac4082c0f94458c1e6489b82f",
+      "bytes": 4932,
+      "lines": 173,
+      "review": "Add reference-only MODEL=1 breakpoint costs and marginal costs. Flag general-polynomial layout versus the GUIDE example treating NCOST>=3 as quadratic; do not invent an unprovided piecewise optimization implementation.",
+      "headings": [
+        {
+          "line": 6,
+          "heading": "# Economic Dispatch"
+        },
+        {
+          "line": 10,
+          "heading": "## Generator Data Indices"
+        },
+        {
+          "line": 21,
+          "heading": "# Use bus number mapping (handles non-contiguous bus numbers)"
+        },
+        {
+          "line": 29,
+          "heading": "## Cost Function Format"
+        },
+        {
+          "line": 46,
+          "heading": "## Optimization Formulation"
+        },
+        {
+          "line": 53,
+          "heading": "# Objective: minimize total cost (handles variable NCOST)"
+        },
+        {
+          "line": 71,
+          "heading": "# Generator limits (convert MW to per-unit)"
+        },
+        {
+          "line": 80,
+          "heading": "## Power Balance Constraint"
+        },
+        {
+          "line": 91,
+          "heading": "## Reserve Co-optimization"
+        },
+        {
+          "line": 96,
+          "heading": "# Reserve data from network.json"
+        },
+        {
+          "line": 100,
+          "heading": "# Decision variables"
+        },
+        {
+          "line": 104,
+          "heading": "# Reserve constraints"
+        },
+        {
+          "line": 116,
+          "heading": "# System must have adequate total reserves"
+        },
+        {
+          "line": 120,
+          "heading": "## Operating Margin"
+        },
+        {
+          "line": 132,
+          "heading": "## Dispatch Output Format"
+        },
+        {
+          "line": 149,
+          "heading": "## Totals Calculation"
+        },
+        {
+          "line": 164,
+          "heading": "## Solver Selection"
+        }
+      ]
+    },
+    "S2": {
+      "path": "economic-dispatch/references/cost-functions.md",
+      "sha256": "a9bf78f5dd90f559d50872d526c1c7bf6685f6c8147c95ec701d1628d318d0ee",
+      "bytes": 1597,
+      "lines": 73,
+      "review": "Polynomial and piecewise-linear formats, coefficient units, marginal-cost formula; examples and bibliography context reviewed.",
+      "headings": [
+        {
+          "line": 1,
+          "heading": "# Generator Cost Functions Reference"
+        },
+        {
+          "line": 3,
+          "heading": "## Polynomial Cost (Type 2)"
+        },
+        {
+          "line": 7,
+          "heading": "### MATPOWER Format"
+        },
+        {
+          "line": 26,
+          "heading": "### Example"
+        },
+        {
+          "line": 29,
+          "heading": "# Generator with:"
+        },
+        {
+          "line": 30,
+          "heading": "# - No-load cost: $100/hr"
+        },
+        {
+          "line": 31,
+          "heading": "# - Incremental: $20/MWh at 0 MW, increasing $0.02/MWh per MW"
+        },
+        {
+          "line": 34,
+          "heading": "# At P = 50 MW:"
+        },
+        {
+          "line": 35,
+          "heading": "# Cost = 0.01*(50)² + 20*(50) + 100 = 25 + 1000 + 100 = $1125/hr"
+        },
+        {
+          "line": 38,
+          "heading": "## Piecewise Linear Cost (Type 1)"
+        },
+        {
+          "line": 42,
+          "heading": "### MATPOWER Format"
+        },
+        {
+          "line": 50,
+          "heading": "### Example"
+        },
+        {
+          "line": 53,
+          "heading": "# 3 breakpoints: (0, 0), (50, 1000), (100, 2500)"
+        },
+        {
+          "line": 57,
+          "heading": "## Marginal Cost"
+        },
+        {
+          "line": 62,
+          "heading": "# Marginal cost at power P"
+        },
+        {
+          "line": 66,
+          "heading": "## Typical Values"
+        }
+      ]
+    }
+  },
+  "locational-marginal-prices": {
+    "S1": {
+      "path": "locational-marginal-prices/SKILL.md",
+      "sha256": "c48851e863afad9f416e52d57f5b065cc9a7a1ab2146b829abae4ac85412f2ac",
+      "bytes": 4746,
+      "lines": 139,
+      "review": "Preserve source extraction and counterfactual workflow. Mark source dual*baseMVA scaling / sign as requiring review of the actual equation; do not inject a formula learned from previous verifier outcomes. Distinguish None->0 source fallback from an available market dual.",
+      "headings": [
+        {
+          "line": 6,
+          "heading": "# Locational Marginal Prices (LMPs)"
+        },
+        {
+          "line": 10,
+          "heading": "## LMP Extraction from CVXPY"
+        },
+        {
+          "line": 20,
+          "heading": "# Store balance constraints separately for dual extraction"
+        },
+        {
+          "line": 32,
+          "heading": "# Solve"
+        },
+        {
+          "line": 36,
+          "heading": "# Extract LMPs from duals"
+        },
+        {
+          "line": 50,
+          "heading": "## LMP Sign Convention"
+        },
+        {
+          "line": 63,
+          "heading": "## Reserve Clearing Price"
+        },
+        {
+          "line": 68,
+          "heading": "# Store reference to reserve constraint"
+        },
+        {
+          "line": 72,
+          "heading": "# After solving:"
+        },
+        {
+          "line": 78,
+          "heading": "## Finding Binding Lines"
+        },
+        {
+          "line": 105,
+          "heading": "## Counterfactual Analysis"
+        },
+        {
+          "line": 115,
+          "heading": "# Modify line limit (e.g., increase by 20%)"
+        },
+        {
+          "line": 123,
+          "heading": "# After solving both cases:"
+        },
+        {
+          "line": 126,
+          "heading": "# LMP changes per bus"
+        },
+        {
+          "line": 131,
+          "heading": "# Congestion relieved if line was binding in base but not in counterfactual"
+        },
+        {
+          "line": 135,
+          "heading": "### Economic Intuition"
+        }
+      ]
+    }
+  }
+}

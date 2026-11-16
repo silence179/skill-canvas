@@ -1,0 +1,58 @@
+{
+  "valid": true,
+  "task": "llm-prefix-cache-replay",
+  "kind": "live",
+  "policy": {
+    "method": "forced-prefix-v1",
+    "arm": "image",
+    "id": "dfac7becf9e2ac93bab9c60761a10a0ae5ceccb9cc31de9ad35c2c84a77c0035",
+    "adapter_sha256": {
+      "experiments/skill-structure-v3/delivery.py": "332b856032208f43deb9bdc0519dbf7ebda3c1dd1d1d36ce56f057f68d126938",
+      "experiments/uml-flowchart/delivery_runner.py": "8127af3eee6b96c0a53fe83239c83995fff8618e188a4463eeb5dab04add6a70",
+      "experiments/uml-flowchart/delivery_protocol.py": "25141e86639e76aed37c03fc98be180f7b9c11754f95a63a33cc5f8214af8977"
+    },
+    "task": "llm-prefix-cache-replay",
+    "skill_names": [
+      "cache-policy-comparison",
+      "prefix-cache-replay"
+    ],
+    "study_sha256": "ab47822a1e19541b2e37a95386cf53e1d680a312eaced525de9845b3204369af",
+    "assets": [
+      {
+        "skill": "cache-policy-comparison",
+        "guide_sha256": "353a7215727695b01e48ea69e63ed92c0b32174534a6bda38cee9b91382e5963",
+        "image_sha256": "985529ae3381d1b5867612b01a88e5ce13cd0842d4e65d51bd06cf693806ca03"
+      },
+      {
+        "skill": "prefix-cache-replay",
+        "guide_sha256": "28ced940ec272cc01cf06519912077492d948b10e08a933acba12dd9907220cf",
+        "image_sha256": "7b5d4157a967913cedd1b53c063b82c7a977e61f39542b306ae433bbee9a073c"
+      }
+    ]
+  },
+  "image_count": 2,
+  "reply": "OK",
+  "usage": {
+    "completion_tokens": 38,
+    "prompt_tokens": 5859,
+    "total_tokens": 5897,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 36,
+      "rejected_prediction_tokens": null,
+      "text_tokens": null,
+      "image_tokens": null,
+      "video_tokens": null
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 128,
+      "text_tokens": null,
+      "image_tokens": null,
+      "video_tokens": null
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 5731
+  }
+}

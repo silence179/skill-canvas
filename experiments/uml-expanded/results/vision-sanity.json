@@ -1,0 +1,44 @@
+{
+  "schema": 1,
+  "scope": "Image-only spatial transcription sanity, separate from the paired benchmark; does not prove task reasoning benefits.",
+  "model": "deepseek/deepseek-flash",
+  "prompt": "Read the two attached flowchart images. No source text is provided. Return only concise JSON with keys q1, q2, q3. q1: In image 1, transcribe the rounded rectangle on the right directly below the middle decision diamond. q2: In image 2, transcribe the half-open overlap inequality in the yellow note at bottom right. q3: In image 2, transcribe the label on the left exit of the decision about overlap with machine work or downtime.",
+  "images": {
+    "experiments/uml-expanded/tasks/energy-market-pricing/previews/dc-power-flow.png": "6dbd3ec6c8dffb791d1a627a0ac6f661ab171211f0dfe9e39f2337f926d3e0b4",
+    "experiments/uml-expanded/tasks/manufacturing-fjsp-optimization/previews/fjsp-baseline-repair-with-downtime-and-policy.png": "d94c741f1e882ca6f52f3b67c5c1f2e4560972232c25f41e7549cd930c63bb20"
+  },
+  "expected_fragments": [
+    "zero-susceptance handling",
+    "s < b AND a < e",
+    "earliest feasible start"
+  ],
+  "reply": "{\"q1\":\"Keep the guide's zero-susceptance handling\",\"q2\":\"s < b AND a < e\",\"q3\":\"earliest feasible start\"}",
+  "usage": {
+    "completion_tokens": 528,
+    "prompt_tokens": 1547,
+    "total_tokens": 2075,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 493,
+      "rejected_prediction_tokens": null,
+      "text_tokens": null,
+      "image_tokens": null,
+      "video_tokens": null
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "text_tokens": null,
+      "image_tokens": null,
+      "video_tokens": null
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1547
+  },
+  "matched_fragments": [
+    true,
+    true,
+    true
+  ]
+}

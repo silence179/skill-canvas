@@ -1,0 +1,37 @@
+@startuml
+!pragma useVerticalIf on
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+skinparam defaultFontName SansSerif
+skinparam defaultFontSize 18
+skinparam ArrowColor #46566F
+skinparam activity {
+  BackgroundColor #EEF5FF
+  BorderColor #365A82
+  FontColor #152B44
+  DiamondBackgroundColor #FFF3D6
+  DiamondBorderColor #BA842A
+}
+skinparam noteBackgroundColor #FFF8DE
+skinparam noteBorderColor #BEA45C
+skinparam wrapWidth 360
+title Locational prices - stored duals and counterfactual comparison
+start
+:Build DC-OPF; retain references to each\nnodal balance constraint and reserve requirement;
+:Solve base case with CLARABEL;
+:Read nodal duals; apply GUIDE's sign /\nbaseMVA convention; record all bus IDs and prices;
+note right
+  Complete GUIDE remains authoritative.
+  This diagram preserves its workflow;
+  it does not correct its equations.
+  Negative prices can be physically valid.
+end note
+:Read reserve-constraint dual for reserve MCP;
+:Compute line flows in MW;\ninclude lines with positive rating and >=99% loading;
+:Save base costs, LMPs and binding lines;
+:Locate the chosen line in either orientation;\nrelax only its thermal rating as requested;
+:Re-solve the counterfactual model;\nextract costs, LMPs and binding lines the same way;
+:Compute base_cost - counterfactual_cost;\ncompute per-bus delta = counterfactual - base LMP;
+:Compare target-line binding state and price changes;\ncheck cost cannot increase when only a constraint relaxes;
+stop
+@enduml

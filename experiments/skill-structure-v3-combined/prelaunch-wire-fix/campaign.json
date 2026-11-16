@@ -1,0 +1,275 @@
+{
+  "created_at_utc": "2026-11-15T15:22:18.164405+00:00",
+  "purpose": "User-directed one combined-new-figure attempt per remaining task; no additional baseline runs",
+  "model": "deepseek/deepseek-flash",
+  "agent": "opencode",
+  "effort": null,
+  "seed": null,
+  "concurrency": 1,
+  "material_sha256": "73bbff9708f89de3b23501a41736273d78d5ccd224d83412260581f1ea3fe91e",
+  "code_sha256": {
+    "experiments/skill-structure-v3-combined/combined.py": "2708284ee5ed7e0dd15436cd99089b2ec703085d61f0395715c6643a1690ce68",
+    "experiments/skill-structure-v3/materials.py": "c423c039540c917df9081cf1aa43fa99b0187486b49763cb703d28e1e408d80d",
+    "experiments/skill-structure-v3/diagrams.py": "b1137d4a5863d5c1f6285ad2c36bcf2d7db1938a0b36ea4478fba3b12bac9774",
+    "experiments/skill-structure-v3/delivery.py": "332b856032208f43deb9bdc0519dbf7ebda3c1dd1d1d36ce56f057f68d126938",
+    "experiments/uml-flowchart/delivery_runner.py": "8127af3eee6b96c0a53fe83239c83995fff8618e188a4463eeb5dab04add6a70",
+    "experiments/uml-flowchart/delivery_protocol.py": "25141e86639e76aed37c03fc98be180f7b9c11754f95a63a33cc5f8214af8977",
+    "experiments/shared_opencode.py": "45fe58513fe9db1e6153eab95b8e8794ecbb9e06a74b1a693705afa2de997b9d",
+    "experiments/env_config.py": "933c052c17dfb9df817b0340ace0413eb097ab9b94cbd81833a45ec0806e071b"
+  },
+  "task_sources": {
+    "r2r-mpc-control": {
+      "prepared_files": {
+        "environment/Dockerfile": "f95fa6412ef19c7318a49af9234ecdfc51bd8ff45fdc5766196e7d8f536990ba",
+        "environment/r2r_simulator.py": "87d4e8f742137fc5cb8473e6b2b88c5ca2bb8ef3e067bec130a921467180a795",
+        "environment/skills/finite-horizon-lqr/SKILL.md": "8ce87c503270a401f9bce17518a8f11d8cc421de2f15984678ddeb0b8c27575f",
+        "environment/skills/integral-action-design/SKILL.md": "e3368f03c7c53e47f650272a2225602b0d437ae82c825b049291b02006d43220",
+        "environment/skills/mpc-horizon-tuning/SKILL.md": "fa85a6c22e728d92176f4aace0a3ad65e280bd4ecd061d1037a042b29ec47123",
+        "environment/skills/state-space-linearization/SKILL.md": "1cd18b96f4f55ff004aa92c0acbf0cab2744032c94a42d750ce749055038835b",
+        "environment/system_config.json": "69659661d4e6bd83bec675306b28d62f47d3ff90c26b38155e23aaef606b743d",
+        "oracle/solve.sh": "8e27b0f4b0629c27e05b6b0a02c0d721414d75c8d9adcbfbe04536ff944ed8cf",
+        "task.md": "0d63d1cc65751d4f4b90f746dd404cd46c43a7c7dd71ca29b209aa69c51b9082",
+        "verifier/test.sh": "26911f6bad5e450bef1f7d7f4cb15e45c1b0dd7359aa0a3a808d6b10762889b4",
+        "verifier/test_outputs.py": "d305382c273132476fa8f3a74f701d397d926c91bed20a2f78d38734ebde1fca"
+      },
+      "skill_names": [
+        "finite-horizon-lqr",
+        "integral-action-design",
+        "mpc-horizon-tuning",
+        "state-space-linearization"
+      ]
+    },
+    "exam-block-sequencing": {
+      "prepared_files": {
+        "environment/Dockerfile": "f2f7745cfaa88f7ae3697f8924c80701a9c1ff8f9b67f462881b667ec71d2bd9",
+        "environment/data/README.md": "bb7d15ca14f29d0949a7261d23cef91363ca0cf68e583f63653d18344079f8be",
+        "environment/data/block_summary.csv": "1752868ec2fb60b8eeead36f0226f967d2dec1f1a8cff344505984f3ff3837b6",
+        "environment/data/blockmap.csv": "bd6dfb47df5c9ea32829bb2a56f3d92c7eab0f66b98466a22ac9bd99f57fa7e8",
+        "environment/data/instance.json": "9147800fa7f2966dc4fcaa96a72dd028c776db6601b36f13df89aee2b329903a",
+        "environment/data/pair_counts.csv": "e50ac02d99c000b1101ee84c986c9e56ca926081adb9ce3537d02f5a61d1d4e6",
+        "environment/data/provenance.md": "d51b5ea0b72f583492ca6a67cfe74b6aede76edf124327937e7cd09d5b69f168",
+        "environment/data/triplet_counts.csv": "1dd7ea72a117c6740c7c6f3f6c13d98b41dadef8d70f20d10d7f8b684fb42fbb",
+        "environment/skills/mip-solver-and-solution-audit/SKILL.md": "34ab1c8cd80ab01f65ad7287776994efeceb15fe454c36216d7d4ba2fee442f7",
+        "environment/skills/ordered-window-sequencing-mip/SKILL.md": "0e1aa2b96b164e0cb06045b8d6b3fdd56d693c002a7dbbf8fb093bca3216c514",
+        "oracle/oracle_solver.py": "6410000ca605d96fd495dbf7c2be1392f33261085e99fa97ce989f82f457f590",
+        "oracle/solve.sh": "ca00ed6547cb9cdd9eba3518c7f309cf3e0cddb17a61d5a8b0e7291fb484bcf3",
+        "task.md": "f038ac85fcb442ea35607d529f729be9a66833fc7436096b3420f8495e825059",
+        "verifier/oracle_metrics.json": "190e3b27072c12d2e23457c0c01e7aa1acc104da40fbe0f50da411f008efc343",
+        "verifier/test.sh": "c1b231e2c569d431c7cb20ff353ba4230f044471aa1d1a747e60cd22508b9839",
+        "verifier/test_outputs.py": "b3a5f36246928a30bcba871b021d553faf32f591b30611edd5533156d294cc39"
+      },
+      "skill_names": [
+        "mip-solver-and-solution-audit",
+        "ordered-window-sequencing-mip"
+      ]
+    },
+    "manufacturing-fjsp-optimization": {
+      "prepared_files": {
+        "environment/Dockerfile": "2bdfd290de1697c8a06b2b58c3723fa1cfd62762e87aff4fc822b4335ca796a2",
+        "environment/data/baseline_metrics.json": "15d72d21997e311ae88a7e9b0273a8a53c6e6e024e55abcac55bc32735a2da1e",
+        "environment/data/baseline_solution.json": "67cca2e9c6d3cdf8e4f397d7e52a4d7921ed579b132b04943a7c1ae0c54b3ac3",
+        "environment/data/downtime.csv": "2ac2a082150827e7513d1e57ee7f45d51a03326d646cfb8cf13a65015f4886ee",
+        "environment/data/instance.txt": "a493ec68c115d4c2693b023162df03e8fbcca3b306cb88639adcece4d53c7131",
+        "environment/data/policy.json": "fef42a889ed6b5293f232fc472e054a28ab7b5689e7c2a929a7a4722b7b01eb7",
+        "environment/skills/fjsp-baseline-repair-with-downtime-and-policy/SKILL.md": "2668bd6b9c6977ccedcf1f1d4af4401afdfe215666d68f82df41b662852b2125",
+        "environment/skills/reference.md": "46f76e2898e1f1a3d7f0d8c7ee4e5390f7e9f8e57c1695dd5eb3ddf739f71743",
+        "oracle/solve.sh": "e51a9286a5eec6916dc6910af69e55a0a3fe94e2c3e8d0a2a74e4fcdaa045109",
+        "task.md": "4803646a11b8dd33037c0bef8ac8f36ddf82843ef9204c5ab6dff8dc95f50ffd",
+        "verifier/test.sh": "2d52b2875167962e4f39976ef42c21e82b93f2f34596f23bf1c0758def70ef70",
+        "verifier/test_outputs.py": "a5f2536f384b52bb36ca2fc0348b480187d49fc19eb39368e01d6a720a7a1990"
+      },
+      "skill_names": [
+        "fjsp-baseline-repair-with-downtime-and-policy"
+      ]
+    }
+  },
+  "controls": {
+    "energy-market-pricing": {
+      "path": "jobs/uml-expanded/environment-controls-prepared/2026-11-14__21-36-43/energy-market-pricing__7a87ad9d/result.json",
+      "sha256": "953f70c396b724da7be730228c23271b6971da0bed5a8c3769999c44ec25cc4d",
+      "reward": 1.0,
+      "error": null,
+      "task_digest": "sha256:e722a071d27ef633f8f56ef981efa22b3cb5fbf3e02c326472908192f10c369d"
+    },
+    "exam-block-sequencing": {
+      "path": "jobs/uml-expanded/environment-controls-prepared/2026-11-14__21-36-43/exam-block-sequencing__4644bc43/result.json",
+      "sha256": "f111b5916e9b776a2957d3cd12e148d6937a93b9751fd85cd316ba2437f8695a",
+      "reward": 1.0,
+      "error": null,
+      "task_digest": "sha256:95ae80d185fcca7a6537462b0daf3e8ef0a867e69be8626bf67e2dc7954ad922"
+    },
+    "llm-prefix-cache-replay": {
+      "path": "jobs/uml-expanded/environment-controls-prepared/2026-11-14__21-40-32/llm-prefix-cache-replay__7aea4cf4/result.json",
+      "sha256": "3c0a34846cc9917683c609e179be881076a6eb4dac4dca3effb1112f092c4f0d",
+      "reward": 1.0,
+      "error": null,
+      "task_digest": "sha256:6e625578b9977265fdb8b1fccacda6fd109fd3097e8991125f99bb99d4931cf7"
+    },
+    "manufacturing-fjsp-optimization": {
+      "path": "jobs/uml-expanded/environment-controls-prepared/2026-11-14__23-00-23/manufacturing-fjsp-optimization__28fa6af6/result.json",
+      "sha256": "137e8ba6067df01b93ab5a07ce7844e7f2685c07c775fb72f2ef52239d8e0a40",
+      "reward": 1.0,
+      "error": null,
+      "task_digest": "sha256:fcbecdd0787726916a1072273fe8571639e2ee7d12cb1f33afdee25e08dc57af"
+    },
+    "r2r-mpc-control": {
+      "path": "jobs/uml-expanded/environment-controls-prepared/2026-11-14__21-45-28/r2r-mpc-control__b4354eec/result.json",
+      "sha256": "d1bd97d7c15c7e06abd4e0423f3b75cc96f104a1deefcec9dcce945969471de8",
+      "reward": 1.0,
+      "error": null,
+      "task_digest": "sha256:56caf760c2411c1d1e4fb20faa30c82a1a1de4b58fbfafe03fcce5e3d6d1f31b"
+    }
+  },
+  "shared_tool_image": {
+    "schema": 1,
+    "version": "1.19.5",
+    "node_version": "22.20.0",
+    "tag": "skillcanvas-opencode:1.19.5-19299e3fe8add58e3b19",
+    "image_id": "sha256:8165f8a91d276c16f7b3c898b85ae2e05655db1f1609e6138852be1a90840de4",
+    "arch": "amd64",
+    "libc": "glibc",
+    "install_sha256": "c67e56103012b7e12464dc28773188bfd283de83ec2f2cefb0dcc2000b7b2a2d",
+    "archive_sha256": "19299e3fe8add58e3b19aa1718f916a916fe9feca8c7f91fee3f9e705c760058",
+    "files_sha256": "f70dd2a0db4c2889db742133a83d5df77826f3eaf467dee2b3a25f9c1f3d488b",
+    "links_sha256": "9a1f96416ae33c1894b14dc686cb72ceb831bbdde90c48ad16b226c8a553cf9e",
+    "source_layer_id": "sha256:f1f7713b23f9d35627d0510b9f9fba7930e40c680e105d92265120b78000a0ba",
+    "adapter_sha256": "3101f8ad2d21d1d68c7486c215b11fbb67d5dd51f625ff5eb504b912a2168611"
+  },
+  "baseline_rule": "R2R: reuse this session's completed v3 baseline; exam/manufacturing: descriptive comparison with historical v2 image runs. Do not claim fresh randomized equivalence.",
+  "user_amendment": "jobs/skill-structure-v3/user-steering-amendment.json",
+  "schedule": [
+    {
+      "task": "r2r-mpc-control",
+      "arm": "combined",
+      "variant": "combined",
+      "changed_skills": [
+        "finite-horizon-lqr",
+        "integral-action-design"
+      ],
+      "jobs_dir": "/home/silence/myfiles/SkillCanvas/jobs/skill-structure-v3-combined/r2r-mpc-control/combined",
+      "command": [
+        "/home/silence/myfiles/SkillCanvas/repos/benchflow/.venv/bin/python",
+        "/home/silence/myfiles/SkillCanvas/experiments/skill-structure-v3-combined/combined.py",
+        "deliver",
+        "--arm",
+        "image",
+        "--bundle",
+        "/home/silence/myfiles/SkillCanvas/experiments/skill-structure-v3-combined/tasks/r2r-mpc-control/bundle",
+        "--",
+        "run",
+        "/home/silence/myfiles/SkillCanvas/.runtime/uml-expanded/prepared-tasks",
+        "-i",
+        "r2r-mpc-control",
+        "--agent",
+        "opencode",
+        "--sandbox",
+        "docker",
+        "--trials",
+        "1",
+        "--concurrency",
+        "1",
+        "--retry-attempts",
+        "0",
+        "--save-outputs",
+        "--jobs-dir",
+        "/home/silence/myfiles/SkillCanvas/jobs/skill-structure-v3-combined/r2r-mpc-control/combined",
+        "--model",
+        "deepseek/deepseek-flash",
+        "--skill-mode",
+        "with-skill",
+        "--skills-dir",
+        "/home/silence/myfiles/SkillCanvas/experiments/skill-structure-v3-combined/tasks/r2r-mpc-control/bundle"
+      ],
+      "policy_id": "c6cc255425607ec886dbced47128c3d682419b3488be9e1c6cb6df6b7d1df408",
+      "status": "planned"
+    },
+    {
+      "task": "exam-block-sequencing",
+      "arm": "combined",
+      "variant": "combined",
+      "changed_skills": [
+        "ordered-window-sequencing-mip"
+      ],
+      "jobs_dir": "/home/silence/myfiles/SkillCanvas/jobs/skill-structure-v3-combined/exam-block-sequencing/combined",
+      "command": [
+        "/home/silence/myfiles/SkillCanvas/repos/benchflow/.venv/bin/python",
+        "/home/silence/myfiles/SkillCanvas/experiments/skill-structure-v3-combined/combined.py",
+        "deliver",
+        "--arm",
+        "image",
+        "--bundle",
+        "/home/silence/myfiles/SkillCanvas/experiments/skill-structure-v3-combined/tasks/exam-block-sequencing/bundle",
+        "--",
+        "run",
+        "/home/silence/myfiles/SkillCanvas/.runtime/uml-expanded/prepared-tasks",
+        "-i",
+        "exam-block-sequencing",
+        "--agent",
+        "opencode",
+        "--sandbox",
+        "docker",
+        "--trials",
+        "1",
+        "--concurrency",
+        "1",
+        "--retry-attempts",
+        "0",
+        "--save-outputs",
+        "--jobs-dir",
+        "/home/silence/myfiles/SkillCanvas/jobs/skill-structure-v3-combined/exam-block-sequencing/combined",
+        "--model",
+        "deepseek/deepseek-flash",
+        "--skill-mode",
+        "with-skill",
+        "--skills-dir",
+        "/home/silence/myfiles/SkillCanvas/experiments/skill-structure-v3-combined/tasks/exam-block-sequencing/bundle"
+      ],
+      "policy_id": "23fe02412a6203235c18ccf03a9188fe1d469983d01ff5f200df7c63fe8a1889",
+      "status": "planned"
+    },
+    {
+      "task": "manufacturing-fjsp-optimization",
+      "arm": "combined",
+      "variant": "combined",
+      "changed_skills": [
+        "fjsp-baseline-repair-with-downtime-and-policy"
+      ],
+      "jobs_dir": "/home/silence/myfiles/SkillCanvas/jobs/skill-structure-v3-combined/manufacturing-fjsp-optimization/combined",
+      "command": [
+        "/home/silence/myfiles/SkillCanvas/repos/benchflow/.venv/bin/python",
+        "/home/silence/myfiles/SkillCanvas/experiments/skill-structure-v3-combined/combined.py",
+        "deliver",
+        "--arm",
+        "image",
+        "--bundle",
+        "/home/silence/myfiles/SkillCanvas/experiments/skill-structure-v3-combined/tasks/manufacturing-fjsp-optimization/bundle",
+        "--",
+        "run",
+        "/home/silence/myfiles/SkillCanvas/.runtime/uml-expanded/prepared-tasks",
+        "-i",
+        "manufacturing-fjsp-optimization",
+        "--agent",
+        "opencode",
+        "--sandbox",
+        "docker",
+        "--trials",
+        "1",
+        "--concurrency",
+        "1",
+        "--retry-attempts",
+        "0",
+        "--save-outputs",
+        "--jobs-dir",
+        "/home/silence/myfiles/SkillCanvas/jobs/skill-structure-v3-combined/manufacturing-fjsp-optimization/combined",
+        "--model",
+        "deepseek/deepseek-flash",
+        "--skill-mode",
+        "with-skill",
+        "--skills-dir",
+        "/home/silence/myfiles/SkillCanvas/experiments/skill-structure-v3-combined/tasks/manufacturing-fjsp-optimization/bundle"
+      ],
+      "policy_id": "53ce16cb9b2021fbd16d0f117feb86ed7854fbb962d8dd8782711c1b5a58e8a9",
+      "status": "planned"
+    }
+  ]
+}

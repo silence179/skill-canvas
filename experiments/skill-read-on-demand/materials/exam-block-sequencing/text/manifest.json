@@ -1,0 +1,15 @@
+{
+  "method": "skill-read-on-demand-v2",
+  "task": "exam-block-sequencing",
+  "arm": "text",
+  "figures": null,
+  "source_files": {
+    "mip-solver-and-solution-audit/SKILL.md": "34ab1c8cd80ab01f65ad7287776994efeceb15fe454c36216d7d4ba2fee442f7",
+    "ordered-window-sequencing-mip/SKILL.md": "0e1aa2b96b164e0cb06045b8d6b3fdd56d693c002a7dbbf8fb093bca3216c514"
+  },
+  "figure_hashes": {},
+  "bundle_files": {
+    "mip-solver-and-solution-audit/SKILL.md": "34ab1c8cd80ab01f65ad7287776994efeceb15fe454c36216d7d4ba2fee442f7",
+    "ordered-window-sequencing-mip/SKILL.md": "0e1aa2b96b164e0cb06045b8d6b3fdd56d693c002a7dbbf8fb093bca3216c514"
+  }
+}

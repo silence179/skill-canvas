@@ -1,0 +1,51 @@
+@startuml
+!pragma useVerticalIf on
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+skinparam defaultFontName SansSerif
+skinparam defaultFontSize 17
+skinparam ArrowColor #46566F
+skinparam activity {
+  BackgroundColor #EEF5FF
+  BorderColor #365A82
+  FontColor #152B44
+  DiamondBackgroundColor #FFF3D6
+  DiamondBorderColor #BA842A
+}
+skinparam noteBackgroundColor #FFF8DE
+skinparam noteBorderColor #BEA45C
+skinparam wrapWidth 370
+title MIP execution | one incumbent, one disk artifact, one audit
+start
+partition "Discover and formulate [S1]" {
+ :Test installed callable solvers; try importing\nPySCIPOpt first; use it if available unless\na clearly better supplied solver is appropriate;
+ :If a solver-based integer program is required,\nuse heuristics only as allowed warm starts /\nimprovements, not a silent replacement;
+ :Build integer/binary decisions, hard constraints,\nlinked auxiliaries and complete named objective;\nset the solve time limit before optimize();
+}
+:Optimize; capture status, incumbent,\nbest bound and gap when available [S1];
+if (Feasible incumbent exists?) then (yes)
+ :Select getBestSol(); extract via getSolVal(sol,var)\nor model.getVal(var), not var.getVal() [S1];
+else (none)
+ :Report no feasible solution and solver status;\ndo not fabricate outputs or a certificate [S1];
+ stop
+endif
+:Validate extracted assignments, counts, uniqueness,\neligibility, timing, policy and finite values [S1];
+if (Post-processing changes the incumbent?) then (yes)
+ :Disclose the change; old gap / optimality\ncertificate does not automatically certify it [S1];
+endif
+partition "Final artifact is the source of truth [S1]" {
+ :Write the chosen schedule / assignment to disk;
+ :RELOAD that exact file; run a pure evaluator\nusing only input data plus the final artifact;
+ :Recompute every component; compare to solver\nobjective when intended to match (tolerance 1e-6);\nfix model, semantics or extraction if inconsistent;
+ :Write metrics and formulation/report from\nthis same audited solution;
+ :Reload output again; rerun evaluator;\nrequire reported and disk-derived metrics to agree;
+}
+:State minimize/maximize, each item exactly once,\nposition/resource rules, pair/triple/overlap terms,\noptional constraints, variables/linking, solver,\ntime limit, status, incumbent, bound/gap and method [S1];
+if (Optimality certified by status/gap?) then (yes)
+ :Make only the supported certified claim [S1];
+else (time limit / other)
+ :Report a feasible incumbent and known gap;\nfeasible does not mean proven optimal [S1];
+endif
+stop
+footer Full-skill v2 | S1: SKILL.md
+@enduml

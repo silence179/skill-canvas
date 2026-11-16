@@ -1,0 +1,37 @@
+@startuml
+!pragma useVerticalIf on
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+skinparam defaultFontName SansSerif
+skinparam defaultFontSize 18
+skinparam ArrowColor #46566F
+skinparam activity {
+  BackgroundColor #EEF5FF
+  BorderColor #365A82
+  FontColor #152B44
+  DiamondBackgroundColor #FFF3D6
+  DiamondBorderColor #BA842A
+}
+skinparam noteBackgroundColor #FFF8DE
+skinparam noteBorderColor #BEA45C
+skinparam wrapWidth 360
+title MPC tuning - balance tracking and control effort
+start
+:Choose timestep and initial horizon;\nGUIDE suggests N=5-15 for dt=0.01 s;
+:Set diagonal Q with tension emphasis;\nQ_tension = 100 / T_ref^2;\nQ_velocity = 0.1 / v_ref^2;
+:Set positive R for actuator effort;\nGUIDE example: 0.01-0.1 times identity;
+:Choose terminal cost from LQR solution\nusing the model/time convention in GUIDE;
+:Run controller and inspect response and computation;
+if (Poor disturbance rejection?) then (yes)
+  :Review a horizon that is too short;\nconsider larger N and tracking weight;
+elseif (Computation too expensive?) then (yes)
+  :Review excessive horizon length;
+endif
+if (Control too aggressive?) then (yes)
+  :Increase R / reduce tracking emphasis;\nexpect slower response and more tracking error;
+else (tracking needs faster response)
+  :Increase Q or lower R cautiously;\nexpect higher effort and stronger transients;
+endif
+:Retest the tracking / effort / runtime trade-off;
+stop
+@enduml

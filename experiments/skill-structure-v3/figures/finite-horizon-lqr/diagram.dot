@@ -1,0 +1,22 @@
+digraph skill {
+graph [bgcolor="white", pad="0.28", nodesep="0.38", ranksep="0.5", fontname="DejaVu Sans", fontsize=22, labelloc=t, labeljust=l];
+node [shape=box, style="rounded,filled", fillcolor="#eef5ff", color="#365a82", fontcolor="#152b44", fontname="DejaVu Sans", fontsize=17, margin="0.16,0.12", penwidth=1.3];
+edge [color="#46566f", fontname="DejaVu Sans", fontsize=14, arrowsize=.8];
+label="finite-horizon-lqr | indexed dynamic-programming dependencies";
+rankdir=LR;
+terminal [label="P[N] = Q\n(or LQR terminal solution) [S1]"];
+next [label="P[k+1]\nknown next-stage matrix"];
+gain [label="K[k] = solve(\nR + B' P[k+1] B,\nB' P[k+1] A) [S1]"];
+current [label="P[k] = Q + A' P[k+1]\n(A - B K[k]) [S1]"];
+terminal -> next [label="first: k=N-1"];
+next -> gain [label="use P-next"];
+next -> current [label="same P-next",constraint=false];
+gain -> current [label="K[k]"];
+current -> next [label="k <- k-1; continue to 0",constraint=false,color="#b06b30"];
+gain -> stored [label="store at index k"];
+stored [label="K[:,:,k], all horizon stages\nshape (n_u,n_x,N) [S1]"];
+action [label="At each real control timestep [S1]\nmeasure x; recompute horizon solution\napply ONLY u[0] = -K[0] x\nnext real timestep: repeat"];
+stored -> action [label="K[0] only"];
+sim [shape=note,fillcolor="#fff8de",label="Horizon prediction [S1]:\nu[k]=-K[k] x[k]\nx[k+1]=A x[k]+B u[k]\nJ=sum(x'Qx+u'Ru)+x[N]'P[N]x[N]\nPrediction indices and real time are distinct."];
+stored -> sim [style=dotted,arrowhead=none];
+}

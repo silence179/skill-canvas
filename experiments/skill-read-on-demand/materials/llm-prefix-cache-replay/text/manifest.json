@@ -1,0 +1,15 @@
+{
+  "method": "skill-read-on-demand-v2",
+  "task": "llm-prefix-cache-replay",
+  "arm": "text",
+  "figures": null,
+  "source_files": {
+    "cache-policy-comparison/SKILL.md": "353a7215727695b01e48ea69e63ed92c0b32174534a6bda38cee9b91382e5963",
+    "prefix-cache-replay/SKILL.md": "28ced940ec272cc01cf06519912077492d948b10e08a933acba12dd9907220cf"
+  },
+  "figure_hashes": {},
+  "bundle_files": {
+    "cache-policy-comparison/SKILL.md": "353a7215727695b01e48ea69e63ed92c0b32174534a6bda38cee9b91382e5963",
+    "prefix-cache-replay/SKILL.md": "28ced940ec272cc01cf06519912077492d948b10e08a933acba12dd9907220cf"
+  }
+}

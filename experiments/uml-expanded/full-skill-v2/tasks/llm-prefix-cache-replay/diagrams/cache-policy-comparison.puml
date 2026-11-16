@@ -1,0 +1,41 @@
+@startuml
+!pragma useVerticalIf on
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+skinparam defaultFontName SansSerif
+skinparam defaultFontSize 17
+skinparam ArrowColor #46566F
+skinparam activity {
+  BackgroundColor #EEF5FF
+  BorderColor #365A82
+  FontColor #152B44
+  DiamondBackgroundColor #FFF3D6
+  DiamondBorderColor #BA842A
+}
+skinparam noteBackgroundColor #FFF8DE
+skinparam noteBorderColor #BEA45C
+skinparam wrapWidth 370
+title Cache policies | distinct transitions, common measurement
+start
+:Read declared policy; give each policy\nits own empty state and identical capacity/trace [S1];
+if (Declared policy?) then (LRU)
+ :OrderedDict: hit -> move to tail;\nmiss -> append; overflow -> pop head [S1];
+elseif (LFU?) then (yes)
+ :Hit -> freq += 1; new key -> freq = 1;\nat capacity evict minimum frequency,\nthen oldest insertion as deterministic tie-break [S1];
+elseif (FIFO?) then (yes)
+ :Hit -> keep queue order; miss -> append;\noverflow -> pop oldest insertion [S1];
+elseif (S3FIFO?) then (yes)
+ :Use linked prefix-cache-replay algorithm [S2];\nS/M/G, saturated freq, second chance in M;\npreserve S-to-M freq; ghost hit admits to M at 0;
+else (other)
+ :Get the missing policy specification;\nARC is named but not implemented in this folder [S1];
+ stop
+endif
+while (Another request?) is (yes)
+ :Measure longest resident prefix BEFORE access;\ncap hit tokens at prompt length [S1, S2];
+ :Access every hash in order using selected policy;\nkeep ghost metadata out of residency [S1, S2];
+endwhile (no)
+:Compare weighted hit rate, final residency,\nper-request distribution and admission effort [S1];
+:Relate measurements to recency / hot-set /\nrandom workload; do not assume a winning policy [S1];
+stop
+footer Full-skill v2 | S1: SKILL.md | S2: SKILL.md
+@enduml

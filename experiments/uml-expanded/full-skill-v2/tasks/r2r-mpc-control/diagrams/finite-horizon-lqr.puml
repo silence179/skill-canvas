@@ -1,0 +1,37 @@
+@startuml
+!pragma useVerticalIf on
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+skinparam defaultFontName SansSerif
+skinparam defaultFontSize 17
+skinparam ArrowColor #46566F
+skinparam activity {
+  BackgroundColor #EEF5FF
+  BorderColor #365A82
+  FontColor #152B44
+  DiamondBackgroundColor #FFF3D6
+  DiamondBorderColor #BA842A
+}
+skinparam noteBackgroundColor #FFF8DE
+skinparam noteBorderColor #BEA45C
+skinparam wrapWidth 370
+title Finite-horizon LQR | backward pass inside receding-horizon control
+start
+:Supply A, B, Q, R and horizon N;\nchoose terminal P_N = Q or LQR terminal cost [S1];
+while (Next control timestep?) is (yes)
+ :Measure current x_0; reset P to P_N;\nset k = N-1 [S1];
+ while (k >= 0?) is (yes)
+  :K_k = solve(R + B' P B, B' P A);\nP_k = Q + A' P (A - B K_k);\nstore K_k, set P=P_k, decrement k [S1];
+ endwhile (backward pass done)
+ :Apply ONLY the first action u_0 = -K_0*x_0;\nadvance the plant / simulator one timestep [S1];
+endwhile (finished)
+:Return / log the applied controls and states [S1];
+note right
+ S1 objective: sum(x'Qx + u'Ru) + x_N' P_N x_N.
+ Forward prediction uses x_next = A*x + B*u.
+ Receding-horizon use measures again rather than
+ applying the entire old predicted sequence.
+end note
+stop
+footer Full-skill v2 | S1: SKILL.md
+@enduml

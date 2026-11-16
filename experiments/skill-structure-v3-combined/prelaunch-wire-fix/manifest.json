@@ -1,0 +1,68 @@
+{
+  "created_at_utc": "2026-11-15T15:22:18.091974+00:00",
+  "v3_material_sha256": "ab47822a1e19541b2e37a95386cf53e1d680a312eaced525de9845b3204369af",
+  "packager_sha256": "2708284ee5ed7e0dd15436cd99089b2ec703085d61f0395715c6643a1690ce68",
+  "basis": "Already frozen skill-derived figures; task identifiers used only to group their original evaluation environment.",
+  "tasks": {
+    "r2r-mpc-control": {
+      "skills": [
+        "finite-horizon-lqr",
+        "integral-action-design",
+        "mpc-horizon-tuning",
+        "state-space-linearization"
+      ],
+      "changed_skills": [
+        "finite-horizon-lqr",
+        "integral-action-design"
+      ],
+      "bundle": "tasks/r2r-mpc-control/bundle",
+      "files": {
+        "finite-horizon-lqr/GUIDE.md": "8ce87c503270a401f9bce17518a8f11d8cc421de2f15984678ddeb0b8c27575f",
+        "finite-horizon-lqr/SKILL.md": "fdd69d0d797ae8b7761690db7f052460313c32b29c16ee513baa336d68c201df",
+        "finite-horizon-lqr/assets/flowchart.png": "3f97c238eaedf67ce22d42d8630c5fec08697ba4dd379ce1cd98a27f10ccc4c2",
+        "integral-action-design/GUIDE.md": "e3368f03c7c53e47f650272a2225602b0d437ae82c825b049291b02006d43220",
+        "integral-action-design/SKILL.md": "ffb492de2a955b7ea63dbe2443a700be2d2cbe3b2e82f0759aa234246b2130ef",
+        "integral-action-design/assets/flowchart.png": "fac55b6c9d2442481c34f600f8deb3f381835487dee48c65560db0ad2886d67d",
+        "mpc-horizon-tuning/GUIDE.md": "fa85a6c22e728d92176f4aace0a3ad65e280bd4ecd061d1037a042b29ec47123",
+        "mpc-horizon-tuning/SKILL.md": "ac2448839467feb2d2c503aebc1b8df65db001b735bfb78777ed2df917f44191",
+        "mpc-horizon-tuning/assets/flowchart.png": "59badbc75938ce9967bd4e59004dec6825dc0b4f8e8d527dd7f3e7382d899fb4",
+        "state-space-linearization/GUIDE.md": "1cd18b96f4f55ff004aa92c0acbf0cab2744032c94a42d750ce749055038835b",
+        "state-space-linearization/SKILL.md": "afad4503f8469985862a5dbbf0c1e804cd7d5d5f1e1f394fb7e4848525e55aa8",
+        "state-space-linearization/assets/flowchart.png": "03535233b61d0a522481ba44b606a2a0caf577bca1fed6ad0117705547243945"
+      }
+    },
+    "exam-block-sequencing": {
+      "skills": [
+        "mip-solver-and-solution-audit",
+        "ordered-window-sequencing-mip"
+      ],
+      "changed_skills": [
+        "ordered-window-sequencing-mip"
+      ],
+      "bundle": "tasks/exam-block-sequencing/bundle",
+      "files": {
+        "mip-solver-and-solution-audit/GUIDE.md": "34ab1c8cd80ab01f65ad7287776994efeceb15fe454c36216d7d4ba2fee442f7",
+        "mip-solver-and-solution-audit/SKILL.md": "432833217e226da5d074bd483ed57312092a4cc67176a66c15617d68c8bd87e4",
+        "mip-solver-and-solution-audit/assets/flowchart.png": "0ed781645eaea904b51908ec8883d4e1d250504cceb44618477e461cedf5558c",
+        "ordered-window-sequencing-mip/GUIDE.md": "0e1aa2b96b164e0cb06045b8d6b3fdd56d693c002a7dbbf8fb093bca3216c514",
+        "ordered-window-sequencing-mip/SKILL.md": "407b4690a8e75079d9d0cfe2763a06b581e1b15cc00e5b2d2359c3e70702ab52",
+        "ordered-window-sequencing-mip/assets/flowchart.png": "b6d4ac6537faad738386ff8a32b5c4e351167bd90c8e04005c0aa96f13f817cf"
+      }
+    },
+    "manufacturing-fjsp-optimization": {
+      "skills": [
+        "fjsp-baseline-repair-with-downtime-and-policy"
+      ],
+      "changed_skills": [
+        "fjsp-baseline-repair-with-downtime-and-policy"
+      ],
+      "bundle": "tasks/manufacturing-fjsp-optimization/bundle",
+      "files": {
+        "fjsp-baseline-repair-with-downtime-and-policy/GUIDE.md": "2668bd6b9c6977ccedcf1f1d4af4401afdfe215666d68f82df41b662852b2125",
+        "fjsp-baseline-repair-with-downtime-and-policy/SKILL.md": "935a3e955d09b7f571486a57d98b99cd995bcb7fa97940e171a1d07dab136fd5",
+        "fjsp-baseline-repair-with-downtime-and-policy/assets/flowchart.png": "a8acf7dd005eb5d42b204ed94ded845085a4a8008b456aba04f215241036ac10",
+        "reference.md": "46f76e2898e1f1a3d7f0d8c7ee4e5390f7e9f8e57c1695dd5eb3ddf739f71743"
+      }
+    }
+  }
+}

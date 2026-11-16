@@ -1,0 +1,74 @@
+@startuml
+!pragma useVerticalIf on
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+skinparam defaultFontName SansSerif
+skinparam defaultFontSize 17
+skinparam ArrowColor #46566F
+skinparam activity {
+  BackgroundColor #EEF5FF
+  BorderColor #365A82
+  FontColor #152B44
+  DiamondBackgroundColor #FFF3D6
+  DiamondBorderColor #BA842A
+}
+skinparam noteBackgroundColor #FFF8DE
+skinparam noteBorderColor #BEA45C
+skinparam wrapWidth 370
+title Prefix-cache replay | S3FIFO accounting and state transitions
+start
+if (Declared policy is S3FIFO?) then (yes)
+else (other)
+ :Follow the companion cache-policy-comparison\nworkflow for LRU/LFU/FIFO, with the same\nprefix accounting before accesses [S2];
+ stop
+endif
+partition "Configuration and state [S1]" {
+ :Read declared policy, block_size, capacity,\nsmall_ratio and max_freq; keep trace order;
+ :For S3FIFO: S_cap = round(capacity * small_ratio);\nM_cap = capacity - S_cap; G_cap = M_cap;\nstart empty S, M and metadata-only G;
+}
+while (Another request?) is (yes)
+ partition "1. Observe pre-request residency [S1]" {
+  :Scan hashes from index 0; stop at first miss;\nresident means S union M, never G;\nhit_tokens = min(k * block_size, input_length);
+ }
+ partition "2. Access EVERY hash in order [S1]" {
+  while (Another hash h?) is (yes)
+   if (h resident in S or M?) then (yes)
+    :Increment and saturate freq at max_freq;\nkeep FIFO position unchanged;
+   elseif (h in G?) then (ghost)
+    :Remove h from G; admit_M(h, 0);
+   else (new)
+    while (S full before admission?) is (yes)
+     :Pop S head (v, vf);
+     if (vf >= 1?) then (warm)
+      :admit_M(v, vf); preserve frequency;
+     else (cold)
+      :insert_G(v);
+     endif
+    endwhile (space)
+    :Append (h, 0) to S tail;
+   endif
+  endwhile (all accessed)
+ }
+ :Save per-request prompt/hit tokens;\naccumulate totals;
+endwhile (end of trace)
+:Check sums and hit-token cap;\nrate = total_hit / total_prompt;\nfinal_cache_blocks = size(S) + size(M);
+stop
+legend right
+  S1 callable helper: admit_M(h, f)
+  If full, inspect M head (v, vf):
+  vf >= 1 -> pop, append (v, vf-1) to TAIL;
+  repeat until vf=0 -> pop, insert_G(v), stop.
+  Append (h, f). One permanent eviction per admission.
+
+  S1 callable helper: insert_G(h)
+  If present, remove h before re-append.
+  Else, if full, discard oldest ghost.
+  Append hash only; G is never resident.
+
+  S1 invariants
+  No re-tokenizing hash_ids. No set intersection.
+  Count hits BEFORE applying any accesses.
+  Keep promoted frequency; new/ghost admissions use 0.
+endlegend
+footer Full-skill v2 | S1: SKILL.md | S2: SKILL.md
+@enduml

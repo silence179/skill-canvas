@@ -1,0 +1,85 @@
+{
+  "task": "r2r-mpc-control",
+  "skillsbench_commit": "f860ecf02ef53412a030f8661c83d644b739ff01",
+  "comparison": "forced full skill text vs PNG-first plus identical full text",
+  "diagram_basis": "only original SKILL.md; no oracle/verifier content",
+  "renderer": {
+    "name": "PlantUML MIT",
+    "sha256": "30a66b81a16127fd3ec560992f31964fe9ae3f1233c614ef4558a4558a21489e",
+    "version": "1.2026.10"
+  },
+  "source_files": {
+    "finite-horizon-lqr/SKILL.md": "8ce87c503270a401f9bce17518a8f11d8cc421de2f15984678ddeb0b8c27575f",
+    "integral-action-design/SKILL.md": "e3368f03c7c53e47f650272a2225602b0d437ae82c825b049291b02006d43220",
+    "mpc-horizon-tuning/SKILL.md": "fa85a6c22e728d92176f4aace0a3ad65e280bd4ecd061d1037a042b29ec47123",
+    "state-space-linearization/SKILL.md": "1cd18b96f4f55ff004aa92c0acbf0cab2744032c94a42d750ce749055038835b"
+  },
+  "skills": {
+    "finite-horizon-lqr": {
+      "guide_sha256": "8ce87c503270a401f9bce17518a8f11d8cc421de2f15984678ddeb0b8c27575f",
+      "uml_sha256": "1da91b5abab961a474927c1ada4fba342f887a64489127d2b7d59de3de1b792f",
+      "png_sha256": "06488c46fd7f1bbecf58c93bbd169a8ee460c5cd6781fe11d7ec06517c25abe1",
+      "png_dimensions": [
+        471,
+        863
+      ],
+      "guide_bytes": 1078
+    },
+    "integral-action-design": {
+      "guide_sha256": "e3368f03c7c53e47f650272a2225602b0d437ae82c825b049291b02006d43220",
+      "uml_sha256": "f04dfbba7166068526fd8b3aad42086a4d976f475c7a9835b325e425a0ce0474",
+      "png_sha256": "907cfca631e45c3e398739fe20a4816bea93b022a271fc98006bf03c2fb3fddf",
+      "png_dimensions": [
+        915,
+        887
+      ],
+      "guide_bytes": 1104
+    },
+    "mpc-horizon-tuning": {
+      "guide_sha256": "fa85a6c22e728d92176f4aace0a3ad65e280bd4ecd061d1037a042b29ec47123",
+      "uml_sha256": "72033a052bba73b153f850903e0e786aa8d2f5405feaeb763b107ac61875e81b",
+      "png_sha256": "dcfb8ab96dbc86671e498e729c3ac5f2e12784cfa485b7d4f26ca40750110fb6",
+      "png_dimensions": [
+        755,
+        1173
+      ],
+      "guide_bytes": 1197
+    },
+    "state-space-linearization": {
+      "guide_sha256": "1cd18b96f4f55ff004aa92c0acbf0cab2744032c94a42d750ce749055038835b",
+      "uml_sha256": "31a481eff7b6ad82faadba8d8ce4ce5fd1576dd1a9f2f0d37565c6f7a8f578cb",
+      "png_sha256": "59ec451e56d61cad931a303d7da0b77f6dc436cff7e4a1c7f35e8f53254fa764",
+      "png_dimensions": [
+        727,
+        860
+      ],
+      "guide_bytes": 1018
+    }
+  },
+  "bundles": {
+    "text": {
+      "finite-horizon-lqr/GUIDE.md": "8ce87c503270a401f9bce17518a8f11d8cc421de2f15984678ddeb0b8c27575f",
+      "finite-horizon-lqr/SKILL.md": "8d62461cfd294eef5f4f277a9a260a16febef58f9ebf8a1cb5663bbff54d9278",
+      "integral-action-design/GUIDE.md": "e3368f03c7c53e47f650272a2225602b0d437ae82c825b049291b02006d43220",
+      "integral-action-design/SKILL.md": "f4f2c5bf29ada47dafa3b70d8c50da4587f01236d80713a163a9122198c0f3e9",
+      "mpc-horizon-tuning/GUIDE.md": "fa85a6c22e728d92176f4aace0a3ad65e280bd4ecd061d1037a042b29ec47123",
+      "mpc-horizon-tuning/SKILL.md": "f9b979c7ec99b632a5d3e9666c91571690d5ef38051d40080636840c7cf47bbc",
+      "state-space-linearization/GUIDE.md": "1cd18b96f4f55ff004aa92c0acbf0cab2744032c94a42d750ce749055038835b",
+      "state-space-linearization/SKILL.md": "71045f8dac07b4d95be6bb11effa7a06ff4558654b6f5dd85078f2f8320f7696"
+    },
+    "image": {
+      "finite-horizon-lqr/GUIDE.md": "8ce87c503270a401f9bce17518a8f11d8cc421de2f15984678ddeb0b8c27575f",
+      "finite-horizon-lqr/SKILL.md": "fdd69d0d797ae8b7761690db7f052460313c32b29c16ee513baa336d68c201df",
+      "finite-horizon-lqr/assets/flowchart.png": "06488c46fd7f1bbecf58c93bbd169a8ee460c5cd6781fe11d7ec06517c25abe1",
+      "integral-action-design/GUIDE.md": "e3368f03c7c53e47f650272a2225602b0d437ae82c825b049291b02006d43220",
+      "integral-action-design/SKILL.md": "ffb492de2a955b7ea63dbe2443a700be2d2cbe3b2e82f0759aa234246b2130ef",
+      "integral-action-design/assets/flowchart.png": "907cfca631e45c3e398739fe20a4816bea93b022a271fc98006bf03c2fb3fddf",
+      "mpc-horizon-tuning/GUIDE.md": "fa85a6c22e728d92176f4aace0a3ad65e280bd4ecd061d1037a042b29ec47123",
+      "mpc-horizon-tuning/SKILL.md": "ac2448839467feb2d2c503aebc1b8df65db001b735bfb78777ed2df917f44191",
+      "mpc-horizon-tuning/assets/flowchart.png": "dcfb8ab96dbc86671e498e729c3ac5f2e12784cfa485b7d4f26ca40750110fb6",
+      "state-space-linearization/GUIDE.md": "1cd18b96f4f55ff004aa92c0acbf0cab2744032c94a42d750ce749055038835b",
+      "state-space-linearization/SKILL.md": "afad4503f8469985862a5dbbf0c1e804cd7d5d5f1e1f394fb7e4848525e55aa8",
+      "state-space-linearization/assets/flowchart.png": "59ec451e56d61cad931a303d7da0b77f6dc436cff7e4a1c7f35e8f53254fa764"
+    }
+  }
+}

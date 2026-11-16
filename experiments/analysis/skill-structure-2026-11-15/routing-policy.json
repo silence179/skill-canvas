@@ -1,0 +1,41 @@
+{
+  "status": "proposal_not_validated",
+  "version": "structure-router-draft-1",
+  "scope": "source-derived skill representation; no task result, oracle, verifier or historical solution as router input",
+  "input": {
+    "source_closure": "SKILL.md + local scripts/references + explicitly linked local sibling/shared resources; stable source hashes",
+    "intermediate_representation": ["atoms with exact source spans", "entities", "state/event/guard/action", "typed relations", "units and preconditions", "index direction", "time/resource constraints", "artifact contracts", "unresolved ambiguities"],
+    "feature_extraction": "currently manual source review; future extractor must supply source evidence spans and permit abstention",
+    "outcome_derived_features_allowed": false
+  },
+  "selection": {
+    "unit": "semantic section, followed by skill-level composition",
+    "max_primary_panels": 1,
+    "max_auxiliary_panels": 1,
+    "rules": [
+      {"requires": ["explicit states", "event-conditioned transitions"], "choose": "state_machine", "auxiliary": "event_sequence"},
+      {"requires": ["ordered positions or intervals", "window/resource overlap constraints"], "choose": "window_or_resource_timeline", "auxiliary": "constraint_graph_or_invariant_checklist"},
+      {"requires": ["feedback path", "error accumulation or saturation"], "choose": "feedback_block", "auxiliary": "validation_cycle"},
+      {"requires": ["indexed recurrence or symbolic derivation"], "choose": "equation_dependency_or_indexed_recurrence", "auxiliary": "equation_card"},
+      {"requires": ["variables/objective/constraints"], "choose": "constraint_graph", "auxiliary": "equation_card"},
+      {"requires": ["fields, units, input/output or ID mapping"], "choose": "schema_map_or_dataflow", "auxiliary": "contract_table"},
+      {"requires": ["alternative policies or parameter tradeoffs"], "choose": "decision_or_tradeoff_table", "auxiliary": "validation_cycle"},
+      {"requires": ["artifact transitions", "checks required before delivery"], "choose": "artifact_gate", "auxiliary": "checklist"},
+      {"requires": ["explicit sequential steps or branches"], "choose": "activity", "auxiliary": null}
+    ],
+    "conflict_resolution": "source-supported relation coverage first; choose primary by dominant relation need, not rule order or keyword count; mixed sections can use one auxiliary",
+    "confidence": "do not invent numerical confidence; unresolved feature conflicts require source review or abstention",
+    "abstain": ["no relation requiring a diagram", "source is contradictory and cannot be rendered without choosing an unsupported interpretation", "legible representation exceeds panel budget"],
+    "abstention_output": "source-linked compact text/table; preserve the complete original skill"
+  },
+  "constraints": {
+    "no_new_algorithm_or_threshold": true,
+    "uncertain_source_statements_must_remain_uncertain": true,
+    "all_branches_guards_units_and_index_directions_require_source_links": true,
+    "avoid_process_arrows_for_non_temporal_relations": true,
+    "source_coverage_audit": "every extracted atom and relation accounted for across the output, or explicitly listed as omitted; critical constraints may not be silently omitted",
+    "render_budget": "freeze canvas area, label count and minimum readable font per matched experiment; thresholds chosen on development material before test",
+    "delivery": "one format for all arms in primary ablation; forced every-call replay versus on-demand delivery is a separate experiment"
+  },
+  "verification": "Compare matched-content text, uniform activity, source-matched type and source-mismatched type; evaluate quality before efficiency; test unseen tasks before claiming routing generality."
+}

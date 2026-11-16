@@ -1,0 +1,160 @@
+{
+  "schema": 1,
+  "version": "full-skill-v2",
+  "manifest_sha256": "480970c3c740126a3ab2d82e3493319b28f603bbaa5d1563e3b7ab0de02bbe1b",
+  "source_files": 16,
+  "figures": 13,
+  "all_pngs_visually_reviewed": true,
+  "source_sha_and_complete_bundles_checked": true,
+  "old_frozen_study_check": "passed",
+  "notes": [
+    "No model benchmark runs were launched for v2.",
+    "Original local resources preserved, including the shared skills-root reference.",
+    "Editorial clarifications and source inconsistencies are documented in SOURCE_REVIEW.md."
+  ],
+  "rows": [
+    {
+      "task": "llm-prefix-cache-replay",
+      "skill": "prefix-cache-replay",
+      "png_sha256": "617a6c6cd5cc7614e2a9e1deddce402da00cc81e7bb57d20385022dbbdb7cfc9",
+      "dimensions": [
+        708,
+        2151
+      ],
+      "visual_review": "Viewed rendered PNG: text, branching, loop arrows and edge clipping checked.",
+      "source_review": "Keep pre-access hit accounting distinct from all-hash mutation; show M/G helper transitions, preserved promotion frequency, rounding and ghost exclusion."
+    },
+    {
+      "task": "llm-prefix-cache-replay",
+      "skill": "cache-policy-comparison",
+      "png_sha256": "985529ae3381d1b5867612b01a88e5ce13cd0842d4e65d51bd06cf693806ca03",
+      "dimensions": [
+        601,
+        1516
+      ],
+      "visual_review": "Viewed rendered PNG: text, branching, loop arrows and edge clipping checked.",
+      "source_review": "Include LFU initial frequency=1 and insertion-order ties; follow the linked full S3FIFO skill. ARC is named but no algorithm is supplied."
+    },
+    {
+      "task": "energy-market-pricing",
+      "skill": "power-flow-data",
+      "png_sha256": "c31a490fda9fab3781719075f960f24075e5d9d1f3fe6e534147a98cf9c55003",
+      "dimensions": [
+        796,
+        893
+      ],
+      "visual_review": "Viewed rendered PNG: text, branching, loop arrows and edge clipping checked.",
+      "source_review": "Preserve MATPOWER columns, non-contiguous bus labels, MW/per-unit conversion, reserve fields and large-JSON reading advice."
+    },
+    {
+      "task": "energy-market-pricing",
+      "skill": "dc-power-flow",
+      "png_sha256": "71a9005073ac48f740500ee9005e01d0be0a417c01410bd7af7ef00b19130cb7",
+      "dimensions": [
+        818,
+        1457
+      ],
+      "visual_review": "Viewed rendered PNG: text, branching, loop arrows and edge clipping checked.",
+      "source_review": "Add executable-resource contract: build_susceptance_matrix returns three objects; calculate_line_flows reuses saved susceptances, keeps original IDs and uses zero loading when rating<=0. CLI only prints matrix diagnostics."
+    },
+    {
+      "task": "energy-market-pricing",
+      "skill": "economic-dispatch",
+      "png_sha256": "c6df0d528db63d3b5f109d843062effd1818dbe7e1de4e0adeb9eba96ab7f5bc",
+      "dimensions": [
+        1611,
+        1287
+      ],
+      "visual_review": "Viewed rendered PNG: text, branching, loop arrows and edge clipping checked.",
+      "source_review": "Add reference-only MODEL=1 breakpoint costs and marginal costs. Flag general-polynomial layout versus the GUIDE example treating NCOST>=3 as quadratic; do not invent an unprovided piecewise optimization implementation."
+    },
+    {
+      "task": "energy-market-pricing",
+      "skill": "locational-marginal-prices",
+      "png_sha256": "2ad20c6d835fe6f363346c6fdcfd03cf90dafd953f817af997c6cabc4d094057",
+      "dimensions": [
+        778,
+        1158
+      ],
+      "visual_review": "Viewed rendered PNG: text, branching, loop arrows and edge clipping checked.",
+      "source_review": "Preserve source extraction and counterfactual workflow. Mark source dual*baseMVA scaling / sign as requiring review of the actual equation; do not inject a formula learned from previous verifier outcomes. Distinguish None->0 source fallback from an available market dual."
+    },
+    {
+      "task": "r2r-mpc-control",
+      "skill": "state-space-linearization",
+      "png_sha256": "03535233b61d0a522481ba44b606a2a0caf577bca1fed6ad0117705547243945",
+      "dimensions": [
+        1026,
+        1009
+      ],
+      "visual_review": "Viewed rendered PNG: text, branching, loop arrows and edge clipping checked.",
+      "source_review": "Include all four stated R2R partial derivatives and both discretization choices. Invertibility is an explicit mathematical precondition of the supplied inverse expression, not a new discretization algorithm."
+    },
+    {
+      "task": "r2r-mpc-control",
+      "skill": "finite-horizon-lqr",
+      "png_sha256": "42fe2a72ed5cdba47e79d5278e033dd9a6b6ee4daf5db60cb688fb2e3e2c045c",
+      "dimensions": [
+        832,
+        881
+      ],
+      "visual_review": "Viewed rendered PNG: text, branching, loop arrows and edge clipping checked.",
+      "source_review": "Preserve P-next versus P-current order, gain storage and first-action-only receding horizon. Returned/logged states are an interface summary, not a new controller."
+    },
+    {
+      "task": "r2r-mpc-control",
+      "skill": "mpc-horizon-tuning",
+      "png_sha256": "59badbc75938ce9967bd4e59004dec6825dc0b4f8e8d527dd7f3e7382d899fb4",
+      "dimensions": [
+        1011,
+        841
+      ],
+      "visual_review": "Viewed rendered PNG: text, branching, loop arrows and edge clipping checked.",
+      "source_review": "Separate parameter selection and evaluation. Show both horizon guidelines without making them simultaneous hard limits; flag continuous ARE example versus discrete-model conventions."
+    },
+    {
+      "task": "r2r-mpc-control",
+      "skill": "integral-action-design",
+      "png_sha256": "85d0662bcf8380add9d3f1e1857f6a0539ac5bd7c85c13d43dec06e497c5f0c2",
+      "dimensions": [
+        653,
+        1178
+      ],
+      "visual_review": "Viewed rendered PNG: text, branching, loop arrows and edge clipping checked.",
+      "source_review": "Separate timestep integration/clipping from post-trial tuning advice. This is an editorial clarification: the source gives tuning advice but does not mandate online gain adaptation."
+    },
+    {
+      "task": "exam-block-sequencing",
+      "skill": "mip-solver-and-solution-audit",
+      "png_sha256": "0ed781645eaea904b51908ec8883d4e1d250504cceb44618477e461cedf5558c",
+      "dimensions": [
+        803,
+        2081
+      ],
+      "visual_review": "Viewed rendered PNG: text, branching, loop arrows and edge clipping checked.",
+      "source_review": "Preserve installed-solver discovery, solver-required method, incumbent extraction, truthful certificates, exact disk reload before metrics, objective consistency and explicit formulation contents."
+    },
+    {
+      "task": "exam-block-sequencing",
+      "skill": "ordered-window-sequencing-mip",
+      "png_sha256": "6db37ba712e6e2a292e8fa30fbcb00bfeb730c78d32f60aa2e52575dff34ead9",
+      "dimensions": [
+        1024,
+        1539
+      ],
+      "visual_review": "Viewed rendered PNG: text, branching, loop arrows and edge clipping checked.",
+      "source_review": "Retain both representations, all linearization bounds, ordered keys, successor labels, masks, boundary conditions, active-pattern overlap and full optimized objective."
+    },
+    {
+      "task": "manufacturing-fjsp-optimization",
+      "skill": "fjsp-baseline-repair-with-downtime-and-policy",
+      "png_sha256": "eea4b605e9135f60be906315cd8ba736e93b3e54ed72b214e2e8760a31e3f540",
+      "dimensions": [
+        975,
+        2268
+      ],
+      "visual_review": "Viewed rendered PNG: text, branching, loop arrows and edge clipping checked.",
+      "source_review": "Incorporate the shared baseline-repair context. Keep integer scan and same-order commitment explicit. Flag conflicting heuristic priorities and the sample safety-bound return not proving feasibility; preserve all original guidance/resources."
+    }
+  ]
+}

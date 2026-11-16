@@ -1,0 +1,20 @@
+{
+  "method": "skill-on-demand-v1",
+  "task": "llm-prefix-cache-replay",
+  "arm": "image",
+  "figures": "uml-v2",
+  "source_files": {
+    "cache-policy-comparison/SKILL.md": "353a7215727695b01e48ea69e63ed92c0b32174534a6bda38cee9b91382e5963",
+    "prefix-cache-replay/SKILL.md": "28ced940ec272cc01cf06519912077492d948b10e08a933acba12dd9907220cf"
+  },
+  "figure_hashes": {
+    "cache-policy-comparison": "985529ae3381d1b5867612b01a88e5ce13cd0842d4e65d51bd06cf693806ca03",
+    "prefix-cache-replay": "617a6c6cd5cc7614e2a9e1deddce402da00cc81e7bb57d20385022dbbdb7cfc9"
+  },
+  "bundle_files": {
+    "cache-policy-comparison/SKILL.md": "353a7215727695b01e48ea69e63ed92c0b32174534a6bda38cee9b91382e5963",
+    "cache-policy-comparison/assets/skillcanvas-diagram.png": "985529ae3381d1b5867612b01a88e5ce13cd0842d4e65d51bd06cf693806ca03",
+    "prefix-cache-replay/SKILL.md": "28ced940ec272cc01cf06519912077492d948b10e08a933acba12dd9907220cf",
+    "prefix-cache-replay/assets/skillcanvas-diagram.png": "617a6c6cd5cc7614e2a9e1deddce402da00cc81e7bb57d20385022dbbdb7cfc9"
+  }
+}

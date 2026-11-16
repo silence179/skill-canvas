@@ -1,0 +1,32 @@
+@startuml
+!pragma useVerticalIf on
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+skinparam defaultFontName SansSerif
+skinparam defaultFontSize 18
+skinparam ArrowColor #46566F
+skinparam activity {
+  BackgroundColor #EEF5FF
+  BorderColor #365A82
+  FontColor #152B44
+  DiamondBackgroundColor #FFF3D6
+  DiamondBorderColor #BA842A
+}
+skinparam noteBackgroundColor #FFF8DE
+skinparam noteBorderColor #BEA45C
+skinparam wrapWidth 360
+title Finite-horizon LQR - backward gains, first control, repeat
+start
+:Supply A, B, Q, R and horizon N;\nterminal P_N = Q or LQR terminal solution;
+while (Next control timestep?) is (yes)
+  :Measure current state x;\nset P = terminal cost;
+  :Set k = N - 1;
+  while (k >= 0?) is (yes)
+    :K_k = solve(R + B' P B, B' P A);\nP = Q + A' P (A - B K_k);
+    :Store K_k; decrement k;
+  endwhile (backward pass done)
+  :Apply ONLY u_0 = -K_0 * x;
+  :Advance system / simulator one timestep;\nmeasure again and solve the shifted horizon;
+endwhile (finished)
+stop
+@enduml
