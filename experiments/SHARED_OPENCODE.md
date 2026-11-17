@@ -1,6 +1,8 @@
-# 公共 OpenCode 工具镜像
+# 历史：公共 OpenCode Docker 工具镜像
 
-当前实验入口默认复用本机的 `skillcanvas-opencode:1.19.5-19299e3fe8add58e3b19`，包含 OpenCode 1.19.5 和 Node 22.20.0。Python 及其依赖仍由各 task 原有的 Dockerfile 安装。
+以下记录迁移前的 Docker 实验与验证。当前 Singularity/Slurm 入口及镜像准备方式见[项目 README](../README.md)，不再默认使用本文的工具镜像与旧参数。
+
+当时实验入口默认复用本机的 `skillcanvas-opencode:1.19.5-19299e3fe8add58e3b19`，包含 OpenCode 1.19.5 和 Node 22.20.0。Python 及其依赖仍由各 task 原有的 Dockerfile 安装。
 
 公共镜像是工具来源：只保存已安装工具的归档，不包含晶体任务的 Python 包、数据、skill、用户目录、对话或密钥。任务先按自己的 Dockerfile 构建，再在一个不联网的构建步骤中从公共镜像解包工具。这样可以跨任务复用 OpenCode，同时保留任务自己的系统与 Python 环境。更换 skill 也只需重新复制工具，不会重新 npm 下载。
 

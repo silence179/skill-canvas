@@ -5,7 +5,7 @@ import os
 from pathlib import Path
 import sys
 
-from prepare import HERE, ROOT, CRYSTAL, TASKS, FIGURES, build, load_policy
+from prepare import HERE, ROOT, TASKS, FIGURES, build, load_policy
 from protocol import METHOD, SkillDeliveryError, digest, is_helper, public_policy, validate_delivery
 
 
@@ -86,9 +86,11 @@ def main():
     parser.add_argument("--effort")
     parser.add_argument("--tasks-root", type=Path)
     parser.add_argument("--jobs-dir", type=Path)
+    parser.add_argument("--images-dir", type=Path)
+    parser.add_argument("--allow-cloud-metadata", action="store_true")
     parser.add_argument("--trials", type=int, default=1)
     parser.add_argument("--concurrency", type=int, default=1)
-    parser.add_argument("--dry-run", action="store_true", help="offline plan only; no Docker, model or grader")
+    parser.add_argument("--dry-run", action="store_true", help="offline plan only; no container, model or grader")
     args = parser.parse_args()
     if args.trials < 1 or args.concurrency < 1:
         parser.error("trials and concurrency must be positive")
@@ -99,18 +101,22 @@ def main():
     policy = load_policy(bundle)
     condition = "text" if args.arm == "text" else args.figures
     jobs = (args.jobs_dir or ROOT / "jobs/skill-read-on-demand-v2.1" / args.task / condition).resolve()
-    tasks = (args.tasks_root or (ROOT / "repos/skillsbench/tasks" if args.task == CRYSTAL
-                                else ROOT / ".runtime/uml-expanded/prepared-tasks")).resolve()
+    tasks = (args.tasks_root or ROOT / "repos/skillsbench/tasks").resolve()
     model = args.model or os.environ.get("EXP_MODEL")
     if not model:
         parser.error("set --model or EXP_MODEL")
     effort = args.effort or os.environ.get("EXP_EFFORT")
-    bench_args = ["run", str(tasks), "-i", args.task, "--agent", "opencode", "--sandbox", "docker",
+    bench_args = ["run", str(tasks), "-i", args.task, "--agent", "opencode", "--sandbox", "singularity",
                   "--model", model, "--skill-mode", "with-skill", "--skills-dir", str(bundle),
                   "--trials", str(args.trials), "--concurrency", str(args.concurrency),
                   "--retry-attempts", "0", "--save-outputs", "--jobs-dir", str(jobs)]
     if effort:
         bench_args += ["--reasoning-effort", effort]
+    if args.allow_cloud_metadata:
+        bench_args += ["--allow-cloud-metadata"]
+    if args.images_dir:
+        os.environ["SKILLCANVAS_IMAGES"] = str(args.images_dir.resolve())
+    os.environ.setdefault("XDG_STATE_HOME", str(ROOT / ".runtime/xdg-state"))
     if args.dry_run:
         print(json.dumps(dict(method=METHOD, offline_plan=True, policy=public_policy(policy),
                               bench_arguments=bench_args, starts_experiment=False), ensure_ascii=False, indent=2))
@@ -119,12 +125,8 @@ def main():
         parser.error("use a new empty jobs directory; historical jobs cannot be resumed with this protocol")
     if not (tasks / args.task).is_dir():
         parser.error("task environment not found")
-    import shared_opencode
-    record = shared_opencode.load_record()
-    shared_opencode.install_adapter(record)
     install_adapter(policy)
     os.environ.pop("BENCHFLOW_DAEMON", None)
-    os.environ.setdefault("DOCKER_CONFIG", str(ROOT / ".runtime/docker"))
     jobs.mkdir(parents=True, exist_ok=True)
     (jobs / "skill-delivery-policy.json").write_text(json.dumps(public_policy(policy), indent=2) + "\n")
     from benchflow.cli.main import main as bench_main

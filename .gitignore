@@ -1,6 +1,7 @@
 /repos/
 /.runtime/
 /jobs/
+/images/
 /experiments/manifests/
 /.env
 /.env.*

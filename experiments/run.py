@@ -35,10 +35,11 @@ def main():
     parser.add_argument("--concurrency", type=positive_int, default=1)
     parser.add_argument("--skills-dir", type=Path)
     parser.add_argument("--jobs-dir", type=Path)
+    parser.add_argument("--images-dir", type=Path, help="directory containing prepared task SIFs (or set SKILLCANVAS_IMAGES)")
+    parser.add_argument("--allow-cloud-metadata", action="store_true", help="explicit BenchFlow opt-out when the cluster controls metadata access")
     parser.add_argument("--dry-run", action="store_true", help="ask BenchFlow to plan without running")
     parser.add_argument("--fresh", action="store_true", help="start a new job instead of resuming")
     parser.add_argument("--delivery-arm", choices=("text", "image"), help="strict UML experiment input adapter")
-    parser.add_argument("--no-shared-opencode", action="store_true", help="use the original per-task OpenCode installer")
     args = parser.parse_args()
     try:
         load_env(ROOT / ".env")
@@ -79,7 +80,7 @@ def main():
     for task in tasks:
         command += ["-i", task]
     command += ["--agent", args.arm if control else args.agent,
-                "--sandbox", "docker", "--trials", str(args.trials),
+                "--sandbox", "singularity", "--trials", str(args.trials),
                 "--concurrency", str(args.concurrency), "--retry-attempts", "0",
                 "--save-outputs", "--jobs-dir", str(jobs)]
     if not control:
@@ -96,6 +97,8 @@ def main():
         command += ["--fresh"]
     if args.dry_run:
         command += ["--dry-run"]
+    if args.allow_cloud_metadata:
+        command += ["--allow-cloud-metadata"]
     if args.delivery_arm:
         if args.arm != "custom" or args.agent != "opencode":
             parser.error("strict skill delivery requires custom skills and --agent opencode")
@@ -105,13 +108,6 @@ def main():
             "--arm", args.delivery_arm, "--bundle", str(args.skills_dir.resolve()),
             "--", *command[1:],
         ]
-    shared_record = ROOT / ".runtime/shared-opencode/image.json"
-    use_shared = (not control and args.agent == "opencode"
-                  and not args.no_shared_opencode and shared_record.is_file())
-    if use_shared:
-        tail = (["--delivery-runner", *command[2:]] if args.delivery_arm else command[1:])
-        command = [str(BENCH.parent / "python"), str(ROOT / "experiments/shared_opencode.py"),
-                   "run", "--", *tail]
     print(shlex.join(command), flush=True)
     if not args.dry_run:
         sources = {}
@@ -127,11 +123,9 @@ def main():
         manifest = ROOT / "experiments/manifests" / f"{args.arm}-{stamp}.json"
         manifest.parent.mkdir(parents=True, exist_ok=True)
         record = {"arm": args.arm, "command": command, "sources": sources, "task_root": str(task_root)}
-        if use_shared:
-            import hashlib
-            record["shared_opencode"] = json.loads(shared_record.read_text())
-            record["shared_opencode_adapter_sha256"] = hashlib.sha256(
-                (ROOT / "experiments/shared_opencode.py").read_bytes()).hexdigest()
+        import hashlib
+        record["runtime_adapter_sha256"] = hashlib.sha256(
+            (ROOT / "experiments/singularity_backend.py").read_bytes()).hexdigest()
         if args.delivery_arm:
             import hashlib
             record["delivery_adapter"] = {
@@ -140,9 +134,11 @@ def main():
             }
         manifest.write_text(json.dumps(record, indent=2) + "\n")
     environment = os.environ.copy()
-    local_docker = ROOT / ".runtime/docker"
-    if (local_docker / "cli-plugins/docker-compose").is_file():
-        environment.setdefault("DOCKER_CONFIG", str(local_docker))
+    environment.pop("BENCHFLOW_DAEMON", None)
+    if args.images_dir:
+        environment["SKILLCANVAS_IMAGES"] = str(args.images_dir.resolve())
+    # Keep controller trust state in the checkout, outside all task mounts.
+    environment.setdefault("XDG_STATE_HOME", str(ROOT / ".runtime/xdg-state"))
     return subprocess.call(command, cwd=ROOT, env=environment)
 
 

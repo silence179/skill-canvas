@@ -20,7 +20,8 @@ def main():
     parser.add_argument("--jobs-dir", type=Path)
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--fresh", action="store_true")
-    parser.add_argument("--no-shared-opencode", action="store_true")
+    parser.add_argument("--images-dir", type=Path)
+    parser.add_argument("--allow-cloud-metadata", action="store_true")
     args = parser.parse_args()
     verify()
     jobs = args.jobs_dir or ROOT / "jobs/uml-flowchart/forced-v1" / args.arm
@@ -43,8 +44,10 @@ def main():
         command += ["--dry-run"]
     if args.fresh:
         command += ["--fresh"]
-    if args.no_shared_opencode:
-        command += ["--no-shared-opencode"]
+    if args.images_dir:
+        command += ["--images-dir", str(args.images_dir.resolve())]
+    if args.allow_cloud_metadata:
+        command += ["--allow-cloud-metadata"]
     return subprocess.call(command, cwd=ROOT)
 
 
