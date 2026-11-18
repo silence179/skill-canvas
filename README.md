@@ -118,7 +118,9 @@ python3 experiments/slurm.py curated --task llm-prefix-cache-replay \
 
 `drone-planning-control` 与 `react-performance-debugging` 依赖 Compose 多服务，当前后端不支持，框架会拒绝启动，不能把它们记作模型失败。所选三十题中其余二十八题通过静态能力检查；这不代表实际环境已验收。
 
-旧 campaign/pilot 脚本依赖本地历史计划、缓存与校验哈希，保留供复盘，不作为服务器提交入口。新任务使用 `slurm.py`、`run.py` 或对应的 read-on-demand runner，并使用新的结果目录。当前仅完成配方/计划静态检查；尚未完成 Singularity 实际镜像构建、task 运行或服务器 Slurm 验证。
+旧 campaign/pilot 脚本依赖本地历史计划、缓存与校验哈希，保留供复盘，不作为服务器提交入口。新任务使用 `slurm.py`、`run.py` 或对应的 read-on-demand runner，并使用新的结果目录。
+
+本地已用 SingularityCE 4.6.0 从 Docker 缓存构建 SIF，并跑通 `llm-prefix-cache-replay` 的单次 `oracle`（得分 `1.0`，未调用模型）。服务器端直接构建 SIF 和通过 Slurm 执行仍待在 SingularityCE 4.1.1 上验证。
 
 ## 第一步：不用模型验证链路
 

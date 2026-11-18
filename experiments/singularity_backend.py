@@ -111,11 +111,10 @@ class SingularitySandbox(BaseSandbox):
 
     def _host_env(self):
         # Runtime options belong to this trial, never to a login shell's
-        # Singularity bind or environment settings.
-        environment = {key: value for key, value in os.environ.items()
-                       if not key.startswith(("SINGULARITY_", "SINGULARITYENV_", "APPTAINER_", "APPTAINERENV_"))}
-        environment["SINGULARITY_CONFIGDIR"] = str(self._state / "config")
-        return environment
+        # Singularity bind or environment settings. The native starter
+        # registers instances in the default directory.
+        return {key: value for key, value in os.environ.items()
+                if not key.startswith(("SINGULARITY_", "SINGULARITYENV_", "APPTAINER_", "APPTAINERENV_"))}
 
     @staticmethod
     def _checked(result, operation):
@@ -169,8 +168,11 @@ class SingularitySandbox(BaseSandbox):
             if hashlib.sha256(path.read_bytes()).hexdigest() != expected:
                 raise RuntimeError(f"task environment changed since SIF preparation: {name}")
         self._state = Path(tempfile.mkdtemp(prefix="skillcanvas-", dir=os.environ.get("SLURM_TMPDIR")))
-        for name in ("config", "tmp", "var-tmp", "logs"):
-            (self._state / name).mkdir()
+        for name in ("tmp", "var-tmp"):
+            directory = self._state / name
+            directory.mkdir()
+            directory.chmod(0o1777)
+        (self._state / "logs").mkdir()
         self._rootfs = self._state / "rootfs"
         try:
             trust_state.begin_fresh(self)
@@ -179,7 +181,7 @@ class SingularitySandbox(BaseSandbox):
             self._checked(result, "unpack SIF; --fakeroot must be enabled for your account")
             instance = "sc-" + uuid.uuid4().hex[:20]
             args = ["instance", "start", "--fakeroot", "--writable", "--cleanenv", "--no-eval",
-                    "--no-home", "--no-mount", "cwd,hostfs,bind-paths", "--pid", "--ipc"]
+                    "--no-home", "--no-mount", "cwd,hostfs,bind-paths,tmp", "--ipc"]
             for source, target in (("tmp", "/tmp"), ("var-tmp", "/var/tmp"), ("logs", "/logs")):
                 args += ["--bind", f"{self._state / source}:{target}"]
             result = await self._cli(*args, str(self._rootfs), instance,
@@ -320,7 +322,7 @@ class SingularitySandbox(BaseSandbox):
             # fakeroot mapping. No sudo or host-wide instance cleanup.
             if self._rootfs.exists():
                 result = await self._cli("exec", "--fakeroot", "--no-home", "--cleanenv",
-                                         "--no-mount", "cwd,hostfs,bind-paths",
+                                         "--no-mount", "cwd,hostfs,bind-paths,tmp",
                                          "--bind", f"{self._state}:/mnt", str(self._image),
                                          "/bin/sh", "-c", "find /mnt -mindepth 1 -type d -exec chmod u+rwx {} + && "
                                          "find /mnt -mindepth 1 ! -type l -exec chown 0:0 {} +", timeout=120)
