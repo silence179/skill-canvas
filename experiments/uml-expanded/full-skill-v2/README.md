@@ -33,3 +33,5 @@ python3 experiments/slurm.py uml-v2 --partition main --nodelist kt-fat \
 ```
 
 不加 `--submit` 只生成计划。正式提交前在服务器项目根目录的 `.env` 填写 `DEEPSEEK_API_KEY`。默认模型是此前使用的 `deepseek/deepseek-flash`，两组都用 OpenCode；两组共用每题的 SIF，各有独立结果目录。计划不保存密钥。
+
+要跨题复用旧实验的 OpenCode 工具层，从旧公共工具镜像提取 `/payload/tools.tar`，连同匹配的 `.runtime/shared-opencode/image.json` 保存到同一目录。为每题构建 SIF 时给 `experiments/images.py` 加 `--agent opencode --opencode-tools <目录>`。构建会核对归档、内容和工具版本；各题使用同一份 OpenCode 与 Node，同时保留自己的任务环境。

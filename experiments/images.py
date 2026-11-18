@@ -180,10 +180,13 @@ def main():
     origin.add_argument("--source", help="full task environment: docker://registry/image:tag, docker-archive:/path, or a local SIF")
     origin.add_argument("--definition", type=Path, help="explicit native recipe for task environments beyond the supported Dockerfile subset")
     parser.add_argument("--agent", choices=("opencode",), help="cache the pinned agent in the SIF too")
+    parser.add_argument("--opencode-tools", type=Path, help="copy the verified shared OpenCode tools.tar and image.json from this directory")
     parser.add_argument("--images-dir", type=Path, default=Path(os.environ.get("SKILLCANVAS_IMAGES", DEFAULT_IMAGES)))
     parser.add_argument("--workdir", default="/root", help="workspace for imported images or explicit recipes")
     parser.add_argument("--plan", action="store_true", help="print the native recipe without building or downloading")
     args = parser.parse_args()
+    if args.opencode_tools and args.agent != "opencode":
+        parser.error("--opencode-tools requires --agent opencode")
     task = args.tasks_root.resolve() / args.task
     if Path(args.task).name != args.task or not (task / "task.md").is_file():
         parser.error("unknown task id")
@@ -228,7 +231,25 @@ def main():
             metadata["agent_install_stamp"] = plan.stamp
             # BenchFlow refuses group-writable runtime tools. Use a fixed mask
             # when installing them instead of inheriting the Slurm job's mask.
-            install = "umask 022\n" + plan.recipe.install_cmd + "\n"
+            command = plan.recipe.install_cmd
+            if args.opencode_tools:
+                from shared_opencode import shared_recipe
+
+                folder = args.opencode_tools.resolve()
+                record = json.loads((folder / "image.json").read_text())
+                for key in ("archive_sha256", "files_sha256", "links_sha256"):
+                    if not re.fullmatch(r"[0-9a-f]{64}", record[key]):
+                        raise ValueError(f"invalid shared OpenCode {key}")
+                if not re.fullmatch(r"sha256:[0-9a-f]{64}", record["image_id"]):
+                    raise ValueError("invalid shared OpenCode image ID")
+                if "sha256:" + record["install_sha256"] != plan.stamp:
+                    raise ValueError("OpenCode install recipe changed; refresh the shared tools")
+                source_tar = folder / "tools.tar"
+                archive = "/run/skillcanvas-tools/payload/tools.tar"
+                definition_text = append_section(definition_text, "files", f"    {shlex.quote(str(source_tar))} {archive}")
+                command = shared_recipe(plan.recipe, record).install_cmd + "\nrm -f " + archive
+                metadata["opencode_tools_sha256"] = record["archive_sha256"]
+            install = "umask 022\n" + command + "\n"
         definition_text = append_section(definition_text, "post", "set -e\nmkdir -p /logs /tmp /var/tmp /mnt\n" + install)
         if not re.search(r"(?m)^%startscript\b", definition_text):
             definition_text = append_section(definition_text, "startscript", "exec /bin/sleep infinity")
