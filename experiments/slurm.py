@@ -66,6 +66,8 @@ def main():
     if paired:
         if args.agent and args.agent != "opencode":
             parser.error("uml-v2 requires OpenCode")
+        if args.allow_cloud_metadata:
+            parser.error("uml-v2 verifies network isolation; do not use --allow-cloud-metadata")
         if any(task not in study["tasks"] for task in tasks):
             parser.error("uml-v2 requires a task registered in the full-skill-v2 materials")
         if args.submit:
@@ -110,12 +112,11 @@ def main():
                            "--concurrency", "1", "--retry-attempts", "0", "--save-outputs", "--fresh", "--jobs-dir", str(job_dir)]
                 if args.effort:
                     command += ["--reasoning-effort", args.effort]
-                if args.allow_cloud_metadata:
-                    command.append("--allow-cloud-metadata")
+                env = ["env", "SKILLCANVAS_ISOLATED_NETWORK=1"]
                 if args.images_dir:
-                    command = ["env", f"SKILLCANVAS_IMAGES={args.images_dir.resolve()}", *command]
+                    env.append(f"SKILLCANVAS_IMAGES={args.images_dir.resolve()}")
                 schedule.append({"task": task, "arm": arm, "jobs_dir": str(job_dir)})
-                commands.append(shlex.join(command))
+                commands.append(shlex.join(env + command))
     commands_file = jobs / "commands.txt"
     commands_file.write_text("\n".join(commands) + "\n")
     script = jobs / "array.sbatch"
@@ -146,7 +147,8 @@ def main():
             "command": sbatch, "code_commit": subprocess.check_output(
                 ["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()}
     if paired:
-        plan.update(schedule=schedule, protocol="forced-prefix-v1", materials="full-skill-v2")
+        plan.update(schedule=schedule, protocol="forced-prefix-v1", materials="full-skill-v2",
+                    network="isolated-with-host-model-proxy")
     (jobs / "plan.json").write_text(json.dumps(plan, indent=2) + "\n")
     print(f"{len(commands)} trials; at most {args.max_parallel} running at once.")
     print(shlex.join(sbatch), flush=True)

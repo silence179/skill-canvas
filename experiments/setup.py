@@ -59,7 +59,23 @@ def main():
         '            task_env_config=env_config,\n'
         '            persistent_env=manifest_env or None,\n        )\n',
     )
+    insert_once(
+        package / "sandbox/setup.py", 'SingularitySandbox = SingularitySandbox.selected()',
+        '        SingularitySandbox.preflight()\n',
+        '        SingularitySandbox = SingularitySandbox.selected()\n',
+    )
+    insert_once(
+        package / "providers/litellm_runtime.py", '"expose_host_model_proxy"',
+        '    from benchflow.providers.runtime import ProviderRuntime\n\n    new_runtime = ProviderRuntime(',
+        '    if not sandbox_local and (expose := getattr(type(sandbox), "expose_host_model_proxy", None)) is not None:\n'
+        '        try:\n'
+        '            await expose(sandbox, server.base_url)\n'
+        '        except BaseException:\n'
+        '            await server.stop()\n'
+        '            raise\n\n',
+    )
     shutil.copyfile(ROOT / "experiments/singularity_backend.py", package / "sandbox/singularity.py")
+    shutil.copyfile(ROOT / "experiments/singularity_relay.py", package / "sandbox/singularity_relay.py")
     if not args.no_sync:
         subprocess.run(["uv", "sync", "--locked", "--no-dev", "--python", "3.12"], cwd=ROOT / "repos/benchflow", check=True)
     print("Pinned sources ready; BenchFlow now accepts --sandbox singularity.")

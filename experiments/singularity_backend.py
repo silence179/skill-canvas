@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import asyncio
 import contextlib
+from functools import partial
 import hashlib
 import io
 import json
@@ -19,6 +20,7 @@ import shutil
 import tarfile
 import tempfile
 import uuid
+from urllib.parse import urlsplit
 
 from benchflow._root_only import root_only_path_check
 from benchflow._runtime_tree import RUN_DIR
@@ -81,6 +83,13 @@ class SingularitySandbox(BaseSandbox):
     def preflight(cls):
         if not shutil.which("singularity"):
             raise RuntimeError("singularity is not installed; use SingularityCE 4.1.1 on the server")
+
+    @classmethod
+    def selected(cls):
+        return IsolatedSingularitySandbox if os.environ.get("SKILLCANVAS_ISOLATED_NETWORK") == "1" else cls
+
+    def _instance_network_args(self):
+        return []
 
     def _validate_definition(self):
         project = Path(__file__).resolve().parents[5]
@@ -182,6 +191,7 @@ class SingularitySandbox(BaseSandbox):
             instance = "sc-" + uuid.uuid4().hex[:20]
             args = ["instance", "start", "--fakeroot", "--writable", "--cleanenv", "--no-eval",
                     "--no-home", "--no-mount", "cwd,hostfs,bind-paths,tmp", "--ipc"]
+            args += self._instance_network_args()
             for source, target in (("tmp", "/tmp"), ("var-tmp", "/var/tmp"), ("logs", "/logs")):
                 args += ["--bind", f"{self._state / source}:{target}"]
             result = await self._cli(*args, str(self._rootfs), instance,
@@ -329,3 +339,76 @@ class SingularitySandbox(BaseSandbox):
                 self._checked(result, "release trial filesystem ownership")
             shutil.rmtree(self._state)
             self._state = None
+
+
+class IsolatedSingularitySandbox(SingularitySandbox):
+    # Run BenchFlow's own reachability proof from the agent user before launch.
+    cloud_metadata_unreachable = True
+    _model_server = None
+    _model_relay = None
+    _model_port = None
+    _relay_mount = "/opt/skillcanvas-model"
+
+    def _instance_network_args(self):
+        self._relay_dir = self._state / "model"
+        self._relay_dir.mkdir(mode=0o700)
+        (self._rootfs / self._relay_mount.lstrip("/")).mkdir(mode=0o700)
+        return ["--net", "--network", "none", "--bind", f"{self._relay_dir}:{self._relay_mount}:ro"]
+
+    async def expose_host_model_proxy(self, url):
+        from benchflow.sandbox import singularity_relay
+
+        endpoint = urlsplit(url)
+        if endpoint.scheme != "http" or endpoint.hostname != "127.0.0.1" or not endpoint.port:
+            raise ValueError("isolated Singularity requires a host model proxy on 127.0.0.1")
+        if endpoint.port == self._model_port and self._model_relay.returncode is None:
+            return
+        await self._stop_model_relay()
+        host_socket = self._relay_dir / "proxy.sock"
+        connect = partial(asyncio.open_connection, "127.0.0.1", endpoint.port)
+        connections = self._model_connections = set()
+
+        def forward(reader, writer):
+            task = asyncio.create_task(singularity_relay.relay(reader, writer, connect=connect))
+            connections.add(task)
+            task.add_done_callback(connections.discard)
+
+        self._model_server = await asyncio.start_unix_server(forward, path=host_socket)
+        try:
+            route = await self.exec_route("root", system_shell=True)
+            python = shlex.join(["python3", "-I", "-S", "-c", Path(singularity_relay.__file__).read_text(),
+                                 self._relay_mount + "/proxy.sock", str(endpoint.port)])
+            self._model_relay = await asyncio.create_subprocess_exec(
+                "singularity", *self._exec_prefix(), route.shell, "-c",
+                with_system_path("exec " + python, route.pin), env=self._host_env(),
+                stdin=asyncio.subprocess.DEVNULL, stdout=asyncio.subprocess.PIPE,
+                stderr=asyncio.subprocess.PIPE,
+            )
+            ready = await asyncio.wait_for(self._model_relay.stdout.readline(), timeout=30)
+            if ready != b"ready\n":
+                raise RuntimeError("could not start model relay inside isolated Singularity")
+            self._model_port = endpoint.port
+        except BaseException:
+            await self._stop_model_relay()
+            raise
+
+    async def _stop_model_relay(self):
+        if self._model_relay is not None:
+            with contextlib.suppress(ProcessLookupError):
+                self._model_relay.kill()
+            await self._model_relay.communicate()
+            self._model_relay = None
+        if self._model_server is not None:
+            self._model_server.close()
+            connections = tuple(self._model_connections)
+            for connection in connections:
+                connection.cancel()
+            await asyncio.gather(*connections, return_exceptions=True)
+            await self._model_server.wait_closed()
+            (self._relay_dir / "proxy.sock").unlink(missing_ok=True)
+            self._model_server = None
+        self._model_port = None
+
+    async def stop(self, delete=True):
+        await self._stop_model_relay()
+        await super().stop(delete=delete)
