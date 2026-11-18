@@ -64,6 +64,13 @@ def main():
         '        SingularitySandbox.preflight()\n',
         '        SingularitySandbox = SingularitySandbox.selected()\n',
     )
+    # A prepared SIF cannot see a per-trial edit to the Dockerfile. Follow
+    # BenchFlow's existing runtime upload and skill verification path instead.
+    insert_once(
+        package / "rollout/__init__.py", 'cfg.environment != "singularity" and not _environment_uses_prebuilt_image',
+        'not _environment_uses_prebuilt_image(\n            env_config, cfg.environment_manifest',
+        'cfg.environment != "singularity" and ',
+    )
     insert_once(
         package / "providers/litellm_runtime.py", '"expose_host_model_proxy"',
         '    from benchflow.providers.runtime import ProviderRuntime\n\n    new_runtime = ProviderRuntime(',
