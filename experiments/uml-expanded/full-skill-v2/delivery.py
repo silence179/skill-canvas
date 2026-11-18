@@ -45,12 +45,16 @@ def load_policy(arm, bundle):
 
 def main():
     from env_config import load_env
-    import shared_opencode
     load_env(ROOT / '.env')
-    os.environ.setdefault('DOCKER_CONFIG', str(ROOT / '.runtime/docker'))
-    record = shared_opencode.load_record(check_image='--dry-run' not in sys.argv)
-    shared_opencode.install_adapter(record)
-    print('Shared OpenCode image: ' + record['tag'], flush=True)
+    sandbox = sys.argv[sys.argv.index('--sandbox') + 1] if '--sandbox' in sys.argv else 'docker'
+    if sandbox == 'singularity':
+        os.environ.setdefault('XDG_STATE_HOME', str(ROOT / '.runtime/xdg-state'))
+    else:
+        import shared_opencode
+        os.environ.setdefault('DOCKER_CONFIG', str(ROOT / '.runtime/docker'))
+        record = shared_opencode.load_record(check_image='--dry-run' not in sys.argv)
+        shared_opencode.install_adapter(record)
+        print('Shared OpenCode image: ' + record['tag'], flush=True)
     legacy.load_policy = load_policy
     return legacy.main()
 

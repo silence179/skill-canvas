@@ -226,7 +226,9 @@ def main():
             from benchflow.agents.install import agent_layer_plan
             plan = agent_layer_plan(args.agent)
             metadata["agent_install_stamp"] = plan.stamp
-            install = plan.recipe.install_cmd + "\n"
+            # BenchFlow refuses group-writable runtime tools. Use a fixed mask
+            # when installing them instead of inheriting the Slurm job's mask.
+            install = "umask 022\n" + plan.recipe.install_cmd + "\n"
         definition_text = append_section(definition_text, "post", "set -e\nmkdir -p /logs /tmp /var/tmp /mnt\n" + install)
         if not re.search(r"(?m)^%startscript\b", definition_text):
             definition_text = append_section(definition_text, "startscript", "exec /bin/sleep infinity")

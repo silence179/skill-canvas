@@ -23,3 +23,13 @@ python3 experiments/uml-expanded/full-skill-v2/build.py --check
 这是看过旧结果后的材料修订，不是独立盲测结果。旧 UML、bundle、轨迹和评分均保留原样。已通过 10 种输入的本地 HTTP 传递检查，并完成新版十次对照。新入口为本目录 campaign.py / delivery.py，沿用旧版传递协议、公共 OpenCode、任务时限与评分。结果见 jobs/uml-expanded/paired-five-full-skill-v2/；旧运行入口仍绑定旧版材料。
 
 最新结果：文字组通过 4/5、图片组通过 3/5；考试两组均超时，R2R 图片组性能测试未过。详见 [结果解释](../../../jobs/uml-expanded/paired-five-full-skill-v2/RUN_NOTES.md) 与 [轨迹索引](../../../jobs/uml-expanded/paired-five-full-skill-v2/TRACE_INDEX.md)。23 项材料/传递/源文件/输入检查通过，任务容器均已清理。每组一次，不能认定图像有稳定收益。
+
+在 Slurm 上复跑时，`experiments/slurm.py uml-v2` 为每题生成一个文字试跑和一个图像试跑，沿用这里的直接输入协议。准备好相同的任务副本和每题一个 SIF 后，可以用下面的命令生成计划：
+
+```bash
+python3 experiments/slurm.py uml-v2 --partition main --nodelist kt-fat \
+  --max-parallel 10 --tasks-root /path/to/prepared-tasks \
+  --images-dir /path/to/sifs
+```
+
+不加 `--submit` 只生成计划。正式提交前在服务器项目根目录的 `.env` 填写 `DEEPSEEK_API_KEY`。默认模型是此前使用的 `deepseek/deepseek-flash`，两组都用 OpenCode；两组共用每题的 SIF，各有独立结果目录。计划不保存密钥。
